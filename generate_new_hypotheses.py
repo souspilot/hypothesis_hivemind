@@ -1,0 +1,144 @@
+"""
+Generate novel hypotheses from full paper context.
+
+Input:  data/train/<paper_id>.json
+Output: results/new_hypotheses/<paper_id>.json
+        { "<model_id>": ["hypothesis_1", ..., "hypothesis_N"], ... }
+"""
+
+import json
+import logging
+import time
+from pathlib import Path
+
+from model_utils import BaseModel, build_all_models
+
+# ---------------------------------------------------------------------------
+# Config
+# ---------------------------------------------------------------------------
+
+N_SAMPLES = 10
+SLEEP_BETWEEN_CALLS = 0.2
+
+TRAIN_DIR  = Path("data/train")
+OUTPUT_DIR = Path("results/new_hypotheses")
+
+# ---------------------------------------------------------------------------
+# Prompt
+# ---------------------------------------------------------------------------
+
+SYSTEM_PROMPT = (
+    "You are an expert research scientist. Given the context of a research paper, "
+    "your task is to generate a single novel hypothesis that logically extends "
+    "beyond the paper's existing findings — not a restatement of them. "
+    "The hypothesis must be: (1) grounded in a gap or open question identified "
+    "in the paper, (2) specific and testable, (3) falsifiable. "
+    "Output ONLY the hypothesis as a single declarative sentence with no preamble or explanation."
+)
+
+USER_INSTRUCTION = (
+    "Based on the research context above, generate one novel hypothesis "
+    "that extends beyond what this paper has already established."
+)
+
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    datefmt="%H:%M:%S",
+)
+log = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Paper text extraction
+# ---------------------------------------------------------------------------
+
+def extract_paper_text(data: dict) -> str:
+    title = data.get("title", "")
+    abstract = " ".join(b["text"] for b in data.get("pdf_parse", {}).get("abstract", []))
+    body = "\n\n".join(b["text"] for b in data.get("pdf_parse", {}).get("body_text", []))
+    return f"Title: {title}\n\nAbstract: {abstract}\n\n{body}"
+
+# ---------------------------------------------------------------------------
+# Inference
+# ---------------------------------------------------------------------------
+
+def get_new_hypothesis(model: BaseModel, paper_text: str) -> str:
+    return model.generate(SYSTEM_PROMPT, paper_text, USER_INSTRUCTION)
+
+
+def sample_model(model: BaseModel, model_id: str, paper_text: str) -> list[str]:
+    samples = []
+    for i in range(N_SAMPLES):
+        try:
+            text = get_new_hypothesis(model, paper_text)
+            samples.append(text)
+            log.info("    [%d/%d] %s", i + 1, N_SAMPLES, text[:90])
+        except Exception as exc:
+            log.error("    [%d/%d] ERROR: %s", i + 1, N_SAMPLES, exc)
+            samples.append(f"ERROR: {exc}")
+        time.sleep(SLEEP_BETWEEN_CALLS)
+    return samples
+
+# ---------------------------------------------------------------------------
+# Per-paper processing
+# ---------------------------------------------------------------------------
+
+def process_paper(models: dict[str, BaseModel], paper_path: Path) -> dict:
+    paper_id = paper_path.stem
+    output_path = OUTPUT_DIR / f"{paper_id}.json"
+
+    with open(paper_path) as f:
+        paper_text = extract_paper_text(json.load(f))
+
+    result: dict = {}
+    if output_path.exists():
+        with open(output_path) as f:
+            result = json.load(f)
+
+    for model_id, model in models.items():
+        if len(result.get(model_id, [])) >= N_SAMPLES:
+            log.info("  [skip] %s already has %d samples", model_id, N_SAMPLES)
+            continue
+
+        log.info("  %s (%d samples)...", model_id, N_SAMPLES)
+        result[model_id] = sample_model(model, model_id, paper_text)
+
+        with open(output_path, "w") as f:
+            json.dump(result, f, indent=2)
+
+    return result
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main() -> None:
+    models = build_all_models()
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    paper_files = sorted(TRAIN_DIR.glob("*.json"))
+    log.info(
+        "Found %d papers | %d models | %d samples → ~%d API calls",
+        len(paper_files), len(models), N_SAMPLES,
+        len(paper_files) * len(models) * N_SAMPLES,
+    )
+
+    success = errors = 0
+    for i, paper_path in enumerate(paper_files, 1):
+        log.info("[%d/%d] %s", i, len(paper_files), paper_path.stem)
+        try:
+            process_paper(models, paper_path)
+            success += 1
+        except Exception as exc:
+            log.error("Failed %s: %s", paper_path.stem, exc)
+            errors += 1
+
+    log.info("Done — %d processed, %d errors", success, errors)
+
+
+if __name__ == "__main__":
+    main()
