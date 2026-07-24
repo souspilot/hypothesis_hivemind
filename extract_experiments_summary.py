@@ -144,7 +144,6 @@ def main():
                 json.dump({"error": str(e), "paper_id": paper_path.stem}, f)
             errors += 1
 
-        break
         time.sleep(0.3)  # light rate-limit buffer
 
     print(f"\nDone. {success} processed, {errors} errors.")
