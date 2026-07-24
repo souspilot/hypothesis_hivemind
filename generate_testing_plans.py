@@ -1,3 +1,5 @@
+# DEPRECATED: NOT DOING THIS EXPERIMENT
+
 """
 Generate a testing plan for each model's own hypotheses.
 

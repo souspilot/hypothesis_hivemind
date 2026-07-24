@@ -18,7 +18,7 @@ After generation, a separate visualization script embeds all outputs with `text-
 extract_experiments_summary.py   # Stage 1: calls Claude directly via Anthropic SDK
 generate_hypotheses.py           # Stage 2: underlying hypotheses via model_utils
 generate_new_hypotheses.py       # Stage 3: novel hypotheses via model_utils
-generate_testing_plans.py        # Stage 4: testing plans via model_utils
+# DEPRECATED generate_testing_plans.py        # Stage 4: testing plans via model_utils
 pipeline.py                      # Runs stages 2-3 in sequence (stage 1 is separate)
 model_utils.py                   # Unified model interface, prompt caching for Claude
 visualize_similarity.py          # Embedding + heatmap generation
