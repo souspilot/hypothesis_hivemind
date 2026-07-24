@@ -37,6 +37,11 @@ OUTPUT_DIR = Path("data2/experiments_summary")
 # plain "claude-sonnet-4-6" string was enough since there's only one provider).
 OPENROUTER_MODEL = "anthropic/claude-sonnet-4-6"
 
+# 1024 was too tight -- some papers' methods sections need more room to
+# summarize than that leaves once you account for the JSON wrapper
+# ({"title": ..., "experiments_summary": ...}) eating into the budget too.
+MAX_OUTPUT_TOKENS = 4096
+
 
 def extract_paper_text(data: dict) -> str:
     title = data.get("title", "")
@@ -73,16 +78,37 @@ def process_paper(client: OpenAI, paper_path: Path) -> dict | None:
     # top-level "system" parameter like Anthropic's native API uses.
     response = client.chat.completions.create(
         model=OPENROUTER_MODEL,
-        max_tokens=1024,
+        max_tokens=MAX_OUTPUT_TOKENS,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
         ],
     )
 
-    text_content = response.choices[0].message.content or ""
+    choice = response.choices[0]
+    text_content = choice.message.content or ""
 
-    result = parse_json_response(text_content)
+    # finish_reason == "length" means the model hit max_tokens and got cut
+    # off mid-output -- like a recording that stops at a fixed time limit
+    # regardless of whether the sentence was finished. If that happens,
+    # fail loudly and specifically rather than letting it surface later as
+    # a confusing JSON parse error with no context.
+    if choice.finish_reason == "length":
+        raise RuntimeError(
+            f"Response truncated at max_tokens={MAX_OUTPUT_TOKENS} "
+            f"(finish_reason='length'). Raw output was {len(text_content)} chars. "
+            f"Consider raising MAX_OUTPUT_TOKENS."
+        )
+
+    try:
+        result = parse_json_response(text_content)
+    except json.JSONDecodeError as e:
+        # Preserve the actual raw text alongside the parse error -- without
+        # this, a JSON failure gives you only "something went wrong" with
+        # no way to see what the model actually said.
+        raise RuntimeError(
+            f"JSON parse failed ({e}). Raw response was: {text_content!r}"
+        ) from e
 
     with open(output_path, "w") as f:
         json.dump(result, f, indent=2)
@@ -118,6 +144,7 @@ def main():
                 json.dump({"error": str(e), "paper_id": paper_path.stem}, f)
             errors += 1
 
+        break
         time.sleep(0.3)  # light rate-limit buffer
 
     print(f"\nDone. {success} processed, {errors} errors.")

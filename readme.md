@@ -27,7 +27,7 @@ visualize_similarity.py          # Embedding + heatmap generation
 ## Setup
 
 ```bash
-pip install anthropic langchain langchain-openai python-dotenv matplotlib seaborn numpy
+pip install anthropic langchain langchain-openai python-dotenv matplotlib seaborn numpy lxml
 ```
 
 Create a `.env` file with your API keys:
