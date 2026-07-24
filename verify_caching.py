@@ -23,7 +23,7 @@ the model is treating each call as fully fresh, and you're paying full
 input-token price on all N_SAMPLES calls, not just the first.
 """
 
-from model_utils import build_model
+from test_models import build_model
 
 MODEL_ID = "anthropic/claude-sonnet-4.6"
 
