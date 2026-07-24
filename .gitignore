@@ -1,6 +1,7 @@
 .env
 __pycache__/*
 data/*
+data2/*
 embeddings/*
 plots/*
 results/*

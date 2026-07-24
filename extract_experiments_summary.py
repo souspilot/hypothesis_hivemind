@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
 import json
+import os
 import re
 import time
 from pathlib import Path
 from dotenv import load_dotenv
 
-import anthropic
+from openai import OpenAI
 
 SYSTEM_PROMPT = (
     "You are a helpful assistant for summarizing key details of experiments "
@@ -24,8 +26,16 @@ TASK_PROMPT = (
     "Paper text:\n"
 )
 
-TRAIN_DIR = Path("data/train")
-OUTPUT_DIR = Path("data/experiments_summary")
+TRAIN_DIR = Path("data2/train")
+OUTPUT_DIR = Path("data2/experiments_summary")
+
+# OpenRouter speaks the OpenAI Chat Completions format, not Anthropic's native
+# Messages format. Model names on OpenRouter are "provider/model-name" --
+# e.g. "anthropic/claude-sonnet-4-6" -- because one endpoint fronts many
+# providers, so the provider prefix disambiguates which company's model
+# you mean (this is different from calling Anthropic directly, where the
+# plain "claude-sonnet-4-6" string was enough since there's only one provider).
+OPENROUTER_MODEL = "anthropic/claude-sonnet-4-6"
 
 
 def extract_paper_text(data: dict) -> str:
@@ -44,7 +54,7 @@ def parse_json_response(text: str) -> dict:
     return json.loads(text.strip())
 
 
-def process_paper(client: anthropic.Anthropic, paper_path: Path) -> dict | None:
+def process_paper(client: OpenAI, paper_path: Path) -> dict | None:
     paper_id = paper_path.stem
     output_path = OUTPUT_DIR / f"{paper_id}.json"
 
@@ -58,17 +68,19 @@ def process_paper(client: anthropic.Anthropic, paper_path: Path) -> dict | None:
     paper_text = extract_paper_text(data)
     prompt = TASK_PROMPT + paper_text
 
-    with client.messages.stream(
-        model="claude-sonnet-4-6",
+    # OpenAI-style chat completions: the system prompt is just another
+    # message in the list (role="system"), rather than a separate
+    # top-level "system" parameter like Anthropic's native API uses.
+    response = client.chat.completions.create(
+        model=OPENROUTER_MODEL,
         max_tokens=1024,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": prompt}],
-    ) as stream:
-        response = stream.get_final_message()
-
-    text_content = next(
-        (b.text for b in response.content if b.type == "text"), ""
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
     )
+
+    text_content = response.choices[0].message.content or ""
 
     result = parse_json_response(text_content)
 
@@ -81,7 +93,10 @@ def process_paper(client: anthropic.Anthropic, paper_path: Path) -> dict | None:
 def main():
     load_dotenv()
 
-    client = anthropic.Anthropic()
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=os.environ["OPENROUTER_API_KEY"],
+    )
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     paper_files = sorted(TRAIN_DIR.glob("*.json"))
