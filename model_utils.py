@@ -66,7 +66,7 @@ MODELS = [
     "openai/gpt-5",
     "google/gemini-3.1-pro-preview",
     "google/gemini-3.1-flash-lite",
-    "google/gemma-4-31b-it:free",
+    "google/gemma-4-31b-it",
     "moonshotai/kimi-k3",
     "moonshotai/kimi-k2.6",
     "moonshotai/kimi-k2.7-code",
