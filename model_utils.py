@@ -8,7 +8,15 @@ AnthropicCachedModel  — uses Anthropic SDK directly, marks both the system
 
 OpenAIModel           — thin wrapper around LangChain's init_chat_model,
                          same .generate() signature for drop-in interoperability.
+
+OpenRouterModel       — for models not natively supported by LangChain's
+                         init_chat_model (Google Gemini/Gemma, Moonshot Kimi,
+                         etc.). Uses the OpenAI-compatible client pointed at
+                         OpenRouter, since OpenRouter fronts these providers
+                         through one endpoint with "provider/model" slugs.
 """
+
+import os
 
 import anthropic
 from abc import ABC, abstractmethod
@@ -16,24 +24,37 @@ from abc import ABC, abstractmethod
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, SystemMessage
+from openai import OpenAI as OpenAIClient
 
 load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Models list — edit here to add / remove models across all scripts
+#
+# Two naming conventions coexist here, and build_model() below tells them
+# apart by whether the string contains "/":
+#   "provider:model"  -- routed through Anthropic's SDK directly (anthropic:)
+#                         or LangChain's native provider integrations (openai:)
+#   "provider/model"   -- OpenRouter slug format, routed through OpenRouter's
+#                         OpenAI-compatible endpoint. Anything not natively
+#                         wired into LangChain (Google, Moonshot, etc.) goes
+#                         here rather than fighting an unsupported provider.
 # ---------------------------------------------------------------------------
 
-# MODELS = [
-#     "anthropic:claude-sonnet-4-6",
-#     "anthropic:claude-sonnet-4-5",
-#     "anthropic:claude-haiku-4-5-20251001",
-#     "openai:gpt-5-mini-2025-08-07",
-#     "openai:gpt-5-nano-2025-08-07",
-# ]
 MODELS = [
-    "openai:gpt-5-mini-2025-08-07",
+    "anthropic:claude-haiku-4-5-20251001",
+    "anthropic:claude-sonnet-4-5",
+    "anthropic:claude-sonnet-4-6",
     "openai:gpt-5-nano-2025-08-07",
+    "openai:gpt-5-mini-2025-08-07",
     "openai:gpt-5",
+    # -- routed via OpenRouter (see OpenRouterModel below) --
+    "google/gemini-3.1-pro-preview",
+    "google/gemini-3.1-flash-lite",
+    "google/gemma-4-31b-it:free",
+    "moonshotai/kimi-k3",
+    "moonshotai/kimi-k2.6",
+    "moonshotai/kimi-k2.7-code",
 ]
 
 # ---------------------------------------------------------------------------
@@ -91,7 +112,7 @@ class AnthropicCachedModel(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# OpenAI — LangChain wrapper
+# OpenAI — LangChain wrapper (native provider integration)
 # ---------------------------------------------------------------------------
 
 class OpenAIModel(BaseModel):
@@ -107,11 +128,50 @@ class OpenAIModel(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# OpenRouter — for providers LangChain doesn't natively support
+# (Google Gemini/Gemma, Moonshot Kimi, and anything else identified by a
+# "provider/model" slug rather than a "provider:model" string)
+# ---------------------------------------------------------------------------
+
+class OpenRouterModel(BaseModel):
+    def __init__(self, model_id: str) -> None:
+        self._client = OpenAIClient(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=os.environ["OPENROUTER_API_KEY"],
+        )
+        self._model_id = model_id
+
+    def generate(self, system: str, static_text: str, user_instruction: str) -> str:
+        response = self._client.chat.completions.create(
+            model=self._model_id,
+            max_tokens=4096,
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": f"{static_text}\n\n{user_instruction}"},
+            ],
+        )
+        content = response.choices[0].message.content or ""
+        return content.strip()
+
+
+# ---------------------------------------------------------------------------
 # Factory
 # ---------------------------------------------------------------------------
 
 def build_model(model_id: str) -> BaseModel:
-    """Return AnthropicCachedModel for claude-* models, OpenAIModel otherwise."""
+    """
+    Return AnthropicCachedModel for "anthropic:*" models, OpenRouterModel
+    for "provider/model" slugs, and OpenAIModel (native LangChain) otherwise.
+
+    Order matters: the "/" check must come before any ":"-splitting logic,
+    since "google/gemma-4-31b-it:free" contains BOTH characters -- checking
+    "/" first routes it correctly as one OpenRouter slug rather than
+    (incorrectly) splitting on the ":free" suffix as if it were a
+    provider:model separator.
+    """
+    if "/" in model_id:
+        return OpenRouterModel(model_id)
+
     provider, model_name = model_id.split(":", 1)
     if provider == "anthropic":
         return AnthropicCachedModel(model_name)
