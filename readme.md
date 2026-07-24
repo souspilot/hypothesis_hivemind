@@ -18,7 +18,6 @@ After generation, a separate visualization script embeds all outputs with `text-
 extract_experiments_summary.py   # Stage 1: calls Claude directly via Anthropic SDK
 generate_hypotheses.py           # Stage 2: underlying hypotheses via model_utils
 generate_new_hypotheses.py       # Stage 3: novel hypotheses via model_utils
-# DEPRECATED generate_testing_plans.py        # Stage 4: testing plans via model_utils
 pipeline.py                      # Runs stages 2-3 in sequence (stage 1 is separate)
 model_utils.py                   # Unified model interface, prompt caching for Claude
 visualize_similarity.py          # Embedding + heatmap generation
@@ -55,7 +54,6 @@ Or run individual stages:
 ```bash
 python generate_hypotheses.py
 python generate_new_hypotheses.py
-python generate_testing_plans.py
 ```
 
 To generate similarity plots after generation is complete:
@@ -69,18 +67,15 @@ python visualize_similarity.py new_hypotheses         # just one type
 results/
   underlying_hypotheses/<paper_id>.json   # {model_id: [hyp_1, ..., hyp_N]}
   new_hypotheses/<paper_id>.json
-  testing_plans/<paper_id>.json
 
 embeddings/
   underlying_hypotheses/<paper_id>.json   # {model_id: [[float, ...], ...]}
   new_hypotheses/<paper_id>.json
-  testing_plans/<paper_id>.json
 
 plots/
   underlying_hypotheses/intra_model.png
   underlying_hypotheses/inter_model.png
   new_hypotheses/...
-  testing_plans/...
 ```
 
 ## Adding or changing models
