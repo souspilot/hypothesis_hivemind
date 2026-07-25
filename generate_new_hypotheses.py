@@ -110,8 +110,6 @@ def process_paper(models: dict[str, BaseModel], paper_path: Path) -> dict:
     with open(paper_path) as f:
         paper_text = extract_paper_text(json.load(f))
 
-    print(paper_text)
-
     result: dict = {}
     if output_path.exists():
         with open(output_path) as f:
@@ -150,7 +148,6 @@ def main() -> None:
         log.info("[%d/%d] %s", i, len(paper_files), paper_path.stem)
         try:
             process_paper(models, paper_path)
-            break
             success += 1
         except Exception as exc:
             log.error("Failed %s: %s", paper_path.stem, exc)
