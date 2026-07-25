@@ -158,30 +158,32 @@ class OpenRouterModel(BaseModel):
     def generate(self, system: str, static_text: str, user_instruction: str) -> str:
         response = self._client.chat.completions.create(
             model=self._model_id,
-            max_tokens=4096,
+            # Raised from 4096: some models on OpenRouter (e.g. Kimi
+            # K2.6/K2.7) share ONE token budget between invisible
+            # "thinking" and the visible answer -- like a student who
+            # uses all their exam time on scratch paper and never writes
+            # the final answer in the box. At 4096 tokens, a chunk of
+            # samples came back with reasoning eating the whole budget
+            # and finish_reason="length" before any answer text existed.
+            # Doubling the ceiling gives real headroom for both, and
+            # costs nothing extra for models that finish early --
+            # max_tokens is a cap, you're only billed for tokens actually
+            # generated.
+            max_tokens=8192,
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": f"{static_text}\n\n{user_instruction}"},
             ],
-            # Some models on OpenRouter (e.g. Kimi K2.6/K2.7, and reasoning
-            # models generally) can spend invisible "thinking" tokens out of
-            # the SAME max_tokens budget as the visible answer -- like a
-            # student who uses all their exam time on scratch paper and
-            # never writes the final answer in the box. If a hard prompt
-            # makes the model think longer than usual, the whole budget can
-            # get consumed before any answer text is written, and you get
-            # back a technically-successful response with empty content
-            # and finish_reason="length" -- no exception, nothing for the
-            # caller's try/except to catch.
-            #
-            # Since this pipeline only needs one short declarative sentence,
-            # there's no upside to letting the model reason at all here, so
-            # we disable it outright rather than just raising max_tokens
-            # (which wouldn't guarantee a fix -- reasoning length isn't
-            # reliably bounded). "All models support this parameter" per
-            # OpenRouter's docs; models that don't reason at all simply
-            # ignore it.
-            extra_body={"reasoning": {"enabled": False}},
+            # NOTE: we tried extra_body={"reasoning": {"enabled": False}}
+            # here previously. Some endpoints (at least one model behind
+            # OpenRouter's Kimi routing) hard-reject that with a 400:
+            # "Reasoning is mandatory for this endpoint and cannot be
+            # disabled." So instead of forbidding reasoning outright, we
+            # ask for the minimum amount via effort="low" -- this is a
+            # request to spend LESS, not a demand to spend NONE, so it
+            # doesn't hit the same wall. Models that don't support the
+            # reasoning field at all just ignore it.
+            extra_body={"reasoning": {"effort": "low"}},
         )
 
         choice = response.choices[0]
