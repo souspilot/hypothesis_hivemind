@@ -18,7 +18,7 @@ from model_utils import BaseModel, build_all_models
 # ---------------------------------------------------------------------------
 
 N_SAMPLES = 10
-SLEEP_BETWEEN_CALLS = 0.2
+SLEEP_BETWEEN_CALLS = 0.01
 
 SUMMARY_DIR = Path("data2/experiments_summary")
 OUTPUT_DIR  = Path("results2/underlying_hypotheses")

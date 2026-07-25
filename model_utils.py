@@ -58,15 +58,17 @@ OPENROUTER_OPENAI_BASE_URL = "https://openrouter.ai/api/v1"
 # ---------------------------------------------------------------------------
 
 MODELS = [
+    # -- VERIFY these three against openrouter.ai/models before a real run --
     "anthropic/claude-haiku-4.5",
     "anthropic/claude-sonnet-4.5",
     "anthropic/claude-sonnet-4.6",
+    # -- VERIFY these three too; OpenRouter may or may not keep the date suffix --
     "openai/gpt-5-nano",
     "openai/gpt-5-mini",
     "openai/gpt-5",
     "google/gemini-3.1-pro-preview",
     "google/gemini-3.1-flash-lite",
-    "google/gemma-4-31b-it",
+    "google/gemma-4-31b-it:free",
     "moonshotai/kimi-k3",
     "moonshotai/kimi-k2.6",
     "moonshotai/kimi-k2.7-code",
@@ -130,7 +132,13 @@ class AnthropicCachedModel(BaseModel):
                 ],
             }],
         )
-        return response.content[0].text.strip()
+        content = response.content[0].text.strip()
+        if not content:
+            raise RuntimeError(
+                f"Empty content from {self._model_id} "
+                f"(stop_reason={response.stop_reason!r})."
+            )
+        return content
 
 
 # ---------------------------------------------------------------------------
@@ -155,9 +163,44 @@ class OpenRouterModel(BaseModel):
                 {"role": "system", "content": system},
                 {"role": "user", "content": f"{static_text}\n\n{user_instruction}"},
             ],
+            # Some models on OpenRouter (e.g. Kimi K2.6/K2.7, and reasoning
+            # models generally) can spend invisible "thinking" tokens out of
+            # the SAME max_tokens budget as the visible answer -- like a
+            # student who uses all their exam time on scratch paper and
+            # never writes the final answer in the box. If a hard prompt
+            # makes the model think longer than usual, the whole budget can
+            # get consumed before any answer text is written, and you get
+            # back a technically-successful response with empty content
+            # and finish_reason="length" -- no exception, nothing for the
+            # caller's try/except to catch.
+            #
+            # Since this pipeline only needs one short declarative sentence,
+            # there's no upside to letting the model reason at all here, so
+            # we disable it outright rather than just raising max_tokens
+            # (which wouldn't guarantee a fix -- reasoning length isn't
+            # reliably bounded). "All models support this parameter" per
+            # OpenRouter's docs; models that don't reason at all simply
+            # ignore it.
+            extra_body={"reasoning": {"enabled": False}},
         )
-        content = response.choices[0].message.content or ""
-        return content.strip()
+
+        choice = response.choices[0]
+        content = (choice.message.content or "").strip()
+
+        if not content:
+            # Fail loudly instead of silently returning "" -- an empty
+            # string looks exactly like a normal (if useless) sample once
+            # it's sitting in the output JSON, with no trace of what went
+            # wrong. Raising here means sample_model's existing try/except
+            # catches it and records "ERROR: ..." instead, so failures are
+            # visible in both the logs and the output file.
+            raise RuntimeError(
+                f"Empty content from {self._model_id} "
+                f"(finish_reason={choice.finish_reason!r}). "
+                f"Likely reasoning-token budget exhaustion or a provider-side issue."
+            )
+
+        return content
 
 
 # ---------------------------------------------------------------------------

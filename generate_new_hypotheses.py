@@ -18,10 +18,10 @@ from model_utils import BaseModel, build_all_models
 # ---------------------------------------------------------------------------
 
 N_SAMPLES = 10
-SLEEP_BETWEEN_CALLS = 0.2
+SLEEP_BETWEEN_CALLS = 0.01
 
-TRAIN_DIR  = Path("data/train")
-OUTPUT_DIR = Path("results/new_hypotheses")
+TRAIN_DIR  = Path("data2/processed")
+OUTPUT_DIR = Path("results2/new_hypotheses")
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -58,7 +58,23 @@ log = logging.getLogger(__name__)
 
 def extract_paper_text(data: dict) -> str:
     title = data.get("title", "")
-    abstract = " ".join(b["text"] for b in data.get("pdf_parse", {}).get("abstract", []))
+
+    # Current schema (data/train, produced by xml_to_json.py) stores the
+    # abstract as a plain STRING at the top level, under "abstract_text" --
+    # not nested inside pdf_parse at all. Reading pdf_parse.get("abstract")
+    # silently returns nothing for every file in this format (no error,
+    # no warning -- the abstract just vanishes from the prompt).
+    abstract = data.get("abstract_text", "")
+
+    if not abstract:
+        # Fallback for the older PDF-derived S2ORC-style format, in case
+        # any files in that shape end up in this folder too: there,
+        # abstract was a top-level list of paragraph dicts (still not
+        # nested inside pdf_parse).
+        abstract = " ".join(
+            b.get("text", "") for b in data.get("abstract", [])
+        )
+
     body = "\n\n".join(b["text"] for b in data.get("pdf_parse", {}).get("body_text", []))
     return f"Title: {title}\n\nAbstract: {abstract}\n\n{body}"
 
@@ -93,6 +109,8 @@ def process_paper(models: dict[str, BaseModel], paper_path: Path) -> dict:
 
     with open(paper_path) as f:
         paper_text = extract_paper_text(json.load(f))
+
+    print(paper_text)
 
     result: dict = {}
     if output_path.exists():
@@ -132,6 +150,7 @@ def main() -> None:
         log.info("[%d/%d] %s", i, len(paper_files), paper_path.stem)
         try:
             process_paper(models, paper_path)
+            break
             success += 1
         except Exception as exc:
             log.error("Failed %s: %s", paper_path.stem, exc)
