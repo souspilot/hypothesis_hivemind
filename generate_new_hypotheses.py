@@ -23,6 +23,12 @@ SLEEP_BETWEEN_CALLS = 0.01
 TRAIN_DIR  = Path("data2/processed")
 OUTPUT_DIR = Path("results2/new_hypotheses")
 
+# Paper IDs (one per line) to skip entirely -- never sent to any model,
+# never written to the output file. See plos_skip.txt for the current list
+# and why: certain papers' text reliably trips a provider content filter
+# for the Claude models, and retrying doesn't change that outcome.
+SKIP_LIST_PATH = Path("plos_skip.txt")
+
 # ---------------------------------------------------------------------------
 # Prompt
 # ---------------------------------------------------------------------------
@@ -62,6 +68,21 @@ def _is_valid(sample: str) -> bool:
     raises an exception. Neither is a usable hypothesis."""
     text = str(sample)
     return text != "" and not text.startswith("ERROR:")
+
+
+def _load_skip_ids(path: Path) -> set[str]:
+    """Paper IDs to skip entirely, one per line (blank lines ignored).
+    Matches paper_path.stem, e.g. 'journal.pbio.3003761' -- not the
+    filename with its .json extension."""
+    if not path.exists():
+        return set()
+    ids = {line.strip() for line in path.read_text().splitlines() if line.strip()}
+    if ids:
+        log.info("Loaded %d paper ID(s) to skip from %s", len(ids), path)
+    return ids
+
+
+SKIP_IDS = _load_skip_ids(SKIP_LIST_PATH)
 
 # ---------------------------------------------------------------------------
 # Paper text extraction
@@ -115,9 +136,13 @@ def sample_model(model: BaseModel, model_id: str, paper_text: str, n_needed: int
 # Per-paper processing
 # ---------------------------------------------------------------------------
 
-def process_paper(models: dict[str, BaseModel], paper_path: Path) -> dict:
+def process_paper(models: dict[str, BaseModel], paper_path: Path) -> dict | None:
     paper_id = paper_path.stem
     output_path = OUTPUT_DIR / f"{paper_id}.json"
+
+    if paper_id in SKIP_IDS:
+        log.info("Skipping %s — listed in %s", paper_id, SKIP_LIST_PATH)
+        return None
 
     with open(paper_path) as f:
         paper_text = extract_paper_text(json.load(f))
@@ -161,17 +186,18 @@ def main() -> None:
         len(paper_files) * len(models) * N_SAMPLES,
     )
 
-    success = errors = 0
+    success = skipped = errors = 0
     for i, paper_path in enumerate(paper_files, 1):
         log.info("[%d/%d] %s", i, len(paper_files), paper_path.stem)
         try:
-            process_paper(models, paper_path)
-            success += 1
+            result = process_paper(models, paper_path)
+            success += 1 if result else 0
+            skipped += 0 if result else 1
         except Exception as exc:
             log.error("Failed %s: %s", paper_path.stem, exc)
             errors += 1
 
-    log.info("Done — %d processed, %d errors", success, errors)
+    log.info("Done — %d processed, %d skipped, %d errors", success, skipped, errors)
 
 
 if __name__ == "__main__":
