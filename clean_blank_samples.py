@@ -17,6 +17,10 @@ string), matching exactly what sample_model writes on a failed call --
 this avoids ever mistaking a genuine hypothesis that happens to mention
 error rates, error bars, etc. for a failed sample.
 
+Note: papers listed in plos_skip.txt are never sent to any model in the
+first place (see generate_hypotheses.py / generate_new_hypotheses.py), so
+their output files are untouched by both the generator and this cleaner.
+
 Usage:
     python clean_blank_samples.py results/new_hypotheses
     python clean_blank_samples.py results2/new_hypotheses
