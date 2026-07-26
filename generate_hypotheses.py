@@ -54,6 +54,14 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _is_valid(sample: str) -> bool:
+    """An 'ERROR: ...' entry is a failed call, not a usable hypothesis."""
+    return not str(sample).startswith("ERROR:")
+
+# ---------------------------------------------------------------------------
 # Inference
 # ---------------------------------------------------------------------------
 
@@ -61,15 +69,16 @@ def get_hypothesis(model: BaseModel, experiments_summary: str) -> str:
     return model.generate(SYSTEM_PROMPT, experiments_summary, USER_INSTRUCTION)
 
 
-def sample_model(model: BaseModel, model_id: str, experiments_summary: str) -> list[str]:
+def sample_model(model: BaseModel, model_id: str, experiments_summary: str, n_needed: int) -> list[str]:
+    """Generate exactly n_needed new samples (the shortfall, not a full fresh batch)."""
     samples = []
-    for i in range(N_SAMPLES):
+    for i in range(n_needed):
         try:
             text = get_hypothesis(model, experiments_summary)
             samples.append(text)
-            log.info("    [%d/%d] %s", i + 1, N_SAMPLES, text[:90])
+            log.info("    [%d/%d] %s", i + 1, n_needed, text[:90])
         except Exception as exc:
-            log.error("    [%d/%d] ERROR: %s", i + 1, N_SAMPLES, exc)
+            log.error("    [%d/%d] ERROR: %s", i + 1, n_needed, exc)
             samples.append(f"ERROR: {exc}")
         time.sleep(SLEEP_BETWEEN_CALLS)
     return samples
@@ -97,12 +106,18 @@ def process_summary(models: dict[str, BaseModel], summary_path: Path) -> dict | 
             result = json.load(f)
 
     for model_id, model in models.items():
-        if len(result.get(model_id, [])) >= N_SAMPLES:
-            log.info("  [skip] %s already has %d samples", model_id, N_SAMPLES)
+        existing = result.get(model_id, [])
+        valid = [s for s in existing if _is_valid(s)]
+        n_needed = N_SAMPLES - len(valid)
+
+        if n_needed <= 0:
+            log.info("  [skip] %s already has %d valid samples", model_id, len(valid))
+            result[model_id] = valid[:N_SAMPLES]
             continue
 
-        log.info("  %s (%d samples)...", model_id, N_SAMPLES)
-        result[model_id] = sample_model(model, model_id, experiments_summary)
+        log.info("  %s has %d valid samples, topping up %d more...", model_id, len(valid), n_needed)
+        new_samples = sample_model(model, model_id, experiments_summary, n_needed)
+        result[model_id] = valid + new_samples
 
         with open(output_path, "w") as f:
             json.dump(result, f, indent=2)
@@ -119,7 +134,7 @@ def main() -> None:
 
     summary_files = sorted(SUMMARY_DIR.glob("*.json"))
     log.info(
-        "Found %d summaries | %d models | %d samples → ~%d API calls",
+        "Found %d summaries | %d models | %d samples → up to ~%d API calls",
         len(summary_files), len(models), N_SAMPLES,
         len(summary_files) * len(models) * N_SAMPLES,
     )
