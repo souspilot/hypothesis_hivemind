@@ -3,6 +3,9 @@ __pycache__/*
 data/*
 data2/*
 embeddings/*
+embeddings2/*
 plots/*
+plots2/*
 results/*
+results2/*
 data.ipynb
