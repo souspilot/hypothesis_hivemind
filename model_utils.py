@@ -58,11 +58,9 @@ OPENROUTER_OPENAI_BASE_URL = "https://openrouter.ai/api/v1"
 # ---------------------------------------------------------------------------
 
 MODELS = [
-    # -- VERIFY these three against openrouter.ai/models before a real run --
     "anthropic/claude-haiku-4.5",
     "anthropic/claude-sonnet-4.5",
     "anthropic/claude-sonnet-4.6",
-    # -- VERIFY these three too; OpenRouter may or may not keep the date suffix --
     "openai/gpt-5-nano",
     "openai/gpt-5-mini",
     "openai/gpt-5",
@@ -132,6 +130,25 @@ class AnthropicCachedModel(BaseModel):
                 ],
             }],
         )
+
+        # Guard added: previously this went straight to
+        # response.content[0].text, which assumes the SDK call always
+        # comes back with a normal Anthropic message shape. It doesn't
+        # always -- OpenRouter's Anthropic Skin can return HTTP 200 with
+        # response.content set to None instead of raising an SDK-level
+        # error, which crashed here with a bare "'NoneType' object is
+        # not subscriptable" and no way to tell what actually went wrong.
+        # This surfaces the raw response instead, so the next failure
+        # tells you something diagnosable (rate limit, provider routing
+        # issue, a field OpenRouter's proxy dropped, etc.) rather than
+        # just "NoneType".
+        if not response.content:
+            raise RuntimeError(
+                f"No content block from {self._model_id} "
+                f"(stop_reason={getattr(response, 'stop_reason', None)!r}, "
+                f"raw_response={response!r})"
+            )
+
         content = response.content[0].text.strip()
         if not content:
             raise RuntimeError(
