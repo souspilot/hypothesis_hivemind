@@ -5,7 +5,6 @@ Usage:
   python visualize_similarity.py                        # all result types
   python visualize_similarity.py underlying_hypotheses  # one type
   python visualize_similarity.py new_hypotheses
-  python visualize_similarity.py testing_plans
 
 Pipeline per result type:
   1. results/<type>/*.json  →  embed with text-embedding-3-small
@@ -33,7 +32,7 @@ from langchain_openai import OpenAIEmbeddings
 # Config
 # ---------------------------------------------------------------------------
 
-ALL_RESULT_TYPES = ["underlying_hypotheses", "new_hypotheses", "testing_plans"]
+ALL_RESULT_TYPES = ["underlying_hypotheses", "new_hypotheses"]
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 SIMILARITY_BINS = np.arange(0.0, 1.01, 0.1)
