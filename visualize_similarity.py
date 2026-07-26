@@ -35,7 +35,7 @@ load_dotenv()
 # Config
 # ---------------------------------------------------------------------------
 
-ALL_RESULT_TYPES = ["underlying_hypotheses"]#, "new_hypotheses"]
+ALL_RESULT_TYPES = ["new_hypotheses"]#, "new_hypotheses"]
 
 # Routed through OpenRouter's embeddings endpoint (same OPENAI_API-compatible
 # shape as model_utils.py's OpenRouterModel, just a different dedicated
