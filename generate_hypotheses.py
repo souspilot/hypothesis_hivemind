@@ -58,8 +58,11 @@ log = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 def _is_valid(sample: str) -> bool:
-    """An 'ERROR: ...' entry is a failed call, not a usable hypothesis."""
-    return not str(sample).startswith("ERROR:")
+    """A sample is invalid if it's blank (empty-string generation) or if
+    it's one of the literal 'ERROR: ...' strings written when a call
+    raises an exception. Neither is a usable hypothesis."""
+    text = str(sample)
+    return text != "" and not text.startswith("ERROR:")
 
 # ---------------------------------------------------------------------------
 # Inference
