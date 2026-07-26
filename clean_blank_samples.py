@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """
-Removes model entries containing blank ("") samples OR error samples
-(text containing "ERROR", matching the "ERROR: {exc}" strings written by
-sample_model's except block) from existing hypothesis-generation output
-files, so the next run of the main script regenerates ONLY those
-model/paper combinations -- not the whole file.
+Strips blank ("") and error ("ERROR: {exc}") samples out of existing
+hypothesis-generation output files, in place, leaving the good samples
+where they are.
 
-Relies on the existing skip logic in generate_hypotheses.py /
-generate_new_hypotheses.py: `if len(result.get(model_id, [])) >= N_SAMPLES:
-skip`. Deleting a model_id key entirely (rather than leaving a partial,
-contaminated list) makes that check correctly see it as "not done yet",
-so a re-run regenerates a full fresh set of N_SAMPLES for just that model
--- papers/models that already came back clean are left alone.
+This relies on the TOP-UP resume logic in generate_hypotheses.py /
+generate_new_hypotheses.py: for each model_id, it counts how many valid
+samples remain and generates only the shortfall (N_SAMPLES - len(valid)),
+appending rather than overwriting. So this script's only job is to remove
+the bad entries -- it does NOT need to delete the whole model_id key to
+force a full regeneration; that would throw away good samples along with
+the bad ones and cost extra API calls for no reason.
+
+"ERROR:" is matched as an exact prefix (not "ERROR" anywhere in the
+string), matching exactly what sample_model writes on a failed call --
+this avoids ever mistaking a genuine hypothesis that happens to mention
+error rates, error bars, etc. for a failed sample.
 
 Usage:
     python clean_blank_samples.py results/new_hypotheses
@@ -25,31 +29,27 @@ from pathlib import Path
 
 
 def is_bad_sample(sample: str) -> bool:
-    """A sample is bad if it's blank, or if it's one of the literal
-    "ERROR: ..." strings sample_model writes when a call raises an
-    exception. "ERROR" is matched case-sensitively (all caps only) so
-    this doesn't accidentally match a genuine hypothesis that happens to
-    discuss error rates, error bars, etc. in lowercase or mixed case."""
-    return sample == "" or "ERROR" in sample
+    text = str(sample)
+    return text == "" or text.startswith("ERROR:")
 
 
 def clean_file(path: Path) -> dict[str, dict[str, int]]:
     data = json.loads(path.read_text())
-    removed = {}
+    changed: dict[str, dict[str, int]] = {}
 
-    for model_id in list(data.keys()):
-        samples = data[model_id]
-        blank_count = sum(1 for s in samples if s == "")
-        error_count = sum(1 for s in samples if s != "" and "ERROR" in s)
+    for model_id, samples in data.items():
+        kept = [s for s in samples if not is_bad_sample(s)]
+        removed = len(samples) - len(kept)
+        if removed:
+            blank_count = sum(1 for s in samples if s == "")
+            error_count = removed - blank_count
+            changed[model_id] = {"blank": blank_count, "error": error_count, "kept": len(kept)}
+            data[model_id] = kept  # strip bad entries; keep the good ones in place
 
-        if blank_count > 0 or error_count > 0:
-            removed[model_id] = {"blank": blank_count, "error": error_count}
-            del data[model_id]
-
-    if removed:
+    if changed:
         path.write_text(json.dumps(data, indent=2))
 
-    return removed
+    return changed
 
 
 def main():
@@ -62,14 +62,17 @@ def main():
     print(f"Scanning {len(files)} files in {results_dir}/\n")
 
     total_files_affected = 0
+    total_removed = 0
     for path in files:
-        removed = clean_file(path)
-        if removed:
+        changed = clean_file(path)
+        if changed:
             total_files_affected += 1
-            print(f"{path.name}: cleared {removed}")
+            removed_here = sum(v["blank"] + v["error"] for v in changed.values())
+            total_removed += removed_here
+            print(f"{path.name}: stripped {removed_here} bad samples across {len(changed)} model(s) -- {changed}")
 
-    print(f"\nDone. {total_files_affected}/{len(files)} files had blank/error entries removed.")
-    print("Re-run the main generation script to regenerate just those model/paper combos.")
+    print(f"\nDone. {total_files_affected}/{len(files)} files touched, {total_removed} bad samples stripped.")
+    print("Re-run the main generation script -- it will top up only the missing samples per model.")
 
 
 if __name__ == "__main__":
