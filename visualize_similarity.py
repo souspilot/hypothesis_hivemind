@@ -29,6 +29,8 @@ from collections import defaultdict
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 
+load_dotenv()
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
