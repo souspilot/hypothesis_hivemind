@@ -15,6 +15,7 @@ Pipeline per result type:
 
 import json
 import logging
+import os
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -32,9 +33,29 @@ from langchain_openai import OpenAIEmbeddings
 # Config
 # ---------------------------------------------------------------------------
 
-ALL_RESULT_TYPES = ["underlying_hypotheses", "new_hypotheses"]
+ALL_RESULT_TYPES = ["underlying_hypotheses"]#, "new_hypotheses"]
 
-EMBEDDING_MODEL = "text-embedding-3-small"
+# Routed through OpenRouter's embeddings endpoint (same OPENAI_API-compatible
+# shape as model_utils.py's OpenRouterModel, just a different dedicated
+# endpoint: /embeddings instead of /chat/completions). This is still
+# literally OpenAI's text-embedding-3-small on the backend -- OpenRouter is
+# just the single billing/key funnel -- so vectors are numerically identical
+# to calling OpenAI directly. Safe to mix with any embeddings/*.json files
+# already cached from a prior direct-OpenAI run.
+#
+# Model slug needs the provider prefix, same convention as the chat models
+# in model_utils.py ("anthropic/claude-sonnet-4.6", "openai/gpt-5", etc.) --
+# bare "text-embedding-3-small" will 400 on OpenRouter's endpoint.
+EMBEDDING_MODEL = "openai/text-embedding-3-small"
+OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+
+# Paper IDs to never embed, matching the generation scripts' skip list --
+# these files may still exist on disk from before the skip list existed,
+# with leftover ERROR: entries mixed into otherwise-valid samples. See
+# plos_skip.txt for the current list.
+SKIP_LIST_PATH = Path("plos_skip.txt")
+
 SIMILARITY_BINS = np.arange(0.0, 1.01, 0.1)
 
 # ---------------------------------------------------------------------------
@@ -42,9 +63,14 @@ SIMILARITY_BINS = np.arange(0.0, 1.01, 0.1)
 # ---------------------------------------------------------------------------
 
 def get_paths(result_type: str) -> tuple[Path, Path, Path]:
-    results_dir    = Path(f"results/{result_type}")
-    embeddings_dir = Path(f"embeddings/{result_type}")
-    heatmap_dir    = Path(f"plots/{result_type}")
+    # NOTE: matches generate_hypotheses.py / generate_new_hypotheses.py's
+    # OUTPUT_DIR, which is "results2/...", not "results/...". Previously
+    # this pointed at "results/" -- a folder nothing else in this project
+    # writes to -- so this script would silently find zero files and
+    # produce no heatmaps, with no error to explain why.
+    results_dir    = Path(f"results2/{result_type}")
+    embeddings_dir = Path(f"embeddings2/{result_type}")
+    heatmap_dir    = Path(f"plots2/{result_type}")
     return results_dir, embeddings_dir, heatmap_dir
 
 # ---------------------------------------------------------------------------
@@ -59,12 +85,43 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
+# Skip list / sample validity
+# ---------------------------------------------------------------------------
+
+def _load_skip_ids(path: Path) -> set[str]:
+    """Paper IDs to skip entirely, one per line (blank lines ignored)."""
+    if not path.exists():
+        return set()
+    ids = {line.strip() for line in path.read_text().splitlines() if line.strip()}
+    if ids:
+        log.info("Loaded %d paper ID(s) to skip from %s", len(ids), path)
+    return ids
+
+
+SKIP_IDS = _load_skip_ids(SKIP_LIST_PATH)
+
+
+def _is_valid(sample: str) -> bool:
+    """Matches generate_hypotheses.py's definition: blank or 'ERROR: ...'
+    entries aren't real hypotheses and shouldn't be embedded as if they
+    were -- an unfiltered ERROR string still gets a real embedding vector,
+    and if the same error text repeats across samples (it usually does),
+    those identical vectors read as a spike of near-1.0 self-similarity --
+    a measurement artifact, not a signal about the model's behavior."""
+    text = str(sample)
+    return text != "" and not text.startswith("ERROR:")
+
+# ---------------------------------------------------------------------------
 # Embedding
 # ---------------------------------------------------------------------------
 
 def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir: Path) -> None:
     """Embed all hypothesis outputs and cache per-paper to embeddings_dir."""
     for path in sorted(results_dir.glob("*.json")):
+        if path.stem in SKIP_IDS:
+            log.info("[skip] %s — listed in %s", path.stem, SKIP_LIST_PATH)
+            continue
+
         out_path = embeddings_dir / path.name
         if out_path.exists():
             log.info("[skip] embeddings exist: %s", path.stem)
@@ -75,8 +132,20 @@ def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir:
 
         embeddings_map: dict[str, list] = {}
         for model_id, responses in data.items():
-            log.info("  Embedding %s / %s (%d responses)", path.stem, model_id, len(responses))
-            embeddings_map[model_id] = model.embed_documents(responses)
+            valid_responses = [r for r in responses if _is_valid(r)]
+            n_dropped = len(responses) - len(valid_responses)
+            if n_dropped:
+                log.warning(
+                    "  %s / %s: dropping %d blank/ERROR entr%s before embedding",
+                    path.stem, model_id, n_dropped, "y" if n_dropped == 1 else "ies",
+                )
+
+            if not valid_responses:
+                embeddings_map[model_id] = []
+                continue
+
+            log.info("  Embedding %s / %s (%d responses)", path.stem, model_id, len(valid_responses))
+            embeddings_map[model_id] = model.embed_documents(valid_responses)
 
         with open(out_path, "w") as f:
             json.dump(embeddings_map, f)
@@ -257,7 +326,11 @@ def main() -> None:
     result_types = [rt for rt in result_types if rt in ALL_RESULT_TYPES or
                     (log.error("Unknown result type '%s'. Choose from: %s", rt, ALL_RESULT_TYPES) or False)]
 
-    embedding_model = OpenAIEmbeddings(model=EMBEDDING_MODEL)
+    embedding_model = OpenAIEmbeddings(
+        model=EMBEDDING_MODEL,
+        api_key=OPENROUTER_API_KEY,
+        base_url=OPENROUTER_BASE_URL,
+    )
 
     # Step 1 — embed all result types in parallel (I/O bound API calls)
     completed = []
