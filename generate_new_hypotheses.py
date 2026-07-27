@@ -20,8 +20,8 @@ from model_utils import BaseModel, build_all_models
 N_SAMPLES = 10
 SLEEP_BETWEEN_CALLS = 0.01
 
-TRAIN_DIR  = Path("data2/processed")
-OUTPUT_DIR = Path("results2/new_hypotheses")
+TRAIN_DIR  = Path("data/processed")
+OUTPUT_DIR = Path("results/new_hypotheses")
 
 # Paper IDs (one per line) to skip entirely -- never sent to any model,
 # never written to the output file. See plos_skip.txt for the current list

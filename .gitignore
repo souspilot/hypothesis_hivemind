@@ -9,3 +9,4 @@ plots2/*
 results/*
 results2/*
 data.ipynb
+*.log
