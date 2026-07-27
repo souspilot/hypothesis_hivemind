@@ -33,9 +33,23 @@ def clean_file(path: Path) -> dict[str, int]:
 
     for model_id in list(data.keys()):
         samples = data[model_id]
-        bad_count = sum(1 for s in samples if not is_valid(s))
-        if bad_count > 0:
-            removed[model_id] = bad_count
+        valid = [s for s in samples if is_valid(s)]
+        bad_count = len(samples) - len(valid)
+
+        if bad_count == 0:
+            continue
+
+        removed[model_id] = bad_count
+        if valid:
+            # Keep the good samples -- only the invalid ones are stripped
+            # out. The generation engine's own top-up logic will then see
+            # a shorter-than-N_SAMPLES list and regenerate just the
+            # shortfall, not all of them from scratch.
+            data[model_id] = valid
+        else:
+            # Every sample for this model was invalid -- nothing worth
+            # keeping, so drop the key entirely (same end result as
+            # before for this specific case).
             del data[model_id]
 
     if removed:
