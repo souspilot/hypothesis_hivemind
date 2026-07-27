@@ -1,15 +1,27 @@
 """
 Generate novel hypotheses from full paper context.
 
-Input:  data/train/<paper_id>.json
-Output: results/new_hypotheses/<paper_id>.json
+Input:  data{suffix}/train/<paper_id>.json
+Output: results{suffix}/new_hypotheses/<paper_id>.json
         { "<model_id>": ["hypothesis_1", ..., "hypothesis_N"], ... }
+
+Two data sources exist side by side -- data/ (native-format papers) and
+data2/ (XML-converted papers) -- each with its own mirrored results{,2}/
+tree. Use --source to pick one, or omit it to process both in one run:
+
+  python generate_new_hypotheses.py             # both data/ and data2/
+  python generate_new_hypotheses.py --source 1  # just data/  -> results/
+  python generate_new_hypotheses.py --source 2  # just data2/ -> results2/
 """
 
+import argparse
+import logging
 from pathlib import Path
 
 from model_utils import build_all_models
 from hypothesis_engine import run_batch
+
+log = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
 # Config
@@ -18,8 +30,9 @@ from hypothesis_engine import run_batch
 N_SAMPLES = 10
 MAX_WORKERS = 24
 
-TRAIN_DIR  = Path("data/train")
-OUTPUT_DIR = Path("results/new_hypotheses")
+# Maps --source values to the directory suffix: data/ has no suffix,
+# data2/ has "2".
+SOURCE_SUFFIXES = {"1": "", "2": "2"}
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -49,8 +62,8 @@ def extract_text(data: dict) -> str:
     # Three schema shapes have shown up across this project's data sources,
     # so we check each in order rather than assuming just one:
     #
-    # 1. Current schema (data/train, from xml_to_json.py): a plain STRING
-    #    at the top level, under "abstract_text".
+    # 1. Current schema (data{suffix}/train, from xml_to_json.py): a plain
+    #    STRING at the top level, under "abstract_text".
     # 2. Old S2ORC-style schema: a plain STRING at the top level, under
     #    "abstract" directly -- already exactly what we want, no
     #    reconstruction needed.
@@ -78,19 +91,34 @@ def extract_text(data: dict) -> str:
 # Main
 # ---------------------------------------------------------------------------
 
+def paths_for_suffix(suffix: str) -> tuple[Path, Path]:
+    return Path(f"data{suffix}/train"), Path(f"results{suffix}/new_hypotheses")
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--source", choices=sorted(SOURCE_SUFFIXES), default=None,
+        help="1 = data/ (native format), 2 = data2/ (XML-converted). Default: both.",
+    )
+    args = parser.parse_args()
+    suffixes = [SOURCE_SUFFIXES[args.source]] if args.source else list(SOURCE_SUFFIXES.values())
+
     models = build_all_models()
 
-    run_batch(
-        models=models,
-        input_dir=TRAIN_DIR,
-        output_dir=OUTPUT_DIR,
-        extract_text=extract_text,
-        system_prompt=SYSTEM_PROMPT,
-        user_instruction=USER_INSTRUCTION,
-        n_samples=N_SAMPLES,
-        max_workers=MAX_WORKERS,
-    )
+    for suffix in suffixes:
+        train_dir, output_dir = paths_for_suffix(suffix)
+        log.info("=== Source: data%s/ → results%s/ ===", suffix, suffix)
+        run_batch(
+            models=models,
+            input_dir=train_dir,
+            output_dir=output_dir,
+            extract_text=extract_text,
+            system_prompt=SYSTEM_PROMPT,
+            user_instruction=USER_INSTRUCTION,
+            n_samples=N_SAMPLES,
+            max_workers=MAX_WORKERS,
+        )
 
 
 if __name__ == "__main__":
