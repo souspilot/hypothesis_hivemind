@@ -121,28 +121,46 @@ SKIP_IDS = load_skip_ids(SKIP_LIST_PATH)
 # ---------------------------------------------------------------------------
 
 def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir: Path) -> None:
-    """Embed all hypothesis outputs and cache per-paper to embeddings_dir."""
+    """Embed all hypothesis outputs and cache per-paper to embeddings_dir.
+
+    Cache freshness is checked per MODEL, not per file. Previously this
+    skipped a paper entirely if its embeddings file already existed --
+    which meant a paper embedded back when the model roster had 6 entries
+    stayed frozen at those 6 forever, even after generate_new_hypotheses.py
+    later added results for 6 more models to the same paper. The newer
+    models would then be silently absent from every heatmap with no
+    error, since nothing ever re-checked whether the cache still matched
+    the current model roster.
+
+    Known limitation: this only detects a model key being entirely ABSENT
+    from the cache. It does not detect a model's sample count changing
+    (e.g. topped up from 9 valid samples to 10) -- that would need
+    comparing cached vector counts against current valid-sample counts,
+    which isn't implemented here. In practice this hasn't come up yet,
+    but if you start topping up samples for a model that's already been
+    through this pipeline once, its embeddings won't reflect the new
+    samples until you delete that entry from the cache file by hand.
+    """
     pending_paths = []
     for path in sorted(results_dir.glob("*.json")):
         if path.stem in SKIP_IDS:
             log.info("[skip] %s — listed in %s", path.stem, SKIP_LIST_PATH)
             continue
-        out_path = embeddings_dir / path.name
-        if out_path.exists():
-            log.info("[skip] embeddings exist: %s", path.stem)
-            continue
         pending_paths.append(path)
 
     if not pending_paths:
-        log.info("Nothing new to embed in %s", results_dir)
+        log.info("Nothing to embed in %s", results_dir)
         return
 
     # results_by_paper accumulates each paper's {model_id: [vectors]} as
-    # tasks complete; paper_lock guards it and the per-paper output-file
-    # write, since multiple worker threads finish at arbitrary times and
-    # may belong to different papers or the same one.
+    # tasks complete -- seeded from whatever's already cached, so existing
+    # embeddings are preserved rather than recomputed. paper_lock guards
+    # it and the per-paper output-file write, since multiple worker
+    # threads finish at arbitrary times and may belong to different
+    # papers or the same one.
     results_by_paper: dict[Path, dict[str, list]] = {}
     pending_model_counts: dict[Path, int] = {}
+    paper_changed: dict[Path, bool] = {}
     paper_lock = threading.Lock()
 
     tasks: list[tuple[Path, str, list[str]]] = []
@@ -150,10 +168,20 @@ def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir:
         with open(path) as f:
             data: dict[str, list[str]] = json.load(f)
 
-        results_by_paper[path] = {}
+        out_path = embeddings_dir / path.name
+        cached: dict[str, list] = {}
+        if out_path.exists():
+            with open(out_path) as f:
+                cached = json.load(f)
+
+        results_by_paper[path] = dict(cached)  # start from what's already cached
+        paper_changed[path] = False
         n_models_needing_call = 0
 
         for model_id, responses in data.items():
+            if model_id in cached:
+                continue  # already embedded in a prior run -- leave as-is
+
             valid_responses = [r for r in responses if is_valid(r)]
             n_dropped = len(responses) - len(valid_responses)
             if n_dropped:
@@ -165,20 +193,21 @@ def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir:
             if not valid_responses:
                 # No API call needed -- record the empty result directly.
                 results_by_paper[path][model_id] = []
+                paper_changed[path] = True
                 continue
 
             n_models_needing_call += 1
             tasks.append((path, model_id, valid_responses))
 
         pending_model_counts[path] = n_models_needing_call
-        if n_models_needing_call == 0:
-            # Every model for this paper had zero valid responses --
-            # nothing to dispatch, so save immediately rather than waiting
-            # for a completion event that will never come.
+        if n_models_needing_call == 0 and paper_changed[path]:
+            # New empty-list model(s) recorded but nothing needed an API
+            # call -- save now rather than waiting for a completion event
+            # that will never come.
             _save_paper_embeddings(embeddings_dir, path, results_by_paper[path])
 
     if not tasks:
-        log.info("Embeddings ready in %s (nothing needed an API call)", embeddings_dir)
+        log.info("Embeddings already up to date in %s (no new models to embed)", embeddings_dir)
         return
 
     log.info("  Dispatching %d embedding calls across up to %d workers...", len(tasks), EMBEDDING_MAX_WORKERS)
