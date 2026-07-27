@@ -145,6 +145,18 @@ def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir:
     for path in sorted(results_dir.glob("*.json")):
         if path.stem in SKIP_IDS:
             log.info("[skip] %s — listed in %s", path.stem, SKIP_LIST_PATH)
+            # Purge any stale cached embeddings for this paper. Without
+            # this, a paper embedded BEFORE being added to plos_skip.txt
+            # keeps its old embeddings file sitting in embeddings_dir
+            # forever -- build_embeddings only ever looks at results_dir
+            # to decide what to do, so a file it never touches again just
+            # stays there, silently feeding every heatmap computed from
+            # this directory. Skipping future work isn't the same as
+            # removing past work.
+            stale_cache = embeddings_dir / path.name
+            if stale_cache.exists():
+                stale_cache.unlink()
+                log.info("       also removed stale cached embeddings: %s", stale_cache)
             continue
         pending_paths.append(path)
 
@@ -252,6 +264,11 @@ def compute_intra_model_similarities(embeddings_dir: Path) -> dict[str, list[flo
     """Return {model_id: [avg_pairwise_sim per paper]}."""
     model_to_sims: dict[str, list[float]] = defaultdict(list)
     for path in sorted(embeddings_dir.glob("*.json")):
+        if path.stem in SKIP_IDS:
+            # Defense in depth: build_embeddings purges stale caches for
+            # skip-listed papers, but this check means a heatmap is never
+            # wrong even if some other path leaves a file here.
+            continue
         with open(path) as f:
             data: dict[str, list] = json.load(f)
         for model_id, emb_list in data.items():
@@ -308,6 +325,48 @@ def plot_intra_model_heatmap(
     plt.close(fig)
     log.info("Saved intra-model heatmap → %s", save_path)
 
+def check_sample_count_consistency(results_dir: Path) -> None:
+    """Warn if models have unequal numbers of valid samples across papers.
+
+    The heatmap averages are only fairly comparable across models if every
+    model contributed the same number of samples per paper. A model that
+    ended up with, say, 6 valid samples for a paper (due to filtered
+    ERROR/blank/garbled entries -- see hypothesis_engine.is_valid) while
+    every other model has the full 10 is drawing its per-paper average
+    from a noisier, smaller sample than the rest. This doesn't necessarily
+    push the average in a particular direction, but it does mean that
+    model is no longer on equal footing when compared against the others
+    in the same heatmap -- worth knowing about before reading too much
+    into a difference between two models' numbers.
+    """
+    mismatches: dict[str, dict[str, int]] = {}
+    total_papers = 0
+    for path in sorted(results_dir.glob("*.json")):
+        if path.stem in SKIP_IDS:
+            continue
+        total_papers += 1
+        with open(path) as f:
+            data: dict[str, list] = json.load(f)
+        counts = {model_id: sum(1 for s in samples if is_valid(s)) for model_id, samples in data.items()}
+        if len(set(counts.values())) > 1:
+            mismatches[path.stem] = counts
+
+    if not mismatches:
+        log.info(
+            "  Sample-count check OK: every model has an equal valid-sample "
+            "count in all %d paper(s) in %s", total_papers, results_dir,
+        )
+        return
+
+    log.warning(
+        "  Sample-count MISMATCH in %d/%d paper(s) in %s -- heatmap averages "
+        "for affected models are drawn from unequal sample sizes there:",
+        len(mismatches), total_papers, results_dir,
+    )
+    for paper_id, counts in mismatches.items():
+        detail = ", ".join(f"{m}={c}" for m, c in sorted(counts.items()))
+        log.warning("    %s: %s", paper_id, detail)
+
 # ---------------------------------------------------------------------------
 # Inter-model similarity
 # ---------------------------------------------------------------------------
@@ -323,6 +382,9 @@ def compute_inter_model_matrix(embeddings_dir: Path) -> tuple[np.ndarray, list[s
     """Return (n_models × n_models similarity matrix, model name list)."""
     all_data: list[dict[str, list]] = []
     for path in sorted(embeddings_dir.glob("*.json")):
+        if path.stem in SKIP_IDS:
+            # Defense in depth -- see compute_intra_model_similarities.
+            continue
         with open(path) as f:
             all_data.append(json.load(f))
 
@@ -409,8 +471,11 @@ def build_embeddings_for(embedding_model: OpenAIEmbeddings, result_type: str, su
 
 
 def plot_for(result_type: str, suffix: str) -> None:
-    _, embeddings_dir, heatmap_dir = get_paths(result_type, suffix)
+    results_dir, embeddings_dir, heatmap_dir = get_paths(result_type, suffix)
     heatmap_dir.mkdir(parents=True, exist_ok=True)
+
+    log.info("=== [data%s/%s] Sample-count sanity check ===", suffix, result_type)
+    check_sample_count_consistency(results_dir)
 
     log.info("=== [data%s/%s] Intra-model heatmap ===", suffix, result_type)
     intra_sims = compute_intra_model_similarities(embeddings_dir)
