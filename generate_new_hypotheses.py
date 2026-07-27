@@ -19,7 +19,7 @@ import logging
 from pathlib import Path
 
 from model_utils import build_all_models
-from hypothesis_engine import run_batch
+from hypothesis_engine import run_batch, load_skip_ids
 
 log = logging.getLogger(__name__)
 
@@ -33,6 +33,14 @@ MAX_WORKERS = 24
 # Maps --source values to the directory suffix: data/ has no suffix,
 # data2/ has "2".
 SOURCE_SUFFIXES = {"1": "", "2": "2"}
+
+# Paper IDs (one per line) to skip entirely -- shared with
+# generate_hypotheses.py. Certain papers' text reliably trips a provider
+# content filter (seen in practice: anthropic/claude-sonnet-4.6 returning
+# "blocked by the provider's content filter" on every single sample,
+# never succeeding), and retrying doesn't change that outcome -- it just
+# burns API calls on a guaranteed failure every run. See plos_skip.txt.
+SKIP_LIST_PATH = Path("plos_skip.txt")
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -105,6 +113,7 @@ def main() -> None:
     suffixes = [SOURCE_SUFFIXES[args.source]] if args.source else list(SOURCE_SUFFIXES.values())
 
     models = build_all_models()
+    skip_ids = load_skip_ids(SKIP_LIST_PATH)
 
     for suffix in suffixes:
         train_dir, output_dir = paths_for_suffix(suffix)
@@ -116,6 +125,7 @@ def main() -> None:
             extract_text=extract_text,
             system_prompt=SYSTEM_PROMPT,
             user_instruction=USER_INSTRUCTION,
+            skip_ids=skip_ids,
             n_samples=N_SAMPLES,
             max_workers=MAX_WORKERS,
         )
