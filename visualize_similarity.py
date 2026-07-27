@@ -1,22 +1,29 @@
 """
 Compute embeddings and produce intra/inter-model similarity heatmaps.
 
-Usage:
-  python visualize_similarity.py                        # all result types
-  python visualize_similarity.py underlying_hypotheses  # one type
-  python visualize_similarity.py new_hypotheses
+Two data sources exist side by side -- data/ (native-format papers) and
+data2/ (XML-converted papers) -- each with its own mirrored results{,2}/
+tree, containing both underlying_hypotheses and new_hypotheses. Source and
+result type are independent choices; both default to "all" if omitted.
 
-Pipeline per result type:
-  1. results/<type>/*.json  →  embed with text-embedding-3-small
-  2. Save embeddings to embeddings/<type>/*.json
-  3. Intra-model heatmap  →  plots/<type>/intra_model.png
-  4. Inter-model heatmap  →  plots/<type>/inter_model.png
+Usage:
+  python visualize_similarity.py                                    # everything: both sources x both result types
+  python visualize_similarity.py --source 1                         # data/ only, both result types
+  python visualize_similarity.py underlying_hypotheses               # both sources, one result type
+  python visualize_similarity.py --source 2 new_hypotheses           # one source, one result type
+
+Pipeline per (source, result type) pair:
+  1. results{suffix}/<type>/*.json  →  embed with text-embedding-3-small
+  2. Save embeddings to embeddings{suffix}/<type>/*.json
+  3. Intra-model heatmap  →  plots{suffix}/<type>/intra_model.png
+  4. Inter-model heatmap  →  plots{suffix}/<type>/inter_model.png
 """
 
+import argparse
 import json
 import logging
 import os
-import sys
+import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -29,13 +36,22 @@ from collections import defaultdict
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 
+from hypothesis_engine import is_valid, load_skip_ids
+
 load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-ALL_RESULT_TYPES = ["new_hypotheses"]#, "new_hypotheses"]
+ALL_RESULT_TYPES = ["underlying_hypotheses", "new_hypotheses"]
+
+# Maps --source values to the directory suffix: data/results have no
+# suffix, data2/results2 have "2". Source and result type are independent
+# dimensions -- every combination of the two is a valid, real directory
+# (results/new_hypotheses, results/underlying_hypotheses,
+# results2/new_hypotheses, results2/underlying_hypotheses all exist).
+SOURCE_SUFFIXES = {"1": "", "2": "2"}
 
 # Routed through OpenRouter's embeddings endpoint (same OPENAI_API-compatible
 # shape as model_utils.py's OpenRouterModel, just a different dedicated
@@ -52,28 +68,20 @@ EMBEDDING_MODEL = "openai/text-embedding-3-small"
 OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
+# How many (paper, model) embedding calls run at once, per (source, result
+# type) pair. Embedding calls are individually fast, but sequential across
+# ~50 papers x ~12 models still adds up to hundreds of round-trips -- same
+# reasoning as MAX_WORKERS in generate_new_hypotheses.py.
+EMBEDDING_MAX_WORKERS = 16
+
 # Paper IDs to never embed, matching the generation scripts' skip list --
 # these files may still exist on disk from before the skip list existed,
 # with leftover ERROR: entries mixed into otherwise-valid samples. See
-# plos_skip.txt for the current list.
+# plos_skip.txt for the current list. Applies to both data sources, since
+# it's about problematic paper CONTENT, not which pipeline produced it.
 SKIP_LIST_PATH = Path("plos_skip.txt")
 
 SIMILARITY_BINS = np.arange(0.0, 1.01, 0.1)
-
-# ---------------------------------------------------------------------------
-# Paths helper
-# ---------------------------------------------------------------------------
-
-def get_paths(result_type: str) -> tuple[Path, Path, Path]:
-    # NOTE: matches generate_hypotheses.py / generate_new_hypotheses.py's
-    # OUTPUT_DIR, which is "results2/...", not "results/...". Previously
-    # this pointed at "results/" -- a folder nothing else in this project
-    # writes to -- so this script would silently find zero files and
-    # produce no heatmaps, with no error to explain why.
-    results_dir    = Path(f"results2/{result_type}")
-    embeddings_dir = Path(f"embeddings2/{result_type}")
-    heatmap_dir    = Path(f"plots2/{result_type}")
-    return results_dir, embeddings_dir, heatmap_dir
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -87,31 +95,26 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Skip list / sample validity
+# Paths helper
 # ---------------------------------------------------------------------------
 
-def _load_skip_ids(path: Path) -> set[str]:
-    """Paper IDs to skip entirely, one per line (blank lines ignored)."""
-    if not path.exists():
-        return set()
-    ids = {line.strip() for line in path.read_text().splitlines() if line.strip()}
-    if ids:
-        log.info("Loaded %d paper ID(s) to skip from %s", len(ids), path)
-    return ids
+def get_paths(result_type: str, suffix: str) -> tuple[Path, Path, Path]:
+    results_dir    = Path(f"results{suffix}/{result_type}")
+    embeddings_dir = Path(f"embeddings{suffix}/{result_type}")
+    heatmap_dir    = Path(f"plots{suffix}/{result_type}")
+    return results_dir, embeddings_dir, heatmap_dir
 
+# ---------------------------------------------------------------------------
+# Skip list / sample validity
+#
+# is_valid and load_skip_ids used to be reimplemented separately in this
+# file (a third copy of logic that already existed in both generation
+# scripts, before they were consolidated into hypothesis_engine.py). Now
+# imported from there instead, so there's exactly one definition of "what
+# counts as a usable sample" across the whole project.
+# ---------------------------------------------------------------------------
 
-SKIP_IDS = _load_skip_ids(SKIP_LIST_PATH)
-
-
-def _is_valid(sample: str) -> bool:
-    """Matches generate_hypotheses.py's definition: blank or 'ERROR: ...'
-    entries aren't real hypotheses and shouldn't be embedded as if they
-    were -- an unfiltered ERROR string still gets a real embedding vector,
-    and if the same error text repeats across samples (it usually does),
-    those identical vectors read as a spike of near-1.0 self-similarity --
-    a measurement artifact, not a signal about the model's behavior."""
-    text = str(sample)
-    return text != "" and not text.startswith("ERROR:")
+SKIP_IDS = load_skip_ids(SKIP_LIST_PATH)
 
 # ---------------------------------------------------------------------------
 # Embedding
@@ -119,22 +122,39 @@ def _is_valid(sample: str) -> bool:
 
 def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir: Path) -> None:
     """Embed all hypothesis outputs and cache per-paper to embeddings_dir."""
+    pending_paths = []
     for path in sorted(results_dir.glob("*.json")):
         if path.stem in SKIP_IDS:
             log.info("[skip] %s — listed in %s", path.stem, SKIP_LIST_PATH)
             continue
-
         out_path = embeddings_dir / path.name
         if out_path.exists():
             log.info("[skip] embeddings exist: %s", path.stem)
             continue
+        pending_paths.append(path)
 
+    if not pending_paths:
+        log.info("Nothing new to embed in %s", results_dir)
+        return
+
+    # results_by_paper accumulates each paper's {model_id: [vectors]} as
+    # tasks complete; paper_lock guards it and the per-paper output-file
+    # write, since multiple worker threads finish at arbitrary times and
+    # may belong to different papers or the same one.
+    results_by_paper: dict[Path, dict[str, list]] = {}
+    pending_model_counts: dict[Path, int] = {}
+    paper_lock = threading.Lock()
+
+    tasks: list[tuple[Path, str, list[str]]] = []
+    for path in pending_paths:
         with open(path) as f:
             data: dict[str, list[str]] = json.load(f)
 
-        embeddings_map: dict[str, list] = {}
+        results_by_paper[path] = {}
+        n_models_needing_call = 0
+
         for model_id, responses in data.items():
-            valid_responses = [r for r in responses if _is_valid(r)]
+            valid_responses = [r for r in responses if is_valid(r)]
             n_dropped = len(responses) - len(valid_responses)
             if n_dropped:
                 log.warning(
@@ -143,16 +163,48 @@ def build_embeddings(model: OpenAIEmbeddings, results_dir: Path, embeddings_dir:
                 )
 
             if not valid_responses:
-                embeddings_map[model_id] = []
+                # No API call needed -- record the empty result directly.
+                results_by_paper[path][model_id] = []
                 continue
 
-            log.info("  Embedding %s / %s (%d responses)", path.stem, model_id, len(valid_responses))
-            embeddings_map[model_id] = model.embed_documents(valid_responses)
+            n_models_needing_call += 1
+            tasks.append((path, model_id, valid_responses))
 
-        with open(out_path, "w") as f:
-            json.dump(embeddings_map, f)
+        pending_model_counts[path] = n_models_needing_call
+        if n_models_needing_call == 0:
+            # Every model for this paper had zero valid responses --
+            # nothing to dispatch, so save immediately rather than waiting
+            # for a completion event that will never come.
+            _save_paper_embeddings(embeddings_dir, path, results_by_paper[path])
+
+    if not tasks:
+        log.info("Embeddings ready in %s (nothing needed an API call)", embeddings_dir)
+        return
+
+    log.info("  Dispatching %d embedding calls across up to %d workers...", len(tasks), EMBEDDING_MAX_WORKERS)
+
+    def run_one(path: Path, model_id: str, valid_responses: list[str]):
+        log.info("  Embedding %s / %s (%d responses)", path.stem, model_id, len(valid_responses))
+        vectors = model.embed_documents(valid_responses)
+        with paper_lock:
+            results_by_paper[path][model_id] = vectors
+            pending_model_counts[path] -= 1
+            done = pending_model_counts[path] == 0
+        if done:
+            _save_paper_embeddings(embeddings_dir, path, results_by_paper[path])
+
+    with ThreadPoolExecutor(max_workers=EMBEDDING_MAX_WORKERS) as executor:
+        futures = [executor.submit(run_one, *task) for task in tasks]
+        for future in as_completed(futures):
+            future.result()  # re-raise any embedding-call failure immediately
 
     log.info("Embeddings ready in %s", embeddings_dir)
+
+
+def _save_paper_embeddings(embeddings_dir: Path, path: Path, embeddings_map: dict[str, list]) -> None:
+    out_path = embeddings_dir / path.name
+    with open(out_path, "w") as f:
+        json.dump(embeddings_map, f)
 
 # ---------------------------------------------------------------------------
 # Intra-model similarity
@@ -186,6 +238,10 @@ def plot_intra_model_heatmap(
     save_path: Path,
 ) -> None:
     models = sorted(model_to_sims.keys())
+    if not models:
+        log.warning("No models with >=2 valid samples in any paper -- skipping intra-model heatmap (%s)", save_path)
+        return
+
     per_model = {}
     for model in models:
         hist, _ = np.histogram(model_to_sims[model], bins=SIMILARITY_BINS)
@@ -241,7 +297,16 @@ def compute_inter_model_matrix(embeddings_dir: Path) -> tuple[np.ndarray, list[s
         with open(path) as f:
             all_data.append(json.load(f))
 
-    models = sorted(all_data[0].keys())
+    if not all_data:
+        raise ValueError(f"No embedding files found in {embeddings_dir} -- run the embedding step first.")
+
+    # Union of model keys across ALL papers, not just the first file --
+    # different papers' output JSON can have different model sets (the
+    # MODELS list in model_utils.py has changed shape multiple times over
+    # this project's life), so using only all_data[0].keys() would
+    # silently drop any model missing from whichever paper happened to
+    # sort first, with no warning that it was excluded.
+    models: list[str] = sorted(set().union(*(d.keys() for d in all_data)))
     model_idx = {m: i for i, m in enumerate(models)}
     n = len(models)
 
@@ -261,7 +326,13 @@ def compute_inter_model_matrix(embeddings_dir: Path) -> tuple[np.ndarray, list[s
                 accum[i, j] += cross_model_avg_similarity(e1, e2)
                 counts[i, j] += 1
 
-    matrix = np.divide(accum, counts, where=counts > 0)
+    # out=... matters here: without it, cells where counts==0 (model pairs
+    # that never co-occurred in the same paper) are left as uninitialized
+    # memory rather than a defined value -- numpy warns about exactly this.
+    # NaN is the correct "no data" value; seaborn renders NaN cells as
+    # blank rather than plotting garbage numbers.
+    matrix = np.full((n, n), np.nan)
+    np.divide(accum, counts, out=matrix, where=counts > 0)
     return matrix, models
 
 
@@ -296,37 +367,56 @@ def plot_inter_model_heatmap(
 # Main
 # ---------------------------------------------------------------------------
 
-def build_embeddings_for(embedding_model: OpenAIEmbeddings, result_type: str) -> str | None:
-    """Embed one result type. Returns result_type on success, None if skipped."""
-    results_dir, embeddings_dir, _ = get_paths(result_type)
+def build_embeddings_for(embedding_model: OpenAIEmbeddings, result_type: str, suffix: str) -> tuple[str, str] | None:
+    """Embed one (result_type, suffix) pair. Returns (result_type, suffix) on success, None if skipped."""
+    results_dir, embeddings_dir, _ = get_paths(result_type, suffix)
     if not results_dir.exists() or not any(results_dir.glob("*.json")):
         log.warning("No results found in %s — skipping", results_dir)
         return None
     embeddings_dir.mkdir(parents=True, exist_ok=True)
-    log.info("=== [%s] Building embeddings ===", result_type)
+    log.info("=== [data%s/%s] Building embeddings ===", suffix, result_type)
     build_embeddings(embedding_model, results_dir, embeddings_dir)
-    return result_type
+    return (result_type, suffix)
 
 
-def plot_for(result_type: str) -> None:
-    _, embeddings_dir, heatmap_dir = get_paths(result_type)
+def plot_for(result_type: str, suffix: str) -> None:
+    _, embeddings_dir, heatmap_dir = get_paths(result_type, suffix)
     heatmap_dir.mkdir(parents=True, exist_ok=True)
 
-    log.info("=== [%s] Intra-model heatmap ===", result_type)
+    log.info("=== [data%s/%s] Intra-model heatmap ===", suffix, result_type)
     intra_sims = compute_intra_model_similarities(embeddings_dir)
     plot_intra_model_heatmap(intra_sims, heatmap_dir / "intra_model.png")
 
-    log.info("=== [%s] Inter-model heatmap ===", result_type)
+    log.info("=== [data%s/%s] Inter-model heatmap ===", suffix, result_type)
     matrix, models = compute_inter_model_matrix(embeddings_dir)
     plot_inter_model_heatmap(matrix, models, heatmap_dir / "inter_model.png")
 
 
 def main() -> None:
-    load_dotenv()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "result_types", nargs="*",
+        help=f"Which result type(s) to process, from {ALL_RESULT_TYPES}. Default: both.",
+    )
+    parser.add_argument(
+        "--source", choices=sorted(SOURCE_SUFFIXES), default=None,
+        help="1 = data/ (native format), 2 = data2/ (XML-converted). Default: both.",
+    )
+    args = parser.parse_args()
 
-    result_types = sys.argv[1:] if len(sys.argv) > 1 else ALL_RESULT_TYPES
-    result_types = [rt for rt in result_types if rt in ALL_RESULT_TYPES or
-                    (log.error("Unknown result type '%s'. Choose from: %s", rt, ALL_RESULT_TYPES) or False)]
+    # Validated manually rather than via argparse's `choices=` on this
+    # positional: nargs="*" combined with choices AND a list-valued
+    # default crashes argparse's own validation even when zero args are
+    # given (it tries to check the whole default list as if it were one
+    # choice value). Simpler and more reliable to just check it here.
+    result_types = args.result_types if args.result_types else ALL_RESULT_TYPES
+    invalid = [rt for rt in result_types if rt not in ALL_RESULT_TYPES]
+    if invalid:
+        parser.error(f"invalid result type(s) {invalid}; choose from {ALL_RESULT_TYPES}")
+
+    suffixes = [SOURCE_SUFFIXES[args.source]] if args.source else list(SOURCE_SUFFIXES.values())
+
+    pairs = [(rt, suffix) for rt in result_types for suffix in suffixes]
 
     embedding_model = OpenAIEmbeddings(
         model=EMBEDDING_MODEL,
@@ -334,21 +424,24 @@ def main() -> None:
         base_url=OPENROUTER_BASE_URL,
     )
 
-    # Step 1 — embed all result types in parallel (I/O bound API calls)
+    # Step 1 — embed all (result_type, source) pairs in parallel (I/O bound API calls)
     completed = []
-    with ThreadPoolExecutor(max_workers=len(result_types)) as executor:
-        futures = {executor.submit(build_embeddings_for, embedding_model, rt): rt for rt in result_types}
+    with ThreadPoolExecutor(max_workers=max(1, len(pairs))) as executor:
+        futures = {
+            executor.submit(build_embeddings_for, embedding_model, rt, suffix): (rt, suffix)
+            for rt, suffix in pairs
+        }
         for future in as_completed(futures):
-            rt = futures[future]
+            rt, suffix = futures[future]
             exc = future.exception()
             if exc:
-                log.error("Embedding failed for %s: %s", rt, exc)
+                log.error("Embedding failed for data%s/%s: %s", suffix, rt, exc)
             elif future.result():
                 completed.append(future.result())
 
     # Step 2 — plot sequentially (fast, avoids matplotlib thread-safety issues)
-    for rt in completed:
-        plot_for(rt)
+    for rt, suffix in completed:
+        plot_for(rt, suffix)
 
     log.info("All done.")
 
