@@ -33,15 +33,29 @@ log = logging.getLogger(__name__)
 
 
 def is_valid(sample) -> bool:
-    """A sample is invalid if it's blank (empty-string generation) or if
-    it's one of the literal 'ERROR: ...' strings written when a call
-    raises an exception. Neither is a usable hypothesis. Also treats a
-    lingering None placeholder (a slot a prior run started but never
-    finished, e.g. if the process was killed mid-batch) as invalid."""
+    """A sample is invalid if it's blank, one of the literal 'ERROR: ...'
+    strings written when a call raises an exception, a lingering None
+    placeholder, or garbled output (>= 100 embedded newlines).
+
+    The 100-newline threshold is backed by real data, not a guess: across
+    a full audit of this project's output, legitimate samples topped out
+    at 4 newlines (models adding an unrequested "**Hypothesis:** ... this
+    is grounded in..." structure despite being told not to -- verbose,
+    but still one coherent hypothesis). Confirmed-garbled samples (mostly
+    moonshotai/kimi-k2.7-code hitting its reasoning-token budget mid-
+    generation and degenerating into repeated fragments like "important."
+    or "to to to to...") started at 241 newlines. 100 sits in the middle
+    of that gap with wide margin on both sides -- not a fine-grained
+    judgment call, a threshold picked to land cleanly between two
+    observed, well-separated clusters."""
     if sample is None:
         return False
     text = str(sample)
-    return text != "" and not text.startswith("ERROR:")
+    if text == "" or text.startswith("ERROR:"):
+        return False
+    if text.count("\n") >= 100:
+        return False
+    return True
 
 
 def load_skip_ids(path: Path) -> set[str]:
