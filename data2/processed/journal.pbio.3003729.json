@@ -1,0 +1,393 @@
+{
+  "paper_id": "journal.pbio.3003729",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003729.xml"
+  },
+  "title": "Casein kinase 2-mediated phosphorylation of the splicing factor SF3B3 plays a key role in esophageal squamous cell carcinoma progression",
+  "doi": "10.1371/journal.pbio.3003729",
+  "authors": [
+    {
+      "first": "Du-chuang",
+      "last": "Wang"
+    },
+    {
+      "first": "Jia-yuan",
+      "last": "Li"
+    },
+    {
+      "first": "Xiao-bing",
+      "last": "Wang"
+    },
+    {
+      "first": "Guo-sheng",
+      "last": "Hu"
+    },
+    {
+      "first": "Rui-chao",
+      "last": "Nie"
+    },
+    {
+      "first": "Bin",
+      "last": "Zheng"
+    },
+    {
+      "first": "Yao-hui",
+      "last": "He"
+    },
+    {
+      "first": "Wen",
+      "last": "Liu"
+    }
+  ],
+  "abstract_text": "Protein kinases play a crucial role in regulating cellular processes, and their dysregulation is frequently implicated in various diseases, including cancer. Targeting protein kinases represents a promising therapeutic strategy for cancer treatment. Esophageal squamous cell carcinoma (ESCC) constitutes over 90% of esophageal cancer cases in high-incidence regions, with a global five-year survival rate below 20%. Here, we report that CK2 is aberrantly activated in ESCC, identified through kinase-substrate enrichment analysis (KSEA) of large-scale proteomic and phosphoproteomic data. Functional enrichment revealed the splicing factor SF3B3 as a clinically relevant CK2 substrate. We demonstrated that CK2-mediated phosphorylation of SF3B3 T1200 plays a pivotal role in ESCC progression. Mechanistically, CK2-mediated phosphorylation of SF3B3 enhances its affinity for the deubiquitinase USP7, leading to SF3B3 deubiquitination and subsequent protein stabilization. This stabilization drives ESCC progression by regulating alternative splicing (AS) events, including a critical event involving the inclusion of exon 4 in the EXOSC2 transcript. Furthermore, we demonstrated that SF3B3 T1200 phosphorylation specifically facilitates its incorporation into the U2 snRNP complex, directly promoting the aforementioned EXOSC2 exon 4 inclusion. Crucially, targeting CK2 or USP7, either individually or in combination, effectively suppressed ESCC progression. Our findings uncover a key molecular mechanism underlying SF3B3 stabilization and AS regulation, offering novel therapeutic opportunities for ESCC.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003729",
+    "body_text": [
+      {
+        "text": "Esophageal cancer is one of the most common malignant tumors of the digestive tract worldwide, ranking 11th in terms of new cases and sixth in terms of mortality among all cancers [1]. It claims the lives of over 440,000 people annually [2]. In China, esophageal squamous cell carcinoma (ESCC) constitutes more than 90% of esophageal cancer cases, with a five-year survival rate below 20% [3]. The lack of early symptoms often results in diagnoses at advanced stage, thereby limiting therapeutic options.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Post-translational modifications of proteins are crucial for regulating cellular physiology and are involved in various biological processes, including signal transduction, transcriptional regulation, protein homeostasis, protein localization, and phase separation [4]. PTMs such as phosphorylation, acetylation, methylation, ubiquitination, SUMOylation, NEDDylation, glycosylation, palmitoylation, and S-nitrosylation intricately regulate cellular functions [4]. Protein phosphorylation is one of the most prevalent and dynamic PTMs, regulated by kinases and phosphatases, and it plays a key role in regulating cellular signal transduction, protein-protein interactions, gene transcription, among many other essential functions [4,5]. For example, SRC-induced phosphorylation of ANXA2 at tyrosine 23 leads to its nuclear translocation and enhances the metastatic potential of ESCC cells [6]. PRKD2-mediated phosphorylation of DSG2 at T730 promotes ESCC progression, and targeting this phosphorylation site on DSG2 represents a potential therapeutic approach for ESCC [7]. Ubiquitination is another widely prevalent PTM that is tightly regulated by a cascade of enzymes, including E1, E2, and E3 ubiquitin ligases, as well as deubiquitinating enzymes (DUBs) [8]. Dysregulation of ubiquitination is implicated in various diseases, including cancer, neurodegenerative disorders, and autoimmune diseases [8,9]. For instance, the E3 ubiquitin ligase PARK2 inhibits ESCC progression by promoting YAP degradation through K48-linked ubiquitination at lysine 90 [10], while the DUB USP4 stabilizes TAK1 protein levels via deubiquitination, thereby promoting ESCC progression [11].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Protein kinases, as catalysts of phosphorylation reactions, are frequently dysregulated in various human diseases, particularly cancer [12]. Protein kinase CK2, a highly conserved serine/threonine kinase comprising two catalytic (\u03b1 or \u03b1\u2032) and two regulatory (\u03b2) subunits, is frequently over-activated in numerous tumors [13,14]. As a constitutively active enzyme with a broad substrate range, CK2 is implicated in a diverse array of cellular processes, including cell proliferation, apoptosis, and DNA damage repair, promoting tumorigenesis through the phosphorylation of various substrates such as AKT, P53, and STAT3 [15\u201317]. Previous studies have reported that Casein kinase II subunit \u03b1 (CSNK2A1) was nominated as a potential kinase target for ESCC through integrated kinase-substrate network analysis [18]. Given its central role in cellular signaling and its frequent dysregulation in cancer, CK2 has emerged as a promising therapeutic target [19,20]. However, the role of CK2 in ESCC remains insufficiently understood, and its potential involvement in ESCC tumorigenesis warrants further investigation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Splicing is a crucial cellular process involving the removal of introns and the ligation of exons from pre-mRNA to generate mature mRNA [21,22]. Cancer cells often exhibit aberrant splicing patterns compared to normal cells, contributing to tumorigenesis. These splicing alterations may be caused by mutations in splicing regulatory elements, or dysregulated splicing factors due to abnormal expression, mutations, or post-translational modifications [21,22]. Dysregulated alternative splicing (AS) has been implicated in cancer initiation and progression and is increasingly recognized as a potential therapeutic target [23,24]. For example, the long isoform of BOLA3 (BOLA3-L), which includes exon 3, is highly expressed in ESCC and correlates with poor prognosis [25]. Similarly, LOXL2\u039472 significantly promotes ESCC cell migration and invasion [26].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The SF3b complex, an essential component of the U2 small nuclear ribonucleoprotein (U2 snRNP) complex, comprises seven subunits: SF3B1, SF3B2, SF3B3, SF3B4, SF3B5, SF3B6, and PHF5A. This complex plays a critical role in branch point sequence recognition during the early stages of spliceosome assembly [27\u201329]. SF3B1 primarily participates in RNA recognition, binding, and splice sites selection, while SF3B3 mainly functions as a scaffold protein, maintaining the complex\u2019s structural stability and assisting in the assembly of other subunits [28]. Recurrent mutations in SF3B1 are frequently observed across a range of cancers, causing splicing alterations [30,31]. Previous studies have reported that the upregulated long noncoding RNA LINC02820 interacts with SF3B3 and cooperates with TNF\u03b1 to amplify the NF-\u03baB signaling pathway, thereby promoting ESCC metastasis [32]. While the functional roles of SF3B1, SF3B4, and PHF5A have been extensively studied in various cancers, including ESCC [30,33,34], the involvement of other SF3b complex members in ESCC progression remains poorly understood.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "In this study, we performed kinase-substrate enrichment analysis (KSEA) utilized large-scale proteomic and phosphoproteomic data from ESCC, which we previously reported [1]. Our analysis revealed aberrant activation of CK2 in ESCC [1,35]. Additionally, we observed that multiple members of the SF3b complex are highly phosphorylated in ESCC. We identified Thr1200 as a CK2 phosphorylation site on SF3B3 and demonstrated that phosphorylation of SF3B3 at T1200 stabilizes the protein, thereby promoting ESCC cell proliferation, migration, and invasion. Mechanistically, phosphorylation of SF3B3 at T1200 enhances its interaction with deubiquitinase USP7, which removes K48-linked ubiquitination on SF3B3, thereby preventing its degradation. Furthermore, utilizing third-generation sequencing, we systematically characterized the splicing landscape regulated by SF3B3 in ESCC, revealing that SF3B3 regulates numerous AS events, which are predominantly enriched in mRNA metabolic processes. Functional analysis demonstrated that the impact of SF3B3 on ESCC malignant behaviors is partly mediated through the long isoform of EXOSC2 (EXOSC2-L) induced by SF3B3. Finally, we demonstrated that targeting CK2 and USP7, either individually or in combination, effectively suppresses ESCC progression.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Protein kinases are known to be dysregulated in a variety of diseases, including cancer [36]. To identify key kinases and druggable targets involved in ESCC, we employed KSEA on large-scale proteomic and phosphoproteomic data from our prior study [1,35]. Our analysis revealed aberrant activity in over 52 protein kinases in ESCC, with 24 kinases exhibiting hyper-activation and 28 kinases showing decreased activity (Fig 1A and S1 Table). Notably, several cell cycle-related kinases, including CDK2, CDK6, CLK1, MAPKs, and ATR, were found to be hyper-activated, consistent with previous studies [1,13,37\u201340]. Intriguingly, we identified hyper-activation of both catalytic subunits of CK2 kinase, CK2\u03b1 (CSNK2A1) and CK2\u03b1\u2032 (CSNK2A2), in ESCC (Fig 1A). Concurrently, functional enrichment analysis of hyper-phosphorylated proteins revealed a significant enrichment of mRNA splicing-related proteins (Fig 1B and S2 Table). Among these splicing-related proteins, we identified multiple proteins with phosphorylation sites conforming to the CK2 kinase consensus motif (S/TXE/D, S/TXXE/D), including SF3B3 (T1200), SF3B2 (S436), SF3B1 (T299), HNRNPA1L2 (S6), and HNRNPM (S481). Among these, the phosphorylation of SF3B3 at T1200 showed the most significant increase in tumors (Figs 1C and S1A). Furthermore, the levels of T1200 phosphorylation in SF3B3, but not T299 phosphorylation in SF3B1 or S436 phosphorylation in SF3B2, are significantly correlated with prognosis in patients with ESCC (Figs 1D, 1E, and S1B\u2013S1E). Moreover, the amino acid sequence surrounding T1200 is highly conserved across multiple species, underscoring its functional importance (Fig 1F).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Elevated CK2 activity and CK2-mediated SF3B3 phosphorylation are clinically relevant in ESCC patients",
+        "sec_num": null
+      },
+      {
+        "text": "To confirm CK2-mediated phosphorylation of SF3B3 at T1200, we generated a custom antibody specifically targeting phosphorylated Thr1200 on SF3B3 (p-SF3B3 (T1200)). Dot blot experiments showed that this antibody specifically recognized peptides containing pT1200, but not wild-type (WT) peptides (Fig 1G). We then expressed and purified recombinant His-tagged, WT SF3B3 and the T1200A mutant in which threonine 1200 was replaced with alanine (Fig 1H). In vitro phosphorylation assay demonstrated that SF3B3 (WT), but not T1200A mutant, could be phosphorylated at T1200 by CK2 in vitro (Fig 1I). Moreover, to assess whether CK2 phosphorylates SF3B3 on T1200 in vivo, we treated KYSE140 cells with CX-4945, a specific CK2 inhibitor, and performed immunoprecipitation using an SF3B3 antibody to examine T1200 phosphorylation levels. The results showed that CK2 inhibition led to a significant reduction in T1200 phosphorylation (Fig 1J). Similar results were observed in 293T cells transfected with GFP-SF3B and subsequently treated with CX-4945 (Fig 1K). It should be noted that there was also a decrease of the total protein levels of SF3B3 (vida infra) (Fig 1J and 1K). Next, we investigated whether SF3B3 interacts with CK2. The interaction between SF3B3 and CK2, represented by the catalytic subunit CSNK2A1, was then examined by immunoprecipitation. The results showed that CSNK2A1 was pulled down by SF3B3 (Fig 1L). In addition, the interaction between SF3B3 and CSNK2A1 was confirmed by overexpressed SF3B3 and CSNK2A1 in HEK293T cells (Fig 1M and 1N). These data collectively demonstrate that SF3B3 is a bona fide substrate of CK2, and that CK2-mediated phosphorylation of SF3B3 at T1200 is clinically relevant in ESCC patients.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Elevated CK2 activity and CK2-mediated SF3B3 phosphorylation are clinically relevant in ESCC patients",
+        "sec_num": null
+      },
+      {
+        "text": "To further investigate the role of SF3B3 phosphorylation in ESCC progression, we first examined the oncogenic function of SF3B3 in ESCC. The protein expression levels of SF3B3 were assessed in seven different ESCC cell lines (Fig 2A). We then performed SF3B3 knockdown in KYSE140 and KYSE30 cells using two independent siRNAs targeting SF3B3. SF3B3 knockdown significantly inhibited cell proliferation, colony formation, migration, and invasion in both cell lines (Figs 2B\u20132I and S2A\u2013S2H). Conversely, overexpression of SF3B3 in ECA109 and KYSE520 cells, which have relatively low endogenous SF3B3 expression, promoted cell proliferation, colony formation, migration, and invasion (Figs 2J\u20132Q and S2I\u2013S2P). To assess the oncogenic role of SF3B3 in vivo, KYSE30 cells stably expressing either a control shRNA (shCTL) or shRNA specifically targeting SF3B3 (shSF3B3) were subcutaneously injected into nude mice. Tumors derived from shSF3B3-expressing cells showed significantly reduced volume and weight compared to those from control cells (Fig 2R\u20132U). In contrast, overexpression of SF3B3 in ECA109 cells resulted in increased tumor growth in vivo (Fig 2V\u20132X). Collectively, our findings demonstrate that SF3B3 functions as an oncoprotein in ESCC.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SF3B3 functions as an oncoprotein in ESCC both in vitro and in vivo",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate the role of T1200 phosphorylation of SF3B3 in ESCC, we knocked down SF3B3 in KYSE140 cells and reintroduced SF3B3 (WT) or the T1200A mutant at physiologically relevant levels (Fig 3A). As expected, SF3B3 knockdown suppressed cell proliferation in KYSE140 cells. Reintroducing SF3B3 (WT), but not the phosphorylation-defective mutant T1200A, rescued the growth defects caused by SF3B3 knockdown (Fig 3B). Consistently, colony formation was reduced following SF3B3 knockdown and was rescued upon reintroducing of SF3B3 (WT), but not T1200A (Fig 3C and 3D). In line with the observation that SF3B3 protein levels decreased in response to CK2 inhibitor, the expression of SF3B3 (T1200A) was consistently lower than that of SF3B3 (WT) (Fig 3A).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "CK2-mediated phosphorylation of SF3B3 at T1200 is crucial for its oncogenic in ESCC",
+        "sec_num": null
+      },
+      {
+        "text": "To further explore the critical role of T1200 phosphorylation in the oncogenic function of SF3B3, we established ECA109 cell lines stably expressing a control vector, SF3B3 (WT), the phosphorylation-defective T1200A mutant, and the phosphomimetic mutant (T1200D) mutant (Fig 3E). As expected, stable expression of SF3B3 enhanced cell proliferation and colony formation in ECA109 cells (Fig 3F\u20133H). Moreover, the volume and weight of tumors derived from ECA109 cells stably expressing SF3B3 were significantly increased compared to those from control cells (Fig 3I\u20133K). However, the oncogenic potential of SF3B3 was significantly diminished in the T1200A mutant (Fig 3F\u20133K). Surprisingly, the phosphomimetic mutant (T1200D) did not further enhance the oncogenic potential of SF3B3 (vida infra) (Fig 3F\u20133K). Together, these results demonstrate that CK2-mediated phosphorylation of SF3B3 at T1200 is crucial for its oncogenic in ESCC.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "CK2-mediated phosphorylation of SF3B3 at T1200 is crucial for its oncogenic in ESCC",
+        "sec_num": null
+      },
+      {
+        "text": "We observed that the SF3B3 protein levels decreased in response to CK2 inhibitor treatment, and the SF3B3 (T1200A) mutant consistently expressed at lower levels than SF3B3 (WT) (Figs 1J, 1K, 3A, and 3E). Given the established link between protein phosphorylation and stability [41,42], we hypothesized that CK2-mediated phosphorylation of SF3B3 at T1200 might regulate its stability. To test this, we first treated KYSE140 and KYSE30 cells with CX-4945 for varying durations. We observed a time-dependent decrease in both T1200 phosphorylation and total SF3B3 protein levels (Fig 4A). We then measured the protein half-life of SF3B3 in KYSE30 cells with or without CX-4945 treatment. CK2 inhibition significantly decreased the half-life of SF3B3 protein (Fig 4B and 4C). Moreover, the phosphorylation-defective mutant T1200A exhibited a significantly shorter half-life. Surprisingly, the half-life of the phosphomimetic mutant T1200D was comparable to that of the WT protein (Fig 4D and 4E). Consistent with the finding for p-SF3B3 (T1200), SF3B3 protein levels were significantly elevated in ESCC tissues compared to adjacent normal tissues, based on analysis from the Cancer Proteome and Phosphoproteome Atlas (CPPA) (Fig 4F) [43]. Furthermore, high expression of SF3B3 was associated with poor prognosis in ESCC patients (Fig 4G). To further support the functional link between CK2 and SF3B3 protein stability, we observed a strong correlation between CK2-mediated SF3B3 phosphorylation at T1200 and SF3B3 protein expression levels, as well as a strong correlation between CK2 kinase activity and SF3B3 protein expression levels in ESCC samples (Fig 4H and 4I). These findings indicate that CK2-mediated phosphorylation of SF3B3 stabilizes the SF3B3 protein.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "CK2-mediated phosphorylation of SF3B3 at T1200 stabilizes the SF3B3 protein",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate the mechanism by which SF3B3 phosphorylation stabilizes the protein, we treated KYSE140 and KYSE30 cells with the proteasome inhibitor MG132 and the autophagy inhibitor chloroquine (CQ). The results showed that MG132, but not CQ, significantly increased SF3B3 protein levels, suggesting that SF3B3 is primarily degraded via the ubiquitin-proteasome pathway (Fig 5A). To identify deubiquitinases that regulate SF3B3 stability, we analyzed the subcellular localization of SF3B3 and found that it predominantly resides in the nucleus (Fig 5B). Next, using the CPPA database, we identified nuclear-localized deubiquitinases with a positive correlation to SF3B3 expression [43]. This analysis revealed USP1, USP7, and USP39 as potential candidates (S3A Fig). Among these, only knockdown of USP7 reduced SF3B3 protein levels without affecting its mRNA levels (Figs 5C, 5D, and S3B). The downregulation of SF3B3 by USP7 knockdown was confirmed in KYSE30 cells expressing shRNA targeting USP7 (Fig 5E). To determine whether USP7 regulates SF3B3 degradation through the proteasome pathway, we examined the effect of the proteasome inhibitor MG132 on SF3B3 levels in USP7-depleted ESCC cells. We found that MG132 reversed the decrease in SF3B3 protein levels caused by USP7 depletion (Figs 5F and S3C). Further investigation showed that overexpression of USP7 (WT), but not the catalytically inactive USP7 (C223A) mutant, resulted in increased SF3B3 protein levels (Fig 5G). Cycloheximide chase experiments revealed accelerated degradation of the SF3B3 in USP7-knockdown cells compared to control cells (Fig 5H and 5I). In contrast, delayed degradation was observed in cells overexpressing USP7 (WT), but not in those overexpressing USP7 (C223A) (Fig 5J and 5K).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Phosphorylation of SF3B3 at T1200 stabilizes the protein via USP7-mediated deubiquitination",
+        "sec_num": null
+      },
+      {
+        "text": "To examine if USP7 stabilizes SF3B3 by deubiquitination, we analyzed SF3B3 ubiquitination in the presence of the proteasome inhibitor MG132. Overexpression of USP7 (WT), but not the USP7 (C223A) mutant, significantly reduced SF3B3 ubiquitination (Fig 5L). Given that protein degradation is often associated with K48- or K63-linked polyubiquitination and that USP7 preferentially cleaves K48- and K63-linked polyubiquitin chains [44\u201347]. We found that USP7 reduced the K48-linked, but not K63-linked, polyubiquitination of SF3B3 (Fig 5M and 5N). Furthermore, consistent with USP7 knockdown, treatment with the USP7 inhibitor P5091 significantly increased SF3B3 ubiquitination levels (Fig 5O), decreased SF3B3 protein levels in a concentration-dependent manner (Fig 5P), and reduced SF3B3 protein half-life (Fig 5Q and 5R). To further confirm that USP7 functions as a deubiquitinase for SF3B3, immunoprecipitation experiments demonstrated an interaction between SF3B3 and USP7 in both KYSE140 and KYSE30 cells (Figs 5S and S3D). Co-immunoprecipitation in HEK293T cells with overexpressed SF3B3 and USP7 confirmed this interaction (Fig 5T and 5U). Additionally, co-immunostaining analysis showed co-localization of SF3B3 and USP7 in KYSE30 cells (Fig 5V). Together, these results demonstrate that USP7 interacts with SF3B3 and stabilizes it by cleaving K48-linked polyubiquitin chains.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Phosphorylation of SF3B3 at T1200 stabilizes the protein via USP7-mediated deubiquitination",
+        "sec_num": null
+      },
+      {
+        "text": "Prompted by the established crosstalk between protein phosphorylation and ubiquitination [48], we investigated whether T1200 phosphorylation enhances SF3B3 stability through its effect on ubiquitination. We co-transfected HEK293T cells with HA-Ub and GFP-tagged SF3B3 (WT), SF3B3 (T1200A), or SF3B3 (T1200D). Immunoprecipitation assay showed that the T1200A mutant exhibited significantly increased ubiquitination, while the T1200D mutant showed similar ubiquitination levels to SF3B3 (WT) (Fig 5W). This was consistent with the observation that the T1200A mutant is less stable and expressed at lower levels compared to SF3B3 (WT), while the T1200D mutant is similarly stable and expressed comparable levels to SF3B3 (WT) (Figs 3A, 3E, 4D, and 4E).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Phosphorylation of SF3B3 at T1200 stabilizes the protein via USP7-mediated deubiquitination",
+        "sec_num": null
+      },
+      {
+        "text": "Given the established link between protein phosphorylation and protein-protein interactions [4,48,49], we hypothesized that phosphorylation of SF3B3 at T1200 might enhance protein stability by promoting its interaction with USP7 and subsequently decreasing its ubiquitination. Co-immunoprecipitation experiments further demonstrated that the T1200A mutant displayed a weaker interaction with USP7 compared to SF3B3 (WT) (Fig 5X). Together, these results collectively showed that phosphorylation of SF3B3 at T1200 enhances its stability through USP7-mediated deubiquitination.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Phosphorylation of SF3B3 at T1200 stabilizes the protein via USP7-mediated deubiquitination",
+        "sec_num": null
+      },
+      {
+        "text": "SF3B3 is a subunit of the U2 snRNP, involved in recognizing and binding to branch sites within the intron, and plays a key role in regulating AS [28,29]. To investigate SF3B3-regulated AS events and their potential role in ESCC progression, we performed Nanopore sequencing after knocking down SF3B3 in KYSE140 cells (Fig 6A). A total of 2,230 AS events were significantly altered by SF3B3 knockdown, including 1,200 cassette exons (SEs), 499 intron retention (IR), 290 alternative 5\u2032 splice site (5\u2032 ASS), and 241 alternative 3\u2032 splice site (3\u2032 ASS) (|\u25b3PSI| \u2265 0.2 and FDR \u2264 0.05) (Fig 6B and S3 Table). Among the SF3B3-regulated cassette exons (n = 1,200), 649 were inclusion events, and 551 were exclusion events (Fig 6C and S3 Table).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SF3B3-induced exon inclusion in EXOSC2 gene is critical for the oncogenic function of SF3B3 in ESCC",
+        "sec_num": null
+      },
+      {
+        "text": "To identify SF3B3-regulated cassette exons with potential function in ESCC, we analyzed RNA-seq data from The Cancer Genome Atlas (TCGA), focusing on those cassette exons from genes that are highly expressed in ESCC (Log2FC \u2265 2, P \u2264 0.01) and positively correlated with SF3B3 expression (r \u2265 0.3) (Fig 6D and S4 Table). Gene Ontology (GO) enrichment analysis revealed that these genes were primarily involved in mRNA metabolic processes (Fig 6E and S4 Table). Furthermore, using the OncoSplicing database, we identified SF3B3-induced exon inclusion event (NM_014285, exon 4, Chr9: 130,698,161\u2212130,698,251) in EXOSC2 as a survival-associated alternative splicing event with high expression predicting poor prognosis in ESCC patients (Fig 6F). RT-PCR analysis confirmed that SF3B3 knockdown increased the short isoform (exon 4 skipped, EXOSC2-S) and decreased the long isoform of EXOSC2 (exon 4 included, EXOSC2-L) in KYSE140 and KYSE30 cells (Figs 6G and S4A). Meanwhile, we knocked down SF3B3 in KYSE140 and KYSE30 cells and performed rescue experiments using either SF3B3 (WT) or SF3B3 (T1200A). The results showed that SF3B3 (WT), but not the T1200A mutant, was able to partially rescue the skipping of exon 4 of EXOSC2 caused by SF3B3 knockdown (Figs 6H and S4B). Similar results were observed when cells were treated with CX-4945 (Figs 6I and S4C). SF3B3 is primarily known to act as a scaffold protein, which is crucial for maintaining the structural integrity of the SF3b complex and assisting in the assembly of downstream splicing factors [28]. Given the well-established regulatory role of protein phosphorylation in mediating protein-protein interactions and complex assembly [4,48,49], we hypothesized that the phosphorylation of SF3B3 at T1200 specifically promotes its incorporation into the SF3b complex. Co-immunoprecipitation and RNA Immunoprecipitation assays demonstrated that SF3B3 (T1200A) displayed a much weaker interaction with SF3B1/2 and binding with U2 snRNA compared to SF3B3 (WT) (Fig 6J and 6K). Consequently, the binding between SF3B3 (T1200A) and its target EXOSC2 pre-mRNA was much weaker than that of SF3B3 (WT) (Fig 6K).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SF3B3-induced exon inclusion in EXOSC2 gene is critical for the oncogenic function of SF3B3 in ESCC",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate the role of EXOSC2-L and EXOSC2-S in ESCC progression, we generated stable cell lines expressing control vector, EXOSC2-L, or EXOSC2-S in KYSE140 and KYSE30 cells (Figs 6L and S4D). Our results showed that overexpression of EXOSC2-L, but not EXOSC2-S, significantly enhanced cell proliferation and colony formation (Figs 6M\u20136O and S4E\u2013S4G). We next investigated whether EXOSC2-L could rescue the growth defects caused by SF3B3 knockdown. Reintroduction of EXOSC2-L, but not EXOSC2-S, partially reversed the inhibitory effects of SF3B3 knockdown on cell proliferation and colony formation, suggesting that the impact of SF3B3 on cell proliferation and colony formation is mediated, at least in part, through EXOSC2-L (Fig 6P\u20136S). Furthermore, EXOSC2-L, but not EXOSC2-S, rescued tumor volume and weight in a mouse xenograft model following SF3B3-knockdown in KYSE140 cells (Fig 6T\u20136V). To further explore the clinical significance of SF3B3-mediated AS of EXOSC2, we examined the expression levels of the two EXOSC2 isoforms in ESCC tumor and adjacent normal tissues (n = 6). The results showed that a significant increase in the percentage of EXOSC2-L in tumor compared to adjacent normal tissues (Fig 6W and 6X). Taken together, these findings suggest that SF3B3-induced exon inclusion in EXOSC2 is critical for SF3B3\u2019s oncogenic function in ESCC.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SF3B3-induced exon inclusion in EXOSC2 gene is critical for the oncogenic function of SF3B3 in ESCC",
+        "sec_num": null
+      },
+      {
+        "text": "Given the oncogenic role of SF3B3 in ESCC and its regulation by both CK2 and USP7, we hypothesized that targeting CK2 and USP7 could effectively inhibit ESCC progression. To test this, we first assessed the cytotoxic effects of CK2 inhibitor CX-4945 and USP7 inhibitor P5091 in ESCC cells. Both inhibitors showed significant cytotoxicity in KYSE140 and KYSE30 cancer cells (Figs 7A, 7B, S5A, and S5C). In contrast, CX-4945 exhibited low toxicity in normal esophageal epithelial Het-1A cells (S5B Fig). Additionally, CX-4945 and P5091 effectively inhibited cell proliferation and colony formation in a dose-dependent manner (Figs 7C\u20137H and S5C\u2013S5I). Since the CK2-mediated phosphorylation of SF3B3 promotes its deubiquitination and stabilization by USP7, we proposed that combined inhibition of USP7 and CK2 might elicit a synergistic effect on the suppression of ESCC cell proliferation. Using SynergyFinder 2.0, we generated an inhibitory dose-response matrix, which revealed a dose-dependent increase in cytotoxicity with combined treatment (Fig 7I and 7J). The synergy score for the combination of CX-4945 and P5091 is 15.24, suggesting a synergistic interaction between the two compounds (Fig 7J). Subsequently, we investigated the effect of the combination of these two inhibitors on ESCC cell proliferation and colony formation. The combination treatment displayed superior inhibitory effects compared to either drug alone in both KYSE140 and KYSE30 cells (Figs 7K\u20137M and S5J\u2013S5L). As expected, the combination treatment of CX-4945 and P5091 more effectively reduced SF3B3 protein levels and promoting EXOSC2 exon 4 skipping compared to monotherapy (Figs 7N, 7O, S5M, and S5N). Consistent with our findings in cultured cells, combination treatment with CX-4945 and P5091 exhibited synergistic effects on inhibiting tumor growth in mouse xenograft tumor models using KYSE30 cells, without significant impact on body weight, and the morphology and weight of various organs including liver, spleen, lung, kidney, and heart (Figs 7P\u20137S and S5O\u2013S5R).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The combination treatment with the CK2 inhibitor CX-4945 and the USP7 inhibitor P5091 exhibits synergistic effects in inhibiting ESCC progression",
+        "sec_num": null
+      },
+      {
+        "text": "Protein kinase activity is known to be dysregulated in many diseases, including cancer [50,51]. In this study, we found that CK2 is aberrantly activated in ESCC through KSEA analysis of large-scale proteomic and phosphoproteomic data. Among the highly phosphorylated proteins, the splicing factor SF3B3 was notably prominent, as elevated levels of Thr1200 phosphorylation in SF3B3 were significantly correlated with unfavorable patient prognosis. While the SF3B1 subunit of the U2 snRNP is frequently mutated in cancer and its oncogenic role is well-established [30,31,47,52], the function of SF3B3 and its phosphorylation in cancer progression has remained largely unexplored. We demonstrated that CK2 phosphorylates SF3B3 at T1200, a modification crucial for its oncogenic function in ESCC. Mechanistically, CK2-mediated phosphorylation stabilizes SF3B3 by enhancing its interaction with the deubiquitinase USP7. Furthermore, we found that CK2-mediated SF3B3 phosphorylation perturbs the stoichiometric balance of the spliceosomal complex, thereby influencing splicing fidelity and isoform selection. While the significant elevation of SF3B3 T1200 phosphorylation in ESCC tumors (n = 21 paired samples) is a key preliminary finding, the limited sample size necessitates cautious interpretation, and validation in larger, independent cohorts is required to substantiate its potential as a biomarker and therapeutic target.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate the molecular mechanisms underlying the oncogenic role of SF3B3, we identified SF3B3-regulated AS events using long-read sequencing technology. Most of these AS events were cassette exons, with SF3B3-regulated cassette exons significantly enriched in genes involved in mRNA metabolism. Among the numerous AS events regulated by SF3B3, we focused on a clinically relevant event in EXOSC2 (exon 4 inclusion), as EXOSC2 is highly expressed and its expression correlates positively with SF3B3 in ESCC clinical samples. More importantly, exon 4 inclusion in EXOSC2 is associated with prognosis in ESCC patients. EXOSC2, a core component of the RNA exosome, directly participates in mRNA metabolism, but the functional roles of its alternatively spliced isoforms remain unclear [53,54]. Here, we show that the EXOSC2-S isoform, with exon 4 skipped, is downregulated, while the EXOSC2-L isoform is upregulated in ESCC cell lines and clinical samples, indicating its crucial role in ESCC progression. Notably, EXOSC2-L did not fully rescue the growth defects following SF3B3 knockdown, suggesting that SF3B3\u2019s effects on cell growth may involve other genes. Thus, we conclude that SF3B3 partially promotes the malignant phenotypes of ESCC by regulating EXOSC2 AS. However, it will be required to systematically evaluate the association between EXOSC2-L expression and the clinical stage of ESCC. Given that SF3B3 is highly expressed in various cancers, differential inclusion of EXOSC2 exon 4 may be a common event in many human cancers, with EXOSC2 splice variants potentially serving as novel cancer markers. However, the molecular mechanism by which EXOSC2-L promotes cell growth remains to be further investigated.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Although the pharmacological inhibitors CX-4945 and P5091 were used to induce the degradation of SF3B3 and suppress ESCC progression, their broad substrate specificity and potential off-target effects suggest that the observed phenotypes may result from the modulation of multiple downstream pathways rather than exclusively from SF3B3 perturbation. Given the current absence of reported SF3B3-specific inhibitors, future studies will explore targeted degradation and post-translational modification strategies to interrogate SF3B3 function. Specifically, PROTACs (proteolysis-targeting chimeras) may be employed to selectively degrade SF3B3, while PhosTACs (phosphorylation-targeting chimeras) could be utilized to specifically reverse its phosphorylation. These approaches will provide direct mechanistic evidence for the role of SF3B3 in ESCC progression and may uncover novel therapeutic vulnerabilities.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Based on our findings, we propose a working model in which hyper-activation of CK2 leads to the hyper-phosphorylation of SF3B3 at T1200. This modification enhances the interaction between SF3B3 and USP7, triggering USP7-mediated deubiquitination and stabilization of SF3B3 in ESCC cells. The phosphorylation of SF3B3 at T1200 also facilitates its incorporation into the U2 snRNP complex. The resulting accumulated SF3B3 then drives a wide array of AS events, including the inclusion of exon 4 in EXOSC2 (EXOSC2-L), thereby contributing to tumorigenesis. Importantly, inhibition of CK2 and USP7, either individually or in combination, results in the destabilization of SF3B3 and a balanced expression of EXOSC2-L and EXOSC2-S, resulting in tumor suppression (Fig 8).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "KSEA was performed using the R package of KSEA App to identify potential kinases associated with differential phosphorylation events. This method utilizes kinase-substrate databases, PhosphoSitePlus, and NetworKIN to assign known kinase-substrate relationships to phosphorylation site detected in the phosphoproteomic data we reported previously [1,35,55,56]. Firstly, phosphorylation sites were mapped to their corresponding kinases based on prior knowledge. Next, the normalized enrichment score was calculated for each kinase by comparing the observed changes in the phosphorylation levels of its substrates to the background distribution of all phosphorylation changes. A statistical significance threshold, typically P < 0.05, was applied to identify significantly enriched or depleted kinases. The resulting analysis highlights key kinases that may regulate phosphorylation-driven signaling pathways.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Kinase-substrate enrichment analysis (KSEA)",
+        "sec_num": null
+      },
+      {
+        "text": "Bacterially expressed proteins were incubated with CK2 kinase following the manufacturer\u2019s instructions (New England Biolabs, P6010). Briefly, 5 \u03bcg protein was incubated with 1\u00d7 NEBuffer supplemented with 200 \u03bcM ATP, 2 \u03bcM Na3VO4, 1 \u03bcM NaF, and 500 units of CK2 kinase at 30 \u00b0C for 1 h. The reaction was stopped by adding 5 \u00d7 loading buffer and boiling at 95 \u00b0C for 10 min.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "In vitro phosphorylation assay",
+        "sec_num": null
+      },
+      {
+        "text": "The human ESCC cell lines (KYSE140, KYSE150, KYSE30, KYSE510, KYSE520, ECA109, and ECA9706), and HEK293T cells were used in this study. ECA109 and HEK293T cells were cultured in Dulbecco\u2019s modified Eagle\u2019s medium (DMEM; 01-052-1ACS, Biological Industries) supplemented with 10% fetal bovine serum (FBS; BC-SE-FBS07, Bio-Channel) and 1% penicillin/streptomycin mixture (PS; S110JV, BasalMedia). KYSE140, KYSE510, KYSE520, and KYSE30 cells were cultured in RPMI 1640 medium (01-100-1ACS, Biological Industries) supplemented with 10% FBS and 1% PS mixture. All cells were cultured in a humidified incubator (Thermo Fisher Scientific) at 37 \u00b0C with a CO2 concentration of 5%.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cell culture",
+        "sec_num": null
+      },
+      {
+        "text": "Rabbit anti-SF3B3 antibody (14577-1-AP), rabbit anti-CSNK2A1 antibody (10992-1-AP), and mouse anti-\u03b2-Actin antibodies were purchased from Proteintech. Rabbit anti-GFP antibody (AE078), mouse anti-\u03b1-Tubulin antibody (AC012), and magnetic beads-conjugated anti-GFP VHH single domain antibody (AE079) were purchased from ABclonal. Mouse anti-Flag antibody (F1804) and anti-Flag M2 affinity gel (A2220) were purchased from Sigma-Aldrich. Mouse anti-Myc antibody (9E10) was purchased from Santa Cruz Biotechnology. Rabbit IgG2a (BP0089) was purchased from BioXCell. Rabbit anti-Phospho-SF3B3 (Thr1200) antibody was commercially made by ABclonal (antigen peptide: EELDRT(p)PPEVS). Chloroquine (HY-17589A) and DAPI dihydrochloride (HY-D0814) were purchased from MedChemExpress. The proteasome inhibitor MG-132 (T2154), the CK2 inhibitor CX-4945 (T2259), and the USP7 inhibitor P5091 (T6925) were purchased from TargetMol.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Antibodies and other reagents",
+        "sec_num": null
+      },
+      {
+        "text": "Cell viability was measured by using a CellTiter 96 AQueous one solution cell proliferation assay kit (G3582, Promega) following the manufacturer\u2019s protocol. Briefly, cells were either transfected with siRNAs or treated with CX-4945 and/or P5091, and then maintained in culture medium for different time followed by cell proliferation assay. To measure cell viability, 20 \u03bcL of CellTiter 96 AQueous one solution reagent was added per 100 \u03bcL of culture medium, and the culture plates were incubated for 1 hour (h) at 37 \u00b0C in a humidified, 5% CO2 atmosphere incubator. Data were recorded at a wavelength of 490 nm using a Spark spectrophotometer (Tecan) Microplate Reader.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cell proliferation assay",
+        "sec_num": null
+      },
+      {
+        "text": "Cells were seeded into 6-well plates (800 cells per well) and growth media were replenished every three days. The relative cell number was determined by crystal violet staining. Briefly, cells were fixed with a methanol/acetic acid solution (3:1) for five minutes, followed by staining with 0.1% crystal violet (Sango Biotech, A100528-0025) for 15 min (min). To quantify cell numbers, the crystal violet dye was extracted into 10% acetic acid and its absorbance was measured at a wavelength of 590 nm (OD590).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Colony formation assay",
+        "sec_num": null
+      },
+      {
+        "text": "For wound healing assays, ESCC cells transfected with siRNAs were re-seeded into 6-well plates to form a confluent monolayer. A linear wound was made by scratching with a 200 \u03bcL pipette tip and cells were washed three times with phosphate-buffered saline (PBS). Cells were then incubated in fresh media with mitomycin at 5 \u03bcg/ml to block cell proliferation. Images of wound recovery were captured every 12 h using a phase contrast microscope (Carl Zeiss). For transwell assay, cell invasion was investigated by a transwell chamber containing 50 ng/ml Matrigel (Corning) according to the manufacturer\u2019s instructions. Briefly, siRNA-transfected cells were re-suspended in 200 \u03bcL serum-free medium and loaded onto the upper chamber at a density of 5 \u00d7 104 cells per chamber. Meanwhile, 600 \u03bcL of culture medium supplemented with 10% FBS was carefully added to the lower chamber. After incubation for 24 h, the inserts were washed with PBS and fixed with 4% paraformaldehyde for 15 min and stained with 0.1% crystal violet for 15 min. Following extensive washing with PBS, non-invaded cells remaining in the upper compartment were removed using a cotton swab. Subsequently, invaded cells were photographed and quantified using Image J software.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Wound healing and transwell assay",
+        "sec_num": null
+      },
+      {
+        "text": "Male BALB/c nude mice (4\u20135 weeks of age, 18\u201320 g of weight) were used for xenograft tumor models and maintained under SPF conditions in accordance with a protocol approved by the Animal Ethics Committee of Xiamen University (XMULAC20210126). For xenograft models, KYSE30 cells (3 \u00d7 106 in 100 \u03bcL sterile PBS) transfected with shCTL or shSF3B3, or ECA109 cells (3 \u00d7 106 in 100 \u03bcL sterile PBS) transfected with control vector or pCDH-SF3B3 were subcutaneously injected in the right flanks of the mice. All mice were euthanized before the tumor burden exceeded the limit (\u20531,500 mm3). Tumors were then excised, photographed, and weighted. To examine the effects of combination treatment with CX-4945 and P5091, KYSE30 cells (3 \u00d7 106 in 100 \u03bcL sterile PBS) were subcutaneously injected in the right flanks of the mice. Mice were randomized into four groups (n = 5 in each group) when the tumor size reached approximately 50 mm3, mice were treated with vehicle, CX-4945 (25 mg/kg), P5091 (25 mg/kg), or in combination by intraperitoneal injection daily. Tumors volume and mice weight were measured every third day. The tumor volume was calculated using the formula: V = 1/2 (length \u00d7 width2). Then, mice were euthanized and subcutaneous tumor tissues were dissected, weighed, and photographed at the end of the experiments.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Xenograft tumor assays",
+        "sec_num": null
+      },
+      {
+        "text": "SiRNA (targeting sequences: 5\u2032-CCAAGAAACTCGAGGATAT-3\u2032 (siSF3B3-1); 5\u2032-CCACGAAAGCTCAGAGAAA-3\u2032 (siSF3B3-2); USP1: 5\u2032- GCATAGAGATGGACAGTAT-3\u2032 (siUSP1); USP7: 5\u2032-GCATAGTGATAAACCTGTA-3\u2032 (siUSP7); USP39: 5\u2032-CCATGAGGATCTTCACTAA) transfections were performed using Lipofectamine 2000 according to the manufacturer\u2019s protocol. Total RNA was isolated using RNAiso Plus (Takara), and first-strand cDNA synthesis was performed using HiScript II Q RT SuperMix for qPCR (Vazyme) according to the manufacturer\u2019s protocol. Quantitative PCR (qPCR) was performed using AriaMx Real-Time PCR machine (Agilent Technologies). All RT-qPCRs were repeated at least three times, and the relative abundance of each transcript was normalized to the expression level of ACTIN. Standard PCR was used to examine AS change using 2 \u00d7 Rapid Taq Plus Master Mix (Vazyme). PCR products were separated on 2% agarose gels, and the amount of each splicing isoform was measured with ImageJ. Sequence information for all the primers used were presented in S5 Table.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SiRNA transfection, RNA isolation, RT-qPCR, and standard PCR",
+        "sec_num": null
+      },
+      {
+        "text": "Plasmids transfection was performed using Lipofectamine 2000 (Life Technology) or Polyethyleneimine (PEI, Polysciences) according to the manufacturer\u2019s protocol. Lentiviral vector packaging and infection was described previously [57]. Briefly, HEK293T cells were seeded in culture plates coated with poly-D-lysine (0.1% (w/v), Sigma, P7280) and transfected with lentiviral vector together with packaging vectors, psPAX2 (12260, Addgene) and pMD2.G (12259, Addgene), at a ratio of 2:1:1 using PEI. After 48 h, virus was collected, filtered, and added to ESCC cells in the presence of 10 \u03bcg/mL polybrene (Sigma, H9268), followed by centrifugation for 30 min at 1,500 g at 37 \u00b0C. Medium was replaced 24 h later.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Plasmids transfection, lenti-viral vectors packaging, and infection",
+        "sec_num": null
+      },
+      {
+        "text": "SF3B3, EXOSC2, and USP7 were PCR-amplified from complementary DNA (cDNA) derived from HEK293 cells by using Phanta Max Super-Fidelity DNA Polymerase (Vazyme, P505-d1) and then cloned into pCDH-3 \u00d7 Flag- 3 \u00d7 HA-EF1-puro (System Biosciences), pCDH-mCherry-puro (System Biosciences), pEGFP-C2 (Addgene), or pET-28a (Novagen) expression vector. The following mutations were generated by overlap extension PCR method using Phanta Max Super-Fidelity DNA Polymerase: SF3B3 phosphorylation-deficient mutant SF3B3 T1200A, SF3B3 phosphorylation mimic mutation SF3B3 T1200D, and USP7 enzymatically dead mutant USP7 C223A. Short hairpin RNAs (shRNAs) targeting SF3B3 (shSF3B3#1, CCAAGAAACTCGAGGATATCC; shSF3B3#2, AGACAGATGAAGATATGGTTA) or USP7 (shUSP7#1, CCTGGATTTGTGGTTACGTTA; shUSP7#2, CAGCTAAGTATCAAAGGAAA) were cloned into the lentiviral vector pLKO.1 between AgeI and EcoRI sites.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cloning procedures",
+        "sec_num": null
+      },
+      {
+        "text": "Cells were lysed in lysis buffer (50 mM Tris-HCl (pH 7.4), 150 mM NaCl, 1 mM EDTA, and 1% Triton X-100) containing protease inhibitor cocktail (Sigma, P2714-1BTL) and phosphatase inhibitor cocktail (Sigma, 4906837001) on ice for 30 min followed by centrifugation. For immunoblotting, the resultant supernatant was directly boiled in SDS sample buffer, resolved by SDS-PAGE gel. For immunoprecipitation, the resultant supernatant was incubated with antibodies (2\u20135 \u03bcg) at 4 \u00b0C overnight. Protein A/G Magnetic Beads (MCE, HY-K0202) were then added and incubated for an additional 4 h before washing five times with washing buffer (the same as lysis buffer). For immunoprecipitation, FLAG- and GFP-tagged proteins were immunoprecipitated with anti-FLAG M2 Affinity Gel (Sigma, A2220) and anti-GFP (Nanobody) Magnetic Beads (ABclonal, AE079), respectively, according to the manufacturer\u2019s protocol. Flag-tagged proteins were then eluted by 3 \u00d7 FLAG peptides (MDYKDHDGDYKDHDIDYKDDDDK) and boiled in SDS sample buffer, and GFP-tagged proteins were directly boiled in SDS sample buffer The associated proteins were resolved by SDS-PAGE gel.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Immunoblotting and immunoprecipitation",
+        "sec_num": null
+      },
+      {
+        "text": "Cells were lysed in lysis buffer (150 mM KCl, 25 mM Tris-HCl (pH 7.4), 0.5 mM dithiothreitol (DTT), 0.5% NP-40) supplemented with protease inhibitor cocktail (sigma, P2714-1BTL), phosphatase inhibitor cocktail (Sigma, 4906837001), and RNase inhibitors (Thermo Fisher Scientific, 10777019), followed by centrifugation. Subsequently, the supernatant was incubated with anti-GFP (Nanobody) Magnetic Beads (ABclonal, AE079) at 4 \u00b0C for 4 h. After washing with lysis buffer for 5 times, the bead-bound immunocomplexes were eluted using elution buffer (50 mM Tris-HCl (pH 8.0), 1% SDS, and 10 mM EDTA) at 55 \u00b0C for 20 min. To isolate protein-associated RNAs from the eluted immunocomplexes, samples were treated with proteinase K (Beyotime, ST532) at a final concentration of 1 mg/mL, and RNAs were extracted by RNAiso Plus (TaKaRa, 9109) before RT-PCR analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "RNA Immunoprecipitation",
+        "sec_num": null
+      },
+      {
+        "text": "His-tagged proteins were expressed in BL21 (DE3) bacterial cells (Stratagene) and purified by using Ni-NTA Resin (Thermo Fisher Scientific) according to the manufacturer\u2019s protocol.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Protein purification",
+        "sec_num": null
+      },
+      {
+        "text": "Cells were seeded on coverslips coated with poly-D-lysine in 6-well plates followed by transfection as described above. After 48 h, cells were washed twice with PBS and fixed with 4% paraformaldehyde at room temperature for 20 min. Cells were then washed again with PBS and incubated with 0.1% (v/v) Triton X-100 (Sigma) in PBS for 10 min at RT. Coverslips were mounted onto slides using Mowiol, and DAPI was added for nuclear visualization. Imaging was performed with a Carl Zeiss laser confocal microscope.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Immunofluorescence",
+        "sec_num": null
+      },
+      {
+        "text": "Tumor specimens and adjacent normal esophageal epithelial tissues were collected from patients with ESCC who underwent esophagectomy at the Department of Thoracic Surgery, Fujian Medical University Union Hospital, between 2015 and 2018. All patients were treatment-na\u00efve, having received neither radiotherapy nor chemotherapy prior to surgical intervention. Immediately following resection, tissue samples were flash-frozen in liquid nitrogen and subsequently stored at \u221280 \u00b0C until RNA or protein extraction. Histopathological diagnoses were independently confirmed by two experienced pathologists in accordance with the eighth edition of the American Joint Committee on Cancer (AJCC) and the Union for International Cancer Control (UICC) staging criteria. This study was conducted with the approval of the Ethics Committee of Fujian Medical University Union Hospital, and written informed consent was obtained from all participants prior to tissue collection and analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Clinical tissue specimens",
+        "sec_num": null
+      },
+      {
+        "text": "Total RNA (50 ng) was reverse transcribed into cDNA using Maxima H Minus Reverse Transcriptase (Thermo Fisher Scientific) according to the manufacturer\u2019s instructions. To amplify the cDNA, PCR reactions were performed using the PCR-cDNA Barcoding kit (SQK-PCB109) protocol. Subsequently, PCR products were treated with exonuclease I (NEB) at 37 \u00b0C for 30 min to remove excess primers. After purification with Agencourt AMPure XP magnetic beads (Beckman Coulter), libraries were constructed using the Ligation Sequencing Kit (SQK-LSK109) (Oxford Nanopore) and sequenced with SpotON FlowCell MK\u2160 (R9.4) (Oxford Nanopore) according to the manufacture\u2019s protocol. Basecalling from raw data (FAST5 format) was performed using the Guppy software (version 3.0.3) (Oxford Nanopore) [58]. All RNA-seq data were deposited in the Gene Expression Omnibus database under accession GSE285651. The following link has been created to allow review of record GSE285651 while it remains in private status (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE285651).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Nanopore sequencing",
+        "sec_num": null
+      },
+      {
+        "text": "AS analysis was conducted using FLAIR (Full-Length Alternative Isoform RNA), a tool specifically designed for long-read sequencing data [59]. The pipeline begins by aligning long-read RNA sequencing data to the reference genome using minimap2 [60]. FLAIR identifies full-length isoforms by clustering aligned reads and assigns them to specific splicing events, such as exon skipping, alternative 5\u2032 or 3\u2032 splice sites and intron retention. Differential splicing analysis was subsequently performed by quantifying isoform expression across samples and identifying splicing events with significant differences, using |\u0394PSI| \u2265 0.2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Alternative splicing (AS) analysis",
+        "sec_num": null
+      },
+      {
+        "text": "ImageJ software was used for quantification of WB and RT-PCR data. All statistical analyses were performed using GraphPad Prism 8 software (version 8). For comparisons between two groups, a two-tailed Student t test or paired t test was applied. Multiple comparisons were analyzed using two-way ANOVA. Survival curves were generated using the Kaplan\u2013Meier method and compared with the log-rank (Mantel-Cox) test. P < 0.05 was considered statistically significant.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Quantification and statistical analysis",
+        "sec_num": null
+      }
+    ]
+  }
+}

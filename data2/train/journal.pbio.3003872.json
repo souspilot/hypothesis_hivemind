@@ -1,0 +1,333 @@
+{
+  "paper_id": "journal.pbio.3003872",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003872.xml"
+  },
+  "title": "Normative assembly rule reveals fairness in microbial communities",
+  "doi": "10.1371/journal.pbio.3003872",
+  "authors": [
+    {
+      "first": "Teemu",
+      "last": "Kuosmanen"
+    },
+    {
+      "first": "Juhani",
+      "last": "Rantanen"
+    },
+    {
+      "first": "Dovydas",
+      "last": "Ki\u010diatovas"
+    },
+    {
+      "first": "Sanna",
+      "last": "Pausio"
+    },
+    {
+      "first": "Ville-Petri",
+      "last": "Friman"
+    },
+    {
+      "first": "Teppo",
+      "last": "Hiltunen"
+    },
+    {
+      "first": "Ville",
+      "last": "Mustonen"
+    }
+  ],
+  "abstract_text": "Understanding and predicting how communities assemble is a paramount challenge in ecology. Here we address these questions normatively by comparing the observed species abundance distribution to a game-theoretically fair distribution based on each species\u2019 Shapley value. By analyzing in total 56 distinct community outcomes, we assess how fairly biomass is distributed in microbial communities displaying both competitive and cooperative interactions in different growth conditions. We find examples of fair communities that closely follow their Shapley value across all environments as well as counterexamples where the true abundances deviate from the species\u2019 objective contribution to community biomass. Next, we develop a fair assembly rule based on the recursive definition of Shapley value and show that also unfair community compositions are consistent with the principles of fair assembly after the lower-level competitive outcomes are known. Our results give unique empirical insights into the distributive function of ecological dynamics and lay down the theoretical foundations of what might become a normative community assembly theory.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003872",
+    "body_text": [
+      {
+        "text": "Organisms interact with each other and their surrounding environment to grow, adapt, and assemble to biological populations, ecological communities, and economic coalitions which in turn self-organize to functioning ecosystems and technological societies with advanced economies [1]. Such complex systems display various emergent phenomena ranging from cyclicity and chaos [2,3] to robustness and resilience [4,5], and evolution and diversification [6,7]. By exploiting available free energy reservoirs, all living organisms produce surplus output that is distributed in the community context by some distinct mechanisms. In nature, the ecological game of growth is largely based on competitive success in utilizing limited shared resources whereas cooperative interactions among social groups, such as seen in human societies, might lead to a different payoff distribution.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "By studying competition in its purest form, ecological and evolutionary theory have since their adoption broadly influenced economic thought by shedding light to properties of the \u2018state of nature\u2019. While the distribution of income, wealth, and consumption in human societies has been a prominent theme in economic literature [8,9], species abundance distributions [10,11] have similarly been some of the most intensively studied macroecological patterns ever since Preston\u2019s observation that different physical, economic, and ecological \u2018wealth distributions\u2019 all seem to take similar form [12,13]. But whereas the distributive properties of political and economic systems have also given rise to normative theories addressing questions of distributive justice in terms of fair resource allocation, corresponding ecological theories have remained mainly descriptive, characterizing biodiversity with statistical scaling laws [14,15]. However, redistribution of resources has also been observed in non-human species, where uncertainty about kinship can reduce inequality among offspring, a finding consistent with Rawlsian notion of fairness [16].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The field of game theory can be roughly divided to non-cooperative game theory, which focuses on modeling individual strategic behavior in a competitive setting, and cooperative game theory, which in contrast focuses solely on the outputs of different coalitions of players and how the total output is distributed among them (either by bargaining or fair redistribution). While game theory has been extensively applied, and indeed also developed, within the broader fields of evolution and ecology, existing eco-evolutionary theory is predominantly making use of the concepts of non-cooperative game theory by attempting to model microscopic interactions and strategy dynamics either at the level of individuals, species, or genes as players [17]. However, measuring these underlying mechanistic interactions can be generally very difficult in case of complex biological systems even for simple minimal models, such as the generalized Lotka-Volterra model commonly employed for studying ecological communities [18,19]. Here, we demonstrate, perhaps counterintuitively, that concepts of cooperative game theory can be meaningfully applied also in an inherently non-cooperative biological setting, where competition and exploitation are the norm [20,21]. As we will show, this opens new, top-down methods to model and predict assembly of complex ecological communities.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "We introduce the ecological Game of Growth where we first measure the biomass growth\u2014the universal currency of living systems\u2014in different species assemblages and then analyze the game\u2019s distributional properties using the concept of Shapley value (see Fig 1). The Shapley value [22] is an established solution concept in cooperative game theory, which provides an objective way to distribute the total payoff between the players fairly in the sense that, among all possible payoff distributions, the Shapley distribution is the only one satisfying the mathematical properties of efficiency, symmetry, and linearity [22] as well as admitting a unique potential function [23]. The Shapley value has been extensively applied and extended in the economics game theory literature [24] as well as more recently in machine learning as a principled way to quantify the feature importances of different predictors [25]. In the context of biology, analysis inspired by the Shapley value has found applications, for example, in the fair proportion index used in constructing phylogenetic trees, to assess the importance of genes within a metabolic pathway, or to determine the individual contribution of each taxon within a multi-taxa setting to microbiome functional profiles [26\u201332].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "In this paper, we investigate how biomass as a proxy for cumulative consumption of shared resources is distributed in microbial communities and further pose the question of how fair the resulting ecological outcome is from a normative point of view. By systematically measuring the growth of 14 distinct 4-species communities across all possible subcommunities, we can compute the Shapley value of each species and assess the fairness of the community assembly by comparing these to the actual end-population shares of the species. We also applied varying antibiotic stress to each community to see whether the observed species abundance distribution and fairness change in more challenging growth conditions, where cooperation can readily emerge via production of public goods, detoxification, or nutrient availability promotion, and thus potentially play a pivotal role in the community outcomes [33]. By using the established concept of Shapley value, we first empirically quantify the fairness of altogether 56 community outcomes and then develop a normative assembly rule that can also predict unfairly assembled communities if the realized relative abundances in lower-level subcommunities are known.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The Shapley value of player i in a game with n players forming a grand coalition N={1,...,n} is given by [22]",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "where v is a function that gives the output of every 2n possible (sub)coalitions S that can be formed from the members of the grand coalition. In the context of ecology, we can interpret v(S) as some community function of community S, which we assume can be directly measured. Here, we focus on the community yield, denoted by YS, which is the total biomass at the end of the experiment. Now, to compute the Shapley values, we need not make any assumptions about the ecological dynamics that give rise to the species abundances, but instead simply experimentally measure the observable community yield in all subcommunities (see Fig 1).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "In practice, the Shapley value Eq. (1) can be computed more efficiently using the following recursive formula",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "with initial condition \u03d5i{}(v) =0 for empty coalitions (for a proof, see Ref. [34]). This more interpretable formula shows how the Shapley value \u03d5iN(v) is built bottom-up from the subcoalition Shapley values based on the species\u2019 marginal value on the community function.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "We formed 14 distinct communities by randomly selecting four species to each community from a pool of 16 microbial species that are known to be able to coexist as a community in laboratory microcosm experiments (see Materials and methods for more details). We then measured the growth curves and determined the yields from the combinatorially complete set of experiments in four different growth conditions, which allowed us to compute the Shapley values of the community members across the different communities and environments. These results are summarized in Fig 2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "First, we investigated the yield distribution within each community without focusing on the species identities: by ranking the Shapley values from largest to smallest independently for each community and environment, we gain a first look on how the fair yield shares based on the Shapley value (Fig 2A) compare to the actual yield distribution (Fig 2B). Note that by the property of efficiency, the Shapley value distributes the total yield fully among the community members, so we are comparing two different ways to distribute the same surplus output. By averaging these proportions across all communities (Fig 2C), we noticed that the most prevalent species in each community typically attains higher abundance compared to ranking based on Shapley value, the second-ranked species obtains roughly the same share under both distribution rules, and the third and fourth-ranked species are left with lower shares than what their Shapley values would warrant. Therefore, the observed yield shares are more concentrated to the most abundant species than the corresponding yield distribution obtained from the Shapley values which would distribute the biomass more equally. However, in the more challenging growth condition of moxifloxacin stress, we noticed that both the Shapley values and the observed yield shares become increasingly concentrated on a single species. In this case, two of the communities produce no observable biomass, and some species even have negative values, meaning that their presence lowered the community output.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "We then turned to analyze the roles of the individual species by collecting their Shapley values from all the communities they were present. Note that by the property of linearity, averaging the Shapley values of any given coalition across different environments constitutes a Shapley value of the entire game across environments. However, in our experiment, some species can belong to multiple different coalitions, and averaging over them is not anymore formally a Shapley value. Nevertheless, by averaging over all the individual Shapley values per species, the obtained mean Shapley value gives a measure of the species overall deserved share of the games\u2019 output (performance). We show that the mean Shapley value of each species is correlated quite strongly with the true abundances (r = 0.754), but note that some species receive on average less than what their objective contribution to the community output is, while others gain a larger share than what could be considered fair (see Figs 2D and S1 where the same is shown separately for each environment).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "Next, we investigated how closely the observed frequency distribution follows the game-theoretically fair end-distribution \u03c6, which can be obtained from the optical density data by normalizing with the sum of the Shapley values, which equals the yield of the grand coalition (see Materials and methods for more details). For example, in the case of only two species, the fair end-distribution is given by",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "where Y1 and Y2 are the monoculture yields of species 1 and 2, respectively, and Y12 is the biculture yield. This uniquely defines the fair distribution in case of two species for any ecological dynamics, assigning a higher fair proportion for the species with more efficient resource conversion efficiency while the biculture value scales the monoculture difference more strictly in case of antagonism (lower biculture yield) and more loosely in case of synergy (higher biculture yield) allowing for more equal proportions. The fair distribution therefore has the interesting feature that as the total output increases, the fair proportion of the less abundant species increases not only in absolute, but also in relative terms.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "In reality, the true end-frequencies after the community growth can deviate from the fair distribution because, in a competitive setting, resource efficiency (monoculture yield) is not the only important factor: for example, shorter lag time, higher resource uptake rate, consumption of secondary metabolites, exploitation of other public goods without reciprocal contribution to their production (cheating), and direct negative interactions, such as bacterial warfare [20], can all significantly change the competitive dynamics such that the monoculture yield alone is not predictive enough for success in a community setting. However, species that reach high abundances mainly by exploiting others without contributing themselves cannot grow successfully in harsher environments without the help of the contributing species. Thus, by observing growth systematically across all possible coalitions, we can effectively dissect the causal impact and role of each species on the community output, which defines the fair proportions of the species. By sequencing the community after growth, we can estimate the true end-frequencies, which allows us to compare how ecological reality relates to what would be fair community outcomes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "To quantify the fairness of each community across different environments, we computed the cosine similarity of the fair distribution and the true frequency vector (Fig 3A). We found communities that systematically followed the fair distribution across all environments; communities that were fair in some conditions, but not others; and communities that deviated significantly from the fair distribution across all conditions. We then quantified both the actual and implied community diversity of the true and fair distributions, respectively, using the Gini\u2013Simpson index, which can be interpreted as the probability of observing two different species when randomly sampling a pair of individuals from the population, i.e., the probability of interspecific encounter (note that the Gini\u2013Simpson index is inversely related to the Gini index with higher values meaning higher diversity). First, we found that the implied community diversity of the fair distribution could be either high or low, with the latter being the default mode in the presence of moxifloxacin (Fig 3D). However, in other conditions, the fair distribution displayed non-trivial coexistence as showcased in Fig 3C, which makes the observed fairness of these communities intriguing. We then compared the properties of the fair distribution and the true ecological distribution by contrasting their community diversity against each other (Fig 3E) and found that the Gini\u2013Simpson index of actual ecological communities was systematically lower or at most as high as that of the fair distribution. This suggests that the ecological reality seems to be more unequal than the fair distribution.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "A property of the fair distribution is that any discrepancies present with respect to true ecological outcomes already in the biculture competitions get propagated forward via the recursive logic of the Shapley value as shown by Eq. (2). However, if we have access to such additional biologically relevant information besides the yields, can we use this information to predict the full community assembly?",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "To test this, we also sequenced all the subcommunities and modified the recursive formula Eq. (2) to take the estimated true abundances xiS at some subcommunity size L as the initial condition for the recursion, and then computed the higher-order Shapley values as before. This leads to the following recursive algorithm",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "which can be used to predict the species abundances in the full community as x^iN=\u03d5iN. Note that this fair assembly rule contains no free parameters but instead assumes that after the initial unfairness present in the lower subcommunities has been accounted for, the community assembly thereafter follows the rules of the fair assembly.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "By incorporating the true biculture and triplet frequencies, we found that the fair assembly rule Eq. (4) was able to predict the observed full community outcomes up to very high accuracy (see Fig 4). We quantified the prediction accuracy using the Euclidean distance between the predicted and observed community composition and found that the mean squared error of the fair distribution with only yields was 0.367 \u00b1 0.034 (SE, N = 54). By using the fair assembly rule with the correct pairwise frequencies, this improved to 0.233 \u00b1 0.025 (SE, N = 54), and to 0.132 \u00b1 0.015 (SE, N = 54) with triplet frequencies. This suggests that the observed assembly process is consistent with the recursive logic of the fair assembly rule: the improved predictive performance is not driven by simply feeding in more data, but by adjusting the initial condition of the recursion based on observed, as opposed to fair, subcommunity outcomes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "Although much empirical research has been devoted to characterizing biodiversity in terms of species abundance distributions, there is surprisingly little knowledge about the normative status of the \u201cstate of nature\u201d. Here, we asked how fair ecological outcomes are in microbial communities by comparing the observed species abundance distribution to a fair distribution where each species claims only their fair share of the total surplus given by their Shapley value. We found examples of communities where the true ecological distribution followed the fair distribution very closely both in the control conditions and under antibiotic stress, while in other cases some significant species reached unfairly high abundances at the expense of \u201cexploited species\u201d which had a higher objective contribution to the community function than their observed share. One potential mechanism leading to unfairness in our system could be the varying lag time before the onset of growth: we found that species with shorter lag time were generally able to claim their fair share according to their Shapley value while species with a longer lag grew either better or worse after the initial growth of other species (see S2 Fig in the Supplementary material). This observation may be explained by the varying degree of niche overlap, where the growth of the species with longer lag can be hindered in case of high overlap, but improved in case of low overlap, for example, due to cross-feeding.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "While very unequal payoff distributions can also be fair, as seen in the stronger selective environment (Fig 3D), we found that the community diversity of the true ecological distribution was systematically lower or at most the same as the corresponding diversity of the fair distribution as measured by the Gini\u2013Simpson index. This tentatively suggests that at least in our microbial model system, the ecological reality seems to be even harsher than that of a purely meritocratic system. However, an important open question remains, whether this applies also in real ecosystems where species have co-evolved together as opposed to the random assemblages used here. Therefore, it may well be plausible that in the absence of \u201cunfair\u201d asymmetries, such as historical priority effects, nature is indeed organized increasingly \u2018fairly\u2019 in the Shapley sense. To what extent species sorting and evolutionary mechanisms invoking community state shifts [35] can act on fairness remains an intriguing topic for future studies, especially if fairness indeed affects community function. For example, it has been shown that community evenness can facilitate higher robustness in metrics such as invasion resistance and functional redundancy [36,37].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We believe that the introduced framework based on ideas of cooperative game theory and the Shapley value can become broadly useful in analyzing ecological data and developing ecological theory based on the several key strengths highlighted by our work. First, it provides a fully general way to make a non-trivial, game-theoretical baseline prediction for community outcomes and as such potentially serve as a useful null model that is driven by experimental data rather than any assumptions about the underlying ecological dynamics. Indeed, the fair assembly rule Eq. (4) based on the recursive definition of the Shapley value Eq. (2) could accurately predict complex community outcomes with zero free parameters. To emphasize, we did not fit any mathematical or statistical model to data but rather derived the predictions from the basic principles of fair distribution, further showing that the recursive logic of the Shapley value provided a very parsimonious description for the observed data and a new lens for understanding community composition. This success is particularly interesting as it remains unclear when microbial assembly follows general rules in contrast to cases where the community member species succeed in \u201csurprising\u201d the experimenters by exhibiting the so-called emergent properties [38,39]. Thus, our assembly rule based on fairness opens a new way to identify at what level of hierarchy the possible emergent properties arise. The methodology can also be directly applied to other community functions or properties of interest besides the yield, which was our focus here. By construction, the Shapley value compares community outcomes with and without the presence of each species, thus allowing to make causal inferences of the species contributions as well as their interactions in a model-agnostic way.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "There are, of course, also some limitations to the approach taken here, the most notable being the fact that to compute the Shapley value in practice, one must experimentally measure the yield (or other value of interest) from all the 2n possible subcommunities, which grows quickly with the number of present species. However, the technology to make combinatorially complete experiments even for moderately large communities already exists [40] and is likely to become easier in the future. Similarly, computer scientists actively develop approximative analysis ideas trying to overcome enumeration challenges related to Shapley values [30] which may be transferable to experimental design also in biology. Additionally, if one has access to the realized species distribution at some level, the introduced fair assembly rule can then be used to make predictions for the full community of any size without having to measure all the smaller subcommunities. This makes leave-one-out experiments (see, e.g., Ref. [41]) particularly interesting for testing how these ideas might translate to larger communities.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In conclusion, we have demonstrated how a purely normative concept can be successfully applied to studying a complex system, where a central problem in the typical bottom-up modeling approaches has been the number of unknown parameters that are very difficult to infer even for a minimal model. The suggested top-down approach of using the Shapley value and fairness to understand and predict community assembly is analogous to methods based on optimization principles [42] or principle of maximum entropy [43], which avoid this problem by deriving the model parameters and predictions from first principles. We anticipate that community assembly theory could be advanced with new types of normative models and identify the evolution of fairness as a particularly interesting area of future research both theoretically related to the evolutionary stability and reachability of fair community compositions as well as empirically in experimental evolution setups.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In this experiment, we had a pool of 16 bacterial species from which we randomly selected 4 species to each set. Randomized sets with duplicates of any given strain were discarded, and thus all sets have 4 different species in them. We then formed all possible combinations from these 4 species (n = 15), and this grand coalition is referred to as a block. We formed 25 blocks for this experiment, but sequenced 14 of them, and thus only data from 14 blocks is used in this article.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Sampling logic and experimental setup",
+        "sec_num": null
+      },
+      {
+        "text": "All bacterial strains used in this experiment are from the University of Helsinki Culture Collection (Microbial Domain Biological Resource Centre, HAMBI). The strains chosen into the species pool were a subset of species based on prior research (see Table 1 and Ref. [44]) and they were known to be able to coexist even for extended periods of time, with their antibiotic resistance profiles well-characterized.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Strain availability and pre-culturing",
+        "sec_num": null
+      },
+      {
+        "text": "Prior to the experiment, we revived the frozen glycerol stocks by axenically cultivating them in 6 ml proteose-peptone-yeast (PPY) medium for 22 hours under experimental conditions. Due to its extended lag phase, we revived HAMBI 3,237 in two stages: following an initial 48 h growth period, 500 \u00b5l of culture was used to inoculate 6 mL fresh PPY medium for the main pre-cultivation step.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Strain availability and pre-culturing",
+        "sec_num": null
+      },
+      {
+        "text": "Prior to setting up the growth assay, we adjusted the cell density of each culture to 2.4 \u00d7 107 cells/ mL by measuring each culture\u2019s OD600 and diluting the cultures with M9 minimal medium. The dilution factors were determined based on the relationship between OD600 and cell density, established from previously done flow cytometer measurements and CFU (colony-forming unit) counts.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Growth assay",
+        "sec_num": null
+      },
+      {
+        "text": "After density adjustment, we assembled the combinations by dispensing 500 \u00b5l density-leveled axenic cultures to the corresponding combination tubes with species number-specific volumes of M9. This resulted in the cell density of 6 \u00d7 106 cells/ mL per community.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Growth assay",
+        "sec_num": null
+      },
+      {
+        "text": "For the growth assay, we used liquid 100% R2A (Reasoner\u2019s 2A) medium. In this experiment, we have 4 treatment groups: control, ampicillin, streptomycin, and moxifloxacin. The final media antibiotic concentrations were 4.24 \u00b5g/ mL for ampicillin, 6.3 \u00b5g/ mL for streptomycin, and 0.06 \u00b5g/ mL for moxifloxacin. These concentrations are based on median IC50 values across the 16 strains in the bacterial pool the combinations were randomized from. For the control treatment, we added sterile MQ water to dilute the media to have the same amount of nutrients and salts as the antibiotic treatments. The media volume was 140 \u00b5l/ well on 96-well cell culture microplates (Corning). We inoculated 10 \u00b5l of the assembled bacterial consortia into each well. The growth assays were conducted on Agilent BioTek LogPhase 600 Microbiology Readers at 600 nm, 30 \u00b0C for 48 h with shaking on at 800 RPM. The OD600 was measured every 10 min. After the growth assay, the culture plates were frozen at \u221220 \u00b0C prior to 16S amplicon library preparation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Growth assay",
+        "sec_num": null
+      },
+      {
+        "text": "We constructed the 16S amplicon libraries for community composition analysis using an in-house library preparation method derived from the protocol described in [45]. Briefly, the V3 region of the 16S gene was amplified with fusion primers which included iTru fusion adapters and an internal sample-specific and combinatorial index. Amplicons were purified with NGS Normalization 96-Well Kit (Norgen Biotek), pooled in sets of 90 reactions, and subsequently amplified with standard TrueSeq primers and indexes. The reaction products were purified with Sera-Mag particles (Cytiva), and equimolarly pooled. The quality of the library was evaluated using Bioanalyzer High sensitivity DNA kit (Agilent) and sequenced on Illumina Miseq at the Finnish Functional Genomics Centre (Turku, Finland), using the MiSeq Reagent Micro Kit v2 (2 \u00d7 150 bp reads). DNA template for PCR was obtained by thermal lysis of diluted samples in dH2O (10 min at 99.9 \u00b0C) and subsequent removal of cellular debris by centrifugation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Library preparation",
+        "sec_num": null
+      },
+      {
+        "text": "We demultiplexed the pooled 16S amplicon paired-end sequencing data by: (1) identifying each experimental community sample by the forward and reverse primer sequence combination; (2) trimming paired-end adapter sequences; (3) merging paired-end reads; and (4) filtering merged reads. Scripts to run this pipeline are based on scripts available at https://gitlab.utu.fi/slhogl/hambiDemuxQC.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Bioinformatics/downstream sequence analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Identification of samples by primer combinations was done using cutadapt [46] (version 4.9) software to search sequencing data for primer combinations corresponding to specific experimental communities, as defined during library preparation stage (maximum error rate 0.15). Likewise, cutadapt [46] (version 4.9) was used to trim paired-end adapter sequences (forward: CCTACGGGAGGCAGCAG; reverse: ATTACCGCGGCTGCTGG; maximum error rate 0.2). Merging of the trimmed paired-end reads was done using NGmerge [47] (version 0.3) software in default (\u201cstitch\u201d) mode. Filtering of the merged reads was done using vsearch [48] (version 2.22.1) software (maximum expected error 1; minimum sequence length 115; maximum sequence length 165; \u201cN\u201d characters in sequences are not allowed).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Bioinformatics/downstream sequence analysis",
+        "sec_num": null
+      },
+      {
+        "text": "We derived the absolute abundances of the bacterial species within each experimental community using the demultiplexed merged reads with Rbec [49] (version 1.8.0; as part of R Bioconductor version 3.17) software. Relative abundances obtained by first normalizing species-specific counts by the expected number of 16S gene copies in their genome, then dividing by the total number of counts in the sample. Scripts to run this software are based on the script available at https://gitlab.utu.fi/slhogl/hambiAmplicon.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Bioinformatics/downstream sequence analysis",
+        "sec_num": null
+      },
+      {
+        "text": "When computing the yields, we subtracted the measured background optical density obtained from the associated control condition. As the Shapley value can become negative for some species, unlike true abundances, we compute the fair end-distribution as \u03c6i =max(0,\u03d5i)/\u2211kmax(0,\u03d5k), where the max-operator renormalizes the potentially negative values to give well-defined fair frequencies that sum up to unity. We quantified community diversity using the Gini\u2013Simpson index defined as 1\u2212\u2211i\u03c6i2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Data analysis",
+        "sec_num": null
+      }
+    ]
+  }
+}

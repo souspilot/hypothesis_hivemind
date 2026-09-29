@@ -1,0 +1,613 @@
+{
+  "paper_id": "journal.pbio.3003648",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003648.xml"
+  },
+  "title": "Expansion of the geranylgeranyl pyrophosphate synthase gene family underlies the evolution of terpenoid biosynthesis in termites",
+  "doi": "10.1371/journal.pbio.3003648",
+  "authors": [
+    {
+      "first": "Natan",
+      "last": "Hor\u00e1\u010dek"
+    },
+    {
+      "first": "Ond\u0159ej",
+      "last": "Luk\u0161an"
+    },
+    {
+      "first": "Zarley",
+      "last": "Rebholz"
+    },
+    {
+      "first": "Karel",
+      "last": "Harant"
+    },
+    {
+      "first": "Radek",
+      "last": "Pohl"
+    },
+    {
+      "first": "Lana",
+      "last": "Mutabd\u017eija-Nedelcheva"
+    },
+    {
+      "first": "Simon",
+      "last": "Hellemans"
+    },
+    {
+      "first": "Daniel",
+      "last": "Jungwirth"
+    },
+    {
+      "first": "Jan",
+      "last": "K\u0159iv\u00e1nek"
+    },
+    {
+      "first": "Anna",
+      "last": "Amirianov\u00e1"
+    },
+    {
+      "first": "Pavl\u00edna",
+      "last": "Kyjakov\u00e1"
+    },
+    {
+      "first": "Thomas",
+      "last": "Bourguignon"
+    },
+    {
+      "first": "Dorothea",
+      "last": "Tholl"
+    },
+    {
+      "first": "Robert",
+      "last": "Hanus"
+    },
+    {
+      "first": "Jitka",
+      "last": "\u0160t\u00e1fkov\u00e1"
+    }
+  ],
+  "abstract_text": "Termites produce the most diverse array of terpenoids among terrestrial metazoans, comprising over 200 structures. However, their biosynthesis has not yet been elucidated. Here, we identify a gene family which arose through a series of duplications of geranylgeranyl pyrophosphate synthase in the common ancestor of Neoisoptera, the terpene-producing termite lineage. We functionally characterized several proteins from this rich GGPPS-like family as terpene synthases generating biologically relevant sesqui- and diterpenes. These include the queen pheromone (3R,6E)-nerolidol in Embiratermes neotenicus and the presumed precursor of polycyclic defensive diterpenes (E,E,E)-neocembrene in Nasutitermes takasagoensis. We report significant enrichment of transposable elements in the GGPPS-like genomic loci, study the selection pressures acting in the evolution of the GGPPS-like family, and highlight an amino acid site crucial for cyclization capacity and enantiospecificity of the characterized enzymes. We conclude that we have identified an enzyme family that facilitated the emergence of the remarkable richness of termite terpenoids.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003648",
+    "body_text": [
+      {
+        "text": "Termites hold the record among insects for the diversity of terpenoid secondary metabolites they produce, with over 200 different monoterpenes, sesquiterpenes, and diterpenes identified to date [1,2]. The occurrence of terpenoids is restricted to the modern termite clade Neoisoptera and coincides with the emergence of the frontal gland, a unique exocrine organ and a synapomorphy of Neoisoptera. This gland is present in dispersing kings and queens, but most developed\u2014and best studied\u2014in soldiers, the caste specialized in colony defense [3,4].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The supposed ancestral function of termite terpenoids was to serve as defensive compounds, released in rich blends through the opening of the frontal gland on termite heads. Some of the defensive terpenoids were later co-opted for chemical communication, in line with the observations of pheromone evolution from defensive compounds in other insects [5]. Thus, terpenoids frequently act as alarm pheromones secreted from the frontal gland of irritated soldiers [6,7], but may also be synthesized in other exocrine organs and serve as sex pheromones and trail pheromones [8]. Finally, terpenoids may play the role of queen pheromones produced by reigning queens to signal their presence in the colony to the nestmates [9]. In contrast to the solid coverage of termite terpenoid diversity, their biosynthesis and its evolution remain to be elucidated. Because terpenoids have been recorded in the basal neoisopteran family Stylotermitidae [10] as well as in many other later diverging lineages, it is reasonable to hypothesize that their biosynthesis has a single origin in the common ancestor of Neoisoptera.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Terpenoid secondary metabolites usually originate from prenyl pyrophosphates, such as geranyl pyrophosphate (C10, GPP), farnesyl pyrophosphate (C15, FPP), or geranylgeranyl pyrophosphate (C20, GGPP) giving rise to monoterpenes, sesquiterpenes, and diterpenes, respectively. The conversion of prenyl pyrophosphates into terpenes is catalyzed by terpene synthases (TPS), which cleave off the pyrophosphate and yield linear or cyclic terpene hydrocarbons, or the respective alcohols. Final terpenoid products may then arise through further modifications (oxygenations, cyclizations) by additional enzymes [11,12].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Like other animals, insects generally lack the \u201cclassical\u201d TPS genes known from plants, bacteria, and fungi [13], except for a rare case of their gain via horizontal gene transfer [14]. Therefore, insects rely on alternative mechanisms to obtain terpenoids, such as sequestering them from the diet, acquiring them from microbial symbionts, or recruiting a completely unrelated enzyme family for TPS functions [15]. Nevertheless, the most common evolutionary route by which insects acquired the capacity for de novo terpenoid biosynthesis is through duplication and neofunctionalization of isoprenyl diphosphate synthase genes (IDS). This enzyme family is conserved in the primary metabolism across all domains of life and catalyzes the elongation of prenyl pyrophosphates via the sequential condensation of shorter pyrophosphates with isopentenyl pyrophosphate (C5, IPP) [16,17]. Such origin of TPSs has so far been documented in a handful of species across Coleoptera, Lepidoptera, Hemiptera, and Diptera, where TPSs are paralogous either to geranyl and farnesyl pyrophosphate synthases (GPPSs and FPPSs [18\u201323]) or geranylgeranyl pyrophosphate synthases (GGPPS [24,25]). Taken together, these findings indicate that TPSs originated independently in multiple insect lineages through repeated IDS duplications and neofunctionalizations.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Here, we aim to elucidate the evolution of terpenoid biosynthesis in termites. Building on reports of independent origins of TPSs from IDSs in several insect clades, as well as on the exclusive occurrence of terpenoids in Neoisoptera, we hypothesize that terpenoid biosynthesis evolved in the common ancestor of Neoisoptera through duplication/multiplication and neofunctionalization of IDSs. To capture the structural and functional diversity of termite terpenoids, we selected two model species from different subfamilies within Neoisoptera. Our primary model is the South American termite Embiratermes neotenicus (Termitidae: Syntermitinae), in which we recently identified the sesquiterpene alcohol (3R,6E)-nerolidol as the queen pheromone [9]. The second model is the Japanese species Nasutitermes takasagoensis (Termitidae: Nasutitermitinae) belonging to a genus whose soldiers produce a rich blend of monoterpenes and polycyclic oxygenated diterpenes presumably derived from the monocyclic precursor (3E,7E,11E)-neocembrene [1,2,26]. Previously, eight GGPPS homologs have been reported as present and upregulated in the frontal gland of soldiers in this species [27]. Although GGPPS gene multiplicity has been tentatively linked to terpenoid production in termites [27,28], the hypothesis has not been experimentally verified.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "We report that GGPPS exists as a single-copy gene in basal termites, but its duplication or multiplication is a ubiquitous feature of Neoisoptera, with paralog numbers reaching up to 15 in E. neotenicus. This pervasive multiplicity strongly indicates that the initial duplication event occurred concurrently with the frontal gland emergence in their common ancestor. We functionally characterize selected GGPPS homologs from the two species and demonstrate that some of them act as TPS enzymes, converting prenyl pyrophosphate substrates into terpenoids known from the respective species, or biosynthetic precursors thereof. We conclude that we have identified a family of TPS enzymes that facilitated the emergence of the remarkable richness of terpenoid secondary metabolites in termites. Furthermore, we bring evidence for possible involvement of transposable elements (TEs) in shaping the GGPPS-like gene family and outline how selection pressures may have affected its evolutionary diversification. Finally, we examine the structure-function relationship of termite TPS enzymes and identify an amino acid crucial for their capacity of terpene cyclization and enantioselective biosynthesis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "To obtain a comprehensive image of the terpenoids produced by the two model termites, we first analyzed body washes from selected castes of both species using gas chromatography coupled with mass spectrometry (GC-MS). In E. neotenicus, substantial amounts of terpenes were only present in neotenic queens; the dominant compound was (6E)-nerolidol, followed by (3E,7E,11E)-neocembrene, along with minor or trace quantities of \u03b1- and \u03b2-farnesene, \u03b2-springene and two additional unidentified diterpenes (Figs 1A and S1, S2).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.1. Terpenoid chemistry in E. neotenicus queens and N. takasagoensis soldiers",
+        "sec_num": null
+      },
+      {
+        "text": "In soldiers of N. takasagoensis, we detected a rich and abundant blend of terpenes comprising two monoterpenes\u2014(+)-\u03b1-pinene and (+)-limonene\u2014and eight diterpenoids (Figs 1B and S3\u2013S5). Three of the most prominent diterpenoids, each bearing three or four oxygenated functional groups, were fully characterized using nuclear magnetic resonance (NMR) as 14\u03b1-acetoxy-3\u03b2,20\u03b2-dipropionoxy-kampa-6(7),8(9)-diene, 3\u03b1,9\u03b2,13\u03b1-tripropionoxy-trinervita-11(12),15(17)-diene, and 3\u03b1,9\u03b2,13\u03b1-tripropionoxy-11\u03b1(12\u03b2)-epoxy-trinervita-15(17)-ene (S6\u2013S8 Figs), following termite diterpene nomenclature [29].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.1. Terpenoid chemistry in E. neotenicus queens and N. takasagoensis soldiers",
+        "sec_num": null
+      },
+      {
+        "text": "We did not retrieve any sequences similar to plant, fungal, or bacterial TPSs in the transcriptome assemblies of E. neotenicus and N. takasagoensis, nor in the E. neotenicus genome, which we assembled for this study (genome assembly statistics are provided in S1 Table). No duplication was found in genes coding for subunits of decaprenyl-diphosphate synthase, a long-chain IDS. We then queried the datasets for short-chain IDS homologs. Our search confirmed the presence of three previously reported FPPS sequences in N. takasagoensis transcriptome [27] and revealed an FPPS tandem duplication in E. neotenicus genome. A phylogenetic analysis of FPPS homologs from selected cockroach and termite species suggested that an FPPS gene duplication is present in all Blattodea (S9A Fig). An inspection of amino acid sequence alignments showed that the more conserved blattodean FPPS clade, containing one and two sequences of E. neotenicus and N. takasagoensis, respectively, presents all main features typical of the ancestral FPPS enzymes, such as the so-called first and second aspartate-rich motifs (FARM and SARM, sequence DDxxD) implicated in binding of magnesium ions in the active site of the enzyme [30,31]. We therefore designated this clade as canonical FPPSs. By contrast, in the divergent clade which we refer to as FPPS-like, FARM and SARM are disrupted to an extent which does not allow for M(II) ion coordination (S9 and S10 Figs). The distinction between FPPS- and FPPS-like proteins was confirmed by in vitro assays with recombinant EneoB from E. neotenicus, a member of the FPPS clade, which presented activities typical of insect FPPS proteins. No IDS or TPS activity was detected with the FPPS-like protein from the same species, EneoA (S9D Fig). The combination of phylogenetic analysis, protein active site modeling, and biochemical assays let us conclude that the FPPS-like homologs are unlikely to be involved in terpenoid biosynthesis in termites.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.2. An FPPS gene duplication predates the occurrence of termites",
+        "sec_num": null
+      },
+      {
+        "text": "Next, we searched the E. neotenicus transcriptome and genome for GGPPS homologs and identified multiple full-length GGPPS sequences. Interestingly, we also discovered numerous partial GGPPS homologs lacking one or more exons and located in genomic regions extensively soft-masked by RepeatMasker. An inspection of the unmasked genome revealed as many as 28 highly homologous sequences with conserved gene organization (Figs 2A and S11), most of which were expressed in one or more E. neotenicus castes. Based on gene integrity (six protein-coding exons) and the presence of indels or nonsense mutations, we classified 15 of these GGPPS homologs as genes and 13 as pseudogenes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3. Neoisoptera possess an expanded family of GGPPS-like genes",
+        "sec_num": null
+      },
+      {
+        "text": "We then reconstructed the GGPPS nucleotide phylogeny in the context of publicly available sequences from other insects, including two basal termites and three Neoisoptera (Stylotermes halumicus, E. neotenicus, and N. takasagoensis). GGPPS occurs as a single-copy gene in basal termites and other insects, whereas multiple paralogs were found in Neoisoptera, including S. halumicus from the very basal neoisopteran family Stylotermitidae (Fig 2B). Neoisoptera possess one paralog clustering with the single-copy genes of basal termites (denoted as clade I), presumably representing the canonical GGPPS enzyme. The remaining paralogs form an expanded monophylum, further referred to as the GGPPS-like gene family, comprising three sequences from S. halumicus, six from N. takasagoensis, and 14 from E. neotenicus. The GGPPS-like clade resolves into three branches, denoted II\u2013IV (Fig 2A, 2B).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3. Neoisoptera possess an expanded family of GGPPS-like genes",
+        "sec_num": null
+      },
+      {
+        "text": "We further verified the hypothesis that the GGPPS multiplication is specific to Neoisoptera by phylogenetic analysis of GGPPS amino acid sequences including 7 basal termite species and 19 Neoisoptera (S12A Fig, S6 Table). The presumed canonical GGPPS branches (paraphyletic clade I) comprised sequences from cockroaches, basal termites, and Neoisoptera, while the divergent GGPPS-like branch consisted exclusively of neoisopteran sequences and formed a monophylum sister to neoisopteran GGPPSs. All Neoisoptera species were represented in the GGPPS-like branch, subdivided into well-supported clades II\u2013IV. Thus, the initial GGPPS duplication occurred in the ancestor of Neoisoptera and was followed by subsequent duplication events. Additionally, we broadened the sampling for the phylogenetic analysis and included sequences from Heliconius butterflies, in which two GGPPS-like TPSs were reported, as well as several insect GGPPSs with confirmed IDS function. The reconstructed tree clearly shows that GGPPS duplications arose independently in Neoisoptera and in Heliconius butterflies (S12B Fig, S6 Table).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3. Neoisoptera possess an expanded family of GGPPS-like genes",
+        "sec_num": null
+      },
+      {
+        "text": "Finally, we surveyed all publicly available sequences homologous to GGPPS across termites, including partial TSA transcripts, and mapped them on a phylogenetic tree of termites together with the records of terpenoid secondary metabolites in Neoisoptera (Fig 3, S7 Table). We obtained a clear picture of GGPPS evolution: while only GGPPS could be retrieved from the basal lineages represented by 8 species from three families, at least some partial GGPPS-like sequences were identified in all 46 included Neoisoptera from seven families and 12 subfamilies of Termitidae.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3. Neoisoptera possess an expanded family of GGPPS-like genes",
+        "sec_num": null
+      },
+      {
+        "text": "In E. neotenicus, the observed extensive duplication in GGPPS and GGPPS-like genes occurs alongside an increased frequency of low-complexity regions in the given loci. To elaborate on this observation, we performed a set of enrichment analyses using genome-scale TE prediction with the Extensive de novo TE Annotator (EDTA) pipeline. The mean TE density observed in a 100 kb window surrounding the GGPPS-like genes and pseudogenes was 0.65 which corresponds to 150% of the average density 0.43 observed in the genomic windows of the same size generated within 1,000 random permutations or 0.42 in regions surrounding protein-coding genes. An even lower TE density of 0.26 was observed in the FPPS-like locus (S13A Fig). The high observed TE density in the GGPPS-like loci corresponds mostly to TEs located next to the genes while exhibiting a periodic distribution near genes and proximal paralogs (S13B Fig). As documented by the TE family representation analysis, no single TE type was found to be specifically enriched in the GGPPS-like loci (S13C Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4. GGPPS and GGPPS-like genomic loci are rich in TEs",
+        "sec_num": null
+      },
+      {
+        "text": "As all the paralogs retained an unspliced gene structure with fully conserved exon-intron boundaries, we focused on class II DNA TEs\u2014elements that transpose directly as DNA without splicing [33]. Upon running RepeatModeler at the whole-genome level, we observed multiple DNA TE-like motifs in loci surrounding the GGPPS-like genes and pseudogenes, consistent with the increased occurrence of masked regions. To improve prediction accuracy, we restricted our analysis to 27 contigs harboring sequences which showed >80% homology to previously identified GGPPS-like orthologs and at least two consecutive exons. Among several TEs revealed by the TE annotation pipeline, TE_00000081\u2014a class II transposon from the CACTA TIR family\u2014was found in all but two loci. This TE was oriented in the opposite direction relative to the gene and was located in the region surrounding exon 6 (Figs 2A and S13).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4. GGPPS and GGPPS-like genomic loci are rich in TEs",
+        "sec_num": null
+      },
+      {
+        "text": "First, we functionally characterized the proteins from clade I expected to act as GGPPS enzymes (EneoJ in E. neotenicus and NtGGPPS7 in N. takasagoensis). Indeed, both proteins showed IDS activity with IPP in combination with all allylic substrates tested: they produced GGPP from IPP and FPP; IPP and GPP generated both FPP and GGPP; upon incubation with IPP and DMAPP, only GPP was detected (S14 Fig). No TPS activity was observed in EneoJ or NtGGPPS7 for any of the substrates tested (GPP, FPP, and GGPP).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.5. Identification of proteins with GGPPS activities in E. neotenicus and N. takasagoensis",
+        "sec_num": null
+      },
+      {
+        "text": "Among the 14 E. neotenicus GGPPS-like paralogs, we selected EneoC and EneoE, highly expressed in neotenic queens according to RNA-Seq analysis shown in Fig 2C. Upon incubation of EneoC with FPP, a single product was generated, identified by GC-MS and chiral GC as pure (3R,6E)-nerolidol (Fig 4A). Additionally, EneoC presented IDS activity by generating FPP upon incubation with IPP and GPP (Fig 4C). No other substrates were accepted by EneoC (GPP or GGPP in TPS assays, IPP combined with DMAPP, FPP, or GGPP in IDS assays).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6. Two E. neotenicus GGPPS-like proteins show TPS activity and generate queen terpenoids",
+        "sec_num": null
+      },
+      {
+        "text": "EneoE accepted FPP in TPS activity assays, generating racemic (6E)-nerolidol, and converted GGPP into (3E,7E,11E)-neocembrene (Fig 4A, 4B). The enzyme showed no IDS activity. Both (3R,6E)-nerolidol and (3E,7E,11E)-neocembrene represent queen-specific terpenoids in E. neotenicus (Fig 1A), the former being known as E. neotenicus queen pheromone [9]. Thus, we consider EneoC an enantiospecific nerolidol synthase and EneoE a neocembrene synthase.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6. Two E. neotenicus GGPPS-like proteins show TPS activity and generate queen terpenoids",
+        "sec_num": null
+      },
+      {
+        "text": "Having identified EneoC as capable of producing the E. neotenicus queen pheromone, we wanted to confirm its upregulation in queens compared to nymphs. Indeed, in differential gene expression analysis of RNA sequencing data from nymphs and queens, EneoC was by far the most upregulated of all GGPPS-like genes in queen samples from thorax and abdomen (log2 fold change queen versus nymph = 9.9, padj = 1.8 \u00d7 10\u221216) while also showing the highest transcript abundances (S15 Fig, S8 Table). Importantly, EneoC transcript upregulation was clearly reflected by proteomic data. Among all detected IDS homologs, EneoC was present as the most abundant protein and showed the strongest enrichment in queen abdomen and thorax compared to nymphs (log2 fold change queen versus nymph = 10.6; S15 Fig, S9 Table). In summary, both transcriptomic and proteomic analyses supported the biological relevance of EneoC for queen pheromone biosynthesis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6. Two E. neotenicus GGPPS-like proteins show TPS activity and generate queen terpenoids",
+        "sec_num": null
+      },
+      {
+        "text": "All six GGPPS-like genes were reported as upregulated in N. takasagoensis soldier heads, the biosynthetic site of terpenoid defensive compounds [27]. We expressed these in the Saccharomyces cerevisiae strain JWY501 which is specifically engineered to accumulate GGPP. In the NtGGPPS6-expressing strain, we detected high amounts of (3E,7E,11E)-neocembrene, while no significant terpenoid production was observed in any other strain (S16 Fig). Subsequently, we expressed the six GGPPS-like genes in Escherichia coli and used the purified proteins in IDS and TPS assays. Only recombinant NtGGPPS6 showed any activity in vitro, producing a mixture of (3R,6E)- and (3S,6E)-nerolidol enantiomers from FPP (Fig 4A), and (3E,7E,11E)-neocembrene from GGPP (Fig 4B). No IDS activity was observed. As only monoterpenes and diterpenes are present in the soldier extract, we assume that in vivo, NtGGPPS6 does not generate nerolidol, and acts instead as a neocembrene synthase producing the precursor of polycyclic diterpenes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.7. N. takasagoensis GGPPS-like protein NtGGPPS6 is a neocembrene synthase",
+        "sec_num": null
+      },
+      {
+        "text": "We examined whether the divergence of GGPPS-like genes involves substitutions within motifs typical of GGPPS proteins. We defined such insect GGPPS motifs (IGMs) based on patterns generated for canonical insect GGPPS sequences by MEME, and we combined them with the IPP-binding motif prediction used in our earlier study [34]. We observed that only FARM and IGM 3 motifs are conserved in termite GGPPS-like proteins (S17 Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.8. Sequence motifs within termite GGPPS gene family and selection analysis",
+        "sec_num": null
+      },
+      {
+        "text": "To understand how selection pressures may have influenced the evolution of TPS function in Neoisoptera, we performed selection analysis on a phylogeny of selected full-length termite GGPPS and GGPPS-like coding sequences (Fig 5A, S10 Table) with the HyPhy RELAX. Our analysis showed that selection pressures have overall intensified along branches in the GGPPS-like clade containing the neoisopteran TPSs (k = 11.1, p < 10\u22124). The partitioned descriptive model fitted to each branch class indicated a general increase in the intensity of diversifying selection along GGPPS-like clade branches compared to the canonical GGPPS reference branches (S11 Table, \u03c9 = 22.72 versus 3.58). Additionally, a lower degree of constraint from purifying selection acting on the GGPPS-like versus canonical GGPPS clades can be inferred from the substantial decrease in the proportion of codons under negative selection (S11 Table, 33.34% in GGPPS-like sequences versus 97.06% in canonical GGPPSs) and a concurrent emergence of a category of neutrally evolving codons in the test branch class (S11 Table, 64.45% versus 0).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.8. Sequence motifs within termite GGPPS gene family and selection analysis",
+        "sec_num": null
+      },
+      {
+        "text": "We next tested all branches within the termite GGPPS-like clade for evidence of positive selection affecting the diversification of the clade by applying the aBSREL (adaptive branch-site random effects likelihood) procedure in HyPhy to our dataset. Three internal branches were significantly likely to have experienced positive diversifying selection (Holm-Bonferroni-corrected p-values < 0.05). Two of these occur within the GGPPS-like clade II containing EneoC and NtGGPPS6. We designated the internal nodes delimiting these branches 1, 2, and 3 (Fig 5A), and used PAML to reconstruct their ancestral sequences (S12 Table). PAML was also employed to detect specific amino acid sites affected by positive selection (\u03c9 > 1) using the Bayes Empirical Bayes (BEB) method. For the branch connecting nodes 2 and 3, posterior probability higher than 0.9 was recorded in four sites corresponding to the following putative amino acid changes: P23S, Q26G, S59G, and N90S (Fig 5B\u20135D). Two additional sites (Q21K, S60I) showed BEB values higher than 0.8. These sites were retained almost completely in both NtGGPPS6 (K21, S23, G26, G59, G60, and S90) and EneoC (K21, S23, G26, C59, I60, and S90). No site with a BEB value exceeding 0.9 was detected on the branch leading to node 2. A structure model of ancestral sequence 2 was then generated using AlphaFold 3 and compared to NtGGPPS6 (Fig 5B, 5C), showing that all listed sites are located near the active site cavity opening. Three of these (Q21K, P23S, and Q26G) lie on a loop adjacent to the opening, a region with greater conformational flexibility compared to the prevailing \u03b1-helical secondary structure.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.8. Sequence motifs within termite GGPPS gene family and selection analysis",
+        "sec_num": null
+      },
+      {
+        "text": "We modeled structures of proteins with known activity (EneoC, EneoE, EneoJ, NtGGPPS6, and NtGGPPS7), and mapped the IGM motifs onto the structures. Overall, all protein structures aligned very well as exemplified by EneoJ and EneoC models (Fig 6C). Interestingly, a distinct pre-cyclization GGPP substrate conformation was modeled with EneoE protein, contrasting with a rather linear GGPP positioning in the active site of NtGGPPS6 (Fig 6D). To evaluate the proximity and potential significance of individual amino acid changes for protein enzymatic activities, we focused on the less divergent clade II GGPPS-like TPS enzymes (EneoC, NtGGPPS6). Specifically, we searched for variable amino acids located near the FARM and SARM motifs within the highly polar part of the active site where the isoprenoid carbocation is formed and transferred to an IPP molecule in IDS enzymes, taking IGM motif substitutions into account. We noticed an interesting site within IGM 4, a motif located in helix 6, ~8 \u00c5 from FARM (Fig 6C\u20136D). Thr152 is conserved in NtGGPPS6 and all IDS enzymes as a part of the KT motif (Fig 6A), and replaced by isoleucine in EneoC. We hypothesized that Thr152 might be important for carbocation stabilization which would aid GGPP cyclization into neocembrene by NtGGPPS6. Indeed, the substitution of this amino acid in the T152I mutant of NtGGPPS6 abolished neocembrene production from GGPP and instead lead to the formation of the linear diterpene alcohol geranyllinalool, a C20 homolog of nerolidol. In addition, upon incubation of T152I NtGGPPS6 with FPP, we observed a significant shift in the enantioselectivity of (6E)-nerolidol biosynthesis. While the wild type produced 65% of the R enantiomer, this proportion increased to 91% in the mutant enzyme, thus nearing the full enantioselectivity of EneoC (Fig 6B, S13 Table).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.9. Structural features underlying cyclization capacity and enantioselectivity of termite TPS",
+        "sec_num": null
+      },
+      {
+        "text": "A novel biosynthetic capacity emerged in termites of the modern lineage Neoisoptera, enabling them to produce a remarkably broad scope of terpenoid secondary metabolites. The goal of this study was to unveil the evolutionary background of this innovation by identifying TPS enzymes, generating either the final terpenoids or precursors thereof. We provide evidence for TPS activity within a family of GGPPS-like enzymes, which evolved by a duplication of a GGPPS gene in the ancestor of Neoisoptera and a subsequent expansion accompanied by the gain of a novel function. The identification of termite TPS enzymes as members of a GGPPS-like gene family adds another instance to the list of independent acquisitions of TPS function via the duplication and neofunctionalization of ancestral IDS (FPPS or GGPPS) genes previously reported in several lineages of insects and in fungi [18\u201325,35]. In fact, the classical TPS gene family in plants and microorganisms has itself been hypothesized to have arisen from an IDS ancestor [13,36], possibly making its origin the most ancient of the recurring IDS neofunctionalization events.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Our data show that GGPPS-like family evolved in the common ancestor of Neoisoptera, suggesting its concurrent origin with the terpene-producing frontal gland, a key neoisopteran synapomorphy. A broader examination of published data shows that the evolutionary origin of terpene synthases in the ancestor of Neoisoptera aligns with the presence of terpenoid secondary metabolites across termite phylogeny, as both features are first recorded in the basal neoisopteran genus Stylotermes (Fig 3). The GGPPS-like genes remained present in the genomes of all later branching clades over roughly 100 million years of their diversification (according to dating by Bu\u010dek and colleagues [37]), even though in some extant lineages the terpenoids themselves seem to be missing. In later branching lineages of Neoisoptera, a trend toward higher terpenoid complexity can be observed, presumably reflecting the involvement of additional enzymes acting on TPS-produced skeletons (Fig 3). For example, the oxygenated polycyclic diterpenes typically found in the modern lineage Nasutitermitinae, such as the three highly complex structures identified here in N. takasagoensis (Fig 1B), represent nearly one half of the termite terpenoid repertoire [1,2]. They are expected to arise via subsequent modifications of the TPS-produced (3E,7E,11E)-neocembrene [1,26] and we propose that the most intuitive candidates for further cyclizations and oxygenations are cytochromes P450, some of which are reported as conspicuously upregulated in the frontal glands of Nasutitermes soldiers [12,27].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In eusocial insects, a gene family expansion accompanied by a caste-biased expression pattern of newly emerging paralogs, as observed here in the case of GGPPSs, represents a feature often associated with caste diversification [38\u201341]. Multiple examples have been accumulated showing that duplications and neofunctionalizations of gene sets and their differential use in individual castes drive social insect phenotypic plasticity, e.g., in genes involved in endocrine signaling, chemosensation, metabolism, or digestion [28,42\u201345].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The emergence of a gene family and its further expansion can be mediated by different mechanisms, which are not necessarily shared in IDS-like gene families in individual insect lineages. For example, the genomic organization of pan-Blattodean FPPS-like genes in termites is suggestive of origin by tandem duplication, which also appears to have been a major driver of FPPS-like gene family expansion in stink bugs [23]. Alternatively, gene duplication can be mediated by TEs [46], examples including non-TPS genes participating in terpenoid biosynthesis in roses [47]. Our data also suggest the potential involvement of TEs in shaping the expansion of GGPPS-like family in E. neotenicus. The observed mean TE density in the near proximity of the GGPPS-like genes and pseudogenes is significantly higher compared to random genomic regions as well as to loci surrounding protein-coding genes. A specific TE, TE_00000081, was consistently associated with focal loci in E. neotenicus, and sequences homologous to this element are also present in GGPPS-like transcripts from N. takasagoensis and in Reticulitermes speratus GGPPS-like genomic locus (S13 Fig). We thus propose that GGPPS gene duplications in Neoisoptera were frequently concurrent with transposition events.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We have identified three TPS enzymes which all produce (6E)-nerolidol from FPP in vitro. Out of these, only EneoC is an enantiospecific TPS generating pure (3R,6E)-nerolidol, which acts as a queen pheromone in E. neotenicus. EneoC gene has been found as highly upregulated in queens at transcript and protein levels, both in an inter-caste comparison and relative to other GGPPS-like genes, supporting its biological role in queen pheromone production. Interestingly, to our knowledge, EneoC is the only known terpene synthase producing exclusively the R enantiomer of nerolidol. The only other enzyme reported to generate enantiomerically pure (3R,6E)-nerolidol is a maize enzyme which, however, also produces additional sesquiterpenes [48]. The other two TPSs which we functionally characterized, NtGGPPS6 and EneoE, presumably act as (3E,7E,11E)-neocembrene synthases in vivo, thus generating the putative precursor of defensive compounds in N. takasagoensis and a queen-specific volatile in E. neotenicus. In addition to TPSs, we have also identified canonical GGPPSs in both E. neotenicus and N. takasagoensis corresponding to typical insect class III GGPPS enzymes [49\u201351].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "To obtain a comprehensive view of terpenoid biosynthesis in termites, it would be required to identify the enzymes responsible for production of monoterpenes. Therefore, one of the selected models was N. takasagoensis, whose defensive compounds are rich in pinene and limonene. To our dismay, none of the recombinant N. takasagoensis enzymes showed monoterpene synthase activity. Recognizing the abundance of GGPPS-like paralogs in Neoisoptera and the complexity of their correct annotation, we propose that a successful TPS activity screen requires a high-quality candidate list based on manually annotated genomic and transcriptomic sequence data. Alternatively, we cannot rule out that the biosynthesis of monoterpenes is independent of the GGPPS-like expansion, though this option is rather unlikely given the concurrent emergence of monoterpenes and GGPPS-like genes in the most basal Neoisopteran lineage Stylotermitidae [10].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Genetic novelty provides the substrate for evolutionary processes, and our analyses suggest that selection has shaped the diversification of the Neoisopteran GGPPS-like gene family. We show that the intensity of diversifying selection was higher along branches in the GGPPS-like clades compared to the GGPPS clade and that the GGPPS-like clades are less constrained by purifying selection, both of which facilitates specialized adaptation in general [38]. Furthermore, the basal branches within GGPPS-like clade II, which contains TPS enzymes EneoC and NtGGPPS6, likely experienced episodic positive diversifying selection. Positive selection-driven diversification of terpenoid biosynthesis has been reported in plants [52\u201354] and we are presenting here an analogous phenomenon in termites. In an early branch of the same clade II, we have identified six amino acids sites with evidence of positive selection corresponding to the following substitutions along the branch: P23S, Q26G, S59G, N90S, Q21K, and S60I (Fig 5B\u20135D). Ser59 and Ser60 are associated with substrate and product chain-length specificity in type III GGPPS [55,56]. In fungal GGPPS-like TPSs, the S60C mutation shifts product specificity from the alcohol (E)-nerolidol to (E,E)-\u03b1-farnesene [35]. Gln21 typical for insect GGPPS enzymes is changed in termite TPSs (Q21K) and retained in both TPSs of the butterfly Heliconius melpomene [24]. At a corresponding position, fungal GGPPS sequences of Melamspora share Asn, while an N21I change is present in GGPPS-like TPSs from the same species [35]. Thus, in two out of three lineages with confirmed GGPPS-like TPS enzymes (termites, Melamspora fungi), the GGPPS-TPS functional shift is accompanied by an amino acid change in this position.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We then focused on features linked to GGPP cyclization activity. The introduction of a T152I mutation in the neocembrene synthase NtGGPPS6 lead to the formation of the linear diterpene alcohol geranyllinalool from GGPP instead of the cyclic neocembrene. Thus, Thr152 is a core amino acid involved in GGPP cyclization. Our results suggest that after the lysis of GGPP, the arising highly reactive carbocation is stabilized by the hydroxyl group of Thr152 at C-1. This intermediate can then be attacked by the nucleophilic double bond at C-14, followed by proton elimination from C-16. Another explanation of our data is that the mutation of Thr152 results in a difference in the substrate binding position. While substrate positioning in the native protein might promote the nucleophilic attack by the double bond at C-14, yielding a cyclized product, the T152I mutant might instead facilitate the attack of water resulting in linear terpene alcohols. A crystal structure with the substrate or a substrate-like inhibitor is necessary to describe the exact mechanism.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The NtGGPPS6 T152I mutant further let us identify the importance of Ile152 in shifting the ratio of nerolidol enantiomers synthesized from FPP in favor of the R enantiomer. The farnesyl isoprenoid backbone is sterically stabilized by isoleucine in an orientation suitable for enantiospecific nucleophilic attack by water at C-3. It appears that isoleucine found at a corresponding position in EneoC contributes to the full enantioselectivity of this enzyme giving rise to pure (3R,6E)-nerolidol reported from queens [9,57].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Interestingly, EneoE, which also generates neocembrene, lacks Thr152. We suggest that in EneoE, the substrate cyclization proceeds by a different mechanism. The active site is rich in aliphatic amino acids, enabling GGPP pre-folding prior to pyrophosphate cleavage (see Fig 6D). The fact that EneoE produces a completely racemic mixture of nerolidol when supplied with FPP also points to distinct reaction mechanisms in the two enzymes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "With this study, we outline the evolutionary background of terpenoid biosynthesis in termites, and our findings invite further exploration of several related topics. Firstly, to gain mechanistic understanding of the evolutionary transition from IDS to TPS enzymes, confirming our hypothesis based on AlphaFold models using protein structures is required, followed by a thorough mutational analysis of candidate amino acids. Secondly, the search for currently unidentified enzymes which modify the basic terpene skeleton generated by TPSs would elucidate the biosynthesis of the highly complex diterpenes. Thirdly, the observation of general presence of mitochondrial targeting sequence in E. neotenicus GGPPS-like proteins and absence in GGPPS (S17 Fig), suggests their possible acquisition during an early duplication event of the GGPPS coding sequence. So far, the subcellular localization of insect IDS-like TPS proteins has not been investigated in any species and represents a thrilling follow-up topic focusing on termite GGPPS-like proteins. Finally, the characterization of the enzyme responsible for producing the queen pheromone (3R,6E)-nerolidol in E. neotenicus queens opens important questions about its regulation and localization at both tissue and subcellular levels, which remain unknown [9].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Colonies of N. takasagoensis (Nawa, 1911) and E. neotenicus (Holmgren, 1906) were used in this study. N. takasagoensis colony was collected at West beach, Ishigaki island, Okinawa Prefecture, Japan (N24\u00b025.886\u2032 E124\u00b004.280\u2032) in September 2021 and kept thereafter at Okinawa Institute of Science and Technology, Japan. Samples for chemical analyses were collected in January 2022 and processed at IOCB Prague.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.1. Origin of termites",
+        "sec_num": null
+      },
+      {
+        "text": "Colonies of E. neotenicus were collected in French Guiana between 2022 and 2024 at two forest localities along the Road to Petit Saut (N5\u00b004.250\u2032 W52\u00b058.770\u2032\u2013N5\u00b004.650\u2032 W53\u00b001.360\u2032) and one locality 13 km south-west of Kourou (N5\u00b006.440\u2032 W52\u00b045.521\u2032).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.1. Origin of termites",
+        "sec_num": null
+      },
+      {
+        "text": "Entire bodies of 500 N. takasagoensis soldiers were extracted overnight in 5 mL of hexane. 1 \u00b5L aliquot of soldier extract was analyzed using a TRACE 1310 gas chromatograph coupled to an ISQ LT quadrupole mass spectrometer. The instrument was equipped with a Rxi-5MS column (30 m \u00d7 0.25 mm \u00d7 0.25 \u00b5m). A split/splitless injector was operated in split mode with a 10:1 split ratio, and the injector temperature was set to 250 \u00b0C. The carrier gas flow rate was maintained at 1.5 mL \u00d7 min\u22121. The oven temperature program was as follows: the initial temperature was set to 50 \u00b0C and held for 1 min, followed by a ramp of 8 \u00b0C \u00d7 min\u22121 to a final temperature of 320 \u00b0C, which was held for 5 min. Mass spectra were acquired at an ionization energy of 70 eV, with a solvent delay of 4 min. The transfer line temperature was set to 260 \u00b0C.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.2.1. Chemical analyses of N. takasagoensis.",
+        "sec_num": null
+      },
+      {
+        "text": "In E. neotenicus, we sampled 3 neotenic queens, 10 workers, 10 soldiers, and 10 female nymphs (4th stage), and extracted them with 300 \u00b5L of hexane for 10 min. One primary king was extracted with 100 \u00b5L of hexane for 10 min. A 1 \u00b5L aliquot of each extract from individual castes was analyzed using comprehensive gas chromatography coupled with mass spectrometry (GC \u00d7 GC-MS). The analysis was performed on an Agilent gas chromatograph equipped with a secondary oven, quad-jet thermal modulator, and a Gerstel multipurpose sampler used as an autosampler. A LECO Pegasus BT 4D time-of-flight mass spectrometer was used as the detector. The injection was carried out using a split/splitless injector operated in splitless mode, with the injector temperature set to 250 \u00b0C. The chromatographic setup consisted of two columns: in the first dimension, a Rxi-5MS column (30 m \u00d7 0.25 mm \u00d7 0.25 \u00b5m) and in the second dimension, a Rxi-17Sil column (1.5 m \u00d7 0.25 mm \u00d7 0.25 \u00b5m) was used. The oven temperature program was as follows: the initial temperature was set to 50 \u00b0C and held for 1 min, followed by a ramp of 8 \u00b0C \u00d7 min\u22121 to a final temperature of 320 \u00b0C, which was held for 5 min. The modulation period was set to 3 s, and the transfer line temperature was maintained at 250 \u00b0C. A 15 \u00b0C offset was used for the secondary oven and a 15 \u00b0C offset relative to the secondary oven was used for the modulator.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.2.2. Chemical analyses of E. neotenicus.",
+        "sec_num": null
+      },
+      {
+        "text": "Unknown polycyclic diterpenes from soldier extracts of N. takasagoensis were identified using a combination of preparative gas chromatography (prep-GC) and NMR spectroscopy. The prep-GC system consisted of an Agilent GC connected to a Gerstel preparative fraction collector (PFC) and equipped with a Gerstel program temperature vaporization (PTV) inlet. A 5 \u00b5L aliquot of the sample was injected onto a Rxi-5MS column (30 m \u00d7 0.53 mm \u00d7 1.50 \u00b5m). PTV temperature was set to 250 \u00b0C for 0.1 min, then ramped at 700 \u00b0C \u00d7 min\u22121 to 320 \u00b0C held for 4 min; then the inlet was cooled down at 100 \u00b0C \u00d7 min\u22121 back to 250 \u00b0C. Column flow was set to 1.4 mL \u00d7 min\u22121. After 1.5 min, the inlet pure flow was increased to 50 mL \u00d7 min\u22121 and held for 3 min. The GC temperature program was set as follows: the starting temperature was set to 200 \u00b0C and held for 1 min, then ramped to 320 \u00b0C by 15 \u00b0C \u00d7 min\u22121 and held for 3 min. The PFC temperature was set to 320 \u00b0C. Fraction collection was performed using coiled glass traps (1 \u00b5L capacity) cooled to 0 \u00b0C with liquid nitrogen. Each trap was washed with 500 \u00b5L of dichloromethane. The collected samples were then evaporated under a stream of nitrogen and re-diluted with deuterated dichloromethane. Six traps were connected to the effluent splitter; however, only three fractions were collected with sufficient purity and quantity for subsequent NMR analysis. NMR spectra were measured on Bruker Avance III HD 600 MHz (600.1 MHz for 1H spectra and 150.9 MHz for 13C spectra) equipped with 1.7 mm TCI MicroCryoProbe. Identification was based on H,H-COSY, H,C-HSQC, H,C-HMBC, and H,H-ROESY 2D spectra.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.2.3. Preparative gas chromatography and NMR.",
+        "sec_num": null
+      },
+      {
+        "text": "For the chiral separation of pinene, a 1 \u00b5L aliquot of N. takasagoensis soldier extract was analyzed using an HP 6850 gas chromatograph equipped with a flame ionization detector (FID) and an HP-Chiral 20\u03b2 GC column (30 m, 0.25 mm, 0.25 \u00b5m) with helium as the carrier gas. The split/splitless injector was operated in splitless mode, and the injector temperature was set to 230 \u00b0C. The carrier gas flow rate was maintained at 1.5 mL \u00d7 min\u22121. The detector temperature was set to 220 \u00b0C, with an H\u2082 flow of 40 mL \u00d7 min\u22121 and an air flow of 400 mL \u00d7 min\u22121. The temperature program was as follows: an initial temperature of 40 \u00b0C held for 20 min, followed by a ramp of 1 \u00b0C \u00d7 min\u22121 to 100 \u00b0C, then a secondary ramp of 30 \u00b0C \u00d7 min\u22121 to 240 \u00b0C, which was held for 10 min. The same setup was used for chiral analysis of limonene, differing only in the temperature program which was set as follows: starting temperature was held for 1 min and then ramped 3 C\u00b0/min to 130 \u00b0C followed by second temperature ramp 30\u00b0C/min to 240 which was held for 10 min. Standards of (+)- and (\u2013)-\u03b1-pinene and (+)- and (\u2013)-limonene were used for identification.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.2.4. Chiral chromatography.",
+        "sec_num": null
+      },
+      {
+        "text": "For nerolidol analysis, the headspace in the vial from the TPS assay was sampled using a polydimethylsiloxane-coated solid-phase microextraction (SPME) fiber (red fiber, 100 \u03bcm; Supelco) for the duration of incubation, followed by desorption in a split/splitless injector operated in splitless mode. The instrument setup for this analysis was the same as for the monoterpene analysis, except for the temperature program: 80 \u00b0C held for 1 min, followed by a ramp of 2 \u00b0C \u00d7 min\u22121 to 200 \u00b0C, which was then held for 10 min. For quantitation of nerolidol enantiomers in WT and T152I mutant NtGGPPS6, the peak area of (3R,6E)-nerolidol was divided by sum of peak areas of both enantiomers. The difference in resulting ratios in wild type and mutant enzymes was tested by a two-tailed t test. Each experiment was done in triplicate.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.2.4. Chiral chromatography.",
+        "sec_num": null
+      },
+      {
+        "text": "High molecular weight DNA for Oxford Nanopore sequencing was isolated by organic extraction from 4 male and 8 female nymphs (whole bodies without digestive tube) of E. neotenicus. Deep-frozen tissue samples were homogenized in 600 \u00b5L of lysis buffer (10 mM Tris-HCl, 400 mM NaCl, 100 mM EDTA, 1% SDS and 1 mg \u00d7 mL\u22121 Proteinase K, pH 8.0) with a PTFE pestle. After overnight incubation at 37 \u00b0C, DNA was extracted from aqueous phase by two consecutive extractions with 650 \u00b5L phenol:chloroform:isoamyl alcohol (25:24:1) and a reextraction with 600 \u00b5L chloroform:isoamyl alcohol (24:1). Phases were separated by centrifugation (5 min, 14,000 g, 4 \u00b0C). The DNA was then precipitated by addition of NaCl and ethanol to final concentration of 0.2 M and 70%, respectively, incubated for 1 hour at 4 \u00b0C, washed with 70% ethanol and resuspended in nuclease-free water. The purity and quantity of isolated DNA were assessed with Nanodrop ND-1000 spectrophotometer and Qubit 4 fluorometer using the dsDNA BR Assay Kit (Thermo Fisher Scientific), the integrity was checked on 0.5% agarose gel in TAE buffer. The samples were used for Oxford Nanopore sequencing analysis on one PromethION flowcell at Novogene UK.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.3.1. DNA isolation and sequencing of E. neotenicus.",
+        "sec_num": null
+      },
+      {
+        "text": "E. neotenicus kings, neotenic queens, soldiers, workers, and female nymphs were sampled for RNA isolation. Collected individuals were cold-anesthetized and dissected to remove the digestive tube and, when appropriate, to sample distinct tissues (heads and thorax + abdomen). Samples were stored in RNA later (Thermo Fisher Scientific). Samples were homogenized in TRI Reagent (Sigma-Aldrich) with a PTFE pestle following the manufacturer\u2019s protocol. The precipitated RNA was resuspended in DEPC-treated ddH2O. RNA quality and quantity were inspected on Nanodrop ND-1000 UV/VIS spectrophotometer, Qubit 4 fluorometer with the RNA HS Assay Kit (all Thermo Fisher Scientific), and Agilent 2100 Bioanalyzer using the RNA 6000 Nano Kit (Agilent Technologies). The samples were shipped to Novogene UK, where nonstranded poly(A)-selected RNA library preparations and sequencing analysis on Illumina NovaSeq platform with output of 20 million of 2 \u00d7 150 bp paired-end reads were conducted.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.3.2. RNA isolation and sequencing.",
+        "sec_num": null
+      },
+      {
+        "text": "The quality of Oxford Nanopore sequencing data was evaluated using fastQC v0.12.1 and NanoPlot v1.30.1, and residual sequencing adapters were removed using Porechop v0.2.4. Draft E. neotenicus genome was assembled using Flye v2.9.4 [58] with 5 subsequent polishing iterations, and the estimated genome size was 0.9 Gb, based on an in-house draft genome assembly of a related termite species Prorhinotermes simplex [59]. High-quality Illumina RNA data were mapped to the newly assembled draft genome with Segemehl aligner v0.3.4 [60] and used for an additional round of assembly polishing with Pilon algorithm v1.24 [61]. In a final step, all contigs shorter than 1 kb were removed, and assembly quality was evaluated with Quast v5.0.2 [62], BUSCO v5.4.4 using the insecta_odb10 HMM library [63], and Merqury using Meryl v1.3 [64]. The final draft genome with a total size of 1.38 Gb consisted of 4,512 polished scaffolds with an N50 of 3.2 Mb, and covered 99.4% (97.4% single-copy, 2.0% duplicated, 0.4% fragmented, 0.2% missing) from a total of 1,367 benchmarking universal single-copy orthologs (BUSCO) [63] of insecta_odb10 lineage. The identification of low-complexity genomic regions was performed using the EDTA pipeline v2.2.0 [65] incorporating both RepeatModeler TE prediction and RepeatMasker for genome masking. The masked genome was then used for annotation with BRAKER v3.0.8 gene prediction tool [66] using full RNA-seq data from caste-specific transcriptomic analysis mapped with Segemehl and annotated genes from published isopteran assemblies of Zootermopsis nevadensis, Cryptotermes secundus, and Reticulitermes speratus. Gene annotation provided in total 26,292 gene models covering 92.8% of insect BUSCOs. The genome assembly statistics are summarized in S1 Table.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.1. E. neotenicus draft genome assembly and annotation.",
+        "sec_num": null
+      },
+      {
+        "text": "The E. neotenicus transcriptome was assembled de novo with RNA-seq data representing heads and body cavities from kings, queens, workers, soldiers, and female nymphs. The data were stripped of artifacts using rCorrector [67] and Trimmomatic v0.32 [68], reads corresponding to ribosomal RNA were filtered out based on mapping to the blacklist from SILVA database [69] using bowtie2 v2.3.4.1 algorithm [70]. The transcriptome was assembled using rnaSPAdes algorithm [71] and the assembly quality was evaluated using rnaQUAST [72] and BUSCO [63]. Open reading frames (ORFs) with at least 100 amino acid residues in size were predicted using Transdecoder (https://github.com/TransDecoder). The SPAdes assembly provided roughly 500,000 unfiltered contigs, covering 98.3% of 1,367 insect BUSCO genes (28.4% single-copy, 69.9% duplicated, and 0.8% fragmented). A similar approach was applied for the de novo assembly of S. halumicus transcriptome from SRX6715957 data downloaded from NCBI SRA archive and for de novo assemblies of transcriptomes of Spinitermes trispinosus and Inquilinitermes inquilinus from our in-house data deposited at NCBI as SRA within the BioProject PRJNA918850.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.2. Transcriptome assembly.",
+        "sec_num": null
+      },
+      {
+        "text": "The prediction of E. neotenicus FPPS- and GGPPS-like sequences was carried out in a series of BLAST searches [73] against transcriptome assembly and predicted ORFs using orthologous sequences of three related species (Z. nevadensis, C. secundus, and N. takasagoensis) available in public repositories. The same approach was used for S. halumicus, S. trispinosus, and I. inquilinus. Candidate E. neotenicus transcript sequences were used for another round of BLAST searches in BRAKER-annotated gene models. Manual annotation of GGPPS-like sequences was performed by a combination of multiple local alignments in unmasked genome including transcripts that were found in transcriptome assembly but not recognized in predicted gene models, and a detailed inspection of exon junctions in RNA-seq data mapped on unmasked genome using IGV genomic viewer [74].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.3. IDS gene discovery.",
+        "sec_num": null
+      },
+      {
+        "text": "Trimmed RNA-seq data from the heads and thoraces + abdomens of E. neotenicus nymphs and neotenic queens were mapped to the annotated genome using STAR v2.7.10b aligner [75]. Read-count matrices were generated with the featureCounts algorithm from rSubread package [76] and normalized according to the TPM (Transcripts Per Kilobase Million) method. Differential gene expression was inspected in pairwise analyses comparing castes and body parts using R packages DESeq2 and edgeR [77,78].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.4. E. neotenicus expression analysis.",
+        "sec_num": null
+      },
+      {
+        "text": "The prediction of low-complexity genomic regions and annotation of suspect TE in GGPPS-like loci was performed using a pipeline involving the EDTA first on a genome-wide level, later on a subset of 27 genomic contigs selected based on local alignments of protein-coding sequences of GGPPS-like genes and pseudogenes. Only contigs with full or partial overlaps showing homology over 80% and containing at least 2 consecutive exon-like regions were selected in the panel and used for a focused prediction of transposable elements in the second round of the EDTA pipeline. The genome-scale EDTA annotations were processed in a set of TE enrichment analyses using the BEDtools toolkit and R. Mean TE densities were calculated in both, all protein-coding and GGPPS-like only gene regions expanded by 50 kb from each side as well as in whole-genome separated ndto 100 kb windows in a set of 1,000 random permutations. The 100 kb window was then separated into strand-oriented 1 kb bins to inspect the TE distribution relative to gene centers followed by TE family representation in GGPPS-like loci compared to whole-genome [79].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.5. Transposable elements prediction in the genome of E. neotenicus.",
+        "sec_num": null
+      },
+      {
+        "text": "Publicly available sequences of FPPS and GGPPS homologs were retrieved from NCBI. Online blastp and tblastn searches of nr (nonredundant protein sequences) and TSA databases limited to Blattodea were run with Z. nevadensis FPPS and GGPPS amino acid sequences as queries (XP_021942300, XP_021933767). The same searches were also run with Z. nevadensis decaprenyl-diphosphate synthase subunit 1 as query (XP_021928794). Local blastp and tblastn searches were used for searching R. speratus datasets deposited at figshare [28], our in-house datasets from E. neotenicus, S. trispinosus, and I. inquilinus, and the in-house assembled transcriptome from S. halumicus. Sequence logos for FARM and SARM motifs in FPPS- and FPPS-like proteins were generated in R using the ggseqlogo package [80]. For phylogenetic analyses, amino acid sequences with a minimum length of 150 amino acids and comprising both FARM and SARM motifs were selected. Unless otherwise stated, sequence alignment was performed using Clustal Omega [81] run from SeaView (v4.7) [82], and the resulting alignments were inspected and trimmed manually in AliView [83]. Phylogenetic trees were reconstructed with IQ-TREE 2 [84] using the ModelFinder option and setting the bootstrap replicate number to 1,000 unless stated otherwise.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.6. Phylogenetic analyses and prediction tools.",
+        "sec_num": null
+      },
+      {
+        "text": "We used MEME [85] (v5.5.7) to detect IGMs in a dataset comprising functionally characterized insect GGPPSs, several single-copy GGPPSs from a diverse selection of insect lineages, and Blattodean sequences from the ancestral GGPPS clade. Regular expressions were generated for the motifs and their boundaries were set as defined for IPP-binding motifs (IBM) by Rebholz and colleagues [34]. The presence or absence of GGPPS and GGPPS-like sequences in individual termite species was determined based on a phylogeny for sequences \u2265 150 amino acids that included FARM and SARM motifs. In species with shorter sequences and/or not comprising FARM and SARM motifs, we used the motifs previously identified as characteristic for insect GGPPSs to distinguish between GGPPS and GGPPS-like sequences.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.6. Phylogenetic analyses and prediction tools.",
+        "sec_num": null
+      },
+      {
+        "text": "Putative MTSs were predicted with MitoFates [86] in newly reported genes from E. neotenicus. In addition, we checked the completeness of annotated ORFs in publicly available N. takasagoensis GGPPS and GGPPS-like mRNA sequences. In two cases (NtGGPPS1B, NtGGPPS3B), we applied MTS predictions to putative proteins coded by ORFs starting with upstream ATG codons not considered in the published annotation. In two other cases (NtGGPPS2B, NtGGPPS4), the ORF was found to be positioned at the very beginning of the transcript. Therefore, it was impossible to assess the completeness of these ORFs and to consider MTS prediction relevant for these proteins.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.6. Phylogenetic analyses and prediction tools.",
+        "sec_num": null
+      },
+      {
+        "text": "All modeled GGPPS sequences were trimmed based on alignment with Homo sapiens GGPPS sequence (UniProt accession O95749) and were modeled as a single subunit with three Mg2+ ions, although it can be assumed that in vivo, the enzymes exist as dimers or hexamers [87]. Structure models for EneoC, EneoE, and NtGGPPS6 with corresponding substrates, and the ancestral sequence at node 2 were generated using Alphafold 3.0 provided by e-INFRA project. The GGPP substrate was included in models of NtGGPPS6, EneoE, and the node 2, the FPP substrate in case of EneoC. NtGGPPS7 and EneoJ were modeled by homology-based modeling using modeler 10.6 software [88] with the structure of Homo sapiens GGPPS (PDB Entry 2Q80) as a template. The active site cavity was identified and highlighted using KVfinder-web [89] implementing parKVFinder v 1.2.0 [90]. We probed whole structures with probe size in 1.4 \u00c5 and probe size out 4 \u00c5. Structures were aligned and processed using UCSF ChimeraX 1.6.1 [91]. For comparison of FPPS- and FPPS-like active sites, the crystal structure 1YV5 (PDB ID: pdb_00001yv5) of human FPPS was downloaded from the RCSB Protein Data Bank. Termite FPPS- and FPPS-like proteins were modeled with three Mg2+ ions using AlphaFold 3. The crystal structure, together with the two models, was aligned and processed using UCSF ChimeraX 1.6.1. We then displayed all interactions between Mg2+ ions and the surrounding amino acids within 2.7 \u00c5.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.4.6. Phylogenetic analyses and prediction tools.",
+        "sec_num": null
+      },
+      {
+        "text": "Heads and thoraces + abdomens (with digestive tubes removed) from four nymphs and four neotenic queens of E. neotenicus were subjected to label-free quantitative (LFQ) mass spectrometry (MS) analysis. Each sample was homogenized in 500 \u00b5L of homogenization buffer consisting of 100 mM triethylammonium bicarbonate buffer (TEAB; Sigma-Aldrich) and 2% sodium deoxycholate (SDC; Sigma-Aldrich) in a 1.5-mL Eppendorf tube using FastPrep-24 homogenizer (MP Biomedicals). The homogenate was centrifuged to remove cell debris and the supernatant was used for analysis. Further sample processing and MS analysis were performed as previously described [92]. Briefly, protein concentration was determined using a BCA protein assay kit (Thermo Fisher Scientific). Cysteines were reduced with Tris(2-carboxyethyl) phosphine hydrochloride and blocked with methyl methanethiosulfonate. The samples were digested with porcine trypsin. Then, the samples were acidified with trifluoroacetic acid to a final concentration of 1%. SDC was removed by extraction with ethylacetate and subsequently with hexane. Peptides were desalted using a Michrom C18 column. Dried peptides were resuspended in 25 \u00b5L of water containing 2% acetonitrile and 0.1% trifluoroacetic acid. Peptides were separated by nanoliquid chromatography on a Dionex Ultimate 3000 system and analyzed on an Orbitrap Fusion Tribrid mass spectrometer (both Thermo Fisher Scientific).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.5. Quantitative proteomics",
+        "sec_num": null
+      },
+      {
+        "text": "The data were evaluated with MaxQuant version 2.2.0.0 using LFQ algorithms [93,94] and the Andromeda search engine [95]. The key criteria used in the data analysis were a false discovery rate (FDR) of 0.01 for proteins and peptides, a minimum length of seven amino acids, a fixed modification (methylthio), and variable modifications of N-terminal protein acetylation and methionine oxidation. The data were locally evaluated against selected databases of nonredundant protein sequences that were downloaded from NCBI on February 13, 2023. The in-house database of E. neotenicus protein sequences was based on protein models generated by BRAKER (see E. neotenicus draft genome assembly and annotation) complemented by a set of manually annotated IDS genes. The local database is available along with the raw data and result files in the PRIDE repository of the ProteomeXchange Consortium (see Data availability). The data were processed in Perseus version 2.0.7.0 [96]. Results representing standard contaminants, reverse sequences (decoys), and sequences identified only with modified peptides were discarded. The dataset containing proteins with at least two valid LFQ values in at least one experimental group was further analyzed. The dataset was log2 transformed. Missing LFQ values were replaced from the normal distribution (width 0.3; downshift 1.8) and histograms before and after the data imputation were examined. A heatmap with hierarchical clustering was used to check the uniformity of the sample proteomes between the two subgroups. Significant differences were determined by a permutation-based two-sided t test with an error-corrected p-value (FDR = 0.05; S0 = 0.1). The number of randomizations in the analysis was 1,000.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.5. Quantitative proteomics",
+        "sec_num": null
+      },
+      {
+        "text": "Coding sequences of candidate TPS and IDS proteins were codon-optimized for expression in S. cerevisiae, synthesized, and cloned into MCS-1 of pESC-URA by Genscript. The resulting plasmids coded for recombinant proteins with N-terminal FLAG-tag and were used for expression in S. cerevisiae. For expression of recombinant proteins with N-terminal hexahistidine tag in E. coli, the coding sequences were recloned in MCS-1 of pRSFDuet-1 (Novagen). Proteins in which mitochondrial targeting peptides were predicted by MitoFates were expressed in the presumed cleaved form. Amino acid sequences of all expressed proteins are listed in S14 Table.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6. Heterologous expression",
+        "sec_num": null
+      },
+      {
+        "text": "The JWY501 strain of S. cerevisiae was used for all yeast experiments [97]. Prior to transformation, the JWY501 strain was grown in a complete medium (YPD) containing 20 g \u00d7 L\u22121 Tryptone, 10 g \u00d7 L\u22121 Yeast Extract (both from Duchefa Biochemie), and 20 g \u00d7 L\u22121 glucose. Selective media (SCE) used for cultivation of transformed JWY501 contained 1.92 g \u00d7 L\u22121 Yeast Synthetic Drop-out Medium Supplements without Uracil, 6.7 g \u00d7 L\u22121 Yeast Nitrogen Base without amino acids (both from Sigma-Aldrich), and 20 g \u00d7 L\u22121 glucose. Selective media used for expression had the same composition as SCE, except that 20 g \u00d7 L\u22121 galactose was used instead of glucose to induce expression of the gene of interest.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.1. Expression in S. cerevisiae and metabolite detection.",
+        "sec_num": null
+      },
+      {
+        "text": "Yeast transformations were performed using the lithium acetate PEG method [98]. Shortly, cells were pre-cultured overnight in YPD medium at 30 \u00b0C with shaking at 200 rpm. The following day, the overnight culture was diluted to an optical density (OD600) of 0.1 in fresh YPD medium and grown at 30 \u00b0C with shaking at 200 rpm until reaching an OD600 of ~0.5. Cells were harvested by centrifugation at 3,000 g for 5 min, washed twice in 25 mL of sterile H2O, and pelleted again under the same conditions. The resulting cell pellet was resuspended in 1 mL of sterile water, centrifuged at 13,000 g for 30 s, and resuspended in 1 mL of sterile water. For each transformation, 100 \u00b5L of resuspended cells were mixed with 240 \u00b5L of 50% (w/v) PEG 3350, 36 \u00b5L of 1 M LiAc, 100 ng of plasmid DNA, and 100 \u00b5g of denatured salmon sperm DNA (all from Sigma-Aldrich) resulting in a final volume of 460 \u00b5L. The transformation mixture was gently mixed, incubated at 42 \u00b0C for 40 min, and centrifuged at 13,000 g for 30 s. Cells were washed with sterile water, plated onto a selective agar medium, and incubated at 30 \u00b0C for 3\u20135 days to allow for colony formation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.1. Expression in S. cerevisiae and metabolite detection.",
+        "sec_num": null
+      },
+      {
+        "text": "Cells carrying the plasmid of interest were pre-cultured in a selective medium (YNB - URA + 2% glucose) for 1 day at 30 \u00b0C with shaking at 200 rpm. The following day, the culture was diluted to an initial optical density (OD600) of 0.3 in fresh selective medium and grown at 30 \u00b0C with shaking until the OD600 reached ~1. At this point, cells were harvested by centrifugation, resuspended in YNB - URA + 2% galactose, and incubated to induce expression of the gene of interest. Cultures were sampled and extracted with hexane either on day 1 after induction (1 mL sample + 1 mL hexane) or on day 7 after induction (100 \u00b5L sample + 1 mL hexane). The organic phase was analyzed by GC \u00d7 GC-MS.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.1. Expression in S. cerevisiae and metabolite detection.",
+        "sec_num": null
+      },
+      {
+        "text": "A 1 \u00b5L aliquot of hexane yeast extract was analyzed using an Agilent comprehensive gas chromatograph equipped with a secondary oven and a quad-jet thermal modulator, coupled with a LECO Pegasus 4D Time-of-Flight (TOF) mass spectrometer. The injection was performed using a split/splitless injector in splitless mode, with the injector temperature set to 250 \u00b0C. A 10 \u00b0C offset was used for the secondary oven, and a 10 \u00b0C offset relative to the secondary oven was used for the modulator. The primary column used was ZB-5MS (30 m \u00d7 0.25 mm \u00d7 0.25 \u00b5m), and the secondary column was Rxi-17Sil (1.980 m \u00d7 0.25 mm \u00d7 0.25 \u00b5m). Helium was used as the carrier gas, with a flow rate of 1 mL \u00d7 min\u22121. The temperature program started at 50 \u00b0C, held for 1 min, then ramped at 8 \u00b0C \u00d7 min\u22121 to 320 \u00b0C and was held for 5 min. The transfer line temperature was set to 260 \u00b0C. The electron ionization ion source operated at 70 eV, with the ion source temperature maintained at 220 \u00b0C. A solvent delay of 400 s was applied.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.1. Expression in S. cerevisiae and metabolite detection.",
+        "sec_num": null
+      },
+      {
+        "text": "For protein purification, pRSFDuet-1 plasmids were used for transformation of E. coli Lemo21(DE3). Bacteria were grown in 2.5 L Tunair baffled shake flasks (IBI Scientific) filled with 0.4 L auto-induction medium, composed of 15 g \u00d7 L\u22121 yeast extract, 10 g \u00d7 L\u22121 peptone, 10 g \u00d7 L\u22121 glycerol, 2 g \u00d7 L\u22121 D-lactose, 0.5 g \u00d7 L\u22121 D-glucose, 100 mM KH2PO4, pH 7.5, 50 mM NaCl, 25 mM (NH4)2SO4 and 3 mM MgSO4. The culture (starting OD600 ~ 0.01, total culture volume 2\u20132.4 L) was supplemented with 30 mg \u00d7 L\u22121 kanamycin, 30 mg \u00d7 L\u22121 chloramphenicol, and 0.1 mM L-rhamnose, and a drop of Antifoam A concentrate (Merck) was added to each flask. Cultures were shaken for 6 hours at 37 \u00b0C, 250 RPM (capped with aluminum foil lids), and further for 16\u201320 hours at 17 \u00b0C (capped with cellulose paper tissues). The cells were harvested by centrifugation and stored at \u221280 \u00b0C.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.2. Expression in E. coli and protein purification.",
+        "sec_num": null
+      },
+      {
+        "text": "After thawing, the cells were suspended with 10 volumes of lysis buffer (100 g \u00d7 L\u22121 glycerol, 0.3 M NaCl, 50 mM KH2PO4, pH 6.7, 10 mM imidazole, 2 mM MgSO4) using a tissue homogenizer. The suspension was supplemented with 0.5 mg \u00d7 mL\u22121 chicken egg lysozyme, 2,000 KU \u00d7 L\u22121 DNase I (Merck), and 1 mM PMSF and incubated while rolling. After 1 hour, 10 mM \u03b2-mercaptoethanol (ME) was added and incubation while rolling continued for another 2 hours at 4 \u00b0C. Cells were broken by four passages through Avestin Emulsiflex C3 and the resulting crude lysate was clarified by consecutive centrifugations (30,000 g, 5 and 10 min). The supernatant was filtered through 0.6 \u03bcm pore glass filter and pump-loaded at 5 mL \u00d7 min\u22121 onto HisTrap Fast Flow 5 mL column (Cytiva) using \u00c4KTA start or \u00c4KTA pure chromatograph (Cytiva). The column was subsequently washed with 250 mL of lysis buffer with 5 mM ME and the protein was eluted by a four-step gradient of 10% elution buffer (EB; i.e., lysis buffer with 5 mM ME and 500 mM imidazole), 20% EB, 30% EB, and 100% EB. Protein concentration was estimated using a calculated extinction coefficient at 280 nm.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.6.2. Expression in E. coli and protein purification.",
+        "sec_num": null
+      },
+      {
+        "text": "For enzyme activity assays, the reaction mixture in a 2 mL glass vial consisted of 50 \u00b5M substrate and roughly 5 \u00b5M recombinant protein in 10 mM 3-(N-morpholino)propanesulfonic acid (MOPS), 5 mM MgCl2, 1 mM dithiothreitol, 10% glycerol, pH 7.0, in a final volume of 100 \u00b5L. The substrates used in TPS assays were GPP, (E,E)-FPP, or (E,E,E)-GGPP (Merck or Cayman Chemicals). For IDS assays, the substrates included a mixture of 50 \u03bcM IPP with 50 \u03bcM DMAPP, GPP, or (E,E)-FPP (Merck or Cayman Chemicals). The reactions were incubated at 30 \u00b0C for 1 hour. In TPS assays, the headspace in the vial was sampled by a polydimethylsiloxane-coated SPME fiber for the duration of incubation (red fiber, 100 \u03bcm; Supelco).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.7. TPS and IDS in vitro assays",
+        "sec_num": null
+      },
+      {
+        "text": "The fiber containing the sample was desorbed and analyzed using a TRACE 1310 gas chromatograph coupled to an ISQ LT quadrupole mass spectrometer. An SPME liner was used in the inlet, with the desorption temperature set to 250\u00b0C. The fiber was desorbed in the inlet for 5 min to ensure complete sample desorption. The GC and MS methods were identical to those described previously.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.7. TPS and IDS in vitro assays",
+        "sec_num": null
+      },
+      {
+        "text": "Isoprenoid pyrophosphates were analyzed using a Vanquish Horizon HPLC system coupled with an Orbitrap ID-X mass spectrometer. The separation was performed on an ACCUCORE VANQUISH C18+ column (1.5 \u00b5m, 150 \u00d7 2.1 mm). As mobile phase A, 10 mM ammonium bicarbonate with 0.1% ammonium hydroxide was used. Acetonitrile with 0.1% ammonium hydroxide was used as mobile phase B. The column flow rate was set to 0.35 mL \u00d7 min\u22121. The system was equilibrated with 95% mobile phase A and 5% mobile phase B before the chromatographic run. The gradient was programmed as follows: 5% B for the first 5 min, ramp to 100% B over 5.5 min, 100% B held for 7.3 min. The column temperature was maintained at 40 \u00b0C throughout the analysis. Electrospray ionization in negative mode was used with an ionization voltage of \u22123,000 V applied from 0.2 min. The gas settings were as follows: Sheath gas, 50 Arb; Auxiliary gas, 10 Arb; Sweep gas, 1 Arb. Additional parameters included an ion transfer tube temperature of 325 \u00b0C and a vaporizer temperature of 350 \u00b0C.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.7. TPS and IDS in vitro assays",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate the role of selection pressures in the evolution of terpene synthase genes in termites from canonical GGPPS progenitors, we utilized the packages HyPhy (v2.5.29) and PAML (v4.10.7) to perform selection analysis [99,100]. Full-length GGPPS and GGPPS-like coding sequences from termites were selected from both terpene-releasing Neoisoptera and early branching termite clades without terpenoid production. To generate a tree for a selection analysis and ancestral sequence reconstruction, translated coding sequences were first aligned using ClustalOmega (v1.2.3) under default parameters and trimmed using Trimal (v1.5) with a gap threshold of 0.5. The alignment was used to infer a maximum-likelihood protein phylogeny with IQTree2 (UFboot x1000) using the substitution model JTT + F + I + G4 selected by ModelFinder and the singleton GGPPS of the cockroach Blatella germanica as an outgroup. To generate a codon alignment, nucleotide coding sequences were aligned using ClustalOmega (v1.2.3) implemented in the Translation Align function of Geneious software. To test for clade-wide differences in the selection regimes acting on canonical GGPPS and the expanded GGPPS-like gene family, an analysis was conducted using HyPhy RELAX [101]. Termite canonical GGPPS clades were designated as the reference branches and the GGPPS-like clade containing TPSs characterized in this study as the test branches. dN/dS ratios (\u03c9) of specific branches were estimated and changes in selection between test and reference branches were tested by fitting a selection intensity parameter (k) to the data. Statistical evidence for a change in selection intensity in the test branches was then detected by comparison of the likelihood of the fitted k to that of a null model in which no change in selection intensity has occurred (k = 1). To test for evidence of episodic diversifying selection in the evolution of the termite GGPPS-like gene family, an analysis was conducted using HyPhy aBSREL [102] implemented in the HyPhy package testing all branches in the GGPPS-like clade. Branches predicted to be under positive diversifying selection using HyPhy aBSREL were again tested for positive selection using branch-site tests implemented using the CODEML program from PAML [100], where the likelihoods of three-ratio foreground models (allowing positive selection on a proportion of sites on the foreground branches) were tested against the likelihood of tree-wide two-ratio null models (no positive selection). The BEB method was also employed in branch-site tests to predict codons under positive selection pressure on different foreground branches. Significance for all selection analysis was assessed using Holm-Bonferroni corrected p-values with a significance threshold of 0.05.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.8. Selection analysis and ancestral sequence reconstruction",
+        "sec_num": null
+      },
+      {
+        "text": "Ancestral termite TPS sequences were reconstructed in PAML, using the above phylogeny and codon alignment as input. A stretch of 7 amino acids (LLNQTDI) was found to be present in all ancestral sequences across the tree, obviously reflecting an EneoO-specific insertion which did not occur in any other extant sequence. Therefore, we omitted these amino acids from ancestral sequences which are presented in S12 Table. Accordingly, the ancestral sequence B used for modeling the protein structure lacks this insertion.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "4.8. Selection analysis and ancestral sequence reconstruction",
+        "sec_num": null
+      }
+    ]
+  }
+}

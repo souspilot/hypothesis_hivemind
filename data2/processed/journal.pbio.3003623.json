@@ -1,0 +1,285 @@
+{
+  "paper_id": "journal.pbio.3003623",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003623.xml"
+  },
+  "title": "Incorporating variation in death times improves predictions of ectotherm responses to stressful temperatures",
+  "doi": "10.1371/journal.pbio.3003623",
+  "authors": [
+    {
+      "first": "Garrison W.",
+      "last": "Bullard"
+    },
+    {
+      "first": "Lauren B.",
+      "last": "Buckley"
+    },
+    {
+      "first": "Joel G.",
+      "last": "Kingsolver"
+    }
+  ],
+  "abstract_text": "Predicting survival of ectotherms in stressful and variable thermal environments is an essential challenge in this era of heat waves and climate change. Recent thermal death time (TDT) models, based on an exponential relationship between average time to death (or failure) tf and temperature, enable accounting for average survival responses to both the magnitude and duration of stressful temperatures. However, extending these deterministic and probabilistic models to predict patterns of survival in fluctuating temperatures currently requires additional assumptions: e.g., that injury accumulation due to heat stress is additive across temperatures, and that the shape of the cumulative survival curve does not change with temperature. We evaluate these assumptions and their consequences by using a parametric survival model and available data on failure (knockdown) times of adult Drosophila. We find that the variance in log(tf) increases with increasing constant temperatures in most Drosophila species, resulting in changes in the shape of the failure density and survival curves across temperatures. We compare predictions of three deterministic and probabilistic models that differ in their TDT assumptions using D. melanogaster data in fluctuating (but stressful) temperatures. All three models consistently underestimate observed median failure times except at extremely high temperatures, suggesting non-additivity of heat injury accumulation. Our parametric model, incorporating temperature-dependent variance, provides more accurate predictions of cumulative survival curves in fluctuating temperatures. Our findings highlight the importance of understanding both mean and variation in failure times, and how these change across temperatures, for modeling survival in fluctuating thermal environments.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003623",
+    "body_text": [
+      {
+        "text": "Increases in environmental variability, heat waves, and other extreme thermal events due to climate change are amplifying the need to understand organismal responses to high and fluctuating temperatures [1\u20133]. Integrating widely available metrics of organismal thermal tolerance [4] with environmental data provides a convenient way to estimate the thermal risk posed by climate change [5,6]. Tolerance has been quantified using both static (time to loss of function at a constant stressful temperature) and dynamic (temperature at loss of function as temperature is ramped) approaches, but metrics of thermal tolerance using either approach are highly sensitive to methodology [7\u20139]. Beyond methodological challenges, the probability of survival depends on both the intensity and duration of thermal stress [8,10]. Thermal sensitivity also depends on the thermal history the organism has experienced, with past stressful temperatures alternately allowing for acclimation or the accumulation of stress and cool temperatures allowing for recovery [11,12].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Efforts to account for both temperature and exposure time have led to a shift toward considering a two-dimensional \u2018tolerance landscape\u2019 rather than a single thermal tolerance metric [10]. One valuable approach to predicting survival in fluctuating temperatures uses thermal death times (TDTs): the time to death (or failure) as a function of temperature [1,3]. Data from a variety of study systems indicate that mean time to death declines exponentially with increasing temperature [13\u201315]. This yields a linear relationship between temperature T and log of time to death or failure tf: log(tf) ~ bT, where b is the slope. Empirical studies have defined failure in terms of death, knockdown, coma, or other events; for simplicity, here we will refer to all of these in terms of failure and failure time tf, and survival as the absence of failure. Recent studies have used a variety of statistical approaches to estimate the relationship between log(tf) and temperature for different constant temperatures [16\u201320]. However, applying these models based on constant temperature data to fluctuating temperatures requires additional information or assumptions about how time and temperature jointly determine survival (see below).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The basic TDT framework has motivated the development of both deterministic and stochastic (probabilistic) models of survival in changing temperatures. Deterministic models of failure in stressful temperatures assume that failure of an organism occurs when accumulation of injury or damage exceeds a critical threshold. For example, in the model proposed by J\u00f8rgensen and colleagues [1], the rate of injury depends on temperature, and the injury accumulation is assumed to be additive across temperatures [1,9]. Several experimental studies of knockdown times in Drosophila support this assumption, but the range of temperature conditions in which this applies is unknown [1,9]. Deterministic models can be used to predict average failure times in fluctuating temperatures when failure is due to stress; however, these models do not consider the stochastic nature of failure, so cannot predict survival probabilities or variation in failure times.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Conversely, probabilistic models explicitly consider the cumulative survival curve S(t) and how it varies with temperature T and time t. Applying such models to fluctuating temperatures requires assumptions about S(t) and the distribution of failure times. One straightforward approach is to assume that the failure rate at time t depends only on current temperature T(t): in this case failure time is exponentially distributed with a survival rate \u03bb = 1/tf, such that failure times and survival curves can be computed directly from the TDT relationship. This method may apply to immature life stages at non-stressful temperatures, but in general, survival will depend on age, past thermal history (including thermal stress) and other factors [10,21,22]. The influential TDT model of Rezende and colleagues [3] does not assume a specific parametric form for the cumulative survival curve S(t), but assumes that there is an \u2018average\u2019 S(t) that applies across all temperatures of interest [3]. However, the shape of S(t)\u2014and variation in failure times\u2014is known to be influenced by both biological mechanisms and environmental factors [22\u201324].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "These deterministic and probabilistic models provide related but distinct methods for using data on death or failure times over a range of constant, stressful temperatures to predict survival in fluctuating temperatures, and have been applied to Drosophila [1,3] and other ectotherms [25\u201328]. However, whether and how cumulative survival curves change across stressful temperatures has not been examined. As we will show, this has important consequences for predicting survival probabilities in fluctuating conditions. In addition, the accuracy of predictions from current deterministic versus probabilistic models has not been directly compared.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Here, we explore these issues and their consequences for predicting survival in constant and fluctuating temperature conditions. First, we use a simple probability model to examine the determinants of the cumulative survival curve S(t), and show how the shape of S(t) is directly related to the variance in the log of failure times, log(tf). We illustrate how changes in the variance in log(tf) with temperature invalidate the assumption of an average survival curve. Second, we use published data for knockdown times of adult Drosophila at stressful temperatures [2] to quantify how mean and variance in log of failure time vary with temperature. Our results show that for most Drosophila species, variance in log(tf) increases with increasing temperature, altering survival probabilities and the shape of S(t) across temperatures within the stressful range. Third, we propose a survival model that incorporates changes in failure variation and the shape of S(t) across temperatures, and compare the predictions with those from previous deterministic and probabilistic models in fluctuating, stressful temperature conditions using data from an experimental study with D. melanogaster [9]. Our approach illustrates how changes in variation in failure times across stressful temperatures can alter predictions of survival in high, fluctuating temperatures. Our results highlight the importance of understanding the biological processes that contribute to variation in failure times.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Two widely used approaches for modeling survival are accelerated failure time (AFT) models, where time to failure is modeled as a function of predictors; and proportional hazard (PH) models, where survival or failure rate is modeled as a function of predictors. The basic TDT model is an example of an AFT model with (constant) temperatures as predictors. As described in the next section, both parametric and non-parametric AFT models have been proposed to model TDT data. We will also briefly consider the application of PH models, and show why these are not valid for the TDT data we consider (see Testing TDT model assumptions: Constant temperatures).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Model development and results",
+        "sec_num": null
+      },
+      {
+        "text": "The basic TDT model assumes that the mean (or median) of log(tf) declines linearly with increasing temperature (Fig 1A). Variation in log(tf) will determine how the probability of survival changes with time. It is useful to define the failure density f(t), which represents the frequency distribution of failure times for a sample of individuals. At any given temperature, the failure density and variance in log (tf) are related to the cumulative survival curve S(t). Here, we use the log-logistic survival model to illustrate the main points, but the qualitative results will apply generally to other probability distributions (see Discussion). The cumulative survival function S(t) for the log-logistic model is given by:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "One useful feature of the log-logistic model is that the scale parameter a equals the median of failure time tf. Note that the median failure time occurs when cumulative survival S(t) = 0.5 (S1 Fig). In addition, the shape parameter k is inversely related to the variance of failure time tf: (See S1 Text):",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "For clarity, we will italicize scale and shape when referring to the log-logistic parameters.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "The hazard function h(t) represents the instantaneous failure rate as a function of time: i.e., the rate of failure given survival to time t [23]. It is defined in terms of the failure density and the cumulative survival curve: h(t) = f(t)/S(t). In the simplest case, h(t) = \u03bb and is constant over time, resulting in an exponential distribution. The hazard function for the log-logistic model is given by:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "When k > 1, the hazard rate increases more rapidly over time when k is larger, decreasing the width of the failure density (S1 Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "To explore the importance of variation in failure times, suppose the mean and median of log(tf) decrease linearly with increasing temperature (the TDT assumption, Fig 1A). We will consider cases in which variance of log(tf) is either constant with temperature (Fig 1B, solid lines) or increases with increasing temperature (Fig 1A and 1B, dashed lines). Recall that variance of log(tf) is inversely related to the log-logistic shape parameter (see Eq (2) above). The variance in log(tf) is therefore determined by the shapes of the failure densities and cumulative survival curves, and how these change across temperature (Figs 1C\u20131F and S2). At any given temperature, greater variance in log(tf) results in a strongly asymmetric failure density with a low mode and a long right tail (Fig 1C and 1D). As a consequence, greater variance in log(tf) results in a more gradual decline in cumulative survival across time, whereas lower variance generates a logistic (switch-like) decline in cumulative survival (Fig 1E and 1F). Because log mean failure time declines rapidly with increasing temperature (Fig 1A), the scales of f(t) and S(t) differ strongly between temperatures. But because the variance of log(tf) is independent of scale (and of median log(tf)), any temperature effects on variance are separate from the established TDT relationship (Fig 1C\u20131F).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "Now consider the case in which variance of log(tf) is not constant, but rather increases with increasing temperature (Fig 1, dashed lines). In this case, the shapes of the failure time density and cumulative survival curve change with temperature, differing from the two constant variance cases (Fig 1C\u20131F). If variance of log(tf) changes with temperature, this has important consequences for models of failure times and survival curves in fluctuating temperature conditions (see S1 Text). Deterministic TDT models such as J\u00f8rgensen and colleagues [1] do not incorporate variation in failure times or the probabilistic nature of failure, and focus on predictions about median or mean failure time. Probabilistic TDT models such as Rezende and colleagues [3] do not assume a specific parametric form for the cumulative survival curve S(t), but assume that there is an \u2018average\u2019 S(t) that applies across all temperatures of interest. In this sense, the model assumes that variance of log(tf) is constant across temperatures (see Fig 1 and supplementary material in [3]). Below, we will address whether variance of log(tf) changes at different constant temperatures within the stressful range, and explore the consequences for predicting failure and survival in fluctuating temperatures.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The survival model",
+        "sec_num": null
+      },
+      {
+        "text": "To assess how mean and variance log(tf) change with temperature, we used recently published datasets for knockdown times (tf) of adults from 11 Drosophila species at a series of stressful, constant temperatures [2] (Fig 2). We excluded trials with fewer than 10 individuals from our analyses to ensure model convergence. We also estimated the scale and shape parameters for the log-logistic model at each temperature for each species (R package flexsurv). Preliminary analyses suggested that the log-logistic model provides a better fit for these data than alternatives such as Weibull, Log-normal, or Gompertz models (S1 and S2 Tables).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing TDT model assumptions: Constant temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "As predicted by TDT models, both the mean of log(tf) and the value of log(scale) (recall that scale = median of tf: see previous section) decline linearly with increasing temperature (Fig 2A and 2C). There are substantial differences in heat tolerance among species (e.g., position of x-intercept in Fig 2A and 2B). Residual analysis confirms that any nonlinearity in the TDT trend is small in scale and inconsistent between taxa (S2 Fig). Changes in the variance in log(tf) and shape across temperatures are more complex (Fig 2B and 2D). At lower temperatures (<36 \u00b0C), variance is relatively low (and shape is high), but the variance is generally larger at higher temperatures. Overall, shape declines with increasing temperatures (mixed-effects LR test: \ud835\udef82 = 33.71, df = 1, p < 0.0001), although there is variation among species in the strength of the relationship (S3 Fig). As a consequence for many species, the shape of the cumulative survival curve changes with temperature (S3 Fig), contrary to the assumption of an \u2018average\u2019 survival curve across temperatures [3]. We emphasize that these changes occur within a narrow range of stressfully high temperatures (>32.5 \u00b0C). Interestingly, species with higher heat tolerance do not show increased variance in log(tf) until higher temperatures (S3 Fig), suggesting that stress responses may alter the variance and distribution of failure times.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing TDT model assumptions: Constant temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "We have focused on the log-logistic model in our analyses here, because its parameters are readily interpreted in terms of mean and variance in failure times, and because it provides a good fit to the Drosophila data. We also considered several alternative models (exponential, Weibull, log-normal, and Gompertz), but none of these provide consistently better fits to these data based on AIC (S1 and S2 Tables). In particular, the exponential model is much worse than the log-logistic model in all cases, confirming that the failure rate is not constant over time. Another alternative approach is the PHs model, which assumes that the ratio of hazards (failure rates) is constant over time at different temperatures. Applying a PH model to these data is inappropriate, because a likelihood ratio test shows that the hazard ratios between temperatures are not constant over time (X2 = 5403.4, df = 1, p < 2.2e \u2212 16).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing TDT model assumptions: Constant temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "Small sample sizes (10\u201326 individuals per temperature: see S3 Table) contribute to the \u2018noisiness\u2019 of our estimates of variance(log(tf)) and shape (Fig 2B and 2D). This has important consequences for estimating failure densities and cumulative survival curves at different temperatures (Fig 3). The Rezende and colleagues [3] model estimates an average survival curve and failure density across all temperatures, and applies this at each temperature. The increasing variance log-logistic model (hereafter labeled the increasing variance model) allows the log-logistic shape parameter to decline linearly with temperature if such a relationship is found (Fig 2D); otherwise shape is constant across temperature (e.g., Fig 3A\u20133D). For both D. subobscura (Fig 3A\u20133D) and D. equinoxialis (Fig 3E\u20133H), the shapes of the observed failure time densities (gray lines) differ markedly between low and high stressful temperatures and are quite jagged, reflecting the sparseness of the data. For both species, many of the observed failure times (gray lines) fall outside of the failure densities predicted by the Rezende and colleagues model (orange lines), especially at the high temperature (Fig 3A, 3B, 3E, and 3F); consequently, the Rezende and colleagues model predicts a faster decline in cumulative survival than the observed survival curve (Fig 3C, 3D, 3G, and 3H). The predicted failure densities for the increasing variance model (purple lines) are consistently wider than the observed densities but encompass the full range of the observed failure times (Fig 3). These patterns highlight an important difference between the models: at a given temperature, the Rezende and colleagues model uses a non-parametric model fitting approach that can result in complex failure densities and survival curves, whereas the log-logistic model estimates a single parameter (shape) that determines the shape of the failure density and cumulative survival (S4 Fig). The complex failure density from the Rezende and colleagues model likely results from overfitting of the data, rather than reflecting the \u2018true\u2019 failure density (see Discussion).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing TDT model assumptions: Constant temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "How do these effects alter predicted patterns of survival in fluctuating temperature conditions? We address this question using D. melanogaster failure (heat coma) time data from an experiment subjecting 26 sets of adults to different fluctuating temperatures between 34 and 42 \u00b0C [1] (a different population than that represented in Fig 2). J\u00f8rgensen and colleagues [1] used their deterministic TDT model, assuming that injury accumulation is additive, to predict median failure time (tf) for each set of adults; we compared their predictions along with predictions for the Rezende and colleagues and the increasing variance (log-logistic) models to the observed failure times (Fig 4). Based on the sum of the (absolute) errors, the increasing variance (187.2) and J\u00f8rgensen and colleagues (188.8) models yield better predictions for median failure time of males than the Rezende and colleagues model (222.5). For females, the J\u00f8rgensen and colleagues model (189.7) has lower error than the increasing variance model (194.7), and both have much lower error than the Rezende and colleagues model (276.7). Note that at lower mean temperatures (e.g., tf > 150 min) all three models consistently underestimate the observed median tf (Fig 4). For the D. melanogaster population used in this experiment, the relationship between temperature and shape was weak, so we also compared log-logistic models with constant or with increasing variance. Incorporating increasing variance had little effect on the predictions for the log-logistic model in this instance (S5 Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing model predictions: Fluctuating temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "The probabilistic models can also predict the distribution of failure times (and hence the cumulative survival curves) under fluctuating temperatures for each set of individuals. We used the difference in log-likelihood between the increasing variance (log-logistic) and Rezende and colleagues models to quantify the relative fit of the two models for each set (Fig 4C) (for details, see S1 Text). The increasing variance (log-logistic) model provides a better fit than the Rezende and colleagues model (paired t test: t = 3.4685, df = 25, p = 0.0019), with a higher likelihood in 20 of 26 cases (S6 Fig). Together, these results suggest that the (deterministic) J\u00f8rgensen and colleagues model and the log-logistic model yield better predictions of median failure times than the Rezende and colleagues model, and the log-logistic model yields better predictions of variation in failure times and in cumulative survival than the Rezende and colleagues model.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Testing model predictions: Fluctuating temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "The TDT model- specifically, that the average time to death or failure declines exponentially with increasing temperature\u2014was first proposed for microbes more than a century ago [13], and subsequently confirmed for fish and insects [14,21] more than a half-century ago. Numerous recent studies have documented the TDT relationship in a variety of ectothermic organisms at constant, stressful temperatures [2,15,16,18\u201320,26\u201328]. Recent extensions enable applying the TDT model to fluctuating temperatures but require additional assumptions about the joint effects of time and temperature on survival probabilities or failure rates. Deterministic models assume that failure at stressful temperatures occurs when damage accumulation exceeds some critical threshold, and that damage accumulation at different (stressful) temperatures is additive [1,2,9]; experimental evidence in several systems supports the additivity of damage accumulation [1,9,14,28]. These deterministic models can be used to predict average failure times in fluctuating temperatures\u2014an important contribution\u2014but ignore the stochastic nature of failure and cannot directly predict survival probabilities or survival curves. Alternatively, the influential probabilistic model of Rezende and colleagues [3] uses failure data at different constant temperatures to compute an average cumulative survival curve, implicitly assuming that the shape of the survival curve, and variation in failure time, does not change across temperatures.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Modeling survival at stressful temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "Here, we have explored these two assumptions and their consequences for modeling survival and failure in both constant and fluctuating temperatures. We show that median log(tf) (and log-logistic scale) decline linearly with increasing temperature, confirming previous analyses in support of the TDT model. In contrast, for most species, var[log(tf)] and shape change in magnitude and variability across temperatures (Fig 2). In particular, var[log(tf)] increases (shape decreases) with increasing temperatures for many species, even over the narrow range of stressful temperatures considered in these studies (Fig 2). Increasing var[log(tf)] with temperature (Fig 2) alters the shape and curvature of the cumulative survival curve (Figs 1 and S1), contrary to the constant shape assumption [3]. Note, however, that the presence or strength of the relationship between temperature and var[log(tf)] differs substantially among the Drosophila species and populations considered here (S3 Fig). The estimated values of the log-logistic shape parameter for Drosophila at high, fluctuating temperatures\u2014typically in the range of 1\u20133 (Fig 2) \u2014predict hazard functions that either decline or increase gradually with time (S1 Fig), contrary to expectations for a deterministic threshold model of failure.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Modeling survival at stressful temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "We have used the log-logistic survival model to illustrate our points, but the main findings will apply to other probability distributions. One benefit of the log-logistic model is that its parameters\u2014scale and shape\u2014are readily related to the mean and variation in failure times tf: scale equals the median of log(tf), and shape declines with increasing variance in log(tf). A key insight is that var[log(tf)] determines the shape of the survival curve: cumulative survival declines more gradually as the variance in log(tf) increases (Figs 1 and S1). These considerations highlight the importance of understanding both the mean and variance in failure times for modeling survival.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Modeling survival at stressful temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "Our estimates of var[log(tf)] and shape here are quite imprecise and noisy (Fig 2), as a consequence of the small sample sizes in these data (10\u201326 individuals per temperature: see S3 Table). For data sets with small sample sizes, the empirically-based Rezende and colleagues approach can result in predicted failure densities and survival curves that fail to overlap much of the observed data at particular temperatures (Fig 3). Substantially larger sample sizes will be needed to provide better estimates of variance in log(tf) and of shape parameters, and to select the best parametric models for failure time and survival data.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Understanding variation in failure times",
+        "sec_num": null
+      },
+      {
+        "text": "Why does var[log(tf)] change with temperatures within the stressful range? One possibility is that the temporal effects of stress on failure (knockdown or mortality) may vary within the stressful temperature range. For example, the induction of different mechanisms of stress response, such as HSP production, ROS accumulation, and DNA repair at different stressful temperatures could generate differences in failure densities across temperatures [11,29,30]. Studies exposing bacteria to high temperatures and other environmental stressors have reported a flattening of the survival curve (and thus increased variance in failure times) at later times, a pattern termed \u2018tailing\u2019 [31]. One mechanism contributing to this pattern is acclimation responses in the kinetics of heat inactivation [31,32]. The effect should be greatest at stressful but sublethal temperatures over longer times [32]; in our Drosophila analyses, this pattern only appears at the most extreme high temperatures where failure times are the shortest. An interesting alternative proposal is that increased noise in gene expression in stressful environments modifies bacterial susceptibility to radiation, resulting in tailing in survival curves [33]. Whether this mechanism applies to heat stress in insects or other eukaryotes is unknown.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Understanding variation in failure times",
+        "sec_num": null
+      },
+      {
+        "text": "Another potentially important mechanism for this pattern is individual heterogeneity. Demographic models show that heterogeneity in individual mortality rates, for example, between \u2018frail\u2019 and \u2018robust\u2019 individuals, can alter the shape of the population survival curve and result in mortality rate plateaus at later ages or times [34]. Genetic variation in survival rates can have similar effects [35,36]. The Drosophila data used in our analyses represent samples from the same populations measured across the set of stressful temperatures, and increased variance in failure times only occurs at the highest temperatures. This suggests that greater phenotypic variation in failure time is expressed at extreme high stressful temperatures. Phenotypic variation that is only expressed in stressful or novel environments (sometimes termed cryptic genetic variation) has been reported in a number of study systems [37], but counterexamples also occur [38]. TDT studies with clones or isogenic lines may be particularly valuable for identifying potential cryptic variation at extreme high temperatures.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Understanding variation in failure times",
+        "sec_num": null
+      },
+      {
+        "text": "The TDT models explored here assume random variation among individuals across all temperatures: in particular, by assuming constant variance across temperatures, TDT models imply that individuals vary in the intercept but not the slope of the TDT relationship. Alternatively, variation among individuals or genotypes in the slope of their TDT curves can generate a \u201cfanning out\u201d effect, where small differences in slope between curves result in larger differences in log(tf) as temperatures increase, thereby increasing var(log(tf)) and changing shape with temperature. This effect is accentuated when slope and intercept covary, as they have been reported to do in several instances [10,39,40]. While some studies have examined genetic variation in thermal tolerance [41], phenotypic and genetic variation in TDT curves is largely unexplored (but see [40,42]).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Understanding variation in failure times",
+        "sec_num": null
+      },
+      {
+        "text": "Studies to date have emphasized estimates or predictions of mean or median failure times. However, many important biological questions require information about cumulative survival curves (equivalently, variation in failure times). Calculations of population growth rate (e.g., r) require information about the survival curves, as do predictions about population persistence or extinction [43,44]. Similarly, the shape of survival curves is important for predicting the survival of immature states to adulthood, especially when environmental factors (including temperature) influence both developmental and mortality rates. It is thus important for analyses and models to move beyond the current focus on average TDTs.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Understanding variation in failure times",
+        "sec_num": null
+      },
+      {
+        "text": "Using constant temperature studies to estimate the parameters for models that can predict survival in fluctuating temperatures is a powerful approach, and such predictions can be experimentally tested in controlled environmental conditions [1,2,14]. We find that the J\u00f8rgensen and colleagues and increasing variance (log-logistic) models yield substantially better predictions for median failure time than the Rezende and colleagues model (Fig 4). In addition, the model comparison shows that the increasing variance (log-logistic) model yields a better fit to the observed failure densities than the Rezende and colleagues model (Fig 4). Increased variance made only minor contributions to the superiority of the log-logistic model for these data (S5 Fig). The weaker performance of the Rezende and colleagues model here may be a consequence of overfitting of the average failure density and cumulative survival curve (Fig 3) based on limited data, resulting in less accurate predictions. While larger sample sizes would help resolve this, further discussion of the relative merits of parametric and non-parametric survival models seems warranted here.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Modeling survival in fluctuating temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "Importantly, all three fluctuating temperature models consistently underestimate median failure times when the frequency of lower (but still stressful) temperatures is greater\u2014i.e., at longer median failure times (Fig 4). Residual analysis (S2 Fig) supports the linear relationship between mean[log(tf)] and temperature over this temperature range, as assumed by TDT models. Instead, the assumption that damage accumulation is additive may not apply when temperatures vary across the stressful range. Studies exposing fish, insects, and plants to various pairs of two successive stressful temperatures suggest that median tf can be accurately predicted with the additive stress model [1,14,19,28]. However, these experiments only tested by switching between pairs of temperatures, have spanned only a narrow portion of the stressful range, and did not consider variance in failure times. For example, in one such study with D. melanogaster, variance in failure time is much higher when the lower temperature (36.5 \u00b0C) preceded the higher (39.5 \u00b0C), compared with the reverse order [1]. Such a result indicates that the order of temperature exposure affects failure times, and may result from acclimation, recovery, or repair [1,11,12,45]. Additional tests of additivity will improve our understanding of these processes and inform further development of TDT models.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Modeling survival in fluctuating temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "The models and data described here consider a restricted range of stressfully high temperatures, in which failure typically occurs within minutes to a few hours (Figs 2\u20134). Of course, most terrestrial thermal environments include diurnal and other fluctuations between stressful and non-stressful (\u2018permissive\u2019) temperatures. A growing literature explores whether and how exposure to non-stressful temperatures allows repair and recovery of damage accumulated during thermal stress [9,12,29,46]. Some recent experimental studies show that cool night-time temperatures can reduce damage accumulated at stressful high daytime temperatures, and improve survival and growth [47\u201349]. Incorporating the time-dependent effects of recovery and repair into models of responses to diurnally fluctuating temperatures represents an important challenge [50,51]. Multiple deterministic approaches have been proposed for modeling the time-dependent effects of damage accumulation, recovery, and repair to predict mean survival or growth in fluctuating conditions [9,19,45,46,50,51].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Beyond stressful temperatures",
+        "sec_num": null
+      },
+      {
+        "text": "Accurately predicting survival in variable field conditions poses additional challenges [3,46,52], although initial attempts are encouraging [3]. Recent syntheses have shown that the TDT slope is steeper within the stressful range than within the permissive range for many ectotherms [9,15], but these analyses have considered only averages and not variation in failure times. Survival curves and failure densities at non-stressful temperatures will be determined by aging, ontogeny, acclimation, and other processes, rather than damage accumulation [21,22]. One approach is to assume that failure rates at permissive temperatures are constant over time, implicitly assuming that survival is exponentially distributed at these temperatures. Because knockdown and related assays only apply at stressful temperatures, death or other metrics of failure that apply across the full range of temperatures may be more useful in this regard [14,21]. A related issue is how to identify the threshold temperature that distinguishes permissive and stressful temperature ranges, and whether these represent distinct physiological ranges rather than part of a continuum [15,45]. Given these many challenges, experimental tests with fluctuating temperatures in environmental chambers may be a particularly useful approach to evaluating alternative models for predicting survival in variable environments [9,45].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Beyond stressful temperatures",
+        "sec_num": null
+      }
+    ]
+  }
+}

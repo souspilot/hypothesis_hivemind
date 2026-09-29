@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import os
 import re
@@ -7,6 +8,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from openai import OpenAI
+
+from config import DATASETS, parse_dataset_args
 
 SYSTEM_PROMPT = (
     "You are a helpful assistant for summarizing key details of experiments "
@@ -25,9 +28,6 @@ TASK_PROMPT = (
     "Do NOT wrap the JSON in markdown code fences.\n\n"
     "Paper text:\n"
 )
-
-TRAIN_DIR = Path("data2/train")
-OUTPUT_DIR = Path("data2/experiments_summary")
 
 # OpenRouter speaks the OpenAI Chat Completions format, not Anthropic's native
 # Messages format. Model names on OpenRouter are "provider/model-name" --
@@ -59,9 +59,9 @@ def parse_json_response(text: str) -> dict:
     return json.loads(text.strip())
 
 
-def process_paper(client: OpenAI, paper_path: Path) -> dict | None:
+def process_paper(client: OpenAI, paper_path: Path, output_dir: Path) -> dict | None:
     paper_id = paper_path.stem
-    output_path = OUTPUT_DIR / f"{paper_id}.json"
+    output_path = output_dir / f"{paper_id}.json"
 
     if output_path.exists():
         print(f"  [skip] {paper_id} already processed")
@@ -117,36 +117,41 @@ def process_paper(client: OpenAI, paper_path: Path) -> dict | None:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset", nargs="*", choices=list(DATASETS), help="default: all")
+    args = parser.parse_args()
     load_dotenv()
 
     client = OpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=os.environ["OPENROUTER_API_KEY"],
     )
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    for dataset in parse_dataset_args(args.dataset):
+        output_dir = dataset.summaries_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
 
-    paper_files = sorted(TRAIN_DIR.glob("*.json"))
-    print(f"Found {len(paper_files)} papers. Saving to {OUTPUT_DIR}/\n")
+        paper_files = sorted(dataset.papers_dir.glob("*.json"))
+        print(f"Found {len(paper_files)} papers. Saving to {output_dir}/\n")
 
-    success, errors = 0, 0
-    for i, paper_path in enumerate(paper_files, 1):
-        print(f"[{i}/{len(paper_files)}] {paper_path.stem}")
-        try:
-            result = process_paper(client, paper_path)
-            if result:
-                print(f"  -> {result['title'][:70]}")
-                success += 1
-        except Exception as e:
-            print(f"  ERROR: {e}")
-            # Save error record so we know which ones failed
-            error_path = OUTPUT_DIR / f"{paper_path.stem}.json"
-            with open(error_path, "w") as f:
-                json.dump({"error": str(e), "paper_id": paper_path.stem}, f)
-            errors += 1
+        success, errors = 0, 0
+        for i, paper_path in enumerate(paper_files, 1):
+            print(f"[{i}/{len(paper_files)}] {paper_path.stem}")
+            try:
+                result = process_paper(client, paper_path, output_dir)
+                if result:
+                    print(f"  -> {result['title'][:70]}")
+                    success += 1
+            except Exception as e:
+                print(f"  ERROR: {e}")
+                # Save error record so we know which ones failed
+                error_path = output_dir / f"{paper_path.stem}.json"
+                with open(error_path, "w") as f:
+                    json.dump({"error": str(e), "paper_id": paper_path.stem}, f)
+                errors += 1
 
-        time.sleep(0.3)  # light rate-limit buffer
+            time.sleep(0.3)  # light rate-limit buffer
 
-    print(f"\nDone. {success} processed, {errors} errors.")
+        print(f"\nDone. {success} processed, {errors} errors.")
 
 
 if __name__ == "__main__":

@@ -41,6 +41,8 @@ from abc import ABC, abstractmethod
 from dotenv import load_dotenv
 from openai import OpenAI as OpenAIClient
 
+import config
+
 load_dotenv()
 
 OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
@@ -51,26 +53,14 @@ OPENROUTER_ANTHROPIC_BASE_URL = "https://openrouter.ai/api"
 OPENROUTER_OPENAI_BASE_URL = "https://openrouter.ai/api/v1"
 
 # ---------------------------------------------------------------------------
-# Models list — edit here to add / remove models across all scripts.
-# All entries are now OpenRouter "provider/model" slugs. build_model() routes
-# anthropic/* to the Anthropic Skin (preserves caching), everything else to
-# the OpenAI-compatible endpoint.
+# Models list -- defined in config.py (with display names, providers, and
+# legacy keys). build_model() routes anthropic/* to the Anthropic Skin
+# (preserves caching), everything else to the OpenAI-compatible endpoint.
+# Re-running generation is a no-op for any (paper, model) that already has
+# N_SAMPLES valid samples, including ones stored under a legacy key.
 # ---------------------------------------------------------------------------
 
-MODELS = [
-    # "anthropic/claude-haiku-4.5",
-    # "anthropic/claude-sonnet-4.5",
-    # "anthropic/claude-sonnet-4.6",
-    # "openai/gpt-5-nano",
-    # "openai/gpt-5-mini",
-    # "openai/gpt-5",
-    "google/gemini-3.1-pro-preview",
-    "google/gemini-3.1-flash-lite",
-    "google/gemma-4-31b-it",
-    "moonshotai/kimi-k3",
-    "moonshotai/kimi-k2.6",
-    "moonshotai/kimi-k2.7-code",
-]
+MODELS = [m.slug for m in config.MODELS]
 
 # ---------------------------------------------------------------------------
 # Base interface

@@ -1,0 +1,389 @@
+{
+  "paper_id": "journal.pbio.3003861",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003861.xml"
+  },
+  "title": "Learning engages transient and sustained cellular mechanisms in the human brain",
+  "doi": "10.1371/journal.pbio.3003861",
+  "authors": [
+    {
+      "first": "Guillermina",
+      "last": "Griffa"
+    },
+    {
+      "first": "Marco",
+      "last": "Palombo"
+    },
+    {
+      "first": "Abraham",
+      "last": "Yeffal"
+    },
+    {
+      "first": "Hong-Hsi",
+      "last": "Lee"
+    },
+    {
+      "first": "Agustin",
+      "last": "Solano"
+    },
+    {
+      "first": "Susie Y.",
+      "last": "Huang"
+    },
+    {
+      "first": "Valeria",
+      "last": "Della-Maggiore"
+    }
+  ],
+  "abstract_text": "Structural neuroplasticity supports learning, development, and shapes vulnerability to brain disorders, making it a central priority in neuroscience research. However, progress in humans has remained limited by the inability to probe cellular processes in vivo, leaving mechanistic insight largely dependent on animal models. To address this gap, here we combined the sub-voxel sensitivity of ultra\u2013high-gradient diffusion MRI with the cell-compartment specificity of the Soma and Neurite Density Imaging (SANDI) model to probe structural plasticity directly in the living human brain. By tracking how learning modulates the temporal dynamics of cell bodies and cell processes, we aimed to distinguish plastic from nonplastic biological processes driving changes in microstructure. We found that learning a motor skill triggered two distinct temporal responses: a transient expansion of cell bodies across all brain regions engaged by the task, consistent with a short-lived homeostatic mechanism, and a sustained increase in cell-process density restricted to key motor regions, consistent with structural plasticity. Our approach provides a mechanistic window into human neuroplasticity and marks a significant step toward bridging the gap between animal and human neuroscience.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003861",
+    "body_text": [
+      {
+        "text": "Experience continually remodels cellular architecture through structural modifications such as synaptogenesis, dendritic spine turnover [1,2], and the reorganization of astroglial processes that stabilize new synapses [3]. Structural plasticity supports learning and development and may influence the pathophysiology of psychiatric and neurodegenerative disorders [4\u201310]. Much of what is known about its cellular basis comes from invasive studies in animal models. Still, these species are evolutionarily distant and often can only approximate the complexity of human cognition and pathology. This gap underscores the need to study structural plasticity directly in the living human brain.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Diffusion MRI (dMRI) offers a promising noninvasive window into cytoarchitecture because it is sensitive to micrometer-scale restrictions imposed by the cell [11,12]. Over the past two decades, diffusion tensor imaging [DTI; 13] has been the primary approach for studying experience-dependent microstructural change in humans. In gray matter, DTI-derived mean diffusivity (MD) is sensitive to learning and correlates with synaptogenesis and astroglial expansion, two hallmarks of structural plasticity in rodents [14\u201317].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "However, because DTI conflates signals from multiple tissue compartments, it cannot distinguish lasting remodeling from transient short-lived homeostatic responses such as swelling that alter cellular morphology without enduring structural impact [18\u201321]. As a result, DTI remains an indirect marker of plasticity. This lack of biological specificity limits the mechanistic interpretation of diffusion findings across learning, development, and disease.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "To overcome these limitations, we leveraged the sensitivity of ultra\u2013high-gradient dMRI [22\u201330] together with the specificity of the compartment-based Soma and Neurite Density Imaging (SANDI) model [31] to separate diffusion signals arising from cell bodies and cell processes. Using the motor sequence learning (MSL) task, a paradigm previously shown by our team to elicit robust functional and DTI changes [32], we tracked how these cellular compartments evolved at baseline, 30 min, and 24 h post-learning. By resolving the temporal dynamics of cell bodies and cell processes, we aimed to distinguish plastic from nonplastic biological mechanisms driving changes in microstructure. SANDI revealed two distinct cellular responses: a transient increase in apparent cell-body density, consistent with a short-lived homeostatic response, and a sustained rise in apparent cell-process density, compatible with structural remodeling. Our approach moves the field beyond descriptive microstructural changes toward mechanistic inference, with broad implications for development and disease.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The MSL paradigm used here consists of executing a five-element finger sequence, initially learned declaratively, with the nondominant hand [Fig 1A, 33]. In our previous study, this task produced reliable improvements in performance alongside well-characterized functional MRI (fMRI) activation patterns and a distinct temporal pattern of reduction in MD in the hippocampus and precuneus [32]. To investigate the cellular mechanisms underlying these microstructural changes, here we replicated the same paradigm and longitudinal design inside the Connectome scanner [300 mT/m; 25,29,34,35], acquiring ultra\u2013high-gradient multi-shell dMRI at baseline, 30 min, and 24 h later (Fig 1B).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "Before applying SANDI, we first examined if the dataset obtained in the Connectome scanner reproduced the behavioral, fMRI, and DTI results of our previous work conducted on a clinical system. MSL showed the expected performance improvements, dominated by micro-offline gains (MOGs) [36,37] during rest periods between practice blocks rather than during active execution (Fig 2A). fMRI analysis revealed increased activity in the left hippocampus and precuneus during rest periods, consistent with early engagement of the limbic system, while cortico\u2013striatal and cortico\u2013cerebellar circuits supported sequence execution throughout training (Fig 2B). Finally, MD also decreased 30 min after learning in the left hippocampus and right precuneus, with additional reductions in left primary motor cortex (M1) and posterior parietal cortex (PPC), two brain regions central to motor skill acquisition [38,39]. Critically, MD changes in hippocampal and M1 were transient, whereas those in precuneus and PPC persisted overnight (Fig 2C).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "In sum, these results replicate our previous behavioral, fMRI, and DTI findings obtained from a study comparing a learning group to a nonlearning control group performing repeated, non-sequential finger tapping [32]. This replication provides support for the learning specificity of the microstructural changes reported here and strengthens the basis for their cellular-level interpretation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Results",
+        "sec_num": null
+      },
+      {
+        "text": "The time course of MD changes across brain regions (Fig 2C) may reflect different phases of the same plasticity cascade or distinct underlying biological mechanisms. Because MD results from the aggregate contribution of multiple tissue compartments, DTI alone cannot distinguish between these hypotheses. To resolve this ambiguity, we applied the SANDI model to the multi-shell dMRI data and examined its compartment-specific estimates within the DTI-defined clusters (Fig 3A and 3B). SANDI is a compartment-based model that decomposes the diffusion signal in gray matter into three fractions: cell soma (FSOMA), cell processes (FNEURITE), and extracellular liquid (FEXTRA), enabling a biologically grounded interpretation of how microstructural changes evolve as a function of time. These compartment-specific measures are further supported by converging evidence from histological atlases, biophysical simulations, and preclinical studies, suggesting sensitivity to cell-body density and underlying microstructural organization [40\u201347].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SANDI uncovers distinct cellular contributions to MD dynamics",
+        "sec_num": null
+      },
+      {
+        "text": "We found that the MD reductions observed 30 min after learning were accompanied by a transient increase in FSOMA across all four regions (left hippocampus, right precuneus, left M1, left PPC; Fig 3A and 3B). Given the short time window, such changes are incompatible with processes like neurogenesis [48,49] and instead point to a rapid, reversible enlargement of cell bodies. The anatomical uniformity of this response across regions with different cytoarchitectonic and embryonic origins is consistent with a non-specific homeostatic mechanism. We propose that learning-induced neural activity causes membrane depolarization, transiently altering the ionic balance of the interstitial space. This perturbation is expected to trigger compensatory responses to buffer the ionic imbalance through cellular uptake, with water following osmotically into the cells and producing transient cell swelling [18\u201321]. Supporting this interpretation, all four regions were functionally engaged during learning (see Fig A in S1 Text), indicating that FSOMA changes occurred within an active network. The return of FSOMA to baseline at 24 h is consistent with the expected restoration of ionic balance toward physiological levels.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SANDI uncovers distinct cellular contributions to MD dynamics",
+        "sec_num": null
+      },
+      {
+        "text": "In contrast, sustained MD reductions in the precuneus and PPC were associated with an increase in FNEURITE 30 min post-learning that persisted overnight, consistent with an increment in cell-process density (Fig 3B). This pattern aligns with structural plasticity observed in animal models, specifically, with the remodeling of dendritic and astroglial processes leading to new synapses and their stabilization, respectively [2,3,7,10,50,51]. Notably, FEXTRA closely tracked MD changes across all four regions (Fig 3A and 3B), consistent with the interpretation proposed by Assaf and colleagues that MD reductions partly reflect reduced interstitial space due to cellular expansion during plasticity-related states [15,17,52].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SANDI uncovers distinct cellular contributions to MD dynamics",
+        "sec_num": null
+      },
+      {
+        "text": "To examine whether these compartment-specific changes related to learning, we conducted linear mixed-effects models assessing the relationship between FSOMA and FNEURITE and behavioral measures of learning (see Methods). We found a significant association between the time course of FNEURITE and MOGs (F(1,25) = 6.15, p = 0.020). Specifically, there was a positive relationship at both 30 min and 24 h (\u03b2 30 min = 0.007, \u03b2 24 h = 0.02), which was significantly stronger at 24 h than at 30 min (time point \u00d7 MOG interaction: F(1,79) = 3.95, p = 0.05). This suggests that participants showing greater early consolidation underwent more persistent structural remodeling of cell processes. No significant association was found between FNEURITE and overnight memory retention, and no significant interactions between transient FSOMA changes and any behavioral metric were observed, consistent with its interpretation as a nonlearning-specific, activity-dependent response.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SANDI uncovers distinct cellular contributions to MD dynamics",
+        "sec_num": null
+      },
+      {
+        "text": "Together, these findings are consistent with the hypothesis that learning triggers at least two distinct biological mechanisms not distinguishable with DTI alone: a transient homeostatic response affecting cell bodies, and a sustained, regionally specific remodeling of cell processes compatible with structural plasticity. The ability to make this distinction rests on the spatiotemporal dissociation between FSOMA and FNEURITE, whose divergent temporal profiles and contrasting spatial distributions provide the inferential basis for interpreting these compartments as reflecting fundamentally different biological processes. The proposed mechanisms likely represent only a subset of the microstructural changes engaged during early learning, as processes occurring at finer spatial or temporal scales may not be detectable with the SANDI model under the current acquisition parameters.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "SANDI uncovers distinct cellular contributions to MD dynamics",
+        "sec_num": null
+      },
+      {
+        "text": "In the whole-brain analyses, SANDI was applied within DTI-defined clusters, maximizing sensitivity but precluding an independent test of cross-model correspondence. To address the potential circularity of this approach, we performed a complementary model-agnostic analysis in the hippocampus. This region was selected because its subfields (head, body, tail) can be reliably segmented longitudinally [53], providing an anatomically defined framework independent of diffusion metrics. DTI and SANDI were fitted independently in each subfield at each time point (baseline, 30 min, 24 h) and their topographical distributions (MD versus FSOMA/FNEURITE) and temporal dynamics were compared.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Independent, cross-model validation of SANDI",
+        "sec_num": null
+      },
+      {
+        "text": "We observed a strong anatomical correspondence between MD and FSOMA across the three hippocampal subfields (Fig 4). Specifically, transient decreases in MD in the tail and body of the left hippocampus, previously reported in MSL and other learning tasks [32,54], were matched by a transient increase in cell-body density. Notably, no significant changes were detected in either the head or the right hippocampus, and MSL did not modulate cell-process density in any subfield. These findings are consistent with the whole-brain spatiotemporal pattern identified by DTI over the left posterior hippocampus.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Independent, cross-model validation of SANDI",
+        "sec_num": null
+      },
+      {
+        "text": "The shared topography between MD and FSOMA confirms cross-model convergence and supports the robustness of SANDI for detecting structural changes in gray matter.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Independent, cross-model validation of SANDI",
+        "sec_num": null
+      },
+      {
+        "text": "Structural plasticity is instrumental to learning, development, and vulnerability to neurological and psychiatric disorders [55\u201360]. However, despite decades of research, our mechanistic understanding in humans has remained limited by the inability to probe cellular processes noninvasively. By combining ultra\u2013high-gradient diffusion MRI with the compartment-based SANDI model [31], here we show that the temporal evolution of cell compartments provides relevant information regarding the biological mechanisms supporting learning, linking microstructural dynamics to human brain function. Importantly, converging evidence from histological atlases and preclinical models supports the interpretation of SANDI-derived metrics as reflecting underlying cellular microstructure [40\u201347].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Prior diffusion MRI work has relied on indirect indices such as MD, which are sensitive to learning but cannot distinguish plastic changes from non-plastic phenomena such as swelling [14\u201317,32,52,54,61,62]. Multi-compartment models were introduced to improve biological specificity [23,27,63\u201367], but most rely on white-matter\u2013based geometries and are not optimal for studying gray matter plasticity. By focusing on cellular compartments SANDI provides great potential to explore plasticity in gray matter.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Our results show that the mechanisms underlying changes in MD are likely to be heterogeneous and compartment-specific. A key feature of our approach is the longitudinal design, which enabled us to track the temporal dynamics of two cellular compartments, soma and neurites, across three timepoints spanning the early and later phases post-learning. It was precisely the combination of divergent temporal profiles and contrasting spatial distributions\u2014the uniform FSOMA response across cytoarchitectonically distinct regions versus the regionally restricted FNEURITE increase\u2014that provides the inferential basis for distinguishing two biologically distinct processes. We hypothesize that the widespread transient increase in cell-body density reflects homeostatic swelling of neurons and astrocytes that may be triggered by increased activity during early phases of synaptic potentiation [15,18\u201321]. In contrast, the persistent increase in cell-process density observed in precuneus and parietal cortex is consistent with remodeling of dendritic and glial cell processes leading to new synaptic connections and synaptic stabilization [2,50,51,68,69]. This spatiotemporal dissociation represents a significant conceptual shift in human neuroscience from descriptive diffusion changes toward identifying their biological drivers",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Persistent increases in cell-process density were restricted to the precuneus and PPC, while the hippocampus and M1 showed only transient FSOMA changes. This temporal dynamics\u2014whereby the hippocampus supports early encoding and reactivation [32,70] while structural remodeling emerges selectively in cortical regions implicated in sequence integration and long-term representation [71,72,73]\u2014is consistent with the systems consolidation framework [74,75], whereby memories initially dependent on the hippocampus are gradually consolidated in distributed cortical networks. Notably, cell-process density increases in the precuneus and PPC were already detectable at 30 min post-learning, indicating that cortical structural remodeling is initiated rapidly after learning. This challenges the classical view of systems consolidation as a slow, sleep-dependent process and is consistent with previous work showing that hippocampal-cortical interactions begin immediately after learning [32,76]. While sleep may further stabilize the structural remodeling initiated during waking, our design and acquisition parameters do not allow us to directly assess its contribution, nor to determine whether our findings are compatible with the synaptic homeostasis hypothesis [SHY, 77], as FNEURITE is unlikely to be sensitive to the fine synaptic changes SHY predicts [31,78].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The ability to dissociate homeostatic from plastic cellular responses is not only relevant for understanding learning, but opens broader possibilities for investigating structural plasticity across development, neurodegeneration, and neuropsychiatric disorders. For example, differentiating transient from persistent cellular changes could help identify biomarkers that distinguish adaptive remodeling from pathological processes such as neuroinflammation or atrophy. Combined with emerging MRI methods that should improve sensitivity to swelling and cell-type discrimination [79\u201383], this approach may contribute to a biologically interpretable framework for understanding how experience, maturation, and degeneration remodel the brain\u2019s cellular architecture.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Despite these advances, several limitations should be considered when interpreting the present findings. SANDI-derived metrics do not provide direct quantification of cellular compartments, but rather model-based inferences about their relative contributions to the diffusion signal. As such, they cannot be directly extrapolated to histological measures of cellular density or volume. In particular, due to the model\u2019s assumption of negligible water exchange between compartments and the relatively long diffusion times used for dMRI acquisition (23 ms), neurite density values are systematically lower than histological estimates\u2014a recognized limitation of diffusion models at these timescales [78]. As a consequence, the neurite compartment is primarily sensitive to larger cellular processes such as axons and dendrites, and is unlikely to capture fine synaptic structures, thereby defining the biological scale at which our inferences apply. Critically, because all analyses were performed relative to each region\u2019s pre-learning baseline, this limitation does not affect the interpretation of the within-subject changes that form the basis of our conclusions. Another consideration is that SANDI yields relative signal fractions rather than absolute proton densities, making the compartment estimates compositionally dependent (i.e., the three fractions are constrained to sum to one within each voxel). More quantitative mapping would require diffusion-relaxometry acquisitions with longer scan times [84,85], calibrated to a proton-density reference such as CSF [86]. Finally, while the present findings provide evidence for distinct mechanisms driving MSL, they are based on a specific experimental paradigm in a healthy young adult sample, and may not generalize to other tasks or cohorts. Manipulating key training parameters -such as duration, intensity, or the implicit/explicit nature of the task- is likely to modulate the magnitude and persistence of compartment-specific changes, as suggested by recent work from our group [54].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In conclusion, tracking the spatiotemporal evolution of cellular compartments provides a biologically grounded framework to interpret microstructural changes in the human brain. By enabling the dissociation of plastic and homeostatic processes, this approach overcomes key limitations of traditional diffusion models and moves the field beyond descriptive changes toward mechanistic inference, thereby helping bridge cellular mechanisms identified in animals with human brain function.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Twenty-nine healthy human subjects between 18 and 36 years old (16 female, mean age \u00b1 SD = 26.86 \u00b1 5.41 years) were recruited under approval by the Institutional Review Board of Mass General Brigham (IRB protocol number: 2018P002443). All procedures were conducted in accordance with the principles expressed in the Declaration of Helsinki. Written informed consent was obtained from all participants. All participants reported no psychiatric, neurological, or cognitive impairment, nor any history of sleep disturbances. All subjects were right-handed as assessed by the Edinburgh Handedness Inventory [87].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Participants",
+        "sec_num": null
+      },
+      {
+        "text": "Both the learning paradigm and the experimental design used in this study were identical to our previous MSL study [32]. Participants were instructed to learn a 5-item motor sequence using the four fingers of their nondominant (left) hand (4-1-3-2-4, 4 being the index finger and 1 being the pinky finger) as quickly and accurately as possible (Fig 1A).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental paradigm",
+        "sec_num": null
+      },
+      {
+        "text": "All participants performed the MSL task in a self-paced manner during 15 blocks of 12 sequences each (60 key presses) interleaved with rest periods of 25 s [32]. The task lasted around 15\u201320 min. Multi-shell Diffusion MRI, T1-weighted, and functional images were acquired throughout the study. fMRI was collected during the MSL task following a block design (task, rest), while dMRI and T1w images were obtained in a longitudinal design at three time points: before practice (baseline), 30 min, and 24 h after learning to track the dynamics of structural plasticity in the short- and long-term (Fig 1B). Finally, to assess overnight offline gains, participants completed 8 additional practice blocks 24 h after training; the test was assessed after the MRI session.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental design and procedure",
+        "sec_num": null
+      },
+      {
+        "text": "Diffusion MRI, T1-weighted, and fMRI images were acquired on the original 3T Connectome MRI scanner (MAGNETOM CONNECTOM, Siemens Healthcare, Forchheim, Germany), equipped with a maximum gradient strength of 300 mT/m and a slew rate of 200 T/m/s, using a 64-channel phased array head coil [88].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "MRI acquisition",
+        "sec_num": null
+      },
+      {
+        "text": "Functional images (BOLD) were obtained following a block design during MSL (15 blocks of self-paced practice alternated with 25 s rest). The acquisition parameters were chosen to match our previous MSL study [32]: voxel size = 3 \u00d7 3 \u00d7 3 mm3; FOV = 210 mm; 42 slices aligned with the AC-PC line; 10% gap; posterior-anterior (P-A) phase-encoding direction; repetition time (TR) = 1,440 ms; echo time (TE) = 30 ms; multiband acceleration factor = 2; no PAT; bandwidth (BW) = 1,786 Hz/Px; echo spacing = 0.62 ms; EPI factor = 70; flip angle = 69\u00b0. A gradient echo (GRE) fieldmap was also acquired for correction of field inhomogeneities using the following parameters: 42 slices; 10% gap; voxel size = 3 \u00d7 3 \u00d7 3 mm3; field-of-view (FOV) = 210 mm; posterior-anterior (P-A) phase-encoding direction; TR = 716 ms; TE1 = 4.92 ms; TE2 = 7.38 ms; flip angle = 55\u00b0; BW = 600 Hz/px.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "MRI acquisition",
+        "sec_num": null
+      },
+      {
+        "text": "T1w and dMRI images were acquired at baseline, 30 min, and 24 h after training. T1w images were obtained using the multi-echo sequence and the following parameters: TR = 2,530 ms; TE = 1.15 ms; flip angle = 7\u00b0; Inversion Time (TI) = 1,100 ms; BW = 649 Hz/Px; FOV = 210 mm; voxel size = 1 \u00d7 1 \u00d7 1 mm3; parallel acquisition = GRAPPA mode, acceleration factor = 3. The acquisition was performed in sagittal slices. The T1w images were used for the coregistration and subsequent normalization of fMRI images and for the segmentation of each subject\u2019s hippocampal subfields.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "MRI acquisition",
+        "sec_num": null
+      },
+      {
+        "text": "Multi-shell dMRI images were acquired using a monopolar pulsed-gradient spin-echo, single-shot echo-planar-imaging sequence [89] using the following parameters: diffusion time = 24 ms; gradient pulse duration = 8 ms; TR = 4,200 ms; TE = 55 ms; voxel size = 2 \u00d7 2 \u00d7 2 mm3; partial Fourier factor = 6/8, GRAPPA acceleration factor = 2; multiband acceleration factor (MB) = 2; anterior-posterior (A-P) phase-encoding direction. dMRI images were acquired in 8 b-values: 32 gradient directions for b-values = 200, 500, 1,200, 2,400 s/mm2, 64 directions for b-values = 4,000, 6,000, 8,000 s/mm2, and 22 interspersed nondiffusion-weighted b = 0 images. The latter were acquired for signal normalization and motion correction, of which five were acquired with reversed phase-encoding direction (posterior-to-anterior) for susceptibility distortion correction.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "MRI acquisition",
+        "sec_num": null
+      },
+      {
+        "text": "Preprocessing of functional images was conducted primarily using Statistical Parametric Mapping (SPM12, Wellcome Department of Cognitive Neurology). Initial corrections addressed gradient nonlinearity [90]. The functional time series was motion-corrected using the middle volume of the series as a reference. Since the experimental paradigm consisted of a block design, we did not perform slice-timing correction. Susceptibility distortion due to magnetic field inhomogeneities was corrected using the phase and magnitude images of a gradient-echo field map, and the realignment was performed to the middle volume of each functional time series with the aid of FSL\u2019s (FMRIB Software Library) \u201cfslsplit\u201d and \u201cfslmerge\u201d commands. T1w structural images were coregistered to the BOLD images and normalized to the standard MNI152 template. This transformation was subsequently applied to the BOLD data, and the functional images were smoothed using a Gaussian kernel with an 8-mm full-width at half-maximum.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Functional MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "Human hippocampal subfields were segmented using FreeSurfer (version 7.0). Each subject\u2019s T1w image was processed through FreeSurfer\u2019s \u2018recon-all\u2019 pipeline. The hippocampal head, body, and tail were then extracted along the longitudinal axis using the optimized \u2018segmentHA_T1\u2019 function [53].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "T1.",
+        "sec_num": null
+      },
+      {
+        "text": "Preprocessing and normalization of the diffusion MRI images were performed using the FSL (University of Oxford) (version 6.0.3), MRtrix3 (version 3.0.3), and Advanced Normalization Tools (ANTs; Wellcome Department, UCL) (version 2.4.2).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "Preprocessing steps were applied separately for each scanning session (baseline, 30 min, and 24 h post-training). Images were denoised using MRtrix3\u2019s \u201cdwidenoise\u201d, corrected for Gibbs ringing using MRtrix3\u2019s \u201cmrdegibbs\u201d, and corrected for the nonlinearity of gradients [90]. Geometric susceptibility distortion correction was made using FSL\u2019s \u201cTopup\u201d. Subsequently, head motion, eddy currents, and b-vector rotation were made using FSL\u2019s \u201ceddy\u201d [91]. Finally, bias correction was then applied using MRtrix3\u2019s \u201cdwibiascorrect\u201d.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "Following preprocessing, FSL\u2019s \u201cdtifit\u201d was used to fit the diffusion tensor model, generating scalar maps for fractional anisotropy (FA) and MD metrics. FA and MD maps were calculated for each subject and each voxel using the 1,200 s/mm\u00b2 b-shell. Additionally, the SANDI model was fitted to the multi-shell dMRI acquisition using the SANDI MATLAB toolbox (https://github.com/palombom/SANDI-Matlab-Toolbox) [31]. SANDI accounts for cellular contributions to gray matter microstructure by modeling cell bodies as spheres, neurites as sticks, and extracellular space as isotropic Gaussian diffusion, producing three additive fractions. FSOMA tackles the contribution of the cell-body to the diffusion signal; FNEURITE estimates the contribution of cell processes such as neurites and cell processes from glial cells; FEXTRA, which represents the extracellular fluid, is calculated based on the other two fractions (FSOMA + FNEURITE + FEXTRA = 1).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "To quantify the DTI and SANDI metrics for each hippocampal subfield in native space (Region of Interest \u2013ROI analysis), MD maps and SANDI-derived fractions were registered to each subject\u2019s T1w image using a linear registration algorithm from ANTs. On the other hand, for the whole-brain analysis, DTI and SANDI maps were normalized to stereotaxic space (MNI152) using a custom-made pipeline based on ANTs to minimize across-session test-retest reproducibility error [92]. Finally, the normalized DTI and SANDI maps were smoothed using FSL\u2019s smoothing function with a 4-mm full-width at half-maximum Gaussian kernel.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "MSL was quantified using the intertap interval, defined as the time elapsed between successive key presses during correctly executed sequences [32]. The mean intertap interval was calculated for each correct sequence (~12 sequences per block) and each subject. Then, the intertap intervals from correct sequences were averaged across all subjects for each block.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Behavior.",
+        "sec_num": null
+      },
+      {
+        "text": "Gains in performance during MSL were assessed as in our previous study [32] into micro-online gains (MONGs), micro-offline gains (MOGs), and total learning. MONGs were calculated as the difference (delta) between the mean intertap interval of the first and last correct sequence within a practice block, while MOGs were computed as the difference between the mean intertap interval of the last correct sequence of a practice block and the first correct sequence of the following block. Total learning represented the sum of MONGs and MOGs.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Behavior.",
+        "sec_num": null
+      },
+      {
+        "text": "To statistically assess gains in performance for each of these behavioral metrics, we performed t tests against zero, with p-values corrected for multiple comparisons using Bonferroni adjustments.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Behavior.",
+        "sec_num": null
+      },
+      {
+        "text": "Statistical analyses of BOLD images were conducted using SPM12. We performed a standard whole-brain voxelwise general linear model (GLM) analysis to identify brain regions more active during motor execution (Task > Rest) and during rest periods (Rest > Task). To determine whether the parameter estimates (beta weights) from this GLM were significantly different from zero, we applied a one-tailed t test for each condition (p < 0.05 corrected for family-wise error\u2013FWE). One subject was excluded from the functional analyses due to a technical inconvenience during acquisition affecting most of the dataset.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Functional MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "Additionally, to assess whether the regions showing DTI/SANDI changes were functionally engaged during learning, we extracted the mean BOLD signal during early learning (blocks 1\u20137) from the four ROIs identified by the DTI analysis and compared it to a reference baseline period. This reference corresponded to the last 30 s of a 1-min fixation interval at the end of the scanning session, during which participants remained still viewing a neutral fixation cross. The first 30 s were excluded to ensure that any residual motor activity following task completion had dissipated. Although brief, this interval provides a reasonable approximation of a resting-state baseline. For each participant, the mean BOLD signal during Task and Rest blocks was normalized by subtracting the fMRI baseline value, and one-tailed one-sample t tests against zero (p < 0.05) were used to determine whether each region showed significant activation above baseline during Task, Rest, or both conditions.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Functional MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "To assess overall changes in MD across sessions (baseline, 30 min, and 24 h after learning), we conducted a whole-brain longitudinal analysis using a nonparametric permutation-based F test, using the threshold-free cluster enhancement (TFCE) approach (H = 2, E = 0.15) [93] implemented with the Sandwich Estimator (SwE) toolbox (version 2.0.0). SwE was specifically designed for accurate modeling of longitudinal and repeated-measures neuroimaging data [94]. The SwE analysis was conducted based on 1,000 permutations, and significant clusters were identified using an FWE-corrected p-value < 0.05. To reveal the temporal dynamics for each cluster of the F test, we extracted the median MD for each cluster, subject, and session, expressed it as the percent change relative to the baseline (Fig 2C) and determined the 95% confidence intervals using the summarySEwithin function from the Rmisc package in R [95,96]. Note that % MD changes are shown in Fig 2C to facilitate the comparison between our DTI analysis carried out in a clinical MRI scanner [32] and that acquired at the Connectome I scanner.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "To distinguish between short- and long-term changes in microstructure, we conducted two additional whole-brain analyses on the same MD maps using the same SwE approach described above. We then extracted the SANDI metrics (FEXTRA, FNEURITE, and FSOMA fractions) from the MD clusters, which were used as ROIs to assess longitudinal metrics of these changes (repeated-measures ANOVA; p < 0.05, corrected by Bonferroni). To reveal the temporal dynamics for SANDI metrics, we then computed each fraction\u2019s median for each cluster, subject, and session and the corresponding 95% CI (Fig 3A and 3B). Additionally, we conducted linear mixed-effects models (LMMs) to examine the relationship between the time course of FSOMA and FNEURITE changes (relative to baseline: 30 min \u2013 baseline and 24 h \u2013 baseline) and behavioral measures of learning (MOGs; micro-online gains, MONGs; and overnight offline gains). Separate models were run for FSOMA and FNEURITE, with time point (30 min, 24 h) as a repeated factor, behavioral metrics as fixed effects, and subjects modeled as a random effect, accounting for between-subject variability. For FSOMA, the key term of interest was the time point \u00d7 behavioral metric interaction, consistent with a transient response. For FNEURITE, the key term was the main effect of the behavioral metric, consistent with a more persistent structural change.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      },
+      {
+        "text": "To contrast DTI and SANDI across hippocampal subfields (Fig 4), we carried out independent statistical analyses (repeated-measures ANOVA; p < 0.05, corrected by Bonferroni) for each metric in the tail, body, and head hippocampi used as ROIs [53]. One subject was excluded from the statistical analysis due to missing data at the 24 h post-training MRI session.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Diffusion MRI.",
+        "sec_num": null
+      }
+    ]
+  }
+}
