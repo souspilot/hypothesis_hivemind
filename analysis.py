@@ -110,87 +110,84 @@ class Corpus:
             "different_paper": between[iu],
         }
 
-    def variance_curve(self, n_perm: int = 1000, seed: int = 0) -> np.ndarray:
-        """(n_papers, n_models) embedding variance of the outputs pooled from
-        the first k models, k = 1..n_models, averaged over n_perm random model
-        orders (drawn independently per paper).
-
-        Exact, not sampled from vectors: for N unit vectors with mean
-        pairwise cosine s (self-pairs excluded), variance = 1 - |centroid|^2
-        = (N-1)/N * (1 - s), and s for any set of models follows from
-        pair_matrix. Requires full coverage (N_SAMPLES per model).
-        """
-        m = N_SAMPLES
-        n_m = len(SLUGS)
-        weights = np.full((n_m, n_m), float(m * m))
-        np.fill_diagonal(weights, m * (m - 1))
-        rng = np.random.default_rng(seed)
-        k = np.arange(1, n_m + 1)
-        n = k * m
-        out = np.empty((len(self.paper_ids), n_m))
-        for p, sims in enumerate(self.pair_matrix):
-            perms = np.argsort(rng.random((n_perm, n_m)), axis=1)
-            w = (weights * sims)[perms[:, :, None], perms[:, None, :]]  # (n_perm, n_m, n_m)
-            pair_sums = np.cumsum(np.cumsum(w, axis=1), axis=2)[:, k - 1, k - 1]
-            mean_sim = pair_sums / (n * (n - 1))
-            out[p] = ((n - 1) / n * (1 - mean_sim)).mean(axis=0)
-        return out
+    def paper_matrix(self, p: int) -> np.ndarray:
+        """(n_models * N_SAMPLES, dim) embeddings for paper p, grouped by model."""
+        return np.concatenate(self.vectors[p])
 
 
-def independent_variance(k: np.ndarray, intra: float, unrelated: float, m: int = N_SAMPLES) -> np.ndarray:
-    """Pooled variance of k models if each kept its own within-model spread
-    (mean pairwise cosine `intra`) but its outputs were only as similar to
-    other models' outputs as outputs for different papers (`unrelated`)."""
-    k = np.asarray(k, dtype=float)
-    n = k * m
-    mean_sim = (k * m * (m - 1) * intra + k * (k - 1) * m * m * unrelated) / (n * (n - 1))
-    return (n - 1) / n * (1 - mean_sim)
+# ---------------------------------------------------------------------------
+# Diversity (Fig. 4): Vendi score and PERMANOVA
+#
+# Both need full coverage (N_SAMPLES per model), which load_corpus guarantees.
+# ---------------------------------------------------------------------------
+
+def vendi_score(x: np.ndarray) -> float:
+    """Effective number of distinct items among the rows of x (unit vectors),
+    with the cosine kernel: exp(Shannon entropy of the eigenvalues of K/n).
+    Friedman & Dieng, "The Vendi Score", TMLR 2023."""
+    eig = np.linalg.eigvalsh(x @ x.T / len(x))
+    eig = eig[eig > 1e-12]
+    return float(np.exp(-(eig * np.log(eig)).sum()))
 
 
-def equivalent_independent_models(target: float, intra: float, unrelated: float) -> float:
-    """Number of independent models (as defined in independent_variance)
-    whose pooled variance equals `target`; solved by bisection over real k."""
-    lo, hi = 1.0, 1e4
-    if target <= independent_variance(lo, intra, unrelated):
-        return 1.0
-    for _ in range(100):
-        mid = (lo + hi) / 2
-        lo, hi = (mid, hi) if independent_variance(mid, intra, unrelated) < target else (lo, mid)
-    return (lo + hi) / 2
+def permanova_r2(x: np.ndarray, groups: np.ndarray) -> float:
+    """Share of the variation among rows of x explained by `groups`:
+    between-group / total sum of squares on Euclidean distances (Anderson 2001)."""
+    total = ((x - x.mean(axis=0)) ** 2).sum()
+    within = sum(((x[groups == g] - x[groups == g].mean(axis=0)) ** 2).sum() for g in np.unique(groups))
+    return float(1 - within / total)
 
 
-def diversity_summary(corpus: Corpus, n_boot: int = 2000, seed: int = 0) -> dict:
-    """Observed variance curve, the independent-model reference, and the
-    equivalent number of independent models for all n_models models, with
-    95% bootstrap CIs over papers."""
-    curves = corpus.variance_curve()
-    intra_pp = np.nanmean(corpus.intra_model, axis=1)
-    unrelated = float(np.mean(corpus.paper_level_distributions()["different_paper"]))
-    k = np.arange(1, curves.shape[1] + 1)
+def diversity_summary(corpus: "Corpus", n_draws: int = 200, n_unrelated: int = 1000,
+                      n_perm: int = 199, seed: int = 0) -> dict:
+    """Fig. 4 and its numbers, for one (dataset, task). Every Vendi score is
+    over exactly N_SAMPLES hypotheses, so set size cannot drive a difference.
 
-    def stats(idx):
-        mean_curve = curves[idx].mean(axis=0)
-        intra = intra_pp[idx].mean()
-        return mean_curve, equivalent_independent_models(mean_curve[-1], intra, unrelated), intra
-
-    mean_curve, k_eff, intra = stats(np.arange(len(curves)))
+    one[p]:  mean Vendi score of each model's own N_SAMPLES hypotheses for paper p.
+    ten[p]:  mean Vendi score of N_SAMPLES hypotheses for paper p, one each from
+             N_SAMPLES randomly chosen models (n_draws draws).
+    unrelated: Vendi scores of N_SAMPLES hypotheses about N_SAMPLES different
+             papers (random model each); a scale reference only.
+    r2_model / r2_provider: PERMANOVA R^2 of model / provider identity per paper;
+             p_max is the largest per-paper permutation p-value.
+    """
     rng = np.random.default_rng(seed)
-    boots = [stats(rng.integers(0, len(curves), len(curves))) for _ in range(n_boot)]
-    boot_curves = np.stack([b[0] for b in boots])
-    boot_keff = np.array([b[1] for b in boots])
-    return {
-        "k": k,
-        "observed": mean_curve,
-        "observed_lo": np.percentile(boot_curves, 2.5, axis=0),
-        "observed_hi": np.percentile(boot_curves, 97.5, axis=0),
-        "independent": independent_variance(k, intra, unrelated),
-        "k_eff": k_eff,
-        "k_eff_ci": (float(np.percentile(boot_keff, 2.5)), float(np.percentile(boot_keff, 97.5))),
-        "single_model_share": float(mean_curve[0] / mean_curve[-1]),
-        "intra": float(intra),
-        "unrelated": unrelated,
-    }
+    n_m, m = len(SLUGS), N_SAMPLES
+    models = np.repeat(np.arange(n_m), m)
+    providers = np.repeat(PROVIDER_OF, m)
 
+    one, ten, r2_model, r2_provider, p_values = [], [], [], [], []
+    for p, per_model in enumerate(corpus.vectors):
+        one.append(np.mean([vendi_score(v) for v in per_model]))
+        ten.append(np.mean([
+            vendi_score(np.stack([per_model[mi][rng.integers(m)]
+                                  for mi in rng.choice(n_m, m, replace=False)]))
+            for _ in range(n_draws)]))
+        x = corpus.paper_matrix(p)
+        r2 = permanova_r2(x, models)
+        null = [permanova_r2(x, rng.permutation(models)) for _ in range(n_perm)]
+        p_values.append((1 + sum(v >= r2 for v in null)) / (n_perm + 1))
+        r2_model.append(r2)
+        r2_provider.append(permanova_r2(x, providers))
+
+    unrelated = np.array([
+        vendi_score(np.stack([corpus.vectors[q][rng.integers(n_m)][rng.integers(m)]
+                              for q in rng.choice(len(corpus.vectors), m, replace=False)]))
+        for _ in range(n_unrelated)])
+    one, ten = np.array(one), np.array(ten)
+    return {
+        "one": one,
+        "ten": ten,
+        "unrelated": unrelated,
+        "one_mean": bootstrap_ci(one, seed=seed),
+        "ten_mean": bootstrap_ci(ten, seed=seed),
+        "unrelated_mean": float(unrelated.mean()),
+        "share_up": float(np.mean(ten > one)),
+        "r2_model": bootstrap_ci(np.array(r2_model), seed=seed),
+        "r2_provider": bootstrap_ci(np.array(r2_provider), seed=seed),
+        "p_max": float(max(p_values)),
+        "n_papers": len(corpus.paper_ids),
+    }
 
 # ---------------------------------------------------------------------------
 # Loading

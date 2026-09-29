@@ -36,14 +36,14 @@ Papers are analysed only if all 12 models have 10 embedded responses.
 | PLOS Biology | recover | 0.56 | 0.73 |
 | PLOS Biology | novel | 0.68 | 0.27 |
 
-## Embedding variance vs number of models (Fig. 4)
+## Diversity (Fig. 4)
 
-Variance = 1 - |centroid|^2 of the pooled outputs, averaged over 1,000 random model orders. 'Independent' = each model keeps its within-model spread but is only as similar to other models as outputs for different papers are.
+Distinct ideas = Vendi score (cosine kernel) of 10 hypotheses. 1 model: each model's own 10 hypotheses for a paper. 10 models: one hypothesis each from 10 random models, same paper. 10 papers: 10 hypotheses about 10 different papers (scale reference). R^2 = PERMANOVA share of per-paper variation explained by model / provider (mean [95% CI] over papers).
 
-| Dataset | Task | 1 model | 12 models | 12 independent models | Equivalent independent models [95% CI] | Share of 12-model variance in 1 model |
-|---|---|---|---|---|---|---|
-| AI4Mat | recover | 0.126 | 0.212 | 0.563 | 1.22 [1.21, 1.24] | 59% |
-| AI4Mat | novel | 0.251 | 0.349 | 0.580 | 1.37 [1.35, 1.40] | 72% |
-| PLOS Biology | recover | 0.110 | 0.182 | 0.678 | 1.13 [1.12, 1.14] | 60% |
-| PLOS Biology | novel | 0.215 | 0.297 | 0.657 | 1.20 [1.19, 1.21] | 73% |
+| Dataset | Task | Ideas, 1 model | Ideas, 10 models | Ideas, 10 papers | Papers where 10 > 1 | R^2 model | R^2 provider | max per-paper p |
+|---|---|---|---|---|---|---|---|---|
+| AI4Mat | recover | 1.86 [1.82, 1.90] | 2.43 [2.36, 2.49] | 6.36 | 100% | 0.407 [0.393, 0.421] | 0.200 [0.187, 0.214] | 0.005 |
+| AI4Mat | novel | 2.90 [2.83, 2.98] | 3.63 [3.54, 3.71] | 6.46 | 100% | 0.281 [0.271, 0.291] | 0.111 [0.106, 0.117] | 0.005 |
+| PLOS Biology | recover | 1.75 [1.70, 1.81] | 2.22 [2.13, 2.30] | 7.72 | 100% | 0.400 [0.386, 0.414] | 0.164 [0.154, 0.174] | 0.005 |
+| PLOS Biology | novel | 2.56 [2.48, 2.64] | 3.12 [3.03, 3.22] | 7.39 | 100% | 0.275 [0.265, 0.285] | 0.104 [0.097, 0.112] | 0.005 |
 

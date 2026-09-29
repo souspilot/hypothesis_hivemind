@@ -46,6 +46,7 @@ Each (dataset, task) is analysed only on papers with full coverage, meaning all 
 | `figures/fig1_model_similarity_plos.pdf` | Appendix: same for PLOS Biology |
 | `figures/fig2_intra_model_{ai4mat,plos}.pdf` | Appendix: intra-model similarity distributions (Fig. 2) |
 | `figures/fig3_same_vs_different_paper.pdf` | Appendix: embedding sanity check (Fig. 3) |
+| `figures/fig4_diversity.pdf` | Effective number of distinct hypotheses: 1 model vs 10 models vs 10 papers (Fig. 4) |
 | `tables/similarity_summary.tex` | Intra-model / intra-provider / cross-provider, 95% bootstrap CIs |
 | `tables/output_length.tex` | Output length per model, with correlation to similarity |
 | `tables/models.tex` | Models, identifiers, open weights, generation settings |
@@ -64,6 +65,8 @@ All metrics are cosine similarities with self-pairs excluded, computed per paper
 - **Model pair (a, b):** all sample pairs across a and b. These fill the off-diagonal cells of Fig. 1; the diagonal is intra-model.
 - **Intra-provider / cross-provider:** model-pair similarity averaged over distinct models with the same provider / with different providers.
 - **Fig. 3 levels:** same paper and same model (= intra-model); same paper and different models; different papers (any models).
+- **Fig. 4 diversity:** the [Vendi score](https://arxiv.org/abs/2210.02410) with a cosine kernel, always over exactly 10 hypotheses: one model's own 10 for a paper, one hypothesis each from 10 random models for the same paper (200 draws), or 10 hypotheses about 10 different papers (a scale reference).
+- **PERMANOVA R²** ([Anderson 2001](https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x)): the share of each paper's variation in hypothesis embeddings explained by model or provider identity, with a 199-permutation test on each paper.
 
 ## Generation settings
 

@@ -23,3 +23,6 @@ embeddings2/
 # Output of the removed visualize_similarity.py; superseded by paper_assets/.
 plots/
 plots2/
+
+# Conference poster (Google Day @ IIT Delhi): kept locally, not in the repo.
+poster/
