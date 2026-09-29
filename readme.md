@@ -1,82 +1,86 @@
-# Hypothesis Generation & Evaluation Pipeline
+# Hypothesis hivemind experiment
 
-This project benchmarks how well different LLMs can recover and extend scientific hypotheses from research papers. It runs a multi-stage pipeline across a corpus of papers, collecting outputs from several models, then computes embedding-based similarity metrics to compare them.
+Code for the *hypothesis hivemind* experiment in "Agentic AI Scientists Are Not Built For Autonomous Scientific Discovery" (NeurIPS 2026, Position Paper Track). It covers 12 models from 4 providers, two tasks, and two datasets. Each model draws 10 samples per paper, the samples are embedded with `text-embedding-3-small`, and the analysis compares cosine similarity within and across models and providers.
 
-## What it does
+## Layout
 
-Given a directory of parsed research papers (JSON format with title, abstract, and body text), the pipeline does four things in sequence:
+`config.py` is the single source of truth for:
 
-1. **Extracts experiment summaries** — strips out everything except the experimental methodology from each paper and saves a concise summary.
-2. **Generates underlying hypotheses** — asks each model to infer the core hypothesis a paper's experiments were designed to test by only seeing the experiment summary but not the results or discussion.
-3. **Generates novel hypotheses** — gives each model the full paper and asks it to produce a new, testable hypothesis that extends beyond what the paper found.
+- **Datasets:** `ai4mat` (NeurIPS 2025 AI4Mat, 50 papers) and `plos` (PLOS Biology Apr–Jun 2026, 52 papers after the skip list).
+- **Tasks:** `recover` (underlying hypothesis from an experiment summary) and `novel` (novel hypothesis from the full paper).
+- **Models:** display names, providers, open-weights flag, and the legacy keys used by the original direct-API AI4Mat runs.
 
-After generation, a separate visualization script embeds all outputs with `text-embedding-3-small` and produces intra-model and inter-model cosine similarity heatmaps, showing how repetitive or distinct each model's outputs are.
+On disk, AI4Mat lives in `data/ results/ embeddings/` and PLOS Biology in `data2/ results2/ embeddings2/`. Only `config.py` knows that mapping.
 
-## File overview
+| Stage | Script | API calls |
+|---|---|---|
+| PLOS download + XML→JSON | `download_plos.py`, `xml_to_json.py` | PLOS |
+| Experiment summaries | `extract_experiments_summary.py [--dataset ...]` | yes |
+| Recover hypotheses | `generate_hypotheses.py [--dataset ...]` | yes |
+| Novel hypotheses | `generate_new_hypotheses.py [--dataset ...]` | yes |
+| Embeddings | `embed.py [--dataset ...] [--task ...] [--check]` | yes (`--check`: no) |
+| **Paper figures, tables, numbers** | `make_paper_assets.py [--out DIR]` | **no** |
 
-```
-extract_experiments_summary.py   # Stage 1: calls Claude directly via Anthropic SDK
-generate_hypotheses.py           # Stage 2: underlying hypotheses via model_utils
-generate_new_hypotheses.py       # Stage 3: novel hypotheses via model_utils
-pipeline.py                      # Runs stages 2-3 in sequence (stage 1 is separate)
-model_utils.py                   # Unified model interface, prompt caching for Claude
-visualize_similarity.py          # Embedding + heatmap generation
-```
+The generation stages are resumable. A (paper, model) pair that already has 10 valid samples is skipped, including samples stored under a legacy key. `embed.py` re-embeds any entry whose vector count no longer matches its valid-sample count.
 
-## Setup
+Maintenance helpers: `find_garbled_samples.py` (report), `clean_blank_samples.py` (drop invalid entries so the next run regenerates them), `model_utils.py` (smoke test when run directly).
 
-```bash
-pip install anthropic langchain langchain-openai python-dotenv matplotlib seaborn numpy lxml
-```
-
-Create a `.env` file with your API keys:
-```
-ANTHROPIC_API_KEY=...
-OPENAI_API_KEY=...
-```
-
-## Data format
-Papers should live in `data/train/<paper_id>.json` and follow the S2ORC schema, with `title`, and a `pdf_parse` object containing `abstract` and `body_text` arrays of paragraph objects.
-
-## Running
-Run stage 1 separately first, since it uses a different interface and produces intermediate files that the rest of the pipeline depends on:
+## Reproducing the paper assets
 
 ```bash
-python extract_experiments_summary.py
+pip install anthropic openai langchain-openai python-dotenv numpy scipy matplotlib lxml
+echo "OPENROUTER_API_KEY=..." > .env
+
+python embed.py --check          # anything stale?
+python embed.py                  # fix it (cheap: only stale entries are sent)
+python make_paper_assets.py      # -> paper_assets/
 ```
 
-Then run the rest:
-```bash
-python pipeline.py
-```
+Each (dataset, task) is analysed only on papers with full coverage, meaning all 12 models have 10 embedded responses. `REPORT.md` lists any excluded papers, and the build fails if fewer than 50 papers qualify (`config.MIN_PAPERS`).
 
-Or run individual stages:
-```bash
-python generate_hypotheses.py
-python generate_new_hypotheses.py
-```
+### What `paper_assets/` contains
 
-To generate similarity plots after generation is complete:
-```bash
-python visualize_similarity.py                        # all three result types
-python visualize_similarity.py new_hypotheses         # just one type
-```
+| File | Use in paper |
+|---|---|
+| `figures/fig1_model_similarity_ai4mat.pdf` | Fig. 1 (main text) |
+| `figures/fig1_model_similarity_plos.pdf` | Appendix: same for PLOS Biology |
+| `figures/fig2_intra_model_{ai4mat,plos}.pdf` | Appendix: intra-model similarity distributions (Fig. 2) |
+| `figures/fig3_same_vs_different_paper.pdf` | Appendix: embedding sanity check (Fig. 3) |
+| `tables/similarity_summary.tex` | Intra-model / intra-provider / cross-provider, 95% bootstrap CIs |
+| `tables/output_length.tex` | Output length per model, with correlation to similarity |
+| `tables/models.tex` | Models, identifiers, open weights, generation settings |
+| `appendix_datasets.tex` | Appendix A.1 / A.2 paper lists |
+| `numbers.tex` | `\newcommand` macros for every number quoted in the text |
+| `tables/*.csv` | Raw numbers behind each figure |
+| `REPORT.md` | Data checks and every number, human readable |
 
-## Output structure
-```
-results/
-  underlying_hypotheses/<paper_id>.json   # {model_id: [hyp_1, ..., hyp_N]}
-  new_hypotheses/<paper_id>.json
+Include figures at `width=\linewidth`. They are sized for the NeurIPS text width, so the fonts print at 6–8 pt.
 
-embeddings/
-  underlying_hypotheses/<paper_id>.json   # {model_id: [[float, ...], ...]}
-  new_hypotheses/<paper_id>.json
+## Metric definitions
 
-plots/
-  underlying_hypotheses/intra_model.png
-  underlying_hypotheses/inter_model.png
-  new_hypotheses/...
-```
+All metrics are cosine similarities with self-pairs excluded, computed per paper and then averaged over papers.
 
-## Adding or changing models
-Edit the `MODELS` list in `model_utils.py`. Claude models (prefix `anthropic:`) automatically get prompt caching applied, which significantly reduces cost when the same paper is passed to the model N times. OpenAI models go through LangChain with no caching. Any model supported by LangChain's `init_chat_model` can be added as an OpenAI-style entry.
+- **Intra-model:** pairs of distinct samples from the same model.
+- **Model pair (a, b):** all sample pairs across a and b. These fill the off-diagonal cells of Fig. 1; the diagonal is intra-model.
+- **Intra-provider / cross-provider:** model-pair similarity averaged over distinct models with the same provider / with different providers.
+- **Fig. 3 levels:** same paper and same model (= intra-model); same paper and different models; different papers (any models).
+
+## Generation settings
+
+The AI4Mat Anthropic and OpenAI samples predate the move to OpenRouter (git `78c3df4`) and were drawn through the providers' own APIs. Everything else went through OpenRouter. `tables/models.tex` gives the exact settings for each (dataset, model); the source is `config.GENERATION_SETTINGS`.
+
+## Data in this repository
+
+| Path | Contents | Licence |
+|---|---|---|
+| `results/`, `results2/` | All model outputs, keyed by model | Generated for this study |
+| `data/experiments_summary/`, `data2/experiments_summary/` | Methods summaries written by Claude Sonnet 4.6 | Generated for this study |
+| `data2/xml/`, `data2/processed/`, `data2/train/` | PLOS Biology articles (JATS XML and extracted text) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); cite the original articles, listed with DOIs in `paper_assets/appendix_datasets.tex` |
+| `paper_assets/` | Every figure, table and number in the paper | Generated for this study |
+
+Not committed:
+
+- **AI4Mat full texts.** The papers carry no open licence. They are listed with their OpenReview links in `paper_assets/appendix_datasets.tex`.
+- **PLOS PDFs.** They duplicate the committed XML; `download_plos.py` re-fetches them.
+- **Embeddings.** They total about 720 MB; `python embed.py` rebuilds them from `results*/`.
+

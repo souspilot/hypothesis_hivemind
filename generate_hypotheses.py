@@ -1,25 +1,22 @@
 """
 Generate underlying hypotheses from experiment summaries.
 
-Input:  data{suffix}/experiments_summary/<paper_id>.json
-Output: results{suffix}/underlying_hypotheses/<paper_id>.json
+Input:  <dataset summaries_dir>/<paper_id>.json
+Output: <dataset results_dir(recover)>/<paper_id>.json
         { "<model_id>": ["hypothesis_1", ..., "hypothesis_N"], ... }
 
-Two data sources exist side by side -- data/ (native-format papers) and
-data2/ (XML-converted papers) -- each with its own mirrored results{,2}/
-tree. Use --source to pick one, or omit it to process both in one run:
+Datasets are defined in config.py; --dataset picks one or more (default: all):
 
-  python generate_hypotheses.py             # both data/ and data2/
-  python generate_hypotheses.py --source 1  # just data/  -> results/
-  python generate_hypotheses.py --source 2  # just data2/ -> results2/
+  python generate_hypotheses.py                    # every dataset
+  python generate_hypotheses.py --dataset plos     # just PLOS Biology
 """
 
 import argparse
 import logging
-from pathlib import Path
 
+from config import DATASETS, N_SAMPLES, TASKS, parse_dataset_args
+from hypothesis_engine import run_batch, setup_logging
 from model_utils import build_all_models
-from hypothesis_engine import run_batch, load_skip_ids
 
 log = logging.getLogger(__name__)
 
@@ -27,20 +24,7 @@ log = logging.getLogger(__name__)
 # Config
 # ---------------------------------------------------------------------------
 
-N_SAMPLES = 10
 MAX_WORKERS = 24
-
-# Maps --source values to the directory suffix: data/ has no suffix,
-# data2/ has "2". Keeping this as an explicit dict (rather than just using
-# the CLI value directly as the suffix) means the CLI-facing names don't
-# have to be awkward things like an empty-string argument.
-SOURCE_SUFFIXES = {"1": "", "2": "2"}
-
-# Paper IDs (one per line) to skip entirely -- never sent to any model,
-# never written to the output file. See plos_skip.txt for the current list
-# and why: certain papers' text reliably trips a provider content filter
-# for the Claude models, and retrying doesn't change that outcome.
-SKIP_LIST_PATH = Path("plos_skip.txt")
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -81,33 +65,24 @@ def should_skip_content(data: dict) -> str | None:
 # Main
 # ---------------------------------------------------------------------------
 
-def paths_for_suffix(suffix: str) -> tuple[Path, Path]:
-    return Path(f"data{suffix}/experiments_summary"), Path(f"results{suffix}/underlying_hypotheses")
-
-
 def main() -> None:
+    setup_logging()
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--source", choices=sorted(SOURCE_SUFFIXES), default=None,
-        help="1 = data/ (native format), 2 = data2/ (XML-converted). Default: both.",
-    )
+    parser.add_argument("--dataset", nargs="*", choices=list(DATASETS), help="default: all")
     args = parser.parse_args()
-    suffixes = [SOURCE_SUFFIXES[args.source]] if args.source else list(SOURCE_SUFFIXES.values())
 
     models = build_all_models()
-    skip_ids = load_skip_ids(SKIP_LIST_PATH)
-
-    for suffix in suffixes:
-        summary_dir, output_dir = paths_for_suffix(suffix)
-        log.info("=== Source: data%s/ → results%s/ ===", suffix, suffix)
+    task = TASKS["recover"]
+    for dataset in parse_dataset_args(args.dataset):
+        log.info("=== %s: %s ===", dataset.label, task.label)
         run_batch(
             models=models,
-            input_dir=summary_dir,
-            output_dir=output_dir,
+            input_dir=dataset.summaries_dir,
+            output_dir=dataset.results_dir(task),
             extract_text=extract_text,
             system_prompt=SYSTEM_PROMPT,
             user_instruction=USER_INSTRUCTION,
-            skip_ids=skip_ids,
+            skip_ids=dataset.skip_ids(),
             should_skip_content=should_skip_content,
             n_samples=N_SAMPLES,
             max_workers=MAX_WORKERS,

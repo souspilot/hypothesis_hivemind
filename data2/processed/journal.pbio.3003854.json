@@ -1,0 +1,421 @@
+{
+  "paper_id": "journal.pbio.3003854",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003854.xml"
+  },
+  "title": "Multiple adhesion molecules act together in oligodendrocyte-mediated axonal selection and myelin formation",
+  "doi": "10.1371/journal.pbio.3003854",
+  "authors": [
+    {
+      "first": "Swathi",
+      "last": "Radha"
+    },
+    {
+      "first": "Martina",
+      "last": "Arends"
+    },
+    {
+      "first": "Georg",
+      "last": "Kislinger"
+    },
+    {
+      "first": "Agata",
+      "last": "Rhomberg"
+    },
+    {
+      "first": "Martina",
+      "last": "Schifferer"
+    },
+    {
+      "first": "Minou",
+      "last": "Djannatian"
+    },
+    {
+      "first": "Mikael",
+      "last": "Simons"
+    }
+  ],
+  "abstract_text": "Rapid information processing in complex organisms depends on myelin, which consists of a multilamellar membrane that tightly adheres to the axonal surface along the internode and at paranodal loops, where specialized adhesion proteins maintain axon-glial contact. Because the decision to myelinate an axon profoundly influences neuronal transmission, this process must be precisely regulated. Yet, it remains unclear which specific molecules enable oligodendrocytes to select appropriate axonal substrates for myelination. Several key myelin-associated adhesion systems have been identified, including Myelin-associated glycoprotein (Mag) and Cell Adhesion Molecule 4 (Cadm4) at the internode, as well as Contactin1 (Cntn1) at the paranode; however, these three adhesion molecules have not previously been deleted in combination. Here, using zebrafish, we systematically disrupted all three myelin-associated adhesion systems. We found that the combined loss of Mag, Cadm4, and Cntn1 severely impairs myelin initiation and destabilizes the few nascent sheaths that do form, resulting in a phenotype characterized by oligodendrocytes exhibiting membrane \u201cstubs\u201d. The failure to form myelin triggered cell death of early myelinating oligodendrocytes and resulted in profound hypomyelination. Our findings reveal that axonal target selection and myelin formation depend on a redundant set of adhesion molecules, and that their simultaneous loss largely abolishes myelin biogenesis.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003854",
+    "body_text": [
+      {
+        "text": "Nervous system function critically depends on myelin, which insulates axons and restricts action potentials to nodes of Ranvier, enabling efficient saltatory conduction [1,2]. The decision to myelinate an axon occurs across multiple stages, from early axon selection to myelin sheath initiation and growth, and ultimately to the refinement and long-term stabilization of sheaths [1,2]. Oligodendrocytes (OL) possess a striking intrinsic ability to initiate myelination, even in culture, where they form myelin around inert plastic fibers above a ~0.4 \u03bcm diameter threshold [3\u20135]. Although axonal diameter influences myelination probability, and axons larger than 1 \u00b5m are generally myelinated in the CNS [6], we still do not understand on which basis axons <1 \u03bcm are selected for myelination. Because myelination shapes neuronal circuits by optimizing conduction velocity [7], it is of fundamental importance to identify such axon selection criteria.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "One such criterion, which has been heavily studied in the past decade, is neuronal activity, linking sensory input and experience-dependent plasticity to myelination [7\u201310]. In zebrafish, non-synaptic vesicle release in specific axon subtypes occurs at future myelination sites and regulates myelin sheath number [11\u201314]. However, blocking neuronal activity does not prevent myelin initiation and reduces overall myelin coverage by only ~40%, suggesting that activity is not required for the initial decision to myelinate [13]. Instead, additional repulsive or instructive axonal cues are thought to be critical for axonal targeting and myelin formation [15]. OL processes dynamically contact axons during target selection, where they likely sense molecular cues decisive for the initiation of the myelination program [16,17]. Several molecules that promote axon-OPC interactions and myelination in the CNS have been identified, including axonal EphA4/B1 receptors, integrins, L1-CAM, and N-Cadherin [18\u201320]. Yet none of these molecules is sufficient on its own to drive the process, leaving the identity of instructive signals unclear. Likewise, neuregulin 1 type III, which is both required and sufficient to induce myelination in the peripheral nervous system (PNS), is largely dispensable for CNS myelination and has only been implicated in activity-dependent myelination [21\u201323]. In contrast, repulsive molecules such as PSA-NCAM, which delays myelination onset, and JAM2, which prevents ectopic myelination of somas or dendrites, define non-permissive substrates [24,25].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Adhesion molecules are strong candidates for specifying axon-glial contacts and promoting myelination because they physically tether cells, compartmentalize axonal domains, and provide signaling platforms. On the myelinated axon, adhesion molecules are compartmentalized in structural subdomains, mainly the internode (which encompasses the region under compact myelin) and the paranodes (where the cytoplasma-rich edges of the individual myelin lamellae tightly adhere to the axon) that flank the axonal nodes of Ranvier. Previous studies demonstrated that the combined loss of internodal Myelin-associated glycoprotein (MAG) and either of the paranodal proteins Contactin-1 (Cntn1), Contactin-associated protein (Caspr), or Neurofascin B impairs myelin sheath extension and results in aberrant wrapping and the overgrowth of neighboring sheaths [26\u201328]. Similarly, loss-of-function of Cell Adhesion Molecule 4 (Cadm4), either alone or in combination with internodal MAG or paranodal Caspr, disrupts axo-glial adhesive contacts, impairs myelin growth, and leads to an abnormal organization of axonal domains [29,30]. These studies documented that internodal and paranodal adhesion molecules together play crucial roles in regulating specific aspects of myelin ultrastructure and longitudinal sheath growth. Notably, oligodendrocytes lacking one or even two of these adhesion systems retain the ability to form myelin [26,30\u201333], raising the possibility that remaining adhesion mechanisms compensate for their loss. Here, we tested the hypothesis that initial axon selection for myelination is governed by a highly redundant set of axonal instructive cues. Using zebrafish, we systematically disrupted three key myelin-associated adhesion molecules: the internodal proteins Mag and Cadm4, and the paranodal protein Cntn1b. We found that the combined loss of these molecules severely impairs both the initiation and stabilization of myelin sheaths, and that axons with diameters <1 \u03bcm are significantly less likely to be selected for myelination.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Glial Cadm4 (SynCAM4/Necl4) and its main axonal interaction partner, Cadm3 (SynCAM3/Necl1), form a trans-interacting complex at the internodal domain of the peripheral axons in mice (Fig 1A) [34\u201336]. To study Cadm4 localization in zebrafish oligodendrocytes in the CNS, we generated an oligodendrocyte-specific fusion protein, olig1:cadm4-EGFP, and expressed it in the stable transgenic line Tg(mbp:mCherry-CAAX), which labels myelin. Briefly after the onset of spinal cord myelination, at 3 days post fertilization (dpf), Cadm4-EGFP localized to the cytoplasm-rich parts of myelin ensheathing the paired large-diameter Mauthner axons (Fig 1B) and dorsal spinal axons (Fig 1C and 1C\u2032). This mirrored the localization pattern of a Mag fusion protein, olig1:mag-EGFP, which typically localizes to the adaxonal face of the myelin sheath (S1A and S1B Fig) [37]. We then expressed the interaction partner Cadm3 under a pan-neuronal promoter (huC:cadm3-EGFP) in zebrafish carrying a stable transgenic reporter for oligodendrocyte lineage cells and myelin, Tg(sox10:mRFP). Here, Cadm3-EGFP accumulated at the axonal internode at sites of myelin formation, indicating its recruitment to axonal segments engaged in myelin sheath assembly (S1C Fig). In contrast, the axonal fusion protein Caspr-EYFP only initially localized to the internodal domain of the axon (S1D Fig, top), which was followed by a rapid relocation to pre-assembled paranodes during confocal in vivo time-lapse imaging (S1D Fig, middle and bottom, S1 Video), matching the known paranodal localization of Caspr [38\u201340]. While only 12% of the myelin sheaths exhibited Caspr-EYFP at the paranodes at 2.5 dpf, this proportion increased to 47% by 3 dpf and 91% by 5 dpf (S1E Fig). Together, these expression analyses indicate that Cadm3 and Cadm4 are recruited to the axonal domain during myelination in zebrafish, positioning them to potentially form a trans-acting adhesion complex.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Glial Cadm4 and axonal Cadm3 localize to myelin internodes in zebrafish",
+        "sec_num": null
+      },
+      {
+        "text": "To study how Cadm4 contributes to target recognition during CNS myelination, we generated cadm4 knockout (KO) zebrafish by CRISPR-Cas9-mediated gene editing. We established stable KOs with an 8-basepair (bp) deletion targeting exon 4, resulting in a premature stop codon immediately downstream of the mutation (S2A\u2013S2E Fig), which leads to a loss of the second Ig-like and the transmembrane domain of Cadm4 (S2B Fig). The successful generation of Cadm4 KO was confirmed by a near-complete loss of cadm4 mRNA using qPCRs (S2F Fig). Outcrosses with our previously generated mag\u2212/\u2212 and cntn1b\u2212/\u2212mag\u2212/\u2212 knockout lines [26] were done to generate cadm4\u2212/\u2212mag\u2212/\u2212 double knockout (dKO) and cadm4\u2212/\u2212cntn1b\u2212/\u2212mag\u2212/\u2212 triple knockout (tKO, referred to as CCM\u2212/\u2212 tKO throughout the manuscript), respectively. Whereas cadm4\u2212/\u2212mag\u2212/\u2212 dKO fish did not display any abnormal physiological or behavioral patterns, CCM\u2212/\u2212 tKO fish were smaller in size and developed a mild ataxic swimming behavior during adulthood, similar to cntn1b\u2212/\u2212mag\u2212/\u2212 dKO. CCM\u2212/\u2212 tKO had abnormally small egg lays (around 50 eggs per egg lay) with low fertilization rates and a higher mortality rate of young larvae, indicating abnormal fertility and development.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Combined loss of Cadm4, Cntn1b, and Mag adhesion molecules largely abolishes spinal cord myelination",
+        "sec_num": null
+      },
+      {
+        "text": "Our analysis in single knockouts, dKOs, and tKOs (Fig 1D) expressing the transgenic myelin reporter Tg(mbp:EGFP-CAAX) revealed a strong reduction of myelin in both the ventral and dorsal spinal cord of CCM\u2212/\u2212 tKOs, with large gaps at 4 dpf that partially persisted by 8 dpf (Fig 1E). Quantification showed that both cntn1b\u2212/\u2212mag\u2212/\u2212 dKO and cadm4\u2212/\u2212mag\u2212/\u2212 dKO fish exhibited a 40%\u201350% reduction of myelin compared to wild-types, whereas myelin was reduced by over 75% in CCM\u2212/\u2212 tKOs (wt: 2.41 \u00b1 0.37 \u00d7 103 \u00b5m2, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 1.39 \u00b1 0.34 \u00d7 103 \u00b5m2, cadm4\u2212/\u2212mag\u2212/\u2212 dKO:1.26 \u00b1 0.26 \u00d7 103 \u00b5m2, and CCM\u2212/\u2212 tKO: 0.57 \u00b1 0.24 \u00d7 103 \u00b5m2, Fig 1F). Myelin content in the CCM\u2212/\u2212 tKOs was persistently reduced by 8 dpf compared to the other genotypes (wt: 7.17 \u00b1 0.74 \u00d7 103 \u00b5m2, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 3.73 \u00b1 0.24 \u00d7 103 \u00b5m2, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 3.18 \u00b1 0.46 \u00d7 103 \u00b5m2, and CCM\u2212/\u2212 tKO: 2.29 \u00b1 0.31 \u00d7 103 \u00b5m2, Fig 1G). Notably, myelin remained patchy along CCM\u2212/\u2212 tKO Mauthner axons at 8 dpf (Fig 1E), which usually start myelinating first in zebrafish and are entirely covered by myelin by 4 dpf [41]. To test how the loss of Cadm4 affected the expression of other Cadm family members, we analyzed the mRNA expression of cadm1a, cadm1b, cadm2a, and cadm3 in wild-types and CCM\u2212/\u2212 tKOs at 8 dpf. We found a strong reduction of cadm3 (by 68.9%), the main axonal interaction partner of cadm4, but also of cadm1b (by 30%) and cadm2a (by 40%, S2G Fig). Cadm2b was not expressed in either wild-type or CCM\u2212/\u2212 tKO samples at this time point.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Combined loss of Cadm4, Cntn1b, and Mag adhesion molecules largely abolishes spinal cord myelination",
+        "sec_num": null
+      },
+      {
+        "text": "To further investigate the observed impairment in myelin initiation, we quantified the total number of processes extended by individual OLs in wild-types and KOs at 4 dpf. While cadm4\u2212/\u2212 and mag\u2212/\u2212 KOs each exhibited approximately a one-third reduction in OL process number compared to wild-types, the combined loss of paranodal and internodal adhesion in cntn1b\u2212/\u2212mag\u2212/\u2212 dKOs led to a greater than 50% reduction in total processes (wt: 30.63 \u00b1 5.25; cadm4\u2212/\u2212: 20.90 \u00b1 4.71, mag\u2212/\u2212: 21.25 \u00b1 4.66, and cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 14.45 \u00b1 3.47, Fig 2A and 2B). Compared to these KOs, both cadm4\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKOs were characterized by an even more pronounced, over 75% reduction of total OL processes (cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 7.30 \u00b1 2.79, CCM\u2212/\u2212 tKO: 8.55 \u00b1 3.64, Fig 2A and 2B). Strikingly, over half of the analyzed CCM\u2212/\u2212 tKO OLs, but almost none in the other KOs, exhibited impaired myelin formation. Specifically, this means that only 20%\u201360% of their processes formed myelin sheaths (defined by a minimum length of >2 \u00b5m) (Fig 2C). The remaining processes terminated in stub-like structures (Fig 2D) and some were connected to ectopically ensheathed neuronal cell bodies (Fig 2E). Notably, the few myelin sheaths that did form in CCM\u2212/\u2212 tKOs were significantly shorter than wild-type sheaths, but did not differ in length from cntn1b\u2212/\u2212mag\u2212/\u2212 dKO sheaths (wt: 21.98 [15.52\u201328.89] \u00b5m, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 9.030 [6.575\u201311.87] \u00b5m, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 16.38 [10.15\u201325.47] \u00b5m, and CCM\u2212/\u2212 tKO: 8.920 [5.865\u201312.23] \u00b5m (all values are median [IQR]), Fig 2F).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cadm4, Cntn1b, and Mag are required to initiate myelination and stabilize sheaths",
+        "sec_num": null
+      },
+      {
+        "text": "In order to elucidate how the stub-like membrane structures in CCM\u2212/\u2212 tKO originate, we performed in vivo time-lapse imaging of individual early myelinating OLs over 13 hours starting at 2.5 dpf (Fig 2G\u20132L and S2\u2013S5 Videos). Oligodendrocyte lineage cells were sparsely labeled using a myrf:EGFP-CAAX transgene, to track OPCs along their differentiation and myelination trajectory as they start to form myelin sheaths (Fig 2G). We found that the OPCs and early-myelinating OLs in the wild types and knockouts formed the same number of processes (Fig 2H and 2I). Newly differentiated wild-type OLs were highly branched and made multiple contacts with axons before initiating myelin sheaths and retracting the excess branches (Fig 2G and S2 Video). The cntn1b\u2212/\u2212mag\u2212/\u2212 dKO OLs initiated sheaths similarly to wild-types but extended their sheaths at a slower pace than wild-types, as previously described ([26], Fig 2G and S3 Video). Strikingly, we found that OLs in the CCM\u2212/\u2212 tKO, but not in the wild types or dKOs, initiated fewer myelin sheaths (wt: 32.13 \u00b1 5.25, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 24.0 \u00b1 3.30, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 25.67 \u00b1 8.26, and CCM\u2212/\u2212 tKO: 11.27 \u00b1 8.10, Fig 2J and S5 Video). Of the initiated sheaths, about 50%\u201360% were retracted in the cadm4\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKO (compared to about 10% sheath retraction in the wild type and about 20% in the cntn1b\u2212/\u2212mag\u2212/\u2212 dKO (Fig 2K). Taken together, the number of stabilized sheaths was reduced by about 70% in CCM\u2212/\u2212 tKO compared to wild-types (Fig 2L). The cadm4\u2212/\u2212mag\u2212/\u2212 dKO exhibited about 50% less stabilized sheaths compared to wild type by the end of the acquisitions (at about 3.5 dpf, Fig 2L) and was reduced to the same level as CCM\u2212/\u2212 tKO by 4 dpf (Fig 2B). Taken together, these data show that myelin \u201cstubs\u201d originate from both a failure to initiate myelination and sheath retractions. They further suggest that Cadm4, Cntn1b, and Mag are required together to establish stable axo-glial contacts, form myelin sheaths, and prevent the ectopic ensheathment of neuronal cell bodies.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cadm4, Cntn1b, and Mag are required to initiate myelination and stabilize sheaths",
+        "sec_num": null
+      },
+      {
+        "text": "How does the loss of its myelinating function affect the oligodendrocyte itself? Throughout the time-lapse experiments, we noted that more than half of the cadm4\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKO OLs suddenly retracted all their processes after initial ensheathment attempts (cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 14 of 25 OLs, CCM\u2212/\u2212 tKO: 13 of 23 OLs). This was followed by fragmentation of the myelin sheaths and cell body, indicating that they were undergoing cell death (Fig 3A and 3B; S8 and S9 Videos). In contrast, none of the wild-type OLs underwent cell death during target selection or myelin initiation (n = 22 OLs, Fig 3A and 3B; S6 Video), and cntn1b\u2212/\u2212mag\u2212/\u2212 dKO OLs, of which 23% died at this stage (n = 26 OLs, Fig 3A and 3B; S7 Video). When we analyzed the abundance of myelinating OLs across all genotypes at 4 dpf, both cadm4\u2212/\u2212mag\u2212/\u2212 dKOs and CCM\u2212/\u2212 tKOs, but neither of the other KOs, showed a ~50% reduction of mbp:EGFP-CAAX-expressing OLs compared to wild-types (wt: 5.11 \u00b1 0.84 \u00d7 10\u22124 per \u00b5m2, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 5.05 \u00b1 0.74 \u00d7 10\u22124 per \u00b5m2, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 2.78 \u00b1 0.86 \u00d7 10\u22124 per \u00b5m2, and CCM\u2212/\u2212 tKO: 2.26 \u00b1 0.76 \u00d7 10\u22124 per \u00b5m2, Fig 3C). Notably, we did not observe a compensatory increase of sox10:mRFP-expressing oligodendrocyte precursor cells (OPCs) and newly-differentiated OLs in cadm4\u2212/\u2212mag\u2212/\u2212 dKOs or CCM\u2212/\u2212 tKOs (Fig 3D and 3E). Together, these data suggest that the combined loss of Cadm4, Cntn1b, and Mag leads to a reduction in myelinating oligodendrocytes, most likely due to loss of target engagement followed by increased OL cell death.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Sheath stabilization by axoglial adhesion molecules is required for the survival of early myelinating oligodendrocytes",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate how the triple loss of adhesion molecules affects oligodendrocyte-mediated axonal target selection and myelin ultrastructure, we performed scanning electron microscopy (SEM) on 8 dpf wild-type, cntn1b\u2212/\u2212mag\u2212/\u2212 and cadm4\u2212/\u2212mag\u2212/\u2212 dKOs, and CCM\u2212/\u2212 tKO spinal cords. We chose this later time point in developmental myelination because it allowed us to capture more myelinated axons. Analysis of ventral and dorsal spinal cord cross-sections revealed a strong reduction of myelinated axons in both dKOs (about 75%\u201382%) and CCM\u2212/\u2212 tKOs (about 90%) (Figs 4A, 4B, and S3A). Although all sheaths were fully compacted in wild-types at 8 dpf, about 50% of the sheaths in all KOs remained uncompacted at this stage (S3B and S3C Fig), precluding an analysis of myelin thickness by g-ratio quantification. Additionally, we observed ultrastructural myelin aberrations in both cntn1b\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKOs, in which about 10% of the axons were ensheathed by double or multiple myelin sheaths (\u201cmulti-myelin,\u201d S3D and S3E Fig). In contrast, myelin outfoldings, which we previously reported in mutant mice lacking Cntn1 and MAG, were only inconsistently increased in cntn1b\u2212/\u2212mag\u2212/\u2212 dKOs and CCM\u2212/\u2212 tKOs compared to wild-types (S3D and S3F Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Adhesion molecules determine axonal targeting for myelination",
+        "sec_num": null
+      },
+      {
+        "text": "To study whether the triple loss of adhesion molecules affects oligodendrocyte-mediated axonal target selection based on their caliber, we further analyzed the distribution of myelinated axons across the whole spinal cord by binned axon diameters. We found that axons below 1 \u00b5m were less frequently myelinated in CCM\u2212/\u2212 tKOs, and to some extent also in dKOs (Fig 4C). Compared to wild-types, the percentage of myelinated axons <1 \u00b5m was reduced in both dKOs and to a larger extent in CCM\u2212/\u2212 tKO (wt: 84.0 \u00b1 3.48, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 62.84 \u00b1 5.97, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 60.74 \u00b1 8.42, and CCM\u2212/\u2212 tKO: 47.48 \u00b1 4.97, Fig 4D). Because the distribution of myelinated axons showed a shift towards larger-diameter axons in the dKOs and tKO, we tested whether dKOs and tKO actually had increased axon sizes compared to wild-type. In the ventral spinal cord, the 30 largest axons, corresponding to the reticulospinal axons, indeed exhibited significantly larger axon diameters in both cntn1b\u2212/\u2212mag\u2212/\u2212 dKOs and CCM\u2212/\u2212 tKOs (Fig 4E). The Mauthner axon in particular, which is the only axon in the spinal cord that increases its diameter during development, was significantly larger in CCM\u2212/\u2212 tKOs and, to a lesser extent, in dKOs (wt: 4.42 \u00b1 1.11 \u00b5m, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 5.44 \u00b1 0.62 \u00b5m, cadm4\u2212/\u2212mag\u2212/\u2212 dKO: 5.08 \u00b1 0.71 \u00b5m, and CCM\u2212/\u2212 tKO: 6.27 \u00b1 0.71 \u00b5m, Fig 4F). To test whether myelination defects improve or even resolve later during development, we additionally performed SEM on adult (2.5-month-old) wild-type, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO, and CCM\u2212/\u2212 tKOs zebrafish spinal cords. While many more axons were myelinated in the wild-types, both the cntn1b\u2212/\u2212mag\u2212/\u2212 dKOs and CCM\u2212/\u2212 tKOs continued to exhibit strong hypomyelination, which was much more pronounced in the CCM\u2212/\u2212 tKOs (wt: 256.0 \u00b1 27.21 \u00d7 10\u22123 axons per \u00b5m2, cntn1b\u2212/\u2212mag\u2212/\u2212 dKO: 52.29 \u00b1 5.71 \u00d7 10\u22123 axons per \u00b5m2, and CCM\u2212/\u2212 tKO: 12.36 \u00b1 7.0 \u00d7 10\u22123 axons per \u00b5m2, Fig 4G and 4H). Together, these ultrastructural analyses indicate that Cadm4, Cntn1b, and Mag together are especially required for the selective myelination of axons below 1 \u00b5m, and their combined loss alters axonal targeting.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Adhesion molecules determine axonal targeting for myelination",
+        "sec_num": null
+      },
+      {
+        "text": "Oligodendrocytes extensively probe their axonal targets by process extension and retraction before they start to make myelin. While they may partially respond to factors like axonal diameter and neuronal activity, a fundamental question remains unsolved: do molecular axonal cues exist that instruct oligodendrocytes to initiate myelination? In this study, we demonstrate that the adhesion molecules Cadm4, Cntn1b, and Mag are key determinants of axoglial contact formation, initiation of the myelination program, and stability of nascent myelin sheaths. Given that these molecules localize to distinct axonal subdomains, how do they act together to instruct myelination?",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We found that OPCs in the CCM\u2212/\u2212 tKO extend processes comparable to those in wild type. However, myelinating oligodendrocytes in the CCM\u2212/\u2212 tKO exhibit impaired myelin sheath formation, accompanied by elevated sheath retraction rates. This results in a pronounced deficit in the number of stable sheaths formed per cell and is ultimately associated with increased cell death. The cadm4\u2212/\u2212mag\u2212/\u2212 dKO displays a similar phenotype, including increased sheath retraction and oligodendrocyte loss, but does not show defects in the initiation of myelin sheaths. Together, these findings indicate that the three adhesive molecules collectively are required for stable axon-glia interactions and for the transition from initial axonal contact to productive myelin sheath.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "What downstream mechanisms might explain these effects? In Schwann cells, Cadm4 recruits Par3 to the adaxonal membrane, inducing cell polarity and enabling myelination [42,43]. Cadm4 also regulates choline homeostasis and critically influences the phospholipid composition of the myelin membrane in vitro [44]. Notably, Cadm4 overexpression results in more axoglial contacts but fails to form proper sheaths [31], suggesting that Cadm4 levels must be tightly regulated, with an optimal concentration range permitting maximal sheath formation. MAG, in contrast, regulates the tyrosine kinase Fyn, which modulates cytoskeletal dynamics and promotes local translation of MBP mRNA at axon-glia contact sites [45\u201348]. Furthermore, the reduced myelination capacity could be due to a cellular stress response and impaired proteostasis. Beyond defects in initial contact formation, CCM\u2212/\u2212 tKO OLs also failed to establish stable myelin sheaths. Most nascent sheaths retracted within hours, leaving behind short \u201cstubs\u201d, indicating a critical role for Cadm4, Cntn1b, and Mag not only in initiating but also in stabilizing early myelination events. We therefore hypothesize that Caspr, which initially localizes to the internodal domain and forms a complex with Cntn1b and Neurofascin B, contributes to the stabilization of initial axoglial contacts (Fig 2J). Once the myelination program is initiated, Caspr relocates to the lateral edges in a pre-formed paranodal complex, which possesses strong adhesive interactions due to its cytoskeletal anchoring, whereas Cadm4 and Mag remain at the internode during the wrapping process. This distribution may be necessary to reduce the adhesive strength of the innermost tongue, which continuously moves around the axon and constantly forms and breaks contacts with the axonal surface.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Loss of OPCs by laser ablation in the zebrafish dorsal spinal cord is quickly compensated for by the increased migration and differentiation of nearby OPCs in the zebrafish spinal cord [17]. This OPC replenishment is reflected in this study, in the abundance of sox10:mRFP-expressing OPCs and early-myelinating OLs in the knockouts, which is comparable to the wild type. OL survival is closely linked to myelination [49\u201352]. In wild-type zebrafish spinal cords, OL death is minimal during early myelination, whereas more than 50% of early-myelinating OLs in the cadm4\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKO underwent cell death (Fig 3). This may be linked to the reduced sheath stability in cadm4\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKO. We have previously shown that retracting sheath fragments and the resulting debris accumulate within lysosomes of the OL soma [53]. Consequently, the failure to stabilize sheaths in CCM\u2212/\u2212 tKO may lead to lysosomal overload with lipid-rich myelin debris, inducing cellular stress and promoting cell death. Alternatively, OLs may depend on axon-derived trophic signals [8], such that the loss or reduction of these cues could contribute to the observed cell death. This might, e.g., occur if critical downstream signaling pathways during the transition to the myelinating state are disrupted [54].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The ability of OLs to ensheath inert substrates, including carbon fibers, polymers, or micropillars, demonstrates that physical cues, such as axon caliber, also contribute to myelination [3,5]. Nevertheless, ensheathment of inert surfaces fails to replicate the precise spatial and temporal patterns necessary for functional neural circuits, suggesting the presence of permissive molecular mechanisms that instruct axon selection and myelin initiation [55,56]. In our study, we found that axons with a diameter <1 \u00b5m were preferentially affected by the loss of myelination. Since axons <1 \u00b5m can be selectively myelinated in the CNS, they might require adhesion molecules as additional cues for decision-making. Some OLs still formed stable sheaths in CCM\u2212/\u2212 tKOs, possibly reflecting axonal heterogeneity. Certain axons may provide alternative molecular cues, larger diameters, or activity-dependent signals favoring myelination [12,57,58]. Indeed, larger axons were preferentially myelinated in the ventral spinal cord of CCM\u2212/\u2212 tKOs, though many remained unmyelinated in adulthood, implying additional regulatory mechanisms.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Notably, a subset of large-diameter axons belonging to reticulospinal neurons exhibited increased caliber in both cntn1b\u2212/\u2212mag\u2212/\u2212 dKO and CCM\u2212/\u2212 tKO. We therefore speculate that the observed increase in axon diameter reflects cytoskeletal rearrangements and/or reduced cortical tension associated with loss of Caspr. Because this phenotype affected only a small subset of axons, axonal enlargement alone cannot account for the loss of small-diameter myelination in CCM\u2212/\u2212 tKO.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In parallel studies in mouse and zebrafish, we previously demonstrated that the functions of adhesion molecules are largely conserved across species [26]. However, the findings presented here differ from the phenotype reported for Cadm4\u2212/\u2212/Mag\u2212/\u2212 mice [30] in two key aspects. First, cadm4\u2212/\u2212mag\u2212/\u2212 dKO zebrafish at 8 days dpf exhibited a > 50% reduction in spinal cord myelin content, whereas Cadm4\u2212/\u2212/Mag\u2212/\u2212 mice showed only a trend toward reduced myelin in the corpus callosum at 3 months of age. Second, whereas Elazar and colleagues [30] reported multi-myelin profiles in approximately 8% of myelinated Cadm4\u2212/\u2212/Mag\u2212/\u2212 axons, we observed comparable structures only rarely, in 1 of 5 fish (S3E Fig). These discrepancies may reflect differences in anatomical region, developmental stage, or species-specific roles of Cadm4.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In summary, Cadm4, Cntn1b, and Mag constitute a combinatorial adhesion code that regulates myelin initiation and the formation of stable sheaths, axonal targeting, and OL survival. These findings reveal that multiple, redundant adhesion signals are essential for precise CNS myelination. Future studies should evaluate their instructive roles across different CNS regions and species, with potential implications for understanding neurodevelopmental disorders and developing regenerative strategies for diseases such as multiple sclerosis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The generation and care of all zebrafish lines, and all the experimental procedures in this study were performed according to the regulations of the local governing body (Sachgebiet 54 \u2013 Tierschutz, Regierung von Oberbayern, Germany, Az. 55.2-2532.Vet_02-21-172).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Ethics statement",
+        "sec_num": null
+      },
+      {
+        "text": "The cadm4 single knockout (ZFIN: # ZDB-ALT-251203\u201319), cadm4;mag double knockout, and cadm4; cntn1b; mag (CCM) triple knockout were generated using CRISPR-Cas9-mediated gene editing and/or by outcrossing with the previously generated double mutants of Tg(cntn1b+/\u2212mag\u2212/\u2212; mbp:EGFP-CAAX, ZFIN: ZDB-FISH-210311-21) and Tg(cntn1b+/\u2212; sox10:mRFP, ZFIN: ZDB-FISH-210311-19). Zebrafish lines were raised at 28.5 \u00b0C and a 12-hour day\u2013night cycle at the fish facility of the German Center for Neurodegenerative Diseases (DZNE) in Munich according to the local animal welfare regulations. Eggs were obtained by natural spawning and raised in E3 medium at 28.5 \u00b0C. For all experiments in this study, larvae between 2.5 - 8 dpf, and 2.5 months of age were used. From 5 dpf on, larvae were raised in rotifer polyculture medium for 8 dpf imaging or further husbandry to adulthood. All fish were used for experiments at a developmental stage before sex specification occurs.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Zebrafish husbandry",
+        "sec_num": null
+      },
+      {
+        "text": "The CRISPR-Cas9 gRNA for cadm4 was designed based on in silico predictions in inDelphi [59], where a gRNA with the target sequence 5\u2032-CTTTCCTCTCCACGGGGATA-3\u2032 was predicted to create a single 8-bp deletion at high frequency (47%), with an 80% probability of a frameshift mutation. The predicted efficiency of gRNA and off-targets was confirmed using CHOPCHOP [60] and CRISPOR [61]. The 20-bp target sequence was synthesized as Alt-R CRISPR-Cas9 crRNA and annealed with the tracrRNA (#1072532) (both from IDT) according to the recommended protocol to obtain the crRNA:tracrRNA complex. For CRISPR-Cas9 gene editing, 1 mM of crRNA:tracrRNA complex was combined with 1.25 mg/ml of the Cas9 protein (PNA Bio, #CB03). This gRNA-Cas9 ribonucleoprotein (RNP) complex was injected into one-cell stage fertilized eggs with a stable transgenic background of Tg(mbp:EGFP-CAAX) or Tg(sox10:mRFP). Frame-shift mutations in the outcrossed F1 generation were validated by Sanger sequencing (Eurofins Genomics), and heterozygous fish with identical 8-bp mutations were incrossed to obtain homozygous F2 knockouts.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Generation of cadm4\u2212/\u2212mag\u2212/\u2212 and CCM\u2212/\u2212 zebrafish",
+        "sec_num": null
+      },
+      {
+        "text": "Genotyping was based on a standard protocol as described in Hruscha and colleagues [62]. Genomic DNA was obtained from F0 larvae or finclips from the F1 adult fish by treating with 1.7 mg/ml Proteinase K (Roche, #39450-01-6) in 1\u00d7 Tris-EDTA buffer (TE) (pH = 8.0) for 4 hours at 55 \u00b0C. PCR primers for knockout validation, forward: 5\u2032-AGGGTTCAAATTTGTGCAGAGT-3\u2032 and reverse: 5\u2032-CGAGCTAATAACAGGCGCTAAT-3\u2032, were chosen from the predicted CHOPCHOP primers. The lysis product was used as PCR template, along with 10 \u00b5M of each primer, and amplified with GoTaq G2 DNA Polymerase (Promega, # M7845) using the following thermocycler program: 95 \u00b0C for 2 min, 30 cycles of 95 \u00b0C for 30 s, 66 \u00b0C for 15 s, 72 \u00b0C for 22 s; a final extension step of 72 \u00b0C for 5 min. The restriction enzyme BciVI(BfuI) was chosen from CRISPOR predictions. The PCR product was digested using BfuI, an isoschizomer of BciVI (ThermoFisher Scientific, # ER1501) with better restriction digestion efficiency, for 1 hour at 37 \u00b0C, and analyzed by gel electrophoresis. The primers sequences and restriction digestion enzymes for genes cntn1b (AciI, NEB, # R0551S) and mag (HindIII-HF, NEB, # R3104S) were obtained from [26].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Generation of cadm4\u2212/\u2212mag\u2212/\u2212 and CCM\u2212/\u2212 zebrafish",
+        "sec_num": null
+      },
+      {
+        "text": "The primer sequences for the PCR are:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Generation of cadm4\u2212/\u2212mag\u2212/\u2212 and CCM\u2212/\u2212 zebrafish",
+        "sec_num": null
+      },
+      {
+        "text": "For the analysis of gene expression, 8 dpf zebrafish larvae (wild-type and CCM\u2212/\u2212 tKO) were first anesthetised in tricaine, snap-frozen in liquid nitrogen, and stored at \u221280\u00b0C. RNA isolation was performed using the RNAeasy Mini Kit (Qiagen, #74104) following the manufacturer\u2019s protocol. Frozen single larvae were homogenized in RLT Buffer Plus (Qiagen, #1053393) with \u03b2-Mercaptoethanol, using a 200 \u00b5l pipette to ensure complete dissociation. The lysate was separated using the QIAshredder spin columns (Qiagen, #79656), followed by purification steps and final reconstitution as per the manufacturer\u2019s protocol. Isolated RNA was reverse transcribed using the SuperScript III First-Strand Synthesis system (ThermoFisher, #18080051), and the obtained cDNA was diluted to be used at a final concentration of 1\u201310 ng/\u00b5l for quantitative PCR (qPCR). qPCR reactions were set up in triplicate using the PowerUp SYBR Green Master Mix (Thermo Fisher Scientific, # A25742), and amplification was done using the Applied Biosystems 7500 Fast Real-Time PCR system. The qPCR primer sequences for eIF1a gene were obtained from [26]. Gene expression was analyzed by the \u0394\u0394Ct method, where \u0394\u0394Ctwild-type = \u0394Ctwild-type \u2212 \u0394Ctwild-type mean, and \u0394\u0394Ctknockout = \u0394Ctknockout \u2212 \u0394Ctwild-type mean.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "RNA isolation and quantitative PCR",
+        "sec_num": null
+      },
+      {
+        "text": "The primers used for qPCR are:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "RNA isolation and quantitative PCR",
+        "sec_num": null
+      },
+      {
+        "text": "To study Cadm4, Cadm3, and MAG localization in myelin, the expression plasmids olig1:cadm4-EGFP, olig1:mag-EGFP, and huC:cadm3-EGFP were assembled by Gateway cloning. First, the coding sequences (CDS) of the cadm4 (ENSDARG00000040291), cadm3 (ENSDARG00000057013), and mag (ENSDARG00000104023) genes were amplified from 8 dpf wild-type cDNA using Q5 High-Fidelity DNA Polymerase (NEB, # M0491S). The amplified CDS with attB overhangs were then cloned into the pDONR221 vector to create pME plasmids using Gateway BP Clonase II (Thermo Fisher, #11789020). pME plasmids were recombined with p5E-olig1(4.2) [55] (kind gift from Tim Czopka), p3E-EGFP-pA and pDest-Tol2CG2 [63] in a Gateway LR reaction using Gateway LR Clonase II plus (Thermo Fisher Scientific, #12538120) to generate the final expression plasmids. Generation of pTol2-UAS:caspr-EYFP was previously described [26]. To label newly differentiated and early myelinating OLs, the expression vector myrf:EGFP-CAAX was assembled using the p5E-myrf (kind gift of Jacob Hines), pME-EGFP-CAAX, p3E-pA, and pDest-Tol2CG2 in a Gateway LR reaction (Thermo Fisher Scientific, #12538120).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Plasmid generation",
+        "sec_num": null
+      },
+      {
+        "text": "The primer sequences used for cloning are:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Plasmid generation",
+        "sec_num": null
+      },
+      {
+        "text": "For sparse labeling of early myelinating oligodendrocytes in time-lapse imaging and fusion protein localization experiments, fertilized zebrafish eggs at the one-cell stage were microinjected with 25 ng/\u00b5l of plasmid DNA and 25 ng/\u00b5l of Tol2 transposase mRNA. UAS:caspr-EYFP was co-injected with huC:Gal4 to drive neuronal expression (12.5 ng/\u00b5l each). Individual zebrafish larvae were screened at 2.5 dpf to select for optimal expression.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Plasmid transgenesis",
+        "sec_num": null
+      },
+      {
+        "text": "For confocal microscopy, larvae were anesthetised using 600 \u00b5M tricaine in E3 medium and mounted laterally in 1%\u20131.5% UltraPure Low Melting Point Agarose (Invitrogen, #16520100) on a glass-bottom imaging dish with 1\u20132 ml of E3-tricaine solution. Following the imaging, the larvae were excised from the gel and lysed to confirm the genotypes. A Leica TCS SP8 confocal laser scanning microscope with 8 kHz resonant scanner and automated moving stage in a climate chamber set at 28.5 \u00b0C was used. Image acquisition was done using a 1.1 NA 40\u00d7 water-immersive lens. Immersol (Zeiss, #444969-0000-000) was used for overnight imaging. 488, 514, and 552 nm lasers were used along with hybrid detectors in photon counting mode (4\u00d7 line accumulation mode) to acquire 8-bit depth images. For the single-time point analysis of myelination at 4 dpf and 8 dpf, tile scans with the following parameters were obtained using the LASX software: 6 \u00d7 1 tiles, zoom factor 4.0, pixel size of 0.058 \u00d7 0.058 \u00b5m, and image size of 72.66 \u00d7 72.66 \u00b5m, covering a total area of around 72 \u00d7 435 \u00b5m2. The z-step size was set to the system-optimized setting of 0.38 \u00b5m, with the pinhole set at 1 AU to image the anterior hemi-spinal cord.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal imaging",
+        "sec_num": null
+      },
+      {
+        "text": "For time-lapse imaging, 2.5\u20133 dpf zebrafish larvae, microinjected with myrf:EGFP-CAAX, were screened to select for larvae with multiple mosaic labeling of pre-myelinating OLs. The pre-myelinating OLs were characterized based on their morphology, with multiple branched processes that did not begin forming sheath-like structures. The imaging was done on LASX Navigation mode, where multiple regions of interest (ROI) in 2\u20133 larvae were imaged in the same session. The imaging parameters used: pixel size of 0.162 \u00d7 0.162 \u00b5m, image size of 83.01 \u00d7 83.01 \u00b5m, z-step size of 0.5 \u00b5m, zoom factor of 3.5, and a pinhole size of 1 AU, and 16\u00d7 line accumulation. Images were acquired every 15 min for 13 hours.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal imaging",
+        "sec_num": null
+      },
+      {
+        "text": "For experiments on Caspr-EYFP localization, Tg(sox10:mRFP) larvae, microinjected with huC:Gal4 and UAS:caspr-EYFP, were screened for Caspr-EYFP expression. Images were acquired in photon-counting mode with an 8\u00d7 line accumulation and a pinhole at 0.8 AU. For time-lapse acquisitions, a z-stack was acquired every 30 min for 15 hours on 2\u20133 dpf larvae. Imaging parameters used: pixel size of 0.047 \u00d7 0.047 \u00b5m, image size of 48 \u00d7 48 \u00b5m, and a z-step size of 0.5 \u00b5m. For quantifications, z-stacks from multiple ROIs per larvae were acquired at 2.5, 3, and 5 dpf. Imaging parameters used: pixel size of 0.063 \u00d7 0.063 nm, with an image size of 58 \u00d7 58 \u00b5m, with a z-step size of 0.3 \u00b5m.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal imaging",
+        "sec_num": null
+      },
+      {
+        "text": "Representative images displayed in the figures show either maximum projection (time-lapse images, Fig 3A) or standard deviation projections of the confocal Z-stack. Representative image for OPCs (Fig 2B) is displayed as a snapshot of the 3D volume in IMARIS 9.9, where the clipping plane tool was used to truncate the 3D volume to display only the OPCs. Lateral views of the spinal cord represent dorsal at the top and anterior to the left. In the figures, stable transgenic lines are indicated as \u201cTg,\u201d and plasmid transgenesis is indicated without \u201cTg.\u201d",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal imaging",
+        "sec_num": null
+      },
+      {
+        "text": "Zebrafish larvae were anaesthetized in tricaine, and the heads, along with a part of their tails, were removed, followed by transfer to the fixative. The adult fish were terminally anesthetized in tricaine, and the trunk (posterior to the operculum) was dissected to obtain 2\u20133 mm thick cross-section blocks of the trunks that were immediately transferred to the fixative. Samples were fixed in the fixative (2.5% glutaraldehyde (EMS, #16220), 4% paraformaldehyde (EMS, #15710), 3.5% mannitol (Serva, #69-65-8), 2 mM CaCl2 in 0.15 M cacodylate buffer at pH 7.2) using a microwave with vacuum (BioWave Pelco). The larvae and adult tissue segments were incubated in the same fixative at 4 \u00b0C for one week and washed in 0.15 M cacodylate buffer with 3.5% mannitol.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Scanning electron microscopy",
+        "sec_num": null
+      },
+      {
+        "text": "Further EM processing was done according to an en bloc staining protocol, using a BioWave microwave [64]. The tissue was post-fixed in 2% osmium tetroxide (EMS, #19130) and 2 mM calcium chloride in 0.15 M sodium cacodylate (EMS, #12310), followed by a reducing step in 2.5% potassium hexacyanoferrate (Sigma, #14459-95-1). After impregnation with thiocarbohydrazide (1% in water, Sigma, #2231-57-4), the tissue was further contrasted by 2% aqueous osmium. 1% uranylacetate (EMS, #22400) was added overnight at 4 \u00b0C and for two hours at room temperature. Samples were dehydrated at increasing ethanol concentrations and embedded in LX112.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Scanning electron microscopy",
+        "sec_num": null
+      },
+      {
+        "text": "For SEM imaging, ultrathin sections at 100 nm thickness were generated on a Leica UC7 ultramicrotome and attached to carbon nanotube (CNT) tape strips (Science Services). SEM imaging for zebrafish spinal cord samples was performed on a Crossbeam 340 (Zeiss). Images were taken at 4 \u00d7 4 nm (larvae) and 10 \u00d7 10 nm (adult) pixel size, and analyzed using ImageJ.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Scanning electron microscopy",
+        "sec_num": null
+      },
+      {
+        "text": "All quantifications of the confocal imaging experiments were done using IMARIS 9.9.0 (Bitplane) and FIJI 1.54p.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Myelinated area was quantified in Fiji from 6 \u00d7 1 tile scans of Tg(mbp:EGFP-CAAX) zebrafish spinal cords by measuring the total mbp:EGFP-CAAX+ pixel area within manually thresholded regions of interest from maximum intensity projection images.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Analysis of OPC and OL counts, total OL processes, number of myelin sheaths, myelin stubs, and ensheathed neuronal cell bodies, as well as the sheath lengths, was done manually on 3D volumes using IMARIS. For quantification of oligodendrocyte lineage cells, sox10:mRFP+ OPCs and newly-differentiated OLs that had their cell bodies in the dorsal hemi-spinal cord were included. Myelinating OLs were quantified from the dorsal spinal cord based on Tg(mbp:EGFP-CAAX) reporter expression. Cell body ensheathments were identified as almost-spherical, partial cup-shaped, or fully covered mbp:EGFP-CAAX+ membrane around a cell body that had no emerging processes, unlike the mbp:EGFP-CAAX+ OLs. For the sheath length analysis, myelin sheaths, defined as mbp:EGFP-CAAX+ cylindrical structures with a length >2 \u00b5m [16], of the dorsal spinal cord and commissural axons were included. Myelin stubs were defined as mbp:EGFP-CAAX+ (often blob-like) structures at the end of OL processes that did not match the criteria of a myelin sheath. Total processes per OL represent the sum of the number of OL processes connected to myelin sheaths, membrane stubs, and ensheathed cell bodies.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "To quantify Caspr-EYFP localization, a binary readout of paranodal (i.e., Caspr localization at the lateral edges of myelin sheaths) versus internodal localization (i.e., uniform colocalization with sox10:mRFP reporter) was used to calculate percentage paranodal localization.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "For the analyses of myelin growth and myelin sheath retraction dynamics, newly-myelinating OLs, sparse-labeled using myrf:EGFP-CAAX, were tracked over 13 hours. The time point at which the sparsely labeled OLs began forming axo-glial contacts and nascent myelin sheaths was identified as early-myelinating OL, and the number of early-myelinating OL processes was analyzed at this stage. At a time point 2 hours before the early-myelinating OL stage, the OPC processes were quantified. The maximum number of myelin sheaths formed per OL during the time-lapse was quantified by identifying myelin sheaths >2 \u00b5m in all the individual time frames using the 3D-view in IMARIS. The stabilized sheaths per OL were identified as the myelin sheaths >2 \u00b5m that remained at the end of the 13-hour time lapse. The percentage of retracted myelin sheaths is quantified as the percentage of sheaths lost at the end (13 hours) of the maximum number of myelin sheaths formed per OL during the time lapse.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "For the OL cell death analysis, cells that began as a pre-myelinating OL and completed differentiation to form myelin sheaths were analyzed from time-lapse experiments. A binary readout (loss versus survival of the imaged OL) was obtained at the end of the 13-hour time lapse. OL that survived during the time-lapse session were included for myelin growth and retraction analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "For the EM analysis at 8 dpf, quantifications were done on whole spinal cords (one cross-section per fish) using FIJI. The total number of myelinated axons per \u00b5m2 was quantified as the number of myelinated axons in a cross-section of the spinal cord divided by the area of the spinal cord. Multi-myelin profiles and myelin outfoldings were quantified as a percentage of all the myelinated axons. Compact myelin was categorized as having densely-stained ensheathment around the axon, while the non-compact myelin was identified as lightly-stained membrane ensheathing the axon with distinguishable uncompacted cytoplasmic regions bordered by membranes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electron microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "The frequency distribution quantification of axonal diameters was done in FIJI. The freehand form was used to trace the axonal cross-sectional area, and the diameter was calculated from the measured area using the formula: diameter = 2 * \u221a(area/\u03c0). About 95% of the myelinated axons were quantified in all groups, with some axons excluded due to fixation or tissue damage. The percentage of myelinated axons with an axonal diameter less than 1 \u00b5m was quantified as a percentage of the total number of myelinated axons traced. For the mean diameter of the 30 largest axons, the axonal cross-section area of around 50\u201370 axons, both myelinated and unmyelinated axons, was traced, and the quantifications include the 30 largest diameter measurements. The Mauthner axon diameter was quantified as the average of the two Mauthner axons per fish.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electron microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "For the EM analysis at 2.5 months, quantifications were done on whole spinal cord sections (one cross-section per fish) and were done on QuPath. The myelinated axons were analyzed from four 900 \u00b5m2 fields of view (FOV), two each for the dorsal and ventral spinal cords of both hemispheres. The numbers of dorsal and ventral myelinated axons were added and averaged between the two hemispheres, and then divided by the measured area to be represented in the graph.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electron microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Representative images for the figures were prepared using FIJI, IMARIS (9.9.0), VAST, and Adobe Illustrator 2026. For the representative images of sox10:mRFP+ OPCs (Fig 3D), the 3D volume of the imaged spinal cord was cropped using IMARIS to exclude the myelin-dense dorsal spinal tract for the clear visualization of the OPCs.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electron microscopy analysis",
+        "sec_num": null
+      },
+      {
+        "text": "All statistical analyses were performed using GraphPad Prism 10.5.0. To test for normal distribution of the data, the D\u2019Agostino\u2013Pearson test or the Shapiro\u2013Wilk test was used. For datasets with multiple experimental groups that were normally distributed, one-way ANOVA with Tukey\u2019s multiple comparisons test was performed. For datasets with multiple experimental groups that did not pass the normal distribution test in GraphPad, the unpaired non-parametric Kruskal\u2013Wallis test with Dunn\u2019s multiple comparisons test was used. For datasets exhibiting substantial differences in standard deviations between the experimental groups, the Brown\u2013Forsythe and Welch ANOVA with Dunnett\u2019s T3 multiple comparison test was performed. The qPCR dataset was analyzed using the unpaired two-tailed non-parametric Mann\u2013Whitney test. The statistical tests used for each comparison (and their significance level) are indicated in the figure legends. Statistical significance was considered when p < 0.05. P values are indicated as\u2014*p < 0.05, **p < 0.01, ***p < 0.001, ****p < 0.0001. Graphs and data described in the results are presented as mean \u00b1 standard deviation (SD) or median with the interquartile range (IQR). \u201cn\u201d is used to indicate the number of cells and fish quantified per genotype, as referenced in the figure legends.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Statistical analysis",
+        "sec_num": null
+      }
+    ]
+  }
+}

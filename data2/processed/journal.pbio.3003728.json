@@ -1,0 +1,377 @@
+{
+  "paper_id": "journal.pbio.3003728",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003728.xml"
+  },
+  "title": "Macrophages self-generate and refine chemotactic gradients during migration towards complement C5a",
+  "doi": "10.1371/journal.pbio.3003728",
+  "authors": [
+    {
+      "first": "Abhimanyu",
+      "last": "Kiran"
+    },
+    {
+      "first": "Peter A.",
+      "last": "Thomason"
+    },
+    {
+      "first": "David M.",
+      "last": "Versluis"
+    },
+    {
+      "first": "Peggy I.",
+      "last": "Paschke"
+    },
+    {
+      "first": "Hannah",
+      "last": "Donnelly"
+    },
+    {
+      "first": "Luke",
+      "last": "Tweedy"
+    },
+    {
+      "first": "Sergio",
+      "last": "Lilla"
+    },
+    {
+      "first": "Isabel",
+      "last": "Bravo-Ferrer"
+    },
+    {
+      "first": "Amy",
+      "last": "Shergold"
+    },
+    {
+      "first": "Ryan",
+      "last": "Devlin"
+    },
+    {
+      "first": "Edward W.",
+      "last": "Roberts"
+    },
+    {
+      "first": "Robert H.",
+      "last": "Insall"
+    }
+  ],
+  "abstract_text": "Macrophages rely on efficient chemotaxis to locate sites of infection and tissue damage. One general strategy that enhances chemotactic accuracy is the use of self-generated gradients, where cells locally deplete attractants to create or sharpen guidance cues. Here, we show that mouse bone marrow\u2013derived macrophages (BMDMs) migrate toward the complement component C5a using this strategy. Cells actively deplete C5a from their surroundings, establishing local gradients as fresh attractant diffuses inward. We visualized this process in real time with fluorescent C5a and reproduced its dynamics using computational models. C5a depletion is mediated primarily by C5aR1-dependent endocytosis. This mechanism produces complex responses, with different C5a concentrations inducing temporally distinct waves of migration, and maximal chemotaxis occurring below 10 nM C5a. As expected, increasing C5a concentrations recruit more cells. In contrast, human macrophages inactivate C5a mainly through carboxypeptidase-mediated degradation, yielding a higher optimal concentration (~30 nM) and distinct migratory dynamics. Both species also deplete externally-imposed C5a gradients, sharpening them and enhancing guidance. These findings identify C5a degradation as a critical mechanism by which macrophages extract directional information from their environment. Self-generated gradient formation, despite different mechanisms across species, emerges as a conserved and versatile strategy for immune navigation.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003728",
+    "body_text": [
+      {
+        "text": "Cell migration is a fundamental biological process involved in embryo implantation, development, cancer metastasis, wound healing, and immune cell function [1,2]. While cells can migrate randomly, it is extremely inefficient over most physiological scales; efficient migration in vivo is usually guided by directional cues from the environment. Among the best-understood guidance cues are diffusible chemicals\u2014chemoattractants\u2014which form gradients interpreted by receptors on the cell surface. The direction and steepness of the gradients provide steering cues that are interpreted through receptors, most often seven transmembrane receptors that couple to G proteins, yielding chemotaxis-cell migration directed towards the source of the chemoattractant [3].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "For immune cells, chemoattractants fall into two main categories: those produced by the target (e.g., formyl peptides like fMLP from bacteria) and those produced by the host, such as chemokines or complement-derived peptides like C5a [4,5]. Immune cells detect these gradients and efficiently migrate toward their sources [6\u20138].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Macrophages are a critical immune cell population, essential to the body\u2019s defence system, that respond rapidly to infections. They perform diverse functions including pathogen engulfment (phagocytosis), antigen presentation, and tissue repair. Macrophages can arise from circulating monocytes that infiltrate tissues, or from long-lived tissue-resident populations established during early development [9,10].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Within tissues, macrophages constantly sample their environment using pattern recognition receptors (PRRs) to detect pathogen-associated molecular patterns. Once activated, they migrate directionally toward infection sites, guided by chemokines from other immune cells and complement factors such as C5a and C3a [11,12]. C5a is one of the most potent chemoattractants known for macrophages and also neutrophils. It is produced at sites of complement activation, a clear hallmark of tissue damage, by proteolysis from the much larger C5 molecule.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "However, the gradients of these chemical signals at infection sites are not always well-defined. Attractants are often initially uniform or spread into shallow gradients by tissues. Consequently, to navigate effectively, cells must locally modify or degrade these constant concentrations to create steep gradients, facilitating their precise migration towards the source of infection. This phenomenon, known as self-generated chemotaxis, has been observed in various cell types, including various cancers, dendritic cells, and model organisms such as zebrafish and Dictyostelium [13\u201316].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Although C5a is known as a dominant chemoattractant for macrophages, it is unclear how macrophages navigate when C5a is abundant but not spatially structured. We therefore asked whether they, like other systems, could generate their own navigational cues. C5a biology makes it an especially suitable context to test self-generated guidance. It is generated rapidly and diffusely during complement activation [4], often creating high but poorly directional concentrations [17]. Macrophages express high levels of its receptor, C5aR1. At the same time, C5a is inactivated by multiple macrophage-expressed mechanisms, including endocytosis, protease-mediated degradation, and enzymatic trimming. These features suggest that macrophages are not merely passive responders but may actively remodel C5a fields to create navigational cues.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "We now demonstrate that mouse bone marrow-derived macrophages (BMDMs) employ self-generated gradients to steer toward C5a. The cells endocytose or degrade the C5a ligand while they respond to it, creating gradients even in initially uniform environments and sharpening preexisting gradients around the responders. This represents, to our knowledge, the first demonstration of self-generated chemotaxis in macrophages, and fills a missing piece in our picture of host defence.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Complement C5a is among the most potent chemoattractants for macrophages [18]. In most experimental setups, it is presented to cells as a premade linear gradient, typically formed between two reservoirs, one containing no C5a and the other a substantial concentration. However, our research on cells including different cancer types and Dictyostelium, backed up by computational models, has shown that cells can chemotax more efficiently to gradients formed locally by the responding cells themselves [19\u201321]. We therefore tested the ability of BMDMs to self-generate gradients of C5a and navigate using them.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Macrophages create and migrate up chemotactic gradients of C5a",
+        "sec_num": null
+      },
+      {
+        "text": "We filled an Insall chemotaxis chamber (Fig 1A) [22] with a homogeneous concentration of 10 nM C5a (that is, initially 10 nM C5a in both wells and the bridge between) and introduced 1.5 \u00d7 106 BMDMs/ml to the outer well. If the cells efficiently depleted the C5a present in the outer well, a chemotactic gradient would be established along the bridge; if they did not, the cells would migrate randomly without steering cues, and mostly remain in the well. Fig 1B and S1 Movie show efficient self-generated chemotaxis of remarkable efficiency\u2014despite initially homogeneous C5a, macrophages oriented accurately towards the opposite well and migrated directly away from their initial reservoir. The negative control showed random migration over this timescale (Fig 1B and S1 Movie), confirming that the migration depends on the presence of C5a. Thus, macrophages are able to self-generate C5a gradients and simultaneously respond to them.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Macrophages create and migrate up chemotactic gradients of C5a",
+        "sec_num": null
+      },
+      {
+        "text": "Inspired by the experimental observations, a hybrid agent-based computational simulation was performed, based on earlier modeling work by our lab [15] and using parameters derived from our measurements, listed in S1 Table. In these simulations, each cell independently degrades the chemoattractant in its immediate vicinity and moves up gradients of attractant. When initialized with a uniform concentration of chemoattractant, simulations were able to replicate the experimental observations (Fig 1C and S2 Movie), indicating that locally degrading attractant can lead to an effective self-generated gradient, and effectively illustrating the mechanism underlying the chemotaxis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Macrophages create and migrate up chemotactic gradients of C5a",
+        "sec_num": null
+      },
+      {
+        "text": "One defining feature of self-generated chemotactic gradients is a collective wave at the front of the population of migrating cells [23]. Macrophages migrating in C5a show a particularly clear front wave (Fig 1B at 18 h; red box in S1 Fig). These cells are particularly accurately aligned towards the opposite well and migrate as a coherent group. Quantification of this collective response to an initially uniform 10 nM C5a is shown in Fig 1D. Another behavior particularly noted in self-generated chemotaxis is that high attractant concentrations cause a delay before the wave of chemotaxis begins (the time it takes for the cells to clear the attractant out of their well) and slower directional migration of the cells in the wave [23]. We analyzed the response of macrophages to a substantially higher concentration of C5a (100 nM)., S1 Fig, and S3 Movie show that the cells took significantly longer to start chemotaxing and enter the bridge than at 10 nM, though still obviously better than the negative control. Interestingly, the alignment of the cells in the front wave was strikingly different in both cases. With 10 nM C5a, the cells in the front wave were inclined to ~90\u00b0 to the bridge (S1 Fig); with 100 nM, the alignment was nearer ~45\u00b0, implying a much less legible gradient, presumably because cells struggled to clear the C5a from their rears, or because persistent migration carried them into regions of C5a saturation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Macrophages create and migrate up chemotactic gradients of C5a",
+        "sec_num": null
+      },
+      {
+        "text": "It is also clear that the positive control with a simple 0\u201310 nM gradient (Fig 1B, S4 Movie) shows a wave of particularly well-oriented cells at the front, with decreased chemotaxis behind. This behavior contrasts with the continuous response expected from cells responding simply to an imposed gradient. This implies that the same mechanisms that create self-generated gradients also act to shape imposed gradients, as has been seen, for example, in melanoma chemotaxis [19]. The formation and propagation of the cell wave is quantified in Fig 1D. Simulations of cells in initial gradient of C5a were able to reproduce the experimental observations in the same way they recapitulated self-generated gradients (Fig 1C).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Macrophages create and migrate up chemotactic gradients of C5a",
+        "sec_num": null
+      },
+      {
+        "text": "Activation in the presence of bacterial or pathogen traces is a fundamental feature of macrophage biology. We therefore examined self-generated chemotaxis in LPS- activated and inactivated macrophages. The LPS binds and activates the Toll-like receptor 4 (TLR4) on the surface of the macrophage, triggering a signaling cascade that alters gene expression and leads to the production of inflammatory cytokines and mediators [24].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Effects of lipopolysaccharide activation",
+        "sec_num": null
+      },
+      {
+        "text": "LPS stimulation was not essential for self-generated chemotaxis. Both activated and inactivated macrophages respond effectively to homogeneous C5a, and start to migrate at the same time. However, the inactivated macrophages chemotax less accurately than LPS-activated ones. Clearly, both activated and inactivated macrophages express a high enough level of C5a receptors to steer. The differences, therefore, more likely reflect changes in the pathways that connect gradients to migration and steering, or proinflammatory responses after activation (Fig 2).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Effects of lipopolysaccharide activation",
+        "sec_num": null
+      },
+      {
+        "text": "In other cell types, we have shown that the number of cells in the front wave of a self-generated gradient is approximately proportional to the attractant concentration [15,21]. We tested whether this holds for BMDMs using self-generated gradients formed from initial C5a concentrations of 0.3 nM, 3 nM, and 30 nM (S5 Movie). Figure 3A shows responses of the same initial cell density after 6 h. As expected, few cells entered the bridge at 0.3 nM C5a, because that is all that is required to inactivate or remove all of the C5a as it diffuses from the source well. With 3 nM C5a, the number of cells in the front wave was clearly greater (Fig 3A), but only by about 2-fold despite the 10\u00d7 increase in chemoattractant. The same was true at the yet higher concentration of 30 nM C5a; after an initial delay for the cells to deplete the pool (see above), a larger wave still was formed (Fig 3A), but again with less than 3-fold further increase in cell number despite a 10\u00d7 increase in attractant. Again, negative controls with no C5a gave negligible migration under these conditions (Fig 3B). Note also the slower response at higher concentrations as described earlier.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dose dependence of self-generated C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "We would expect an approximately linear relationship between attractant concentration and the number of cells in the wave. The actual result suggests an extra level of complexity. One possibility is that cells are increasing their rate of breakdown at higher C5a concentrations, for example, proposed induction of extra breakdown enzymes at high ligand occupancy as a mechanism to increase robustness [21]. Another is that cells are communicating with one another through additional mechanisms than simple C5a depletion. To follow this, we examined hybrid agent-based computational simulations. These were sufficient to recreate the experimentally observed dose responses (S6 Movie).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dose dependence of self-generated C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "We also examined the effect of changes in initial cell density. These supported earlier observations that the number of cells in the front wave depends only on the attractant concentration [15]; cell density only affects the time before the wave is initialized (compare the time required for cells to migrate upon the bridge for the same C5a concentration in S2A, S2B, and S2C Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dose dependence of self-generated C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "To perform self-generated chemotaxis, macrophages must get rid of the C5a in their local environment to form locally steep gradients. Two general mechanisms for this have been described\u2014first, using enzymes that convert the chemoattractant into an inactive form [19,25], and second, by receptor-mediated endocytosis of the chemoattractant [13,26]. The enzymes may be membrane-bound with their catalytic domains exposed to the extracellular medium, like LPP3, or secreted, like phosphodiesterases. One strong candidate enzyme, carboxypeptidase M, is known to inactivate C5a in a complicated fashion by trimming off the C-terminal arginine [27], and is specifically expressed in human macrophages [28,29]. However, mouse macrophages such as our BMDMs do not express carboxypeptidase M (see, for example, the Immunological Genome Project\u2013https://rstats.immgen.org/Skyline/skyline.html). We also examined C5a by mass spectrometry after incubation with BMDMs. The trimmed C5a (C5a-des-R) was not detected when mouse cells were incubated with C5a, whereas it was detected in all samples using THP-1 cultured human cells (cultured cells with macrophage-like gene expression and behavior, differentiated from a monocytic leukaemia line, as primary human cells were unavailable; S3 Fig). Interestingly, a hitherto undescribed double-trimmed form (C5a-des-GR) was also seen in the human and not mouse experiments. Mouse macrophages express a range of other secreted and membrane-bound proteases, but CPM is the only enzyme known to degrade C5a.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "BMDMs deplete C5a from their surroundings using endocytosis",
+        "sec_num": null
+      },
+      {
+        "text": "To further distinguish endocytic from enzymatic degradation, we used commercially available C5a labeled with fluorescent AF647 at its N-terminus. Extracellular enzymes such as proteases do not change the fluorescence of this molecule when they attack it\u2014trimming the C5a into an inactive form does not alter its fluorescence, so active and inactive molecules fluoresce the same. However, endocytosis should be visible as a loss of fluorescence from the medium and a sharp gain in vesicles inside the cell [30]. We visualized both medium and intracellular detail in BMDMs migrating up a self-generated gradient of fluorescently labeled C5a-AF647, examining both using a confocal microscope, after the cells had moved some distance across the bridge. The results are striking (Fig 4)\u2014BMDMs internalize the labeled C5a, and remove it from the medium, creating a gradient. The chambers, which were set up with homogenous C5a, show a clear gradient after a few hours\u2019 incubation with cells\u2014low in the immediate vicinity of the BMDMs, becoming higher by 200 \u00b5m away. Soon after the chamber has been assembled, the macrophages contain punctate fluorescence, reflecting the endocytosed C5a and its breakdown products.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "BMDMs deplete C5a from their surroundings using endocytosis",
+        "sec_num": null
+      },
+      {
+        "text": "Thus, BMDMs set up their own chemoattractant gradients by endocytosing C5a from their surroundings, and retaining it, presumably for lysosomal breakdown.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "BMDMs deplete C5a from their surroundings using endocytosis",
+        "sec_num": null
+      },
+      {
+        "text": "Endocytosed C5a could be recycled and re-secreted or targeted to lysosomes and broken down. To explore this mechanism, cells were seeded in Petri dishes at a similar density to the chemotaxis chambers, exposed to 5 nM of C5a-AF647 for 1 h, then washed with fresh medium and examined after different intervals (Fig 4C). This clearly shows the cells retain the C5a they take up. The fluorescent signal appeared to be in endocytic vesicles and eventually localized in the perinuclear region (Fig 4C), and was not released in significant quantities over three hours.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "BMDMs deplete C5a from their surroundings using endocytosis",
+        "sec_num": null
+      },
+      {
+        "text": "We hypothesized that the presence of CPM in human macrophages might alter the way they made and responded to self-generated gradients. Human macrophages could use the surface bound enzyme to get rid of C5a in their local environment, in contrast to the receptor-mediated endocytosis employed by the mouse macrophages. We tested this hypothesis several ways. First, we observed the change in the extracellular imposed gradient of fluorescent C5a-AF647 by the macrophages over time. Interestingly, although both types of macrophage could perform self-generated chemotaxis, only the mouse cells were able to affect the fluorescence profile of the C5a gradient (Fig 5A and 5B), demonstrating a role of receptor-mediated endocytosis in depleting C5a from the environment. For human macrophages (Fig 5C and 5D), the gradient of fluorescence remained similar, suggesting that the C5a was mainly being inactivated by the surface bound enzyme rather than endocytosed.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparison between human and mouse macrophages",
+        "sec_num": null
+      },
+      {
+        "text": "The different mechanism of establishing self-generated gradients would be expected to lead to different behaviors. In particular, the Kd of receptors is typically much lower than the Km of enzymes, so receptor-mediated mechanisms typically work at a lower ligand concentration than enzyme-mediated ones. The dose response of both types of macrophages was assessed by counting the number of cells crossing a line 200 \u03bcm along the bridge after 18 h for various C5a concentrations. As predicted, the human cells steered most effectively at a higher C5a concentration (>30 nM versus 10 nM, Fig 5E). Tracking the chemotaxis of both types of macrophage, using 3 nM C5a so as to be below the saturation for both types of macrophage (Fig 5F), showed that human macrophages performed much better at the higher end of the gradient. This presumably reflects their greater ability to degrade the chemoattractant in their vicinity, forming steeper and more robust gradients compared to mouse macrophages, which can only internalize one C5a molecule at a time through receptor endocytosis and are thus limited by receptor availability at the cell surface.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparison between human and mouse macrophages",
+        "sec_num": null
+      },
+      {
+        "text": "The collective behavior is also different\u2014mouse macrophages show synchronized motion among themselves to form a clearly visible front wave (Fig 3A), whereas the human macrophages chemotax more independently (S7 Movie). Interestingly, the human macrophages can operate within a broader range of chemoattractant concentrations (Fig 5E), showing a clear response at very low concentrations as well as a better one at higher concentrations. This robustness is a predicted outcome of systems that use chemoattractant-degrading enzymes as well as receptor-mediated uptake [15,21].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparison between human and mouse macrophages",
+        "sec_num": null
+      },
+      {
+        "text": "Mouse and human macrophages behaved dissimilarly when performing self-generated chemotaxis to 3 nM of C5a (Fig 5F). Although they had a very similar time independent chemotaxis index (cos\u03b8\u2014see Fig 5G), the average speed of the human macrophages was twice that of mouse macrophages (Fig 5H). The speed of the chemotactic wave depends predominantly on the interaction between the Vmax of C5a degradation and its diffusion, rather than the inherent speed of the cells, so fast migration of human cells is consistent with rapid degradation of C5a, again consistent with the involvement of surface bound enzymes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparison between human and mouse macrophages",
+        "sec_num": null
+      },
+      {
+        "text": "C5a is transduced by two cell surface receptors, C5aR1 and C5aR2. Most authors consider C5aR1 to be the primary chemotactic receptor [31].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "C5aR1 mediates C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "C5aR2\u2019s role is less clear. It may transduce a subset of signals, or may be a scavenger receptor, in which case it could play a role in the formation of self-generated gradients. To test whether C5aR1 or C5aR2 was forming the gradient, we employed a noncompetitive receptor antagonist PMX-53, which inhibits C5a functions that act through C5aR1 but does not affect C5aR2. We verified the inhibitor was effective by imaging macrophages chemotaxing up an imposed gradient of 0\u201310 nM C5a in the presence or absence of 10 \u03bcM PMX-53 (Fig 6A and 6B, S8 Movie). The inhibitor is clearly effective\u2014the untreated cells show longer and better-directed trajectories (Fig 6A, 6C) than inhibited ones (Fig 6B, 6D). The average speed of the cells with positive control and inhibitor control was 1.25 \u00b5m/min and 1.06 \u00b5m/min, respectively, implying that the inhibitor does not affect the cell\u2019s underlying ability to migrate, but mean cos\u03b8 dropped from 0.4 to 0.2 after inhibitor treatment (Fig 6E). Thus, as expected, C5aR1 is the receptor that mediates chemotaxis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "C5aR1 mediates C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "Imaging receptor-mediated uptake of C5a-AF647 in the presence and absence of PMX-53 demonstrated that C5aR1 was also the receptor mediating C5a uptake. Cells were seeded in 8-well glass bottom dishes, with or without pretreatment with 10 \u00b5M PMX-53 for 30 min. After this, 10 nM C5a-AF647 was added and incubated for 1 h, before assessing C5a uptake using a confocal microscope. As previously, untreated macrophages contained high levels of C5a, but inhibitor-treated cells showed strikingly less (Fig 6F, quantified in Fig 6G)\u2014the total fluorescence endocytosed in the cells dropped by >60%. As receptor inhibitors are not completely efficient, this implies that an even greater fraction of the C5a uptake from the environment was mediated by C5aR1.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "C5aR1 mediates C5a chemotaxis",
+        "sec_num": null
+      },
+      {
+        "text": "Anaphylatoxin C5a, a small peptide released as a result of complement activation, is a strong chemoattractant for macrophages [32]. Studies over many years and using widely different methods have shown mouse bone marrow-derived [33\u201335] and other [36,37] macrophages perform efficient chemotaxis up gradients of a range of attractants [33] including C5a [38,39]. Here we have shown, for the first time, that macrophages can perform self-generated gradient (SGG) chemotaxis towards C5a, turning a flat concentration of C5a into a gradient, then migrating up it (Fig 1B). Self-generated gradients are an efficient and often counterintuitive way for cells to probe their environment and obtain dynamic and complex information about the best paths [40\u201342]; this mode of steering is feasible and believed to occur frequently in real biological scenarios.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "For efficient chemotaxis, the cells need to deplete the chemoattractant available in their immediate vicinity at a rate that is sufficient to overcome new production and diffusion from the environment. Two well-established mechanisms by which cells can degrade chemoattractants have been found to set up self-generated gradients [21,43,44]. The first uses surface bound enzymes, with their active sites on the extracellular side, that degrade and inactivate the local chemoattractant. When we first observed a front wave in macrophage chemotaxis, suggesting a self-generated gradient, membrane-bound carboxypeptidase M (CPM) offered the first candidate mechanism. CPM cleaves the C-terminal arginine of C5a to give C5a-des-Arg [27]. There are two problems with this scenario. First, CPM is only macrophage-specific in humans; mouse cells like BMDMs do not appear to express it. Second, CPM trimming of C5a does not fully inactivate it, but reduces both its receptor affinity and efficacy [45]. It is not clear whether this would of itself support a self-generated gradient. In any case, mass spectrometry of the cell supernatant exposed to cells revealed no evidence of C5a-des-Arg in mouse BMDMs. The second mechanism is through clathrin-mediated endocytosis [46], where cells take in the chemoattractant ligand attached to its surface G-protein coupled receptor (GPCR) by endocytosing the receptor-ligand complex and targeting it to lysosomes. Our confocal experiments and their analysis indicate that BMDMs use clathrin-mediated endocytosis for C5a uptake (Fig 4).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Self-generated chemotaxis has an interesting and complex relationship with the initial concentration of the attractant. In simple SGGs the number of cells performing chemotaxis to the chemoattractant increases with the concentration of chemoattractant. There is an ideal attractant concentration. Below this, relatively few cells migrate, and the gradient is not robust. Above it, saturation makes the gradient less legible, so cells align less accurately; and it takes an increased time for the chemotaxis to start, because it takes longer for cells to remove enough attractant. This is exactly how macrophages behave in response to homogeneous C5a. We have therefore shown that cells take up C5a, that a gradient is actually formed, and cells behave as expected; it is quite clear that macrophages are fully able to use self-generated chemotaxis to C5a. It is possible that secondary attractants (another form of self-generated gradient, where cells produce self-attractants such as LTB4 [47], ATP [36], or cAMP [48] in response to chemotactic signals) are additionally involved; but the initial direction comes from the establishment of a C5a gradient.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The most surprising outcome of this research is that \u201cnormal\u201d chemotaxis\u2014macrophages migrating up externally-imposed, relatively steep gradients of C5a\u2014requires the same processes as self-generated chemotaxis to work efficiently. Clearly, when cells are given a defined C5a gradient, they alter it and reinforce it to give themselves the clearest stimulus and the most information possible.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In summary, this work shows the importance of self-generated gradients in BMDM chemotaxis to C5a. In the presence of macrophages, C5a gradients are more flexible and more complex, than was previously thought.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "The stem cells were extracted from the bone marrow of the wild-type mice. The stem cells were supplemented with macrophage differentiation media made of DMEM, 10% heat-inactivated FBS, 1% Penicillin-streptomycin, 1% L-glutamine, 50 \u00b5M mercaptoethanol, and 25ng/ml mouse macrophage colony stimulating factor (mCSF). Fully differentiated macrophages were obtained by day 4. At day 4, the macrophages were rinsed, and fresh macrophage differentiation media were provided. The chemotaxis experiments were performed between 6 and 8 days. The cells were stimulated with 10 ng/ml of LPS a day prior to the chemotaxis experiments.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cell culture",
+        "sec_num": null
+      },
+      {
+        "text": "The time-lapse experiments were performed using inverted Nikon ECLIPSE Ti microscope equipped with a LWD 0.52NA condenser, a motorized XY stage, and controlled by commercially available MetaMorph software. The microscope is integrated with an incubator, which enabled us to perform the experiments at 37 \u00b0C and 5% CO2. For image acquisition, a 10 \u00d7 0.3NA air objective was used to capture the images at multiple locations with time interval of 10 min.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Phase contrast microscopy.",
+        "sec_num": null
+      },
+      {
+        "text": "Intensity measurement experiments were performed using a Nikon A1R inverted and Zeiss 880 confocal microscope equipped with motorized stage. Where appropriate, we used commercially available (Almac Sciences (Scotland), Edinburgh) human C5a labeled with Alexa Fluor-647 on its N-terminus. Human C5a was used because of the commercial unavailability of fluorescently labeled mouse C5a. Mouse C5a and human C5a share 60% similarity in their amino acid sequence, and mouse macrophages respond and chemotax efficiently to human C5a [49]. We have also experimentally verified that BMDM cells chemotax to mouse and human C5a with comparable efficiency.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy.",
+        "sec_num": null
+      },
+      {
+        "text": "For intensity measurements relating to SGG experiments shown in Fig 4, 10 nM of C5a-AF647 was provided in both inner and outer well of chemotaxis chamber with and without cells. For intensity measurement experiment for imposed gradient shown in Fig 5, 10 nM C5a-AF647 was added to the inner well, either with or without cells in the outer well of the chemotaxis chamber. For all these experiments, the assembled chambers were kept in the incubator at 37 \u00b0C and 5% CO2 for 6 h, followed by the confocal imaging. Image scanning was performed with a 633 nm laser and images were acquired using either a 40\u00d7/1.3NA oil or 60\u00d7/1.4NA oil objective. Laser power was adjusted in order to obtain measurable fluorescent signal across the entire bridge. The in-built image stitching feature available in the microscope software was employed to capture the entire bridge. For image analysis, the variation of the fluorescent intensity along the bridge was measured using FIJI/ImageJ (https://imagej.net/software/fiji/).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy.",
+        "sec_num": null
+      },
+      {
+        "text": "The confocal imaging to evaluate the C5aR1 mediated uptake of C5a-AF647 (Fig 6F) was performed using a 60\u00d7/1.4NA oil objective on either a Nikon NSPARC or Zeiss 980 microscope. For analysis, regions of interest were drawn around each cell, and their fluorescent intensity was measured. The fluorescent intensity of each cell was subtracted by the average background intensity of the image, followed by measuring the average intensity of all cells in the image.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Confocal microscopy.",
+        "sec_num": null
+      },
+      {
+        "text": "Statistical analyses were performed using Microsoft Excel (Office 16). All experiments were independently repeated at least three times. Comparisons between groups were evaluated using two-tailed Student\u2019s t tests, with significance thresholds designated as p < 0.05 (*), p < 0.001 (**), and p < 0.0001 (***). Data are presented as mean \u00b1 standard error of the mean (SEM) unless otherwise indicated, with error bars shown for n > 3. For Fig 5E, variability in cell distributions between biological replicates precluded meaningful averaging; therefore, a representative dataset is shown. Although the spatial patterns differed across replicates, the overall conclusions were consistent. For Fig 1D cells were counted using the Cyto3 cell segmentation neural network retrained on 32 of our earlier macrophage images using Cellpose [50,51] combined with Ultrack [52].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Statistical analyses",
+        "sec_num": null
+      }
+    ]
+  }
+}

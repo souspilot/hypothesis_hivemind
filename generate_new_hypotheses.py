@@ -1,25 +1,22 @@
 """
 Generate novel hypotheses from full paper context.
 
-Input:  data{suffix}/train/<paper_id>.json
-Output: results{suffix}/new_hypotheses/<paper_id>.json
+Input:  <dataset papers_dir>/<paper_id>.json
+Output: <dataset results_dir(novel)>/<paper_id>.json
         { "<model_id>": ["hypothesis_1", ..., "hypothesis_N"], ... }
 
-Two data sources exist side by side -- data/ (native-format papers) and
-data2/ (XML-converted papers) -- each with its own mirrored results{,2}/
-tree. Use --source to pick one, or omit it to process both in one run:
+Datasets are defined in config.py; --dataset picks one or more (default: all):
 
-  python generate_new_hypotheses.py             # both data/ and data2/
-  python generate_new_hypotheses.py --source 1  # just data/  -> results/
-  python generate_new_hypotheses.py --source 2  # just data2/ -> results2/
+  python generate_new_hypotheses.py                    # every dataset
+  python generate_new_hypotheses.py --dataset plos     # just PLOS Biology
 """
 
 import argparse
 import logging
-from pathlib import Path
 
+from config import DATASETS, N_SAMPLES, TASKS, parse_dataset_args
+from hypothesis_engine import run_batch, setup_logging
 from model_utils import build_all_models
-from hypothesis_engine import run_batch, load_skip_ids
 
 log = logging.getLogger(__name__)
 
@@ -27,20 +24,7 @@ log = logging.getLogger(__name__)
 # Config
 # ---------------------------------------------------------------------------
 
-N_SAMPLES = 10
 MAX_WORKERS = 24
-
-# Maps --source values to the directory suffix: data/ has no suffix,
-# data2/ has "2".
-SOURCE_SUFFIXES = {"1": "", "2": "2"}
-
-# Paper IDs (one per line) to skip entirely -- shared with
-# generate_hypotheses.py. Certain papers' text reliably trips a provider
-# content filter (seen in practice: anthropic/claude-sonnet-4.6 returning
-# "blocked by the provider's content filter" on every single sample,
-# never succeeding), and retrying doesn't change that outcome -- it just
-# burns API calls on a guaranteed failure every run. See plos_skip.txt.
-SKIP_LIST_PATH = Path("plos_skip.txt")
 
 # ---------------------------------------------------------------------------
 # Prompt
@@ -70,7 +54,7 @@ def extract_text(data: dict) -> str:
     # Three schema shapes have shown up across this project's data sources,
     # so we check each in order rather than assuming just one:
     #
-    # 1. Current schema (data{suffix}/train, from xml_to_json.py): a plain
+    # 1. Current schema (PLOS papers, from xml_to_json.py): a plain
     #    STRING at the top level, under "abstract_text".
     # 2. Old S2ORC-style schema: a plain STRING at the top level, under
     #    "abstract" directly -- already exactly what we want, no
@@ -99,33 +83,24 @@ def extract_text(data: dict) -> str:
 # Main
 # ---------------------------------------------------------------------------
 
-def paths_for_suffix(suffix: str) -> tuple[Path, Path]:
-    return Path(f"data{suffix}/train"), Path(f"results{suffix}/new_hypotheses")
-
-
 def main() -> None:
+    setup_logging()
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--source", choices=sorted(SOURCE_SUFFIXES), default=None,
-        help="1 = data/ (native format), 2 = data2/ (XML-converted). Default: both.",
-    )
+    parser.add_argument("--dataset", nargs="*", choices=list(DATASETS), help="default: all")
     args = parser.parse_args()
-    suffixes = [SOURCE_SUFFIXES[args.source]] if args.source else list(SOURCE_SUFFIXES.values())
 
     models = build_all_models()
-    skip_ids = load_skip_ids(SKIP_LIST_PATH)
-
-    for suffix in suffixes:
-        train_dir, output_dir = paths_for_suffix(suffix)
-        log.info("=== Source: data%s/ → results%s/ ===", suffix, suffix)
+    task = TASKS["novel"]
+    for dataset in parse_dataset_args(args.dataset):
+        log.info("=== %s: %s ===", dataset.label, task.label)
         run_batch(
             models=models,
-            input_dir=train_dir,
-            output_dir=output_dir,
+            input_dir=dataset.papers_dir,
+            output_dir=dataset.results_dir(task),
             extract_text=extract_text,
             system_prompt=SYSTEM_PROMPT,
             user_instruction=USER_INSTRUCTION,
-            skip_ids=skip_ids,
+            skip_ids=dataset.skip_ids(),
             n_samples=N_SAMPLES,
             max_workers=MAX_WORKERS,
         )

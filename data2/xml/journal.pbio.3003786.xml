@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.3 20210610//EN" "http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3.dtd">
+<article article-type="research-article" dtd-version="1.3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<processing-meta>
+<custom-meta-group content-type="composition">
+<custom-meta specific-use="newgen" xlink:href="https://www.newgen.co/">
+<meta-name>Composition Vendor</meta-name>
+<meta-value>Newgen KnowledgeWorks (P) Ltd.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</processing-meta>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS Biol</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosbiol</journal-id>
+<journal-title-group>
+<journal-title>PLOS Biology</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">1544-9173</issn>
+<issn pub-type="epub">1545-7885</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786</article-id>
+<article-id pub-id-type="publisher-id">PBIOLOGY-D-25-03773</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Research Article</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Oncology</subject><subj-group><subject>Cancers and neoplasms</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Diagnostic medicine</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Ultrasound imaging</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Ultrasound imaging</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Radiology and imaging</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Ultrasound imaging</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Physical sciences</subject><subj-group><subject>Physics</subject><subj-group><subject>Acoustics</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Oncology</subject><subj-group><subject>Cancers and neoplasms</subject><subj-group><subject>Lung and intrathoracic tumors</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>In vivo imaging</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Engineering and technology</subject><subj-group><subject>Equipment</subject><subj-group><subject>Optical equipment</subject><subj-group><subject>Lasers</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>Fluorescence imaging</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Oncology</subject><subj-group><subject>Cancer treatment</subject></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Acoustic delivery of indocyanine green via biosynthetic gas vesicles for tumor photothermal therapy</article-title>
+<alt-title alt-title-type="running-head">Acoustic delivery of ICG using biosynthetic nanobubbles for tumor therapy</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Zhang</surname>
+<given-names>Jiaqi</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-original-draft/">Writing – original draft</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Huang</surname>
+<given-names>Licong</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+<role content-type="http://credit.niso.org/contributor-roles/software/">Software</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+</contrib>
+<contrib contrib-type="author" equal-contrib="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname>
+<given-names>Shuhui</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/formal-analysis/">Formal analysis</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-original-draft/">Writing – original draft</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Ding</surname>
+<given-names>Jingwen</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Yuping</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/software/">Software</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Li</surname>
+<given-names>Chenhui</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Zhao</surname>
+<given-names>Ping</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/supervision/">Supervision</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0001-7903-2838</contrib-id>
+<name name-style="western">
+<surname>Li</surname>
+<given-names>Qian</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<name name-style="western">
+<surname>Yan</surname>
+<given-names>Fei</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/supervision/">Supervision</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff006"><sup>6</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Department of Ultrasound, The First Affiliated Hospital, Guangzhou University of Chinese Medicine, Guangzhou, China</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Ultrasound, Xijing Hospital, The Fourth Military Medical University, Xi’an, China</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Department of Ultrasound, The Third Affiliated Hospital of Sun Yat-Sen University, Guangzhou, Guangdong, China</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Department of Ultrasound, The Affiliated Cancer Hospital of Zhengzhou University &amp; Henan Cancer Hospital, Zhengzhou, China</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>Department of Ultrasound, The Affiliated Hospital of Guangdong Medical University, Zhanjiang, China</addr-line></aff>
+<aff id="aff006"><label>6</label> <addr-line>State Key Laboratory of Quantitative Synthetic Biology, Shenzhen Institute of Synthetic Biology, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Wang</surname>
+<given-names>Baojun</given-names>
+</name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Zhejiang University, CHINA</addr-line></aff>
+<author-notes>
+<fn fn-type="conflict" id="coi001">
+<p>The authors have declared that no competing interests exist.</p>
+</fn>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">pingzhao1499@126.com</email> (PZ); <email xlink:type="simple">zlyyliqian1018@zzu.edu.cn</email> (QL); <email xlink:type="simple">fei.yan@siat.ac.cn</email> (FY)</corresp>
+</author-notes>
+<pub-date pub-type="epub"><day>13</day><month>5</month><year>2026</year></pub-date>
+<pub-date pub-type="collection"><month>5</month><year>2026</year></pub-date>
+<volume>24</volume>
+<issue>5</issue>
+<elocation-id>e3003786</elocation-id>
+<history>
+<date date-type="received"><day>21</day><month>11</month><year>2025</year></date>
+<date date-type="accepted"><day>20</day><month>4</month><year>2026</year></date>
+</history>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Zhang et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pbio.3003786"/>
+<abstract>
+<p>Photothermal therapy (PTT) serves as a complementary strategy to conventional cancer treatments. Indocyanine green (ICG) is the only U.S. Food and Drug Administration (FDA)-approved photothermal agent. However, its clinical application is hindered by poor stability, short blood half-life, and lack of tumor targeting. Herein, we developed biosynthetic gas vesicles (GVs) covalently conjugated with ICG (ICG-GVs) for remotely controlled, visibly acoustic delivery of ICG to tumors in a subcutaneous xenograft model of MB49 murine bladder cancer in C57BL/6 mice. The resulting ICG-GVs exhibit uniform morphology (~200 nm) with an ICG loading rate of 58%, good colloidal stability, and enable trimodal imaging (ultrasound, near-infrared fluorescence, and photoacoustic) for real-time visualization of delivery. Pharmacokinetic analysis revealed that ICG-GVs significantly prolong ICG circulation half-life and increase AUC. Ultrasound-triggered GV cavitation enhanced intratumoral ICG delivery, achieving tumor temperatures &gt;60 °C upon laser irradiation, leading to complete tumor regression and prolonged survival without detectable toxicity. This study provides a clinically translatable strategy for precise and effective ICG-based PTT.</p>
+</abstract>
+<abstract abstract-type="toc">
+<p>Photothermal therapy is a rapidly evolving cancer treatment modality, but further clinical applications are hindered by the short <italic>in vivo</italic> half-life of photothermal agents. This study uses biosynthetic gas vesicles coated with the FDA-approved photothermal agent Indocyanine green to enhance its acoustic delivery and anti-tumor efficacy.half-life of photothermal agents. This study uses biosynthetic gas vesicles coated with the FDA-approved photothermal agent Indocyanine green to enhance its acoustic delivery and anti-tumor efficacy.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source><institution>National Key R&amp;D Program of China</institution>
+</funding-source><award-id>2025YFA0922100</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Yan</surname><given-names>Fei</given-names></name></principal-award-recipient></award-group>
+<award-group id="award002">
+<funding-source><institution>Shenzhen Medical Research Fund</institution>
+</funding-source><award-id>D2301012</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Yan</surname><given-names>Fei</given-names></name></principal-award-recipient></award-group>
+<award-group id="award003">
+<funding-source><institution>Leading Talents of the Guangdong Special Support Program</institution>
+</funding-source><award-id>2024TX08A098</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Yan</surname><given-names>Fei</given-names></name></principal-award-recipient></award-group>
+<award-group id="award004">
+<funding-source><institution>Henan provincial Medical Science and Technology Research Project</institution>
+</funding-source><award-id>SBGJ202502034</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Wang</surname><given-names>Shuhui</given-names></name></principal-award-recipient></award-group>
+<award-group id="award005">
+<funding-source><institution>Natural Science Foundation of Henan</institution>
+</funding-source><award-id>252300420567</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Wang</surname><given-names>Shuhui</given-names></name></principal-award-recipient></award-group>
+<funding-statement>FY was supported by the National Key R&amp;D Program of China (No. 2025YFA0922100), the Shenzhen Medical Research Fund (No. B2402006, A2502037), and the Leading Talents of the Guangdong Special Support Program (No. 2024TX08A098). SHW acknowledges funding from the Henan provincial Medical Science and Technology Research Project (No. SBGJ202502034), and the Natural Science Foundation of Henan (No. 252300420567). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="6"/>
+<table-count count="0"/>
+<page-count count="13"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are within the paper and its <xref ref-type="sec" rid="sec020">Supporting information</xref> files. All underlying data for <xref ref-type="fig" rid="pbio.3003786.g002">Figs 2D</xref>–<xref ref-type="fig" rid="pbio.3003786.g002">2G</xref>, <xref ref-type="fig" rid="pbio.3003786.g003">3D</xref>–<xref ref-type="fig" rid="pbio.3003786.g003">3F</xref>, <xref ref-type="fig" rid="pbio.3003786.g004">4D</xref>, <xref ref-type="fig" rid="pbio.3003786.g004">4H</xref>, <xref ref-type="fig" rid="pbio.3003786.g005">5B</xref>–<xref ref-type="fig" rid="pbio.3003786.g005">5D</xref>, <xref ref-type="fig" rid="pbio.3003786.g005">5F</xref>, <xref ref-type="supplementary-material" rid="pbio.3003786.s004">S2</xref>, <xref ref-type="supplementary-material" rid="pbio.3003786.s005">S3</xref>, <xref ref-type="supplementary-material" rid="pbio.3003786.s006">S4</xref>, <xref ref-type="supplementary-material" rid="pbio.3003786.s007">S5A</xref>–<xref ref-type="supplementary-material" rid="pbio.3003786.s007">S5H</xref>, and <xref ref-type="supplementary-material" rid="pbio.3003786.s008">S6A</xref>–<xref ref-type="supplementary-material" rid="pbio.3003786.s008">S6D</xref> are provided in S1 Data.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec001" sec-type="intro">
+<title>1. Introduction</title>
+<p>Photothermal therapy (PTT) is one of the most rapidly evolving cancer treatment modalities in recent years. It uses light to induce local temperature increase in tumors administrated various photothermal agents. Due to its distinct mechanisms of action, PTT has attracted widespread attentions for its advantages in the noninvasive process, few side effects, and high efficiency of tumor ablation. Also, PTT has been shown to overcome chemotherapy resistance, making it possible combine with other treatment modalities [<xref ref-type="bibr" rid="pbio.3003786.ref001">1</xref>]. Furthermore, advances in various targeted delivery strategies of photothermal agents improve its spatiotemporal controllability of PTT, greatly increasing its safety and reducing off-target toxicities. Nowadays, numerous photothermal agents, such as gold nanocomposites, carbon nanomaterials, sulfide nanocomposites, and black phosphorus, have been developed, but their further clinical applications are hindered by the potential toxicity and long-term retention [<xref ref-type="bibr" rid="pbio.3003786.ref002">2</xref>–<xref ref-type="bibr" rid="pbio.3003786.ref005">5</xref>]. Therefore, it is desirable to develop novel photothermal agents on the basis of clinically licensed agents. Indocyanine green (ICG), the only near-infrared fluorescence (NIRF) imaging dye approved by the U.S. Food and Drug Administration (FDA), has been clinically used for photoacoustic (PA) imaging and PTT [<xref ref-type="bibr" rid="pbio.3003786.ref006">6</xref>]. However, the poor water stability and short <italic>in vivo</italic> half-life of ICG impair its tumor-targeted accumulation and its therapeutic effect. Evidence has demonstrated that 97% of ICG will be rapidly removed from the blood only 20 min after intravenous injection of ICG [<xref ref-type="bibr" rid="pbio.3003786.ref007">7</xref>]. There is an ongoing effort to develop variants of ICG with longer blood circulation times and tumor accumulation, some of them have proceed into clinical trials [<xref ref-type="bibr" rid="pbio.3003786.ref008">8</xref>–<xref ref-type="bibr" rid="pbio.3003786.ref010">10</xref>]. Moreover, the poor intratumoral delivery of ICG is another issue, making it difficult to achieve satisfactory therapeutic effect in PTT [<xref ref-type="bibr" rid="pbio.3003786.ref011">11</xref>]. Thus, it is very important to develop novel strategy to improve the tumor delivery efficiency of ICG for enhancing the efficacy of PTT.</p>
+<p>Ultrasound-targeted microbubble destruction is a novel technology used for local drug delivery into certain special tissues, such as tumors, heart, brain, etc. Thanks to the advantages of ultrasound in high tissue penetration depth and focusability, the sound wave can be positioned into the tumor, inducing the systemically administrated microbubbles to generate oscillation and to produce a series of acoustic cavitation effects, including strong shear forces, microjets, microstreaming, etc. [<xref ref-type="bibr" rid="pbio.3003786.ref012">12</xref>–<xref ref-type="bibr" rid="pbio.3003786.ref014">14</xref>]. These acoustic cavitation effects would perforate the vascular endothelial cells or enlarge the gap of endothelial cells, resulting in the transvascular delivery of drugs in the cavitation site. Also, drug-loaded microbubbles can be fabricated through coating therapeutic agents on the surface of microbubbles, encapsulating them into the shell or inner cavity of microbubbles, which further improves the drug delivery efficiency. However, traditional microbubles have micro-scale particle size, which confines them within blood vessel. It results in the cavitation effects mainly occur on vascular endothelial cells, limiting the drug delivery since these drugs have to overcome multiply cellular barrier to enter the tumor cells.</p>
+<p>Recently, gas vesicles (GVs), a kind of novel nanobubbles from buoyant microbes are proven to have excellent ultrasound imaging and cavitation performance [<xref ref-type="bibr" rid="pbio.3003786.ref015">15</xref>–<xref ref-type="bibr" rid="pbio.3003786.ref017">17</xref>]. Importantly, they have approximately 200 nm particle size, making them able to easily transport out of tumor blood vessel via EPR effect and contact tumor cells. Upon receiving acoustic irradiation, they would generate the cavitation effects and directly deliver drug into the tumor cells. Taking the great advantages of GVs into account, herein, we developed a novel ICG-coating GVs (ICG-GVs) for enhancing and visualizing the ICG delivery process, and improving its anti-tumor efficacy of PTT.</p>
+</sec>
+<sec id="sec002" sec-type="materials|methods">
+<title>2. Materials and methods</title>
+<sec id="sec003">
+<title>2.1 Preparation of ICG-GVs</title>
+<p>Bacterial culture and GV isolation were carried out in accordance with our previous report and Shapiro and colleagues [<xref ref-type="bibr" rid="pbio.3003786.ref012">12</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref015">15</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref016">16</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref018">18</xref>]. Briefly, <italic>Halobacterium NRC-1</italic> (Halo) was cultured for two weeks in ATCC medium at 37 °C with shaking at 220 rpm. These bacteria were then transferred to a separating funnel and left at room temperature for one week. After floating, the bacterial cells were separated and lysed with TMC buffer, followed by centrifugation at 300<italic>g</italic> for 4 h. The milky GVs were isolated and stored at 4 °C. The ICG solution in PBS (pH = 7.4) was added to 1 mL of GVs (OD500 = 3.0) solution. The mixture was then incubated at 4 °C for 3 h. The mixture was then purified by centrifugation four times. The resulting mixture was added to an ultrafiltration tube (2 mL) and centrifuged at 300<italic>g</italic>.</p>
+</sec>
+<sec id="sec004">
+<title>2.2 Characterization of GVs and ICG-GVs</title>
+<p>The particle size and surface zeta potential were determined by zeta analyzer (Malvern Nano ZS Zetasizer). The UV-absorption spectrum was characterized as follows: 100 μL of ICGs, GVs or ICG-GVs solution were transferred to a 96-well plate and measured by UV spectrophotometer. The concentration of the prepared ICG-GVs solution was quantified using the absorbance at 500 nm wavelength according to the method of Shapiro and colleagues [<xref ref-type="bibr" rid="pbio.3003786.ref012">12</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref018">18</xref>]. The morphologic examination was further performed by transmission electron microscope (TEM). For comparing the photostability between ICG-GVs and free ICG, the samples were irradiated with 808 nm laser for 3 min, followed by cooling to room temperature for 10 min. This on-off cycle was repeated for five times and then the morphologies of irradiated ICG-GVs were examined by TEM.</p>
+</sec>
+<sec id="sec005">
+<title>2.3 <italic>In vitro</italic> multimodal imaging</title>
+<p>The <italic>in vitro</italic> contrast enhancement ultrasound (CEUS) imaging of ICG-GVs was performed on a phantom of agarose (2% w/v). ICG-GVs at different concentrations (OD<sub>500</sub> = 2.2, 2.4, 2.6, 2.8, or 3.0) were added into the phantom holes. Imaging was performed using ultrasound system (Mindray Resona 7, Mindray, China) equipped with the L11-3U line array transducer (3.0–11.0 MHz). The parameters were kept as follows: acoustic power: 5.13%, mechanical index: 0.149, contrast gain: 65 db. The PA imaging was performed by system (VevoLAZR, VisualSonics, USA). ICG-GVs (OD<sub>500</sub> = 3.0) at different ICG linkage concentrations (10, 20, 30, or 40 μg/ml, OD<sub>500</sub> = 3.0) were added into the phantom holes and imaged by VevoLAZR.</p>
+<p>For determining the photothermal effect, ICG-GVs (OD<sub>500</sub> = 3.0) with different ICG linkage concentrations (10, 20, 30, or 40 μg/ml) were added into the well of 96-well plate. NIR laser (808 nm, 0.8 W/cm<sup>2</sup>) was used to irradiate the samples for 5 min. The changes of temperature were obtained by infrared imaging camera (Ti27, Fluke, USA).</p>
+</sec>
+<sec id="sec006">
+<title>2.4 Cell culture and animal model</title>
+<p>MB49 murine bladder cancer cells were cultured in high-glucose DMEM containing 10% fetal bovine serum (FBS), 100 U/ml penicillin, and 100 μg/ml streptomycin at 37 °C. Female C57BL/6 mice (4–6 weeks old, 15–20 g) were maintained under standard environmental conditions, and received care in accordance with the Guidance Suggestions for the Care and Use of Laboratory Animals. The procedures were approved by Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences Animal Care and Use Committee (Ethics No. SIAT-IACUC-20211202-YGS-YXZX-YF-A1693-01). Animal research was performed according to ARRIVE guidelines and the National Institutes of Health guide for the care and use of Laboratory animals (NIH Publications No. 8023, revised 1978). To establish the tumor model, 4 × 10<sup>6</sup> MB49 cells suspended in 100 μL PBS were injected into the right groin area of mice.</p>
+</sec>
+<sec id="sec007">
+<title>2.5 <italic>In vitro</italic> photothermal efficiency</title>
+<p>MB49 cells were seeded in 96-well plates (5 × 10<sup>3</sup> cells/well) for 24 h. They were divided into six groups, including the control group, ICG-GVs group, ICG-GVs + US group, ICG-GVs + Laser group, US+Laser group, ICG-GVs + US + Laser group. In brief, 20 μL ICG-GVs (OD<sub>500</sub> = 3.0; ICG: 40 μg/mL) were added to 100 μL PBS and then pulsed ultrasound power were performed for ICG-GVs + US group, US+Laser group, ICG-GVs + US + Laser group for 1 min. Laser irradiation at 0.75W/cm<sup>2</sup> was treated for these cells of ICG-GVs + Laser group, ICG-GVs + US + Laser group for 5 min. After 4 h incubation, cell viability was determined by the Cell Counting Kit-8 kit (Dojindo, Japan) by measuring the absorbance at 450 nm using a multimode plate reader (Synergy 4, BioTek, VT, USA). To visually observe the photothermal therapeutic efficacy, these treated MB49 cells were seeded onto 96-well plate. After another 24 h incubation, cells were washed with PBS and then stained with Calcein-AM/propidium iodide (PI) double staining Kit, followed by observation under microscope.</p>
+</sec>
+<sec id="sec008">
+<title>2.6 <italic>In vivo</italic> multi-imaging guided PTT assay</title>
+<p>The multimodal imaging-guided PTT were performed when tumor volumes of mice reached to about 120 mm<sup>3</sup>. The tumor-bearing mice were randomly divided into six groups, including the control group, ICG-GVs group, ICG-GVs + US group, ICG-GVs + Laser group, US + Laser group, ICG-GVs + US + Laser group. Eight mice were used in each group. ICG-GVs (100 μL at OD<sub>500</sub> = 3.0) or PBS were injected into mice via the tail vein. The ICG-GVs were prepared with an ICG concentration of 40 μg/mL (OD<sub>500</sub> = 3.0). And ultrasound imaging was performed using a 3.0–11.0 MHz line array transducer equipped by Mindray Resona 7. The acoustic output parameters were set within the safety limits recommended for diagnostic and therapeutic applications [<xref ref-type="bibr" rid="pbio.3003786.ref019">19</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref020">20</xref>]. When CEUS imaging showed that ICG-GVs perfused the whole tumor, acoustic power bursts (−3 dB) was performed every 10s for ICG-GVs + US and ICG-GVs + US + Laser groups until the ICG-GVs disappeared. At 4 h post-injection, the tumors of mice in the ICG-GVs + Laser group and ICG-GVs + US + Laser group were irradiated by a diode laser (<italic>λ</italic> = 808 nm, 0.75 W) for 20 min. The maximum temperature of the tumor surface was determined using an FTIR thermal camera (E4, FLIR Systems). The tumor volume and mouse weight were measured every two days. Tumor volume was calculated as follows: tumor volume = (tumor length × tumor width<sup>2</sup>)/2. The study was continued until the average tumor size reached 2,000 mm<sup>3</sup> or until a mouse died, and then the survival curves were recorded. Tumor apoptosis was also assessed by TUNEL assay according to the product instruction.</p>
+</sec>
+<sec id="sec009">
+<title>2.7 Biocompatibility of ICG-GVs</title>
+<p>The cytotoxicity of ICG-GVs was evaluated by the CCK8 assay. Briefly, MB49 cells at 5,000 cells/well were inoculated in 96-well plates, and the culture medium was replaced with fresh culture medium after 24 h. Twenty microliters of ICG-GVs (with ICG concentrations at 10, 20, 30, or 40 μg/mL) was added to each well. Six sub-wells were set up for each concentration, and the cells which did not receive with ICG-GVs were set up as the control group, and the cell-free group was set up as the blank group. The cells were incubated for 12 h in the CO<sub>2</sub> incubator. After that, the medium was renewed, 10 μL of CCK8 solution was added, and the cells were further incubated in the CO<sub>2</sub> incubator for 1 h. The OD value of each well at 450 nm was measured by multifunctional enzyme marker.</p>
+</sec>
+<sec id="sec010">
+<title>2.8 Histology and immunohistochemistry</title>
+<p>After the tumor treatment experiments, mice (<italic>n</italic> = 3) were randomly executed, and tumors, kidneys, livers, lungs, spleens, and hearts were removed, followed by fixing with 10% formalin. Tissue samples were embedded in paraffin and then were cut (8 μm thick). Paraffin sections were stained with hematoxylin and eosin (H&amp;E) reagent to assess any tissue toxicity.</p>
+</sec>
+<sec id="sec011">
+<title>2.9 Statistical analysis</title>
+<p>Statistical analyses were performed using GraphPad Prism 9.5 (GraphPad Software, USA) and SPSS v22.0 (SPSS, USA). The normality of continuous data was evaluated by the Shapiro-Wilk test or Kolmogorov–Smirnov test. For comparisons between two groups, unpaired two-tailed Student <italic>t</italic> test was used for normally distributed data, while Mann–Whitney <italic>U</italic> test was applied for non-normally distributed data. For comparisons among multiple groups, one-way analysis of variance (ANOVA) followed by Tukey’s post-hoc test was used for normally distributed data, and Kruskal-Wallis test with Dunn’s post-hoc test was used for non-normally distributed data. For tumor growth curves involving repeated measurements over time, two-way repeated measures ANOVA was performed followed by Sidak’s multiple comparisons test at each time point. Survival curves were analyzed using the Kaplan–Meier method with log-rank test. All data are presented as mean ± standard deviation (SD) or mean ± standard error of the mean (SEM) as indicated in the figure legends. A <italic>P</italic> value &lt;0.05 was considered statistically significant.</p>
+</sec>
+</sec>
+<sec id="sec012" sec-type="results">
+<title>3. Results</title>
+<sec id="sec013">
+<title>3.1 Synthesis and characterizations of ICG-GVs</title>
+<p>The GVs were biosynthesized by <italic>Halobacterium NRC-1</italic> and then isolated and purified as shown in <xref ref-type="supplementary-material" rid="pbio.3003786.s003">S1 Fig</xref>. The ICG-GVs were fabricated through conjugating ICG-NHS onto the surface amino group of GVs via amide bond formation and the ICG loading rate was 58% (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1A</xref>). The resulting ICG-GVs appeared green due to the presence of ICG and showed obvious NIRF signal (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1B</xref>). The TEM images revealed that GVs and ICG-GVs have a uniform rugby-shaped morphology (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1C</xref>), showing that the conjugation of ICG did not damage the structure of GVs. Surface binding with ICG did not alter GV morphology but elevated their zeta potential to −22.0 ± 2.0 mV, and slightly increased the particle size of 264.0 ± 2.6 nm (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1D</xref> and <xref ref-type="fig" rid="pbio.3003786.g001">1E</xref>). UV-VIS spectroscopy revealed the characteristic absorption peaks of ICG for ICG-GVs, confirming the successful ICG conjugation onto the GVs (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1F</xref>). The resulting ICG-GVs could be stable in PBS for at least 7 days (<xref ref-type="supplementary-material" rid="pbio.3003786.s004">S2 Fig</xref>). <italic>In vitro</italic> studies indicated that the characteristic absorption peaks of the solution containing ICG-GVs elevated gradually with the increase of ICG concentration (<xref ref-type="fig" rid="pbio.3003786.g001">Fig 1G</xref>).</p>
+<fig id="pbio.3003786.g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g001</object-id><label>Fig 1</label><caption><title>Synthesis and Characterizations of ICG-GVs.</title><p><bold>(A)</bold> GVs isolated from Halobacterium salinarum NRC-1 were coated with ICG through amide linkage. <bold>(B)</bold> ICG-GVs appeared green due to ICG-coated and showed near-infrared fluorescence signal. <bold>(C)</bold> TEM micrographs showing the morphology of GVs and ICG-GVs. Scale bar = 200 nm. <bold>(D)</bold> Size distribution and (E) zeta potential of GVs and ICG-GVs. Data are mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). <bold>(F)</bold> UV-VIS spectrum of ICG-GVs and ICG and GVs. <bold>(G)</bold> UV-VIS spectrum of ICG-GVs coated with different ICG concentration. The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s001">S1 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g001" xlink:type="simple"/></fig>
+</sec>
+<sec id="sec014">
+<title>3.2 <italic>In vitro</italic> and <italic>in vivo</italic> imaging performance of ICG-GVs</title>
+<p>Since GVs can be used as ultrasound contrast agents and ICG has NIRF imaging and PA imaging capabilities, we wonder whether ICG-GVs can be detected by ultrasound imaging system, NIRF imaging system, and PA imaging system. To test it, we added different concentrations of ICG-GVs into the agar phantom holes and used the equivalent GVs or ICG as the controls, followed by ultrasound or optical imaging. To quantitatively evaluate the multimodal imaging performance of ICG-GVs, we analyzed the <italic>in vitro</italic> imaging data. As shown in <xref ref-type="fig" rid="pbio.3003786.g002">Fig 2D</xref>, the CEUS signal intensity increased in a concentration-dependent manner as ICG-GVs concentration increased from OD<sub>500</sub> = 2.2 to 3.0, with no significant difference between ICG-GVs and unmodified GVs, indicating that ICG conjugation did not compromise the ultrasound imaging capability of GVs. <xref ref-type="fig" rid="pbio.3003786.g002">Fig 2E</xref> demonstrates that the PA) signal intensity of ICG-GVs increased linearly with increasing ICG concentration (10–40 μg/mL), confirming its excellent PA imaging performance. Correspondingly, quantitative analysis of NIRF imaging (<xref ref-type="fig" rid="pbio.3003786.g002">Fig 2F</xref>) showed that the fluorescence intensity of ICG-GVs gradually increased with ICG concentration, consistent with the fluorescence characteristics of free ICG. These results demonstrate that ICG-GVs retain both the ultrasound imaging capability of GVs and the optical imaging capability of ICG, achieving integrated multimodal imaging. Next, we further detected the imaging performance of ICG-GVs in tumor-bearing mice (OD<sub>500</sub> = 3.0, ICG = 40 μg/mL). Strong CEUS signals can be observed in the tumors of mice received with ICG-GVs or GVs. There are comparable CEUS signal intensities in the tumors between ICG-GVs and GVs (<xref ref-type="fig" rid="pbio.3003786.g002">Fig 2G</xref>). Interestingly, the infusion process of ICG-GVs can clearly visualized and tracked in the tumors. Notably, the NIRF signals of ICG-GVs in the tumor were stronger than that of ICG group at 30 min post-injection, suggesting that ICG-GVs may extend the halftime in the circulation and improve their tumor accumulation capability due to their nanoparticle size (<xref ref-type="fig" rid="pbio.3003786.g002">Fig 2H</xref>).</p>
+<fig id="pbio.3003786.g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g002</object-id><label>Fig 2</label><caption><title><italic>In vitro</italic> and <italic>in vivo</italic> imaging performance of ICG-GVs.</title><p><bold>(A)</bold> Ultrasound image in nonlinear contrast mode, (B) photoacoustic image, and (C) near-infrared fluorescence image of GVs and ICG-GVs <italic>in vitro</italic>. <bold>(D)</bold> Quantitative analysis of CEUS signal intensity corresponding to <bold>(A)</bold>. Data are mean ± SD (<italic>n</italic> = 3 per concentration). <bold>(E)</bold> Quantitative analysis of PA signal intensity corresponding to <bold>(B)</bold>. Data are mean ± SD (<italic>n</italic> = 3 per concentration). <bold>(F)</bold> Quantitative analysis of NIRF signal intensity corresponding to <bold>(C)</bold>. Data are mean ± SD (<italic>n</italic> = 3 per concentration). <bold>(G)</bold> Ultrasound image in nonlinear contrast mode, <bold>(H)</bold> near-infrared fluorescence image, and <bold>(I)</bold> photoacoustic image of GVs and ICG-GVs in tumor-bearing mice. <bold>(G)</bold> Ultrasound image in nonlinear contrast mode, <bold>(H)</bold> near-infrared fluorescence image, and <bold>(I)</bold> photoacoustic image of GVs and ICG-GVs in tumor-bearing mice. The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s001">S1 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g002" xlink:type="simple"/></fig>
+</sec>
+<sec id="sec015">
+<title>3.3 Ultrasound irradiation enhanced ICG delivery into tumor cells</title>
+<p>In order to examine whether acoustic cavitation enhances the delivery of ICG into the tumor cells, we incubated the ICG-GVs with MB49 tumor cells and followed by acoustic bursts every 10 s intervals for 1 min. Significantly more ICG fluorescence could be observed in the irradiated tumor cells relative to these non-irradiated tumor cells, showing the acoustic cavitation could improve the intracellular delivery of ICG into tumor cells (<xref ref-type="fig" rid="pbio.3003786.g003">Fig 3B</xref>). After washing out the free ICG-GVs, we performed the <italic>in vitro</italic> PTT to these tumor cells by using of laser irradiation. The <italic>in vitro</italic> PTT cytotoxicity were determined by the calcein AM/PI staining assay. <xref ref-type="fig" rid="pbio.3003786.g003">Fig 3C</xref> showed that laser irradiation of tumor cells that did not receive acoustic irradiation did not display evident cytotoxicity, attributing to the absence of ICG in these cells. By contrast, laser irradiation produced apparent cytotoxicity to these tumor cells that received acoustic irradiation. Quantitative analysis revealed that the ICG-GVs + US + Laser group achieved significantly higher tumor cell killing compared to the ICG-GVs + Laser group (<xref ref-type="fig" rid="pbio.3003786.g003">Fig 3D</xref>), indicating acoustic delivery of ICG can significantly improve the PTT efficacy. No significant cytotoxicity was observed for ICG-GVs at the tested concentrations (<xref ref-type="supplementary-material" rid="pbio.3003786.s005">S3 Fig</xref>).</p>
+<fig id="pbio.3003786.g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g003</object-id><label>Fig 3</label><caption><title>Ultrasound irradiation enhanced ICG delivery into tumor cells.</title><p><bold>(A)</bold> Schematic illustration of cavitation enhances the delivery of ICG into the tumor cells <italic>in vitro</italic>. <bold>(B)</bold> The fluorescence images of MB49 cells incubated with ICG-GVs either with acoustic burst or without acoustic burst. Scale bar = 20 μm. <bold>(C)</bold> The fluorescence images and <bold>(D)</bold> quantification of MB49 cells after photothermal treatment. Viable cells were stained green with calcein-AM, and dead/later apoptosis cells were stained red with PI. Scale bar = 200 μm. Data are mean ± SD (<italic>n</italic> = 3 independent experiments). One-way ANOVA. <sup>**</sup><italic>P</italic> &lt; 0.01, <sup>****</sup><italic>P</italic> &lt; 0.001 <italic>vs.</italic> control. <bold>(E)</bold> Nonlinear contrast ultrasound images of GVs and ICG-GVs during tumor perfusion and reperfusion <italic>in vivo</italic>. <bold>(F)</bold> NIRF images of tumor-bearing mice at different time after injuction of ICG, ICG-GVs, or ICG-GVs + US burst, respectively. <bold>(G)</bold> Tissue distribution images of ICG in heart, liver, spleen, lung, kidney, and tumor at 12 h after injection of ICG, ICG-GVs, or ICG-GVs + US burst. Data are presented as mean ± SD (<italic>n</italic> = 3). One-way ANOVA. <sup>**</sup><italic>P</italic> &lt; 0.01. <bold>(H)</bold> Time-course quantitative analysis of ICG fluorescence intensity in tumor tissues. Data are presented as mean ± SD (<italic>n</italic> = 3). One-way ANOVA. <sup>**</sup><italic>P</italic> &lt; 0.01. The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s001">S1 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g003" xlink:type="simple"/></fig>
+<p>We next evaluated the pharmacokinetic profile of ICG-GVs to assess its circulation stability <italic>in vivo</italic>. Healthy mice were intravenously injected with equal doses of free ICG or ICG-GVs (ICG dose: 2 mg/kg), and blood samples were collected at various time points post-injection for plasma ICG concentration measurement. As shown in <xref ref-type="supplementary-material" rid="pbio.3003786.s006">S4 Fig</xref>, free ICG was rapidly cleared from circulation, falling below the detection limit within 4 min, with a half-life of approximately 3.2 ± 0.5 min. In contrast, ICG-GVs exhibited significantly prolonged circulation, reaching half of the initial concentration at 20 min post-injection, with an elimination half-life extended to 22.5 ± 3.1 min and an approximately 9-fold increase in AUC₀ ₋ ₂₄. These results demonstrate that covalent conjugation to GVs substantially improves the <italic>in vivo</italic> delivery stability of ICG.</p>
+<p>To further explore the <italic>in vivo</italic> acoustic delivery effect, we intravenously injected ICG-GVs (OD<sub>500</sub> = 3.0, ICG: 40 μg/mL) or free ICG, followed by acoustic irradiation. <xref ref-type="fig" rid="pbio.3003786.g003">Fig 3E</xref> clearly revealed the tumor perfusion of ICG-GVs. The acoustic irradiation collapsed these GVs and re-perfusion could be observed, enabling repeated ultrasound irradiation of the tumor. <xref ref-type="fig" rid="pbio.3003786.g003">Fig 3F</xref> shows representative NIRF images of tumors at various time points (0.5, 2, 4, 8, and 12 h) post-injection, demonstrating that burst acoustic irradiation significantly improved intratumoral delivery efficiency of ICG. Tissue distribution images at 12 h post-injection (<xref ref-type="fig" rid="pbio.3003786.g003">Fig 3G</xref>) revealed that ICG was mainly accumulated in the liver and lung, but not in the tumor, for mice injected with free ICG or non-irradiated ICG-GVs. In contrast, upon burst acoustic irradiation, substantial ICG fluorescence was observed in the tumor of mice injected with ICG-GVs. The time-course fluorescence intensity curves in tumor tissues (<xref ref-type="fig" rid="pbio.3003786.g003">Fig 3H</xref>) further confirmed that the ICG-GVs + US group exhibited significantly higher tumor accumulation at all time points compared to the non-irradiated ICG-GVs and free ICG groups.</p>
+</sec>
+<sec id="sec016">
+<title>3.4 The photothermal characterization of ICG-GVs</title>
+<p>To explore the mechanisms in the <italic>in vitro</italic> tumor cell killing, we tested the photothermal performance of ICG-GVs. The given amount of ICG-GVs were added into the 96-well plates and were irradiated at 0.5, 0.75, 1.0, or 1.25 W laser power for 3 min. <xref ref-type="fig" rid="pbio.3003786.g004">Fig 4A</xref> clearly showed that the temperature of samples at all of laser power intensities gradually increased with the increase of laser exposure time. The stronger the laser power was used, the higher temperature elevation would be. The 1.25 W laser irradiation had the most significant temperature elevation, achieving near 70 °C (<xref ref-type="fig" rid="pbio.3003786.g004">Fig 4B</xref>). When keeping the laser power intensity at 0.75 W, increasing the concentrations of ICG-GVs would produce stronger temperature elevation (<xref ref-type="fig" rid="pbio.3003786.g004">Fig 4C</xref>). For example, the temperature could achieve about 70 °C when the concentration of ICG in ICG-GVs was 40 μg/mL, while only 32 °C could achieve when the concentration of ICG was 10 μg/mL. In contrast, PBS control only showed hardly temperature elevation (&lt;2 °C) (<xref ref-type="fig" rid="pbio.3003786.g004">Fig 4C</xref>). Also, the photothermal effects of ICG-GVs could be effectively repeated with the switch of the 808 nm laser, showing their good stability (<xref ref-type="fig" rid="pbio.3003786.g004">Fig 4D</xref>). These data indicated the strong tumor cell killing mainly contribute to heat-related mortality.</p>
+<fig id="pbio.3003786.g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g004</object-id><label>Fig 4</label><caption><title>The photothermal characterization of ICG-GVs.</title><p><bold>(A)</bold> The temperature change profiles and (B) quantification of irradiated ICG-GVs. Data are mean ± SD (<italic>n</italic> = 3). <bold>(C)</bold> The temperature change profiles of irradiated ICG-GVs coated with different ICG concentration. Data are mean ± SD (<italic>n</italic> = 3). <bold>(D)</bold> The temperature change profiles of ICG-GVs with the repeated switch of the 808 nm laser. Data are mean ± SD (<italic>n</italic> = 3). <bold>(E)</bold> The temperature change profiles and (F) quantification of laser-irradiated tumor area after ICG-GVs injuction with or without acoustic irradiation. Data are mean ± SD (<italic>n</italic> = 3). Unpaired <italic>t</italic> test. The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s001">S1 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g004" xlink:type="simple"/></fig>
+<p>The enhanced ICG delivery observed upon ultrasound irradiation can be attributed to acoustic cavitation effects of GVs. Specifically, ultrasound-triggered GV cavitation induces transient pore formation in cell membranes (sonoporation) and generates microstreaming/microjets that temporarily disrupt vascular endothelial tight junctions, thereby increasing both cellular and vascular permeability [<xref ref-type="bibr" rid="pbio.3003786.ref021">21</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref022">22</xref>]. Unlike conventional micrometer-sized microbubbles confined to blood vessels, the nanoscale dimensions (~200 nm) of GVs enable them to extravasate via the EPR effect and directly contact tumor cells. Upon ultrasound exposure, GVs release internal gas, coalesce into larger bubbles, and undergo inertial cavitation, producing localized mechanical forces that facilitate intracellular ICG delivery. This mechanistic explanation is consistent with our observations of significantly enhanced ICG fluorescence in ultrasound-irradiated tumor cells and tissues (<xref ref-type="fig" rid="pbio.3003786.g003">Fig 3B</xref> and <xref ref-type="fig" rid="pbio.3003786.g003">3F–H</xref>). To further examine whether the acoustic delivery of ICG-GVs enhances tumor photothermal effects, the tumor-bearing mice were intravenously injected with ICG-GVs and then the tumor were received with or without acoustic irradiation, followed by laser irradiation. <xref ref-type="fig" rid="pbio.3003786.g004">Fig 4E</xref> showed that the tumor temperature rose to 64.2 °C in the ICG-GVs + US+Laser group and kept the relatively stable under laser irradiation, suggesting that the acoustic delivery promoted the ICG delivery into the tumor. By contrast, the tumor temperature of the mice receiving ICG-GVs without acoustic irradiation showed a slight increase with the peak temperature of 48.6 °C due to the relatively few ICG delivery into the tumor. No significant temperature elevation after the same laser irradiation was observed in the US+Laser control group (<xref ref-type="fig" rid="pbio.3003786.g004">Fig 4F</xref>).</p>
+</sec>
+<sec id="sec017">
+<title>3.5 The <italic>in vivo</italic> anti-tumor efficacy</title>
+<p>The <italic>in vivo</italic> acoustic delivery and photothermal effects of ICG-GVs motivate us to further explore the anti-tumor efficacy of ICG-GVs. To test it, we established the subcutaneous xenotransplanted tumor model through injecting the MB49 cells into the left hindlimb tumor model. When the tumor became palpable (about 100 mm<sup>3</sup> in tumor volume), the tumor-bearing mice were randomly divided into six groups, including the control group, US + Laser group, ICG-GVs group, ICG-GVs + US group, ICG-GVs + Laser group and ICG-GVs + US + Laser group. The mice in the control group were intravenously administrated with 100 μL PBS and the mice in the US + Laser group were only received with acoustic irradiation and laser irradiation. The mice in the ICG-GVs group, ICG-GVs + US group, ICG-GVs + Laser group and ICG-GVs + US + Laser group were all intravenously administrated with ICG-GVs (OD<sub>500</sub> = 3.0 in 100 μL PBS), but the ICG-GVs + US group were only received with acoustic irradiation and ICG-GVs + Laser group only with laser irradiation. ICG-GVs + US + Laser group were treated with acoustic irradiation and laser irradiation (<xref ref-type="fig" rid="pbio.3003786.g005">Fig 5A</xref>). From the <xref ref-type="fig" rid="pbio.3003786.g005">Fig 5B</xref>, we can see that the US + Laser group and ICG-GVs + US group did not exhibit any tumor growth inhibition effect when compared with the control group (<italic>P</italic> &gt; 0.05). The ICG-GVs + Laser group and ICG-GVs + US group showed partly tumor growth inhibition during 20 days. By contrast, the tumor growth of mice in the ICG-GVs + US + Laser group was significantly inhibited, achieving almost complete tumor regression (<xref ref-type="fig" rid="pbio.3003786.g005">Fig 5B</xref> and <xref ref-type="fig" rid="pbio.3003786.g005">5C</xref>). A significant longer survival time was also observed for ICG-GVs + US + Laser group than these of the other groups (<xref ref-type="fig" rid="pbio.3003786.g005">Fig 5D</xref>). No significant changes of body weight were found in all animals during the treatment process (<xref ref-type="fig" rid="pbio.3003786.g005">Fig 5E</xref>).</p>
+<fig id="pbio.3003786.g005" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g005</object-id><label>Fig 5</label><caption><title>The <italic>in vivo</italic> anti-tumor efficacy of visible acoustic ICG delivery via ICG-GVs therapy.</title><p><bold>(A)</bold> Schematics of acoustic ICG delivery tumor photothermal therapeutic regimen. <bold>(B)</bold> Representative images of tumors in every group after treatments. <bold>(C)</bold> The tumor growth curves of mice received different treatments. Data are mean ± SD (<italic>n</italic> = 8 per group). Two-way ANOVA. <sup>**</sup><italic>P</italic> &lt; 0.01 <italic>vs.</italic> control. <bold>(D)</bold> Survival curve of the tumor-bearing mice after different treatments. Log-rank test. <bold>(E)</bold>TUNEL staining of tumors after different treatment. Scale bar = 100 μm. <bold>(F)</bold> The body weight changes of mice after different treatments. Data are mean ± SD (<italic>n</italic> = 8 per group). Ultrasound parameters: 3.0–11.0 MHz, −3 dB power, bursts every 10 s until ICG-GVs disappeared. Laser parameters: 808 nm, 0.75 W, 20 min irradiation at 4 h post-injection.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g005" xlink:type="simple"/></fig>
+<fig id="pbio.3003786.g006" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003786.g006</object-id><label>Fig 6</label><caption><title>Illustration of ICG-GVs for visible acoustic delivery of ICG in tumor for PTT.</title><p>GVs isolated from Halobacterium salinarum NRC-1 were modified by ICG to get ICG-GVs. ICG-GVs were locally delivered into the tumor by acoustic irradiation. The multimodality imaging capability of ICG-GVs visualized the whole ICG delivery processes. Acoustic burst of ICG-GVs significantly enhanced ICG delivery into the tumor, which greatly improved the anti-tumor outcome of PTT.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.g006" xlink:type="simple"/></fig>
+<p>To further confirm the anti-tumor effects of PTT, TUNEL, and H&amp;E histological staining analysis for these tumors were performed. No apparent apoptotic cells and tumor necrosis could be seen in the control, US + Laser group, ICG-GVs group, ICG-GVs + US group, some apoptotic cells and part tumor necrosis could be observed in the ICG-GVs + Laser group. By contrast, significantly more apoptotic cells and obvious tumor necrosis could be observed in the tumors of ICG-GVs + US + Laser group (<xref ref-type="fig" rid="pbio.3003786.g005">Figs 5B</xref>, <xref ref-type="fig" rid="pbio.3003786.g005">5E</xref>, and <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S8</xref>). The biosafety of ICG-GVs + US + Laser was also evaluated by H&amp;E staining of the major organs (heart, liver, spleen, kidney, lung, and kidney). No histopathological changes were observed in the heart, liver, spleen, lung, and kidney, similar with the control group (<xref ref-type="supplementary-material" rid="pbio.3003786.s009">S7 Fig</xref>). Furthermore, no significant differences were observed in hematology markers (<xref ref-type="supplementary-material" rid="pbio.3003786.s007">S5 Fig</xref>) or in serum biochemical indicators of liver and kidney function (<xref ref-type="supplementary-material" rid="pbio.3003786.s008">S6 Fig</xref>) between the control and ICG-GVs + US + Laser groups. All of these results indicated that ICG-GVs had good biosafety and could be used as PTT agents which might achieve visibly acoustic delivery of ICG for tumor photothermal treatment.</p>
+</sec>
+</sec>
+<sec id="sec018" sec-type="conclusions">
+<title>4. Discussion</title>
+<p>PTT has emerged as an effective and promising cancer treatment modality due to its unique advantages, including noninvasiveness, ease of administration, and minimal toxicity to normal cells. To date, numerous PTT agents have been developed, yet few are suitable for clinical translation. ICG, the only FDA-approved photothermal agent, possesses inherent drawbacks such as poor water solubility, short blood half-life, and lack of tumor-targeted delivery. In this study, we developed a novel ICG-GVs platform that enables multimodal imaging (ultrasound, NIRF, and PA) and acoustically targeted delivery of ICG to tumors (<xref ref-type="fig" rid="pbio.3003786.g006">Fig 6</xref>). The integrated imaging capability of ICG-GVs allows visualization of the entire delivery process—from tumor perfusion via ultrasound imaging to post-cavitation ICG distribution via NIRF and PA imaging [<xref ref-type="bibr" rid="pbio.3003786.ref017">17</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref023">23</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref024">24</xref>]. More importantly, acoustic burst of ICG-GVs significantly enhances intratumoral ICG delivery, thereby improving the anti-tumor efficacy of PTT [<xref ref-type="bibr" rid="pbio.3003786.ref025">25</xref>].</p>
+<p>Unlike conventional phospholipid microbubbles (e.g., SonoVue) that lack reactive surface groups, biosynthetic GVs possess surface-accessible amino groups that enable stable amide bond formation with ICG, serving as the technical foundation for the “visibly acoustic delivery” achieved in this study. Our platform offers several distinct advantages over traditional microbubbles. First, covalent conjugation of ICG to GVs via amidation ensures stable binding, prolonging the blood half-life of ICG (<xref ref-type="supplementary-material" rid="pbio.3003786.s006">S4 Fig</xref>). Second, the nanoscale size (~200 nm) of GVs provides a larger specific surface area compared to micrometer-sized microbubbles, allowing higher ICG loading per unit mass. Third and most importantly, the nanoscale dimensions of ICG-GVs facilitate extravasation through tumor vasculature via the enhanced permeability and retention effect, enabling direct contact with tumor cells. Upon ultrasound irradiation, these nanoscale GVs undergo cavitation, generating mechanical forces that transiently permeabilize tumor cell membranes and greatly enhance ICG delivery efficiency. In contrast, conventional microbubbles (1–5 μm) are confined within blood vessels, and any cavitation-induced effects occur primarily on vascular endothelial cells, substantially reducing ICG delivery to tumor cells. Indeed, previous studies have demonstrated that GVs interacting with ultrasound can effectively enhance biophysical effects including endocytosis, tight junction disruption, perivascular space expansion, and extracellular matrix penetration through cavitation [<xref ref-type="bibr" rid="pbio.3003786.ref026">26</xref>].</p>
+<p>Previous reports have established that PTT above 50 °C induces irreversible cell injury, membrane collapse, protein denaturation, and enzymatic inactivation, leading to coagulative necrosis, whereas temperatures between 42 and 45 °C result in sublethal and reversible cellular responses [<xref ref-type="bibr" rid="pbio.3003786.ref027">27</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref028">28</xref>]. Higher photothermal temperatures therefore produce stronger anti-tumor efficacy and reduce the risk of tumor recurrence. In our study, ICG-GVs + US + Laser treatment achieved tumor temperatures exceeding 60°C, causing irreversible damage to tumor cells. This pronounced thermal effect is attributed to the efficient acoustic delivery of ICG into the tumor tissue.</p>
+<p>We acknowledge certain limitations of the current study, particularly regarding the tumor model employed. While subcutaneous xenograft models are widely used for initial proof-of-concept evaluation, they do not fully recapitulate the complexity of orthotopic liver tumors, particularly with respect to the tumor microenvironment and anatomical challenges associated with deep-seated organs. An orthotopic liver cancer model would indeed provide a more rigorous assessment of tumor targeting and therapeutic efficacy. However, two major factors currently preclude such experiments within the scope of this work. First, the inherent pharmacokinetic properties of ICG lead to pronounced nonspecific accumulation in normal liver tissue, a well-documented phenomenon that complicates the interpretation of targeted delivery in orthotopic settings [<xref ref-type="bibr" rid="pbio.3003786.ref029">29</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref030">30</xref>]. This hepatic background uptake is an intrinsic characteristic of ICG rather than a limitation of our GVs-based delivery system. Second, the therapeutic efficacy of PTT is fundamentally constrained by the limited tissue penetration depth of light in the near-infrared I (NIR-I) window (700–900 nm) employed in this study [<xref ref-type="bibr" rid="pbio.3003786.ref031">31</xref>,<xref ref-type="bibr" rid="pbio.3003786.ref032">32</xref>]. Although ultrasound can penetrate deeply to trigger cavitation-mediated delivery, the 808 nm laser required for ICG excitation cannot effectively reach tumors located deep within the liver parenchyma without significant attenuation and potential thermal damage to overlying tissues [<xref ref-type="bibr" rid="pbio.3003786.ref033">33</xref>]. Emerging strategies utilizing the second near-infrared (NIR-II) window (1,000–1,700 nm) offer improved tissue penetration and reduced scattering [<xref ref-type="bibr" rid="pbio.3003786.ref034">34</xref>], but their integration with ICG-based platforms would require substantial redesign beyond the current study’s scope.</p>
+<p>Therefore, while acknowledging the value of orthotopic models, we opted for a subcutaneous model to unequivocally validate the core mechanism of acoustically enhanced ICG delivery and its photothermal efficacy under well-controlled conditions. The ultrasound parameters employed (−3 dB power, 10 s interval), validated in our previous work, proved sufficient to demonstrate this core concept; however, systematic optimization of parameters (e.g., mechanical index, pulse length) may further enhance delivery efficiency and represents a key focus of our subsequent investigations. From a translational perspective, GVs can be produced at scale via microbial fermentation, and the ICG conjugation and purification processes are straightforward and controllable. Preliminary stability data support favorable storage stability, and future studies will systematically evaluate critical parameters such as batch-to-batch consistency. Future investigations will also focus on adapting this acoustic delivery strategy to NIR-II photothermal agents and evaluating its performance in orthotopic liver tumor models, aiming to translate the demonstrated benefits into more clinically relevant settings.</p>
+</sec>
+<sec id="sec019" sec-type="conclusions">
+<title>5. Conclusions</title>
+<p>In summary, we developed nanoscale biosynthetic ICG-GVs that enable remotely controlled, visibly acoustic delivery of ICG to tumors. The integrated trimodal imaging capability (ultrasound, NIRF, and PA) allows real-time visualization of the delivery process, while ultrasound-triggered GV cavitation substantially enhances intratumoral ICG accumulation. This platform significantly prolongs ICG circulation, achieves effective photothermal ablation with elevated tumor temperatures, and promotes complete tumor regression with excellent biosafety. Our study presents a clinically translatable strategy for precise and effective ICG-based PTT.</p>
+</sec>
+<sec id="sec020" sec-type="supplementary-material">
+<title>Supporting information</title>
+<supplementary-material id="pbio.3003786.s001" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s001" xlink:type="simple">
+<label>S1 Data</label>
+<caption>
+<title>Excel file containing the underlying numerical data for all figures in the main manuscript and supporting information.</title>
+<p>Each sheet corresponds to a specific figure.</p>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s002" xlink:type="simple">
+<label>S1 Materials and Methods</label>
+<caption>
+<title>Pharmacokinetic analysis.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s003" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s003" xlink:type="simple">
+<label>S1 Fig</label>
+<caption>
+<title>Isolation and purification of GVs.</title>
+<p>Schematic illustration of the procedure for isolation and purification of GVs from Halobacterium NRC-1. <bold>(A)</bold> Initial culture system. <bold>(B)</bold> Mature bacterial liquid system after cultivation. <bold>(C)</bold> Bacterial liquid transferred into a separatory funnel awaiting collection. <bold>(D)</bold> GVs obtained after the first centrifugation. <bold>(E)</bold> GVs obtained after the final centrifugation. <bold>(F)</bold> GVs collected together.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s004" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s004" xlink:type="simple">
+<label>S2 Fig</label>
+<caption>
+<title>Long-term stability of ICG-GVs.</title>
+<p>The stability of ICG-GVs was monitored in PBS over 7 days. Data are presented as mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S1 Data</xref>.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s005" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s005" xlink:type="simple">
+<label>S3 Fig</label>
+<caption>
+<title>Biocompatibility of ICG-GVs.</title>
+<p>Assessment of MB49 cell viability following a 48-hour exposure to ICG-GVs (10–40 μg/mL). Data are presented as mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S1 Data</xref>.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s006" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s006" xlink:type="simple">
+<label>S4 Fig</label>
+<caption>
+<title>Pharmacokinetic analysis of ICG-GVs and free ICG in healthy mice.</title>
+<p>Plasma concentration-time profiles of ICG after intravenous injection of free ICG or ICG-GVs (ICG dose: 2 mg/kg) in healthy C57BL/6 mice. Blood samples were collected at indicated time points and ICG concentration was measured by fluorescence spectrophotometry. Data are presented as mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S1 Data</xref>.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s007" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s007" xlink:type="simple">
+<label>S5 Fig</label>
+<caption>
+<title>ICG-GVs+US+Laser treatment had no hematological toxicity.</title>
+<p>Hematology profiles, <bold>(A)</bold> Hematocrit (HCT), <bold>(B)</bold> white blood cell count (WBC), <bold>(C)</bold> platelet count (PLT), <bold>(D)</bold> hemoglobin (HGB), <bold>(E)</bold> red blood cell count (RBC), <bold>(F)</bold> mean corpuscular hemoglobin (MCH), <bold>(G)</bold> mean corpuscular volume (MCV), and <bold>(H)</bold> mean corpuscular hemoglobin concentration (MCHC), show no significant differences between the control and the ICG-GVs + US + Laser treatment groups. Data are presented as mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S1 Data</xref>.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s008" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s008" xlink:type="simple">
+<label>S6 Fig</label>
+<caption>
+<title>Liver and kidney function parameters in control and treated groups.</title>
+<p><bold>(A)</bold> ALT, <bold>(B)</bold> AST, <bold>(C)</bold> BUN, and <bold>(D)</bold> CREA levels in control and ICG-GVs + US+Laser treated groups. Data are presented as mean ± SD. Each dot represents an individual measurement (<italic>n</italic> = 3 per group). The underlying numerical data for this figure can be found in <xref ref-type="supplementary-material" rid="pbio.3003786.s010">S1 Data</xref>.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s009" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s009" xlink:type="simple">
+<label>S7 Fig</label>
+<caption>
+<title>Absence of organ damage.</title>
+<p>H&amp;E staining of major organs (heart, liver, spleen, lung, kidney) in control and ICG-GVs group. Scale bar = 200 μm.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003786.s010" mimetype="application/pdf" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s010" xlink:type="simple">
+<label>S8 Fig</label>
+<caption>
+<title>Histological staining of seed tumor necrosis.</title>
+<p>H&amp;E staining of tumors after different treatment. Scale bar = 200 μm.</p>
+<p>(PDF)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<glossary>
+<title>Abbreviations</title>
+<def-list><def-item><term>ANOVA</term><def><p>analysis of variance</p></def></def-item><def-item><term>CEUS</term><def><p>contrast enhancement ultrasound</p></def></def-item><def-item><term>FBS</term><def><p>fetal bovine serum</p></def></def-item><def-item><term>FDA</term><def><p>Food and Drug Administration</p></def></def-item><def-item><term>GVs</term><def><p>gas vesicles</p></def></def-item><def-item><term>H&amp;E</term><def><p>hematoxylin and eosin</p></def></def-item><def-item><term>ICG</term><def><p>Indocyanine green</p></def></def-item><def-item><term>ICG-GVs</term><def><p>ICG-coating GVs</p></def></def-item><def-item><term>NIRF</term><def><p>near-infrared fluorescence</p></def></def-item><def-item><term>PA</term><def><p>photoacoustic</p></def></def-item><def-item><term>PI</term><def><p>propidium iodide</p></def></def-item><def-item><term>PTT</term><def><p>photothermal therapy</p></def></def-item><def-item><term>SD</term><def><p>standard deviation</p></def></def-item><def-item><term>SEM</term><def><p>standard error of the mean</p></def></def-item><def-item><term>TEM</term><def><p>transmission electron microscope</p></def></def-item></def-list>
+</glossary>
+<ref-list>
+<title>References</title>
+<ref id="pbio.3003786.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Overchuk</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Weersink</surname> <given-names>RA</given-names></name>, <name name-style="western"><surname>Wilson</surname> <given-names>BC</given-names></name>, <name name-style="western"><surname>Zheng</surname> <given-names>G</given-names></name>. <article-title>Photodynamic and photothermal therapies: synergy opportunities for nanomedicine</article-title>. <source>ACS Nano</source>. <year>2023</year>;<volume>17</volume>(<issue>9</issue>):<fpage>7979</fpage>–<lpage>8003</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acsnano.3c00891" xlink:type="simple">10.1021/acsnano.3c00891</ext-link></comment> <object-id pub-id-type="pmid">37129253</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Lv</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Xie</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Sun</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Guo</surname> <given-names>H</given-names></name>, <etal>et al</etal>. <article-title>Near infrared responsive gold nanorods attenuate osteoarthritis progression by targeting TRPV1</article-title>. <source>Adv Sci (Weinh)</source>. <year>2024</year>;<volume>11</volume>(<issue>16</issue>):e2307683. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/advs.202307683" xlink:type="simple">10.1002/advs.202307683</ext-link></comment> <object-id pub-id-type="pmid">38358041</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lu</surname> <given-names>G-H</given-names></name>, <name name-style="western"><surname>Shang</surname> <given-names>W-T</given-names></name>, <name name-style="western"><surname>Deng</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Han</surname> <given-names>Z-Y</given-names></name>, <name name-style="western"><surname>Hu</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Liang</surname> <given-names>X-Y</given-names></name>, <etal>et al</etal>. <article-title>Targeting carbon nanotubes based on IGF-1R for photothermal therapy of orthotopic pancreatic cancer guided by optical imaging</article-title>. <source>Biomaterials</source>. <year>2019</year>;<volume>195</volume>:<fpage>13</fpage>–<lpage>22</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.biomaterials.2018.12.025" xlink:type="simple">10.1016/j.biomaterials.2018.12.025</ext-link></comment> <object-id pub-id-type="pmid">30599289</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sethulekshmi</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Saritha</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Joseph</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Aprem</surname> <given-names>AS</given-names></name>, <name name-style="western"><surname>Sisupal</surname> <given-names>SB</given-names></name>. <article-title>MoS2 based nanomaterials: advanced antibacterial agents for future</article-title>. <source>J Control Release</source>. <year>2022</year>;<volume>348</volume>:<fpage>158</fpage>–<lpage>85</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jconrel.2022.05.047" xlink:type="simple">10.1016/j.jconrel.2022.05.047</ext-link></comment> <object-id pub-id-type="pmid">35662576</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Xie</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Peng</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Meng</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Liang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>Z</given-names></name>, <etal>et al</etal>. <article-title>Black phosphorus-based photothermal therapy with aCD47-mediated immune checkpoint blockade for enhanced cancer immunotherapy</article-title>. <source>Light Sci Appl</source>. <year>2020</year>;<volume>9</volume>:<fpage>161</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/s41377-020-00388-3" xlink:type="simple">10.1038/s41377-020-00388-3</ext-link></comment> <object-id pub-id-type="pmid">33014356</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Son</surname> <given-names>GM</given-names></name>, <name name-style="western"><surname>Ahn</surname> <given-names>H-M</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>IY</given-names></name>, <name name-style="western"><surname>Ha</surname> <given-names>GW</given-names></name>. <article-title>Multifunctional indocyanine green applications for fluorescence-guided laparoscopic colorectal surgery</article-title>. <source>Ann Coloproctol</source>. <year>2021</year>;<volume>37</volume>(<issue>3</issue>):<fpage>133</fpage>–<lpage>40</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3393/ac.2021.05.07" xlink:type="simple">10.3393/ac.2021.05.07</ext-link></comment> <object-id pub-id-type="pmid">34102813</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yu</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Ji</surname> <given-names>M</given-names></name>. <article-title>Recent advances of organic near-infrared II fluorophores in optical properties and imaging functions</article-title>. <source>Mol Imaging Biol</source>. <year>2021</year>;<volume>23</volume>(<issue>2</issue>):<fpage>160</fpage>–<lpage>72</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s11307-020-01545-1" xlink:type="simple">10.1007/s11307-020-01545-1</ext-link></comment> <object-id pub-id-type="pmid">33030708</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hu</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Zha</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Zheng</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Gao</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Sheng</surname> <given-names>Z</given-names></name>. <article-title>Recent advances in indocyanine green-based probes for second near-infrared fluorescence imaging and therapy</article-title>. <source>Research (Wash D C)</source>. <year>2025</year>;<volume>8</volume>:<fpage>0583</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.34133/research.0583" xlink:type="simple">10.34133/research.0583</ext-link></comment> <object-id pub-id-type="pmid">39830366</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Welsher</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Sherlock</surname> <given-names>SP</given-names></name>, <name name-style="western"><surname>Dai</surname> <given-names>H</given-names></name>. <article-title>Deep-tissue anatomical imaging of mice using carbon nanotube fluorophores in the second near-infrared window</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2011</year>;<volume>108</volume>(<issue>22</issue>):<fpage>8943</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1014501108" xlink:type="simple">10.1073/pnas.1014501108</ext-link></comment> <object-id pub-id-type="pmid">21576494</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smith</surname> <given-names>CAB</given-names></name>, <name name-style="western"><surname>Bar-Zion</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>Q</given-names></name>, <name name-style="western"><surname>Malounda</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Bau</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Stride</surname> <given-names>E</given-names></name>, <etal>et al</etal>. <article-title>Ultrafast optical and passive acoustic mapping characterization of nanoscale cavitation nuclei based on gas vesicle proteins</article-title>. <source>AIP Adv</source>. <year>2025</year>;<volume>15</volume>(<issue>2</issue>):<fpage>025016</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1063/5.0239607" xlink:type="simple">10.1063/5.0239607</ext-link></comment> <object-id pub-id-type="pmid">39944082</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sun</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Chintakunta</surname> <given-names>PK</given-names></name>, <name name-style="western"><surname>Badachhape</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Bhavane</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Lee</surname> <given-names>H-J</given-names></name>, <name name-style="western"><surname>Yang</surname> <given-names>DS</given-names></name>, <etal>et al</etal>. <article-title>Rational design of a self-assembling high performance organic nanofluorophore for intraoperative nir-II image-guided tumor resection of oral cancer</article-title>. <source>Adv Sci (Weinh)</source>. <year>2023</year>;<volume>10</volume>(<issue>10</issue>):e2206435. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/advs.202206435" xlink:type="simple">10.1002/advs.202206435</ext-link></comment> <object-id pub-id-type="pmid">36721029</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hijnen</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Kneepkens</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>de Smet</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Langereis</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Heijman</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Grüll</surname> <given-names>H</given-names></name>. <article-title>Thermal combination therapies for local drug delivery by magnetic resonance-guided high-intensity focused ultrasound</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2017</year>;<volume>114</volume>(<issue>24</issue>):E4802–<lpage>11</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1700790114" xlink:type="simple">10.1073/pnas.1700790114</ext-link></comment> <object-id pub-id-type="pmid">28566498</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Padilla</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Brenner</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Prada</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Klibanov</surname> <given-names>AL</given-names></name>. <article-title>Theranostics in the vasculature: bioeffects of ultrasound and microbubbles to induce vascular shutdown</article-title>. <source>Theranostics</source>. <year>2023</year>;<volume>13</volume>(<issue>12</issue>):<fpage>4079</fpage>–<lpage>101</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.7150/thno.70372" xlink:type="simple">10.7150/thno.70372</ext-link></comment> <object-id pub-id-type="pmid">37554276</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Liao</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Luo</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>Y-L</given-names></name>, <name name-style="western"><surname>Herrmann</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Huo</surname> <given-names>S</given-names></name>. <article-title>Ultrasound-controlled drug release and drug activation for cancer therapy</article-title>. <source>Exploration (Beijing)</source>. <year>2021</year>;<volume>1</volume>(<issue>3</issue>):<fpage>20210023</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/EXP.20210023" xlink:type="simple">10.1002/EXP.20210023</ext-link></comment> <object-id pub-id-type="pmid">37323693</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Shapiro</surname> <given-names>MG</given-names></name>, <name name-style="western"><surname>Goodwill</surname> <given-names>PW</given-names></name>, <name name-style="western"><surname>Neogy</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Yin</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Foster</surname> <given-names>FS</given-names></name>, <name name-style="western"><surname>Schaffer</surname> <given-names>DV</given-names></name>, <etal>et al</etal>. <article-title>Biogenic gas nanostructures as ultrasonic molecular reporters</article-title>. <source>Nat Nanotechnol</source>. <year>2014</year>;<volume>9</volume>(<issue>4</issue>):<fpage>311</fpage>–<lpage>6</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nnano.2014.32" xlink:type="simple">10.1038/nnano.2014.32</ext-link></comment> <object-id pub-id-type="pmid">24633522</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lakshmanan</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Farhadi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Nety</surname> <given-names>SP</given-names></name>, <name name-style="western"><surname>Lee-Gosselin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Bourdeau</surname> <given-names>RW</given-names></name>, <name name-style="western"><surname>Maresca</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Molecular engineering of acoustic protein nanostructures</article-title>. <source>ACS Nano</source>. <year>2016</year>;<volume>10</volume>(<issue>8</issue>):<fpage>7314</fpage>–<lpage>22</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acsnano.6b03364" xlink:type="simple">10.1021/acsnano.6b03364</ext-link></comment> <object-id pub-id-type="pmid">27351374</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bourdeau</surname> <given-names>RW</given-names></name>, <name name-style="western"><surname>Lee-Gosselin</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Lakshmanan</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Farhadi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Kumar</surname> <given-names>SR</given-names></name>, <name name-style="western"><surname>Nety</surname> <given-names>SP</given-names></name>, <etal>et al</etal>. <article-title>Acoustic reporter genes for noninvasive imaging of microorganisms in mammalian hosts</article-title>. <source>Nature</source>. <year>2018</year>;<volume>553</volume>(<issue>7686</issue>):<fpage>86</fpage>–<lpage>90</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature25021" xlink:type="simple">10.1038/nature25021</ext-link></comment> <object-id pub-id-type="pmid">29300010</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tayier</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Deng</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Mu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Yan</surname> <given-names>F</given-names></name>. <article-title>Biosynthetic nanobubbles for targeted gene delivery by focused ultrasound</article-title>. <source>Nanoscale</source>. <year>2019</year>;<volume>11</volume>(<issue>31</issue>):<fpage>14757</fpage>–<lpage>68</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1039/c9nr03402a" xlink:type="simple">10.1039/c9nr03402a</ext-link></comment> <object-id pub-id-type="pmid">31348476</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Nowicki</surname> <given-names>A</given-names></name>. <article-title>Safety of ultrasonic examinations; thermal and mechanical indices</article-title>. <source>Med Ultrason</source>. <year>2020</year>;<volume>22</volume>(<issue>2</issue>):<fpage>203</fpage>–<lpage>10</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.11152/mu-2372" xlink:type="simple">10.11152/mu-2372</ext-link></comment> <object-id pub-id-type="pmid">32399527</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fowlkes</surname> <given-names>JB</given-names></name>, <collab>Bioeffects Committee of the American Institute of Ultrasound in Medicine</collab>. <article-title>American Institute of Ultrasound in Medicine consensus report on potential bioeffects of diagnostic ultrasound: executive summary</article-title>. <source>J Ultrasound Med</source>. <year>2008</year>;<volume>27</volume>(<issue>4</issue>):<fpage>503</fpage>–<lpage>15</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.7863/jum.2008.27.4.503" xlink:type="simple">10.7863/jum.2008.27.4.503</ext-link></comment> <object-id pub-id-type="pmid">18359906</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Ling</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Deng</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Guo</surname> <given-names>Y</given-names></name>. <article-title>Ultrasound-responsive micro/nanobubbles based intelligent theranostic systems for precision tumor therapy</article-title>. <source>J Nanobiotechnology</source>. <year>2025</year>;<volume>24</volume>(<issue>1</issue>):<fpage>83</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/s12951-025-03959-x" xlink:type="simple">10.1186/s12951-025-03959-x</ext-link></comment> <object-id pub-id-type="pmid">41449452</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Hu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Wei</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Shen</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>X</given-names></name>. <article-title>Barrier-breaking effects of ultrasonic cavitation for drug delivery and biomarker release</article-title>. <source>Ultrason Sonochem</source>. <year>2023</year>;<volume>94</volume>:<fpage>106346</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ultsonch.2023.106346" xlink:type="simple">10.1016/j.ultsonch.2023.106346</ext-link></comment> <object-id pub-id-type="pmid">36870921</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kircher</surname> <given-names>MF</given-names></name>, <name name-style="western"><surname>Gambhir</surname> <given-names>SS</given-names></name>, <name name-style="western"><surname>Grimm</surname> <given-names>J</given-names></name>. <article-title>Noninvasive cell-tracking methods</article-title>. <source>Nat Rev Clin Oncol</source>. <year>2011</year>;<volume>8</volume>(<issue>11</issue>):<fpage>677</fpage>–<lpage>88</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nrclinonc.2011.141" xlink:type="simple">10.1038/nrclinonc.2011.141</ext-link></comment> <object-id pub-id-type="pmid">21946842</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>James</surname> <given-names>ML</given-names></name>, <name name-style="western"><surname>Gambhir</surname> <given-names>SS</given-names></name>. <article-title>A molecular imaging primer: modalities, imaging agents, and applications</article-title>. <source>Physiol Rev</source>. <year>2012</year>;<volume>92</volume>(<issue>2</issue>):<fpage>897</fpage>–<lpage>965</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1152/physrev.00049.2010" xlink:type="simple">10.1152/physrev.00049.2010</ext-link></comment> <object-id pub-id-type="pmid">22535898</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Zhao</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Zhou</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Xia</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Ran</surname> <given-names>H</given-names></name>, <etal>et al</etal>. <article-title>Peptide-functionalized phase-transformation nanoparticles for low intensity focused ultrasound-assisted tumor imaging and therapy</article-title>. <source>Nano Lett</source>. <year>2018</year>;<volume>18</volume>(<issue>3</issue>):<fpage>1831</fpage>–<lpage>41</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acs.nanolett.7b05087" xlink:type="simple">10.1021/acs.nanolett.7b05087</ext-link></comment> <object-id pub-id-type="pmid">29419305</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chen</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Kreider</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Brayman</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Bailey</surname> <given-names>MR</given-names></name>, <name name-style="western"><surname>Matula</surname> <given-names>TJ</given-names></name>. <article-title>Blood vessel deformations on microsecond time scales by ultrasonic cavitation</article-title>. <source>Phys Rev Lett</source>. <year>2011</year>;<volume>106</volume>(<issue>3</issue>):<fpage>034301</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1103/PhysRevLett.106.034301" xlink:type="simple">10.1103/PhysRevLett.106.034301</ext-link></comment> <object-id pub-id-type="pmid">21405276</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chu</surname> <given-names>KF</given-names></name>, <name name-style="western"><surname>Dupuy</surname> <given-names>DE</given-names></name>. <article-title>Thermal ablation of tumours: biological mechanisms and advances in therapy</article-title>. <source>Nat Rev Cancer</source>. <year>2014</year>;<volume>14</volume>(<issue>3</issue>):<fpage>199</fpage>–<lpage>208</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nrc3672" xlink:type="simple">10.1038/nrc3672</ext-link></comment> <object-id pub-id-type="pmid">24561446</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yan</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Qiu</surname> <given-names>L</given-names></name>. <article-title>Indocyanine green targeted micelles with improved stability for near-infrared image-guided photothermal tumor therapy</article-title>. <source>Nanomedicine (Lond)</source>. <year>2015</year>;<volume>10</volume>(<issue>3</issue>):<fpage>361</fpage>–<lpage>73</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.2217/nnm.14.118" xlink:type="simple">10.2217/nnm.14.118</ext-link></comment> <object-id pub-id-type="pmid">25707973</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Yu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Peng</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Jiang</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Qiu</surname> <given-names>L</given-names></name>. <article-title>Sequential diagnosis and treatment for colon cancer via derived iridium and indocyanine green hybrid nanomicelles</article-title>. <source>ACS Appl Mater Interfaces</source>. <year>2023</year>;<volume>15</volume>(<issue>29</issue>):<fpage>34617</fpage>–<lpage>30</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acsami.3c07742" xlink:type="simple">10.1021/acsami.3c07742</ext-link></comment> <object-id pub-id-type="pmid">37437265</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhou</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Tan</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Sun</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Leng</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>S</given-names></name>. <article-title>Application of indocyanine green fluorescence imaging in hepatobiliary surgery</article-title>. <source>Int J Surg</source>. <year>2024</year>;<volume>110</volume>(<issue>12</issue>):<fpage>7948</fpage>–<lpage>61</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1097/JS9.0000000000001802" xlink:type="simple">10.1097/JS9.0000000000001802</ext-link></comment> <object-id pub-id-type="pmid">38884267</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cigliano</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Liao</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Deiana</surname> <given-names>GA</given-names></name>, <name name-style="western"><surname>Rizzo</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Calvisi</surname> <given-names>DF</given-names></name>. <article-title>Preclinical models of hepatocellular carcinoma: current utility, limitations, and challenges</article-title>. <source>Biomedicines</source>. <year>2024</year>;<volume>12</volume>(<issue>7</issue>):<fpage>1624</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3390/biomedicines12071624" xlink:type="simple">10.3390/biomedicines12071624</ext-link></comment> <object-id pub-id-type="pmid">39062197</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Zhao</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Luo</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Wang</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Gan</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Di</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Molecular stacking@infinite coordination polymer nanocomposites for tumor continuous high-intensity photothermal-thermodynamic alternate cycle therapy and chemotherapy</article-title>. <source>ACS Nano</source>. <year>2025</year>;<volume>19</volume>(<issue>31</issue>):<fpage>28554</fpage>–<lpage>75</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acsnano.5c07772" xlink:type="simple">10.1021/acsnano.5c07772</ext-link></comment> <object-id pub-id-type="pmid">40719356</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Xu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Hao</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Yan</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Qu</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Yu</surname> <given-names>W</given-names></name>. <article-title>Indocyanine green clearance as a test of reserve function in the septic liver</article-title>. <source>Crit Care</source>. <year>2025</year>;<volume>29</volume>(<issue>1</issue>):<fpage>271</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/s13054-025-05530-4" xlink:type="simple">10.1186/s13054-025-05530-4</ext-link></comment> <object-id pub-id-type="pmid">40611219</object-id></mixed-citation></ref>
+<ref id="pbio.3003786.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Chen</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Cheng</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Mo</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Lu</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Hou</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Recent advances in NIR-II photothermal and photodynamic therapies for drug-resistant wound infections</article-title>. <source>Mater Today Bio</source>. <year>2025</year>;<volume>32</volume>:<fpage>101871</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.mtbio.2025.101871" xlink:type="simple">10.1016/j.mtbio.2025.101871</ext-link></comment> <object-id pub-id-type="pmid">40496729</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+<sub-article article-type="editor-report" id="pbio.3003786.r001" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786.r001</article-id>
+<title-group>
+<article-title>Decision Letter 0</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Hodge</surname>
+<given-names>Richard</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Richard Hodge</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003786" document-id-type="doi" document-type="article" id="rel-obj001" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>0</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">5 Dec 2025</named-content></p>
+<p>Dear Dr Li,</p>
+<p>Thank you for submitting your manuscript entitled "Visibly acoustic delivery of ICG via biosynthetic gas vesicles for tumor photothermal therapy" for consideration as a Research Article by PLOS Biology. Please accept my sincere apologies for the delay in getting back to you with feedback.</p>
+<p>Your manuscript has now been evaluated by the PLOS Biology editorial staff and I am writing to let you know that we would like to send your submission out for external peer review.</p>
+<p>However, before we can send your manuscript to reviewers, we need you to complete your submission by providing the metadata that is required for full assessment. To this end, please login to Editorial Manager where you will find the paper in the 'Submissions Needing Revisions' folder on your homepage. Please click 'Revise Submission' from the Action Links and complete all additional questions in the submission questionnaire.</p>
+<p>Once your full submission is complete, your paper will undergo a series of checks in preparation for peer review. After your manuscript has passed the checks it will be sent out for review. To provide the metadata for your submission, please Login to Editorial Manager (<ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology" xlink:type="simple">https://www.editorialmanager.com/pbiology</ext-link>) within two working days, i.e. by Dec 07 2025 11:59PM.</p>
+<p>If your manuscript has been previously peer-reviewed at another journal, PLOS Biology is willing to work with those reviews in order to avoid re-starting the process. Submission of the previous reviews is entirely optional and our ability to use them effectively will depend on the willingness of the previous journal to confirm the content of the reports and share the reviewer identities. Please note that we reserve the right to invite additional reviewers if we consider that additional/independent reviewers are needed, although we aim to avoid this as far as possible. In our experience, working with previous reviews does save time.</p>
+<p>If you would like us to consider previous reviewer reports, please edit your cover letter to let us know and include the name of the journal where the work was previously considered and the manuscript ID it was given. In addition, please upload a response to the reviews as a 'Prior Peer Review' file type, which should include the reports in full and a point-by-point reply detailing how you have or plan to address the reviewers' concerns.</p>
+<p>During the process of completing your manuscript submission, you will be invited to opt-in to posting your pre-review manuscript as a bioRxiv preprint. Visit <ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosbiology/s/preprints" xlink:type="simple">http://journals.plos.org/plosbiology/s/preprints</ext-link> for full details. If you consent to posting your current manuscript as a preprint, please upload a single Preprint PDF.</p>
+<p>Feel free to email us at plosbiology@plos.org if you have any queries relating to your submission.</p>
+<p>Kind regards,</p>
+<p>Richard</p>
+<p>Richard Hodge, PhD</p>
+<p>Senior Editor, PLOS Biology</p>
+<p>rhodge@plos.org</p>
+<p>PLOS</p>
+<p>Empowering researchers to transform science</p>
+<p>Carlyle House, Carlyle Road, Cambridge, CB4 3DN, United Kingdom</p>
+<p>California (U.S.) corporation #C2354500, based in San Francisco</p>
+</body>
+</sub-article>
+<sub-article article-type="aggregated-review-documents" id="pbio.3003786.r002" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786.r002</article-id>
+<title-group>
+<article-title>Decision Letter 1</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Hodge</surname>
+<given-names>Richard</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Richard Hodge</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003786" document-id-type="doi" document-type="article" id="rel-obj002" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>1</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">28 Jan 2026</named-content></p>
+<p>Dear Dr Li,</p>
+<p>Thank you for your patience while your manuscript "Visibly acoustic delivery of ICG via biosynthetic gas vesicles for tumor photothermal therapy" was peer-reviewed at PLOS Biology as a Research Article. Please accept my sincere apologies for the delays that you have experienced during the peer review process. Your manuscript has been evaluated by the PLOS Biology editors, an Academic Editor with relevant expertise, and by two independent reviewers.</p>
+<p>As you will see in the reviewer reports, which can be found at the end of this email, although the reviewers find the work potentially interesting, they have also raised a substantial number of important concerns. Based on their specific comments and following discussion with the Academic Editor, it is clear that a substantial amount of work would be required to meet the criteria for publication in PLOS Biology. However, given our and the reviewer interest in your study, we would be open to inviting a comprehensive revision of the study that thoroughly addresses all the reviewers' comments. Given the extent of revision that would be needed, we cannot make a decision about publication until we have seen the revised manuscript and your response to the reviewers' comments. Your revised manuscript would need to be seen by the reviewers again, but please note that we would not engage them unless their main concerns have been addressed.</p>
+<p>Specifically, the reviewers agree that the delivery approach is interesting, but they raise some partly overlapping concerns. Both reviewers note that the manuscript lacks direct comparative data to either clinically used ultrasound microbubbles or free ICG to demonstrate a proven advantage in performance. In addition, Reviewer #2 raises concerns that important in vivo safety assessments are missing and that the therapeutic relevance of the study would be elevated by including an orthotopic liver cancer model to demonstrate tumor targeting.</p>
+<p>In addition to these revisions, you will need to complete some formatting changes, which you will receive in a follow up email. A member of our team will be in touch with a set of requests shortly.</p>
+<p>We appreciate that these requests represent a great deal of extra work, and we are willing to relax our standard revision time to allow you 6 months to revise your study. Please email us (plosbiology@plos.org) if you have any questions or concerns, or envision needing a (short) extension.</p>
+<p>At this stage, your manuscript remains formally under active consideration at our journal; please notify us by email if you do not intend to submit a revision so that we may withdraw it.</p>
+<p>**IMPORTANT - SUBMITTING YOUR REVISION**</p>
+<p>Your revisions should address the specific points made by each reviewer. Please submit the following files along with your revised manuscript:</p>
+<p>1. A 'Response to Reviewers' file - this should detail your responses to the editorial requests, present a point-by-point response to all of the reviewers' comments, and indicate the changes made to the manuscript.</p>
+<p>*NOTE: In your point by point response to the reviewers, please provide the full context of each review. Do not selectively quote paragraphs or sentences to reply to. The entire set of reviewer comments should be present in full and each specific point should be responded to individually, point by point.</p>
+<p>You should also cite any additional relevant literature that has been published since the original submission and mention any additional citations in your response.</p>
+<p>2. In addition to a clean copy of the manuscript, please also upload a 'track-changes' version of your manuscript that specifies the edits made. This should be uploaded as a "Revised Article with Changes Highlighted " file type.</p>
+<p>*Resubmission Checklist*</p>
+<p>When you are ready to resubmit your revised manuscript, please refer to this resubmission checklist: <ext-link ext-link-type="uri" xlink:href="https://plos.io/Biology_Checklist" xlink:type="simple">https://plos.io/Biology_Checklist</ext-link></p>
+<p>To submit a revised version of your manuscript, please go to <ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology" xlink:type="simple">https://www.editorialmanager.com/pbiology/</ext-link> and log in as an Author. Click the link labelled 'Submissions Needing Revision' where you will find your submission record.</p>
+<p>Please make sure to read the following important policies and guidelines while preparing your revision:</p>
+<p>*Published Peer Review*</p>
+<p>Please note while forming your response, if your article is accepted, you may have the opportunity to make the peer review history publicly available. The record will include editor decision letters (with reviews) and your responses to reviewer comments. If eligible, we will contact you to opt in or out. Please see here for more details:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://blogs.plos.org/plos/2019/05/plos-journals-now-open-for-published-peer-review" xlink:type="simple">https://blogs.plos.org/plos/2019/05/plos-journals-now-open-for-published-peer-review/</ext-link></p>
+<p>*PLOS Data Policy*</p>
+<p>Please note that as a condition of publication PLOS' data policy (<ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosbiology/s/data-availability" xlink:type="simple">http://journals.plos.org/plosbiology/s/data-availability</ext-link>) requires that you make available all data used to draw the conclusions arrived at in your manuscript. If you have not already done so, you must include any data used in your manuscript either in appropriate repositories, within the body of the manuscript, or as supporting information (N.B. this includes any numerical values that were used to generate graphs, histograms etc.). For an example see here: <ext-link ext-link-type="uri" xlink:href="http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001908#s5" xlink:type="simple">http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001908#s5</ext-link></p>
+<p>*Blot and Gel Data Policy*</p>
+<p>We require the original, uncropped and minimally adjusted images supporting all blot and gel results reported in an article's figures or Supporting Information files. We will require these files before a manuscript can be accepted so please prepare them now, if you have not already uploaded them. Please carefully read our guidelines for how to prepare and upload this data: <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/figures#loc-blot-and-gel-reporting-requirements" xlink:type="simple">https://journals.plos.org/plosbiology/s/figures#loc-blot-and-gel-reporting-requirements</ext-link></p>
+<p>*Protocols deposition*</p>
+<p>To enhance the reproducibility of your results, we recommend that if applicable you deposit your laboratory protocols in protocols.io, where a protocol can be assigned its own identifier (DOI) such that it can be cited independently in the future. Additionally, PLOS ONE offers an option for publishing peer-reviewed Lab Protocol articles, which describe protocols hosted on protocols.io. Read more information on sharing protocols at <ext-link ext-link-type="uri" xlink:href="https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols" xlink:type="simple">https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols</ext-link></p>
+<p>Thank you again for your submission to our journal. We hope that our editorial process has been constructive thus far, and we welcome your feedback at any time. Please don't hesitate to contact us if you have any questions or comments.</p>
+<p>Kind regards,</p>
+<p>Richard</p>
+<p>Richard Hodge, PhD</p>
+<p>Senior Editor, PLOS Biology</p>
+<p>rhodge@plos.org</p>
+<p>-----------------------------------------</p>
+<p>REVIEWS:</p>
+<p>Reviewer #1: The authors present a biosynthetic gas vesicle (GV)-based delivery system for indocyanine green (ICG) that addresses several intrinsic limitations of the only FDA-approved photothermal agent, including poor aqueous stability, a short in vivo half-life, and insufficient tumor-targeted accumulation. In this system, ICG is covalently conjugated to the surface of GVs via amide bonds, yielding a nanoscale probe with an average size of approximately 264 nm. The resulting ICG-GVs enable multimodal imaging, including ultrasound, near-infrared fluorescence, and photoacoustic imaging, allowing real-time visualization of ICG delivery to tumors. Importantly, ultrasound-induced cavitation enhances cellular uptake of ICG, and when combined with 808 nm laser irradiation, the platform achieves an in vitro tumor cell killing rate exceeding 90%. In vivo, tumor temperatures reach up to 64.2 °C, leading to effective tumor regression and prolonged survival in tumor-bearing mice. The system exhibits favorable biosafety, with no significant organ toxicity, highlighting its potential as a controllable, precise, and clinically translatable strategy for ICG-mediated photothermal therapy.</p>
+<p>Despite these promising results, several issues should be addressed to further strengthen the manuscript and enhance its translational value.</p>
+<p>1. The authors do not clearly compare ICG-GVs with clinically used ultrasound microbubbles in terms of ICG loading efficiency, in vivo circulation half-life, and tumor-targeting performance. Such comparisons are essential to demonstrate the unique advantages of GVs.</p>
+<p>2. Key parameters relevant to clinical translation, including large-scale production feasibility, batch-to-batch consistency, and storage stability, are not discussed.</p>
+<p>3. Although ICG is covalently coupled via amide bonds, the manuscript does not report quantitative values for ICG loading capacity or encapsulation efficiency.</p>
+<p>4. Only a single ultrasound condition (−3 dB power, 10 s interval) is used throughout the study, without justification or optimization.</p>
+<p>5. The scale bar in the TEM image (Figure 2C) is listed as 200 nm but is not clearly labeled. In addition, the grouping information in the fluorescence images (Figures 4B and 4C) is ambiguous, particularly regarding the presence or absence of ultrasound irradiation.</p>
+<p>6. The tumor growth curve in Figure 6C displays only mean values without individual data points, obscuring data variability. Overlaying individual measurements would improve transparency.</p>
+<p>7. The "Key Findings" sections in Tables 1 and 2 are overly verbose and partially redundant with the main text.</p>
+<p>8. The treatment scheme in Figure 6A does not specify key ultrasound (power, duration, interval) and laser (wavelength, power density, irradiation time) parameters. Likewise, the quantitative imaging data in Figure 3D-F do not clearly define the measured indicators (for example, fluorescence intensity, signal-to-noise ratio).</p>
+<p>9. Several abbreviations, including CEUS, PA, and PTT, are not defined at their first appearance in the figure captions, which does not conform to standard academic practice.</p>
+<p>10 Most figure captions do not report sample sizes (n values) or statistical analysis methods, relying instead on descriptions in the main text.</p>
+<p>11. The reference format needs to be unified, and some important references are missing, such as "Ultrasound-controlled drug release and drug activation for cancer therapy" and "Recent advances in indocyanine green-based probes for second near-infrared fluorescence imaging and therapy." Ensure that the reference format is consistent and check for any missing important references.</p>
+<p>Reviewer #2: In this manuscript, Zhang et al. developed biosynthetic gas vesicles coated with ICG, which are designed to enhance and visualize the delivery of ICG and improve its anti-tumor efficacy in PTT. While the study presents an interesting approach, several serious concerns must be raised regarding the unclear scientific premise and significant weaknesses in the animal experiments described.</p>
+<p>Major critics:</p>
+<p>1. The manuscript claims that acoustic cavitation enhances ICG delivery into tumor cells, while the discussion of its underlying mechanism is inadequate. Please discuss the potential mechanism.</p>
+<p>2. Regarding the pharmacokinetic evidence, the manuscript claims improved delivery stability for ICG-GVs, but a critical piece of evidence is missing: a direct comparison of the in vivo half-life between ICG-GVs and free ICG.</p>
+<p>3. It is necessary to update both the manuscript and the figures to clearly specify the NIR and ultrasound parameters and the injection regimen of ICG-GVs in vivo anti-tumor therapy.</p>
+<p>4. The clinical relevance of this study hinges on the safety of intravenous ICG administration. It is essential to include in vivo safety assessments, such as serum biochemistry, complete blood counts, and histopathological analysis of major organs, to rule out any adverse toxic effects.\</p>
+<p>5. The biodistribution data shows predominant accumulation of ICG-GVs in the liver following intravenous administration. To more rigorously evaluate the translational potential for treating deep-seated tumors, it is strongly recommended to include an orthotopic liver cancer model in the study.</p>
+<p>Minor issues:</p>
+<p>1. The color scale bars in the figures should be revised. Please replace the non-quantitative labels "High" and "Low" with specific numerical values. Additionally, scale bars are missing in several figures (Fig. 2B, Fig. 3H, Fig. 3I, Fig. 4F, Fig. 4G, Fig. 5A).</p>
+<p>2. Some of the presented data lack appropriate statistical analysis. Please add the necessary statistical analysis and specify the methods used (e.g., unpaired t-test, one-way ANOVA).</p>
+</body>
+</sub-article>
+<sub-article article-type="author-comment" id="pbio.3003786.r003">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786.r003</article-id>
+<title-group>
+<article-title>Author response to Decision Letter 2</article-title>
+</title-group>
+<related-object document-id="10.1371/journal.pbio.3003786" document-id-type="doi" document-type="peer-reviewed-article" id="rel-obj003" link-type="rebutted-decision-letter" object-id="10.1371/journal.pbio.3003786.r002" object-id-type="doi" object-type="decision-letter"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>2</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="author-response-date">2 Mar 2026</named-content></p>
+<supplementary-material id="pbio.3003786.s013" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003786.s013" xlink:type="simple">
+<label>Attachment</label>
+<caption>
+<p>Submitted filename: <named-content content-type="submitted-filename">Response to Reviewers_0226.docx</named-content></p>
+</caption>
+</supplementary-material>
+</body>
+</sub-article>
+<sub-article article-type="aggregated-review-documents" id="pbio.3003786.r004" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786.r004</article-id>
+<title-group>
+<article-title>Decision Letter 2</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Hodge</surname>
+<given-names>Richard</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Richard Hodge</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003786" document-id-type="doi" document-type="article" id="rel-obj004" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>2</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">9 Apr 2026</named-content></p>
+<p>Dear Dr Li,</p>
+<p>Thank you for your patience while we considered your revised manuscript "Visibly acoustic delivery of ICG via biosynthetic gas vesicles for tumor photothermal therapy" for publication as a Research Article at PLOS Biology. Please accept my sincere apologies for the delays that you have experienced during this round of the peer review process. This revised version of your manuscript has been evaluated by the PLOS Biology editors, the Academic Editor and the original reviewers.</p>
+<p>Based on the reviews, I am pleased to say that we are likely to accept this manuscript for publication, provided you satisfactorily address the following data and other policy-related requests that I have provided below (A-H):</p>
+<p>(A) We routinely suggest changes to titles to ensure maximum accessibility for a broad, non-specialist readership. In this case, we would suggest a minor edit to the title, as follows, since the general reader may be unclear about the term 'visibly acoustic'. Please ensure you change both the manuscript file and the online submission system, as they need to match for final acceptance:</p>
+<p>“Acoustic delivery of indocyanine green via biosynthetic gas vesicles for tumor photothermal therapy”</p>
+<p>(B) In the Abstract, please spell out the following abbreviations which are currently undefined - PTT, ICG, FDA. In addition, please specify that the FDA is the American FDA.</p>
+<p>(C) You may be aware of the PLOS Data Policy, which requires that all data be made available without restriction: <ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosbiology/s/data-availability" xlink:type="simple">http://journals.plos.org/plosbiology/s/data-availability</ext-link>. For more information, please also see this editorial: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1371/journal.pbio.1001797" xlink:type="simple">http://dx.doi.org/10.1371/journal.pbio.1001797</ext-link></p>
+<p>Note that we do not require all raw data. Rather, we ask that all individual quantitative observations that underlie the data summarized in the figures and results of your paper be made available in one of the following forms:</p>
+<p>-Supplementary files (e.g., excel). Please ensure that all data files are uploaded as 'Supporting Information' and are invariably referred to (in the manuscript, figure legends, and the Description field when uploading your files) using the following format verbatim: S1 Data, S2 Data, etc. Multiple panels of a single or even several figures can be included as multiple sheets in one excel file that is saved using exactly the following convention: S1_Data.xlsx (using an underscore).</p>
+<p>-Deposition in a publicly available repository. Please also provide the accession code or a reviewer link so that we may view your data before publication.</p>
+<p>Regardless of the method selected, please ensure that you provide the individual numerical values that underlie the summary data displayed in the following figure panels as they are essential for readers to assess your analysis and to reproduce it:</p>
+<p>Figure 2D-G, 3D-F, 4D, 4H, 5B-D, 5F, S2, S3, S4, S5A-H, S6A-D</p>
+<p>NOTE: the numerical data provided should include all replicates AND the way in which the plotted mean and errors were derived (it should not present only the mean/average values)</p>
+<p>(D) Please also ensure that each of the relevant figure legends in your manuscript include information on *WHERE THE UNDERLYING DATA CAN BE FOUND*, and ensure your supplemental data file/s has a legend.</p>
+<p>(E) Per journal policy, if you have generated any custom code during the course of this investigation, please make it available without restrictions. Please ensure that the code is sufficiently well documented and reusable, and that your Data Statement in the Editorial Manager submission system accurately describes where your code can be found. More information on our Code Policy, what and how to share can be found here: <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/code-availability" xlink:type="simple">https://journals.plos.org/plosbiology/s/code-availability</ext-link></p>
+<p>Please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. However, you can archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Accessibility Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: <ext-link ext-link-type="uri" xlink:href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" xlink:type="simple">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</ext-link></p>
+<p>(F) Please ensure that your Data Statement in the submission system accurately describes where your data can be found and is in final format, as it will be published as written there.</p>
+<p>(G) Please ensure that you are using best practice for statistical reporting and data presentation. These are our guidelines <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/best-practices-in-research-reporting#loc-statistical-reporting" xlink:type="simple">https://journals.plos.org/plosbiology/s/best-practices-in-research-reporting#loc-statistical-reporting</ext-link> and a useful resource on data presentation <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128" xlink:type="simple">https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128</ext-link></p>
+<p>- If you are reporting experiments where n ≤ 5, please plot each individual data point.</p>
+<p>(H) Please note that per journal policy, the model system/species studied should be clearly stated in the abstract of your manuscript.</p>
+<p>------------------------------------------------------------------------</p>
+<p>As you address these items, please take this last chance to review your reference list to ensure that it is complete and correct. If you have cited papers that have been retracted, please include the rationale for doing so in the manuscript text, or remove these references and replace them with relevant current references. Any changes to the reference list should be mentioned in the cover letter that accompanies your revised manuscript.</p>
+<p>In addition to these revisions, you may need to complete some formatting changes, which you will receive in a follow up email. A member of our team will be in touch with a set of requests shortly. If you do not receive a separate email within a few days, please assume that checks have been completed, and no additional changes are required.</p>
+<p>We expect to receive your revised manuscript within two weeks.</p>
+<p>To submit your revision, please go to <ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology/" xlink:type="simple">https://www.editorialmanager.com/pbiology/</ext-link> and log in as an Author. Click the link labelled 'Submissions Needing Revision' to find your submission record. Your revised submission must include the following:</p>
+<p>- a cover letter that should detail your responses to any editorial requests, if applicable, and whether changes have been made to the reference list</p>
+<p>- a Response to Reviewers file that provides a detailed response to the reviewers' comments (if applicable, if not applicable please do not delete your existing 'Response to Reviewers' file.)</p>
+<p>- a track-changes file indicating any changes that you have made to the manuscript.</p>
+<p>NOTE: If Supporting Information files are included with your article, note that these are not copyedited and will be published as they are submitted. Please ensure that these files are legible and of high quality (at least 300 dpi) in an easily accessible file format. For this reason, please be aware that any references listed in an SI file will not be indexed. For more information, see our Supporting Information guidelines:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/supporting-information" xlink:type="simple">https://journals.plos.org/plosbiology/s/supporting-information</ext-link></p>
+<p>*Published Peer Review History*</p>
+<p>Please note that you may have the opportunity to make the peer review history publicly available. The record will include editor decision letters (with reviews) and your responses to reviewer comments. If eligible, we will contact you to opt in or out. Please see here for more details:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://plos.org/published-peer-review-history/" xlink:type="simple">https://plos.org/published-peer-review-history/</ext-link></p>
+<p>*Press*</p>
+<p>Should you, your institution's press office or the journal office choose to press release your paper, please ensure you have opted out of Early Article Posting on the submission form. We ask that you notify us as soon as possible if you or your institution is planning to press release the article.</p>
+<p>*Protocols deposition*</p>
+<p>To enhance the reproducibility of your results, we recommend that if applicable you deposit your laboratory protocols in protocols.io, where a protocol can be assigned its own identifier (DOI) such that it can be cited independently in the future. Additionally, PLOS ONE offers an option for publishing peer-reviewed Lab Protocol articles, which describe protocols hosted on protocols.io. Read more information on sharing protocols at <ext-link ext-link-type="uri" xlink:href="https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols" xlink:type="simple">https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols</ext-link></p>
+<p>Please do not hesitate to contact me should you have any questions.</p>
+<p>Best regards,</p>
+<p>Richard</p>
+<p>Richard Hodge, PhD</p>
+<p>Senior Editor, PLOS Biology</p>
+<p>rhodge@plos.org</p>
+<p>------------------------------------------------------------------------</p>
+<p>Reviewer remarks:</p>
+<p>Reviewer #1: The revised manuscript has satisfactorily addressed all of my comments and concerns. I therefore recommend that the manuscript be accepted for publication in PLOS Biology without further revision.</p>
+<p>Reviewer #2: They have addressed most of my concerns. I have no more questions.</p>
+</body>
+</sub-article>
+<sub-article article-type="editor-report" id="pbio.3003786.r005" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003786.r005</article-id>
+<title-group>
+<article-title>Decision Letter 3</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Hodge</surname>
+<given-names>Richard</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Richard Hodge</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003786" document-id-type="doi" document-type="article" id="rel-obj005" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>3</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">20 Apr 2026</named-content></p>
+<p>Dear Dr Li,</p>
+<p>On behalf of my colleagues and the Academic Editor, Baojun Wang, I am pleased to say that we can accept your manuscript for publication, provided you address any remaining formatting and reporting issues. These will be detailed in an email you should receive within 2-3 business days from our colleagues in the journal operations team; no action is required from you until then. Please note that we will not be able to formally accept your manuscript and schedule it for publication until you have completed any requested changes.</p>
+<p>Please take a minute to log into Editorial Manager at <ext-link ext-link-type="uri" xlink:href="http://www.editorialmanager.com/pbiology/" xlink:type="simple">http://www.editorialmanager.com/pbiology/,</ext-link> click the "Update My Information" link at the top of the page, and update your user information to ensure an efficient production process.</p>
+<p>PRESS</p>
+<p>We frequently collaborate with press offices. If your institution or institutions have a press office, please notify them about your upcoming paper at this point, to enable them to help maximise its impact. If the press office is planning to promote your findings, we would be grateful if they could coordinate with biologypress@plos.org. If you have previously opted in to the early version process, we ask that you notify us immediately of any press plans so that we may opt out on your behalf.</p>
+<p>We also ask that you take this opportunity to read our Embargo Policy regarding the discussion, promotion and media coverage of work that is yet to be published by PLOS. As your manuscript is not yet published, it is bound by the conditions of our Embargo Policy. Please be aware that this policy is in place both to ensure that any press coverage of your article is fully substantiated and to provide a direct link between such coverage and the published work. For full details of our Embargo Policy, please visit <ext-link ext-link-type="uri" xlink:href="http://www.plos.org/about/media-inquiries/embargo-policy/" xlink:type="simple">http://www.plos.org/about/media-inquiries/embargo-policy/</ext-link>.</p>
+<p>Thank you again for choosing PLOS Biology for publication and supporting Open Access publishing. We look forward to publishing your study.</p>
+<p>Best wishes,</p>
+<p>Richard</p>
+<p>Richard Hodge, PhD</p>
+<p>Senior Editor, PLOS Biology</p>
+<p>rhodge@plos.org</p>
+<p>PLOS</p>
+<p>Empowering researchers to transform science</p>
+<p>Carlyle House, Carlyle Road, Cambridge, CB4 3DN, United Kingdom</p>
+<p>California (U.S.) corporation #C2354500, based in San Francisco</p>
+</body>
+</sub-article>
+</article>

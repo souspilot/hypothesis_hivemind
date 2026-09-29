@@ -15,21 +15,31 @@ those differences. Fixing a bug here (as happened separately, several times,
 in each script's own copy of this logic) now only needs doing once.
 """
 
+from __future__ import annotations
+
 import json
 import logging
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Callable, Optional
+from typing import TYPE_CHECKING, Callable, Optional
 
-from model_utils import BaseModel
+from config import stored_key
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s %(levelname)s %(message)s",
-    datefmt="%H:%M:%S",
-)
+if TYPE_CHECKING:  # analysis code imports is_valid without the API SDKs installed
+    from model_utils import BaseModel
+
 log = logging.getLogger(__name__)
+
+
+def setup_logging() -> None:
+    """Called from each script's main(), not at import, so that importing
+    is_valid (e.g. from analysis.py) doesn't turn on INFO logging globally."""
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+        datefmt="%H:%M:%S",
+    )
 
 
 def is_valid(sample) -> bool:
@@ -134,7 +144,10 @@ def process_file(
     # gets silently retried on the next run without needing an external
     # cleanup pass first.
     tasks: list[tuple[str, BaseModel, int]] = []
-    for model_id, model in models.items():
+    for slug, model in models.items():
+        # Samples may already exist under a legacy key (e.g. the original
+        # direct-API AI4Mat runs); top those up rather than starting over.
+        model_id = stored_key(result, slug)
         existing = result.get(model_id, [])
         valid = [s for s in existing if is_valid(s)]
         n_needed = n_samples - len(valid)

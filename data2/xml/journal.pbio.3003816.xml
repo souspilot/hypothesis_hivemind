@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.3 20210610//EN" "http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3.dtd">
+<article article-type="research-article" dtd-version="1.3" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<processing-meta>
+<custom-meta-group content-type="composition">
+<custom-meta specific-use="newgen" xlink:href="https://www.newgen.co/">
+<meta-name>Composition Vendor</meta-name>
+<meta-value>Newgen KnowledgeWorks (P) Ltd.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</processing-meta>
+<front>
+<journal-meta>
+<journal-id journal-id-type="nlm-ta">PLoS Biol</journal-id>
+<journal-id journal-id-type="publisher-id">plos</journal-id>
+<journal-id journal-id-type="pmc">plosbiol</journal-id>
+<journal-title-group>
+<journal-title>PLOS Biology</journal-title>
+</journal-title-group>
+<issn pub-type="ppub">1544-9173</issn>
+<issn pub-type="epub">1545-7885</issn>
+<publisher>
+<publisher-name>Public Library of Science</publisher-name>
+<publisher-loc>San Francisco, CA USA</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816</article-id>
+<article-id pub-id-type="publisher-id">PBIOLOGY-D-26-00213</article-id>
+<article-categories>
+<subj-group subj-group-type="heading">
+<subject>Short Reports</subject>
+</subj-group>
+<subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Physiological processes</subject><subj-group><subject>Sleep</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Neurology</subject><subj-group><subject>Sleep deprivation</subject></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>Neuroimaging</subject><subj-group><subject>Positron emission tomography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Neuroimaging</subject><subj-group><subject>Positron emission tomography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Diagnostic medicine</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Tomography</subject><subj-group><subject>Positron emission tomography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Tomography</subject><subj-group><subject>Positron emission tomography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Radiology and imaging</subject><subj-group><subject>Diagnostic radiology</subject><subj-group><subject>Tomography</subject><subj-group><subject>Positron emission tomography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Cellular neuroscience</subject><subj-group><subject>Synaptic plasticity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Developmental neuroscience</subject><subj-group><subject>Synaptic plasticity</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Physiological processes</subject><subj-group><subject>Homeostasis</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Bioassays and physiological analysis</subject><subj-group><subject>Electrophysiological techniques</subject><subj-group><subject>Brain electrophysiology</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Electrophysiology</subject><subj-group><subject>Neurophysiology</subject><subj-group><subject>Brain electrophysiology</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Neurophysiology</subject><subj-group><subject>Brain electrophysiology</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Brain mapping</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Clinical medicine</subject><subj-group><subject>Clinical neurophysiology</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Research and analysis methods</subject><subj-group><subject>Imaging techniques</subject><subj-group><subject>Neuroimaging</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Neuroimaging</subject><subj-group><subject>Electroencephalography</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Cellular structures and organelles</subject><subj-group><subject>Vesicles</subject></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Anatomy</subject><subj-group><subject>Nervous system</subject><subj-group><subject>Synapses</subject><subj-group><subject>Synaptic vesicles</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Medicine and health sciences</subject><subj-group><subject>Anatomy</subject><subj-group><subject>Nervous system</subject><subj-group><subject>Synapses</subject><subj-group><subject>Synaptic vesicles</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Physiology</subject><subj-group><subject>Electrophysiology</subject><subj-group><subject>Neurophysiology</subject><subj-group><subject>Synapses</subject><subj-group><subject>Synaptic vesicles</subject></subj-group></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Neuroscience</subject><subj-group><subject>Neurophysiology</subject><subj-group><subject>Synapses</subject><subj-group><subject>Synaptic vesicles</subject></subj-group></subj-group></subj-group></subj-group></subj-group><subj-group subj-group-type="Discipline-v3">
+<subject>Biology and life sciences</subject><subj-group><subject>Cell biology</subject><subj-group><subject>Cellular structures and organelles</subject><subj-group><subject>Vesicles</subject><subj-group><subject>Synaptic vesicles</subject></subj-group></subj-group></subj-group></subj-group></subj-group></article-categories>
+<title-group>
+<article-title>Sleep deprivation increases levels of the synaptic density marker SV2A in the human brain</article-title>
+<alt-title alt-title-type="running-head">Sleep deprivation and synaptic vesicle glycoprotein 2A</alt-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author" corresp="yes" xlink:type="simple">
+<contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0001-6137-416X</contrib-id>
+<name name-style="western">
+<surname>Elmenhorst</surname>
+<given-names>David</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/conceptualization/">Conceptualization</role>
+<role content-type="http://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+<role content-type="http://credit.niso.org/contributor-roles/formal-analysis/">Formal analysis</role>
+<role content-type="http://credit.niso.org/contributor-roles/funding-acquisition/">Funding acquisition</role>
+<role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/project-administration/">Project administration</role>
+<role content-type="http://credit.niso.org/contributor-roles/resources/">Resources</role>
+<role content-type="http://credit.niso.org/contributor-roles/software/">Software</role>
+<role content-type="http://credit.niso.org/contributor-roles/supervision/">Supervision</role>
+<role content-type="http://credit.niso.org/contributor-roles/validation/">Validation</role>
+<role content-type="http://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-original-draft/">Writing – original draft</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="corresp" rid="cor001">*</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Foerges</surname>
+<given-names>Anna L.</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+<role content-type="http://credit.niso.org/contributor-roles/project-administration/">Project administration</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Gordji-Nejad</surname>
+<given-names>Ali</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Elmenhorst</surname>
+<given-names>Eva-Maria</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-original-draft/">Writing – original draft</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff003"><sup>3</sup></xref>
+<xref ref-type="aff" rid="aff004"><sup>4</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Kroll</surname>
+<given-names>Tina</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Matusch</surname>
+<given-names>Andreas</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Beer</surname>
+<given-names>Simone</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Neumaier</surname>
+<given-names>Bernd</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+<xref ref-type="aff" rid="aff006"><sup>6</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Krapf</surname>
+<given-names>Philipp</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff005"><sup>5</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Lerche</surname>
+<given-names>Christoph</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff007"><sup>7</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Drzezga</surname>
+<given-names>Alexander</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff002"><sup>2</sup></xref>
+<xref ref-type="aff" rid="aff008"><sup>8</sup></xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple">
+<name name-style="western">
+<surname>Bauer</surname>
+<given-names>Andreas</given-names>
+</name>
+<role content-type="http://credit.niso.org/contributor-roles/writing-review-editing/">Writing – review &amp; editing</role>
+<xref ref-type="aff" rid="aff001"><sup>1</sup></xref>
+<xref ref-type="aff" rid="aff009"><sup>9</sup></xref>
+</contrib>
+</contrib-group>
+<aff id="aff001"><label>1</label> <addr-line>Institute of Neuroscience and Medicine (INM-2), Forschungszentrum Jülich, Jülich, Germany</addr-line></aff>
+<aff id="aff002"><label>2</label> <addr-line>Department of Nuclear Medicine, University of Cologne, University Hospital Cologne, Cologne, Germany</addr-line></aff>
+<aff id="aff003"><label>3</label> <addr-line>Institute of Aerospace Medicine, German Aerospace Center (DLR), Cologne, Germany</addr-line></aff>
+<aff id="aff004"><label>4</label> <addr-line>Medical Faculty, Institute of Occupational, Social, and Environmental Medicine, RWTH Aachen University, Aachen, Germany</addr-line></aff>
+<aff id="aff005"><label>5</label> <addr-line>Institute of Neuroscience and Medicine (INM-5), Forschungszentrum Jülich, Jülich, Germany</addr-line></aff>
+<aff id="aff006"><label>6</label> <addr-line>Institute of Radiochemistry and Experimental Molecular Imaging (IREMB), University Hospital Cologne, Germany</addr-line></aff>
+<aff id="aff007"><label>7</label> <addr-line>Institute of Neuroscience and Medicine (INM-4), Forschungszentrum Jülich, Jülich, Germany</addr-line></aff>
+<aff id="aff008"><label>8</label> <addr-line>Clinical Research, German Center for Neurodegenerative Diseases (DZNE), Bonn-Cologne, Germany‌‌</addr-line></aff>
+<aff id="aff009"><label>9</label> <addr-line>Medical Faculty, Department of Neurology, Heinrich-Heine-University Düsseldorf, Düsseldorf, Germany</addr-line></aff>
+<contrib-group>
+<contrib contrib-type="editor" xlink:type="simple">
+<name name-style="western">
+<surname>Yang</surname>
+<given-names>Guang</given-names>
+</name>
+<role>Academic Editor</role>
+<xref ref-type="aff" rid="edit1"/></contrib>
+</contrib-group>
+<aff id="edit1"><addr-line>Columbia University Irving Medical Center, UNITED STATES OF AMERICA</addr-line></aff>
+<author-notes>
+<corresp id="cor001">* E-mail: <email xlink:type="simple">d.elmenhorst@fz-juelich.de</email></corresp>
+<fn fn-type="conflict" id="coi001">
+<p>I have read the journal’s policy and the authors of this manuscript have the following competing interests: The authors declare that they have no competing interests except from AD who received material research support from Siemens Healthineers, Life Molecular Imaging, GE Healthcare, AVID Radiopharmaceuticals, Sofie, Eisai, Novartis/AAA, Ariceum Therapeutics. AD received speaker honorary from and/or served in Advisory Boards of Siemens Healthineers, Sanofi, GE Healthcare, Biogen, Novo Nordisk, Invicro, Novartis/AAA, Bayer Vital, Lilly, Peer View Institute for Medical Education, International Atomic Energy Agency and Swiss Rockets. AD holds/held stock from Siemens Healthineers, Lantheus Holding, Lilly and Bayer. The clinical center headed by AD is participating in clinical trials funded by pharmaceutical companies however not involving any salary, a role as employee or as a consultant of AD.</p>
+</fn>
+</author-notes>
+<pub-date pub-type="epub"><day>23</day><month>6</month><year>2026</year></pub-date>
+<pub-date pub-type="collection"><month>6</month><year>2026</year></pub-date>
+<volume>24</volume>
+<issue>6</issue>
+<elocation-id>e3003816</elocation-id>
+<history>
+<date date-type="received"><day>21</day><month>1</month><year>2026</year></date>
+<date date-type="accepted"><day>8</day><month>5</month><year>2026</year></date>
+</history>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Elmenhorst et al</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<self-uri content-type="pdf" xlink:href="info:doi/10.1371/journal.pbio.3003816"/>
+<abstract>
+<sec id="sec120">
+<title/>
+<p>Sleep is essential for synaptic homeostasis, a proposed mechanism whereby wakefulness leads to synaptic potentiation and sleep facilitates synaptic down-selection. Synaptic vesicle glycoprotein 2A (SV2A), whose availability is quantifiable by [¹⁸F]SynVesT-1 positron emission tomography (PET), is commonly interpreted as a proxy for synaptic density. In this randomized study, we examined 40 healthy adults (mean age 27.5 ± 6.5 years) who underwent two [¹⁸F]SynVesT-1 PET scans on consecutive days. Half of the participants were assigned to the normal sleep (i.e., control) condition and half to the sleep deprivation condition. Scans were performed at the same circadian time point, approximately 4 h after awakening in the control group and during baseline in the sleep deprivation group or after ~28 h of continuous wakefulness in the sleep deprivation group after sleep deprivation. Sleep deprivation led to significant increases in synaptic vesicle glycoprotein 2A binding in multiple brain regions, including the thalamus (+4.6%), hippocampus (+5.6%), and parietal cortex (+3.2%), whereas no changes were observed in controls. The degree of increase in synaptic vesicle glycoprotein 2A positively correlated with elevated slow wave activity during recovery sleep, a physiological marker of sleep pressure. These findings provide in vivo support for the synaptic homeostasis hypothesis in humans and suggest that synaptic vesicle glycoprotein 2A PET imaging is sensitive to sleep-wake dependent synaptic plasticity.</p>
+</sec>
+<sec id="sec001">
+<title>Trial Registration</title>
+<p>The study was prospectively registered on 19.01.2022 here: German Clinical Trials Registry: DRKS # DRKS00027867, <ext-link ext-link-type="uri" xlink:href="https://drks.de/search/en/trial/DRKS00027867" xlink:type="simple">https://drks.de/search/en/trial/DRKS00027867</ext-link>.</p>
+</sec>
+</abstract>
+<abstract abstract-type="toc">
+<p>The synaptic homeostasis hypothesis proposes that wakefulness increases synaptic strength, while sleep facilitates synaptic down-selection, but direct evidence for this phenomenon in the human brain remains scarce. This PET imaging study provides new evidence that sleep deprivation increases synaptic density across the human brain.</p>
+</abstract>
+<funding-group>
+<award-group id="award001">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/501100002347</institution-id>
+<institution>Bundesministerium für Bildung und Forschung</institution>
+</institution-wrap>
+</funding-source><award-id>01EW1808</award-id>
+<principal-award-recipient><contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0001-6137-416X</contrib-id><name name-style="western">
+<surname>Elmenhorst</surname><given-names>David</given-names></name></principal-award-recipient></award-group>
+<award-group id="award002">
+<funding-source><institution>German Research Foundation</institution>
+</funding-source><award-id>Grants for Collaborative Research Centre 1451 C04 and DR 445/9-1</award-id>
+<principal-award-recipient><name name-style="western">
+<surname>Drzezga</surname><given-names>Alexander</given-names></name></principal-award-recipient></award-group>
+<award-group id="award003">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="funder-id">http://dx.doi.org/10.13039/100028897</institution-id>
+<institution>Wellcome Leap</institution>
+</institution-wrap>
+</funding-source><principal-award-recipient><name name-style="western">
+<surname>Drzezga</surname><given-names>Alexander</given-names></name></principal-award-recipient></award-group>
+<funding-statement>This research was supported by internal institutional funds and the project SleepLess, which received funding from the Bundesministerium für Bildung und Forschung (Federal Ministry of Education and Research, BMBF), the Fonds voor Wetenschappelijk Onderzoek - Research Foundation Flanders (FWO), and the Fonds de recherche du Québec - Santé (Quebec Health Research Fund, FRQS) under the frame of ERA-NET Neuron Cofund (grant # 01EW1808). AD received funding from public funding authorities: German Research Foundation (Grants for Collaborative Research Centre 1451 C04 and DR 445/9-1) and Wellcome Leap. The funders did not play any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript.</funding-statement>
+</funding-group>
+<counts>
+<fig-count count="4"/>
+<table-count count="1"/>
+<page-count count="16"/>
+</counts>
+<custom-meta-group>
+<custom-meta id="data-availability">
+<meta-name>Data Availability</meta-name>
+<meta-value>All relevant data are available within the manuscript and <xref ref-type="sec" rid="sec018">Supporting information</xref> files. The codes of the main statistical data analysis are available on Zenodo (<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5281/zenodo.20033920" xlink:type="simple">https://doi.org/10.5281/zenodo.20033920</ext-link>). The raw data could be identified and linked to a single subject and represent a large amount of data. Researchers willing to access to the raw data should send a request at <ext-link ext-link-type="uri" xlink:href="https://data.fz-juelich.de/" xlink:type="simple">https://data.fz-juelich.de/</ext-link> via <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.26165/JUELICH-DATA/GOTGS5" xlink:type="simple">https://doi.org/10.26165/JUELICH-DATA/GOTGS5</ext-link>. Data sharing will require evaluation of the request by the local Research Ethics Board and the signature of a data transfer agreement.</meta-value>
+</custom-meta>
+</custom-meta-group>
+</article-meta>
+</front>
+<body>
+<sec id="sec002" sec-type="intro">
+<title>Introduction</title>
+<p>The synaptic homeostasis hypothesis (SHY) [<xref ref-type="bibr" rid="pbio.3003816.ref001">1</xref>–<xref ref-type="bibr" rid="pbio.3003816.ref004">4</xref>] posits that wakefulness promotes synaptic potentiation due to environmental interactions and learning [<xref ref-type="bibr" rid="pbio.3003816.ref005">5</xref>]. The strengthening of connections during waking elevates energy consumption, results in the accumulation of proteins and receptors that compete for the limited anatomical space in the skull and diminishes the signal-to-noise ratios in the neuronal network, ultimately saturating the capacity for learning. Sleep allows for synaptic down-selection, preserving energy and network efficiency. While the SHY has been supported by anatomical and molecular studies in animals, human evidence has remained limited due to the invasive nature of most techniques for quantifying synaptic strength.</p>
+<p>Studies in animals indicate that anatomical or molecular markers of synaptic strength increase during wake and decline during sleep [<xref ref-type="bibr" rid="pbio.3003816.ref006">6</xref>]. Firing rates in rodents indicate increased cortical excitability during wakefulness and decreased cortical excitability during sleep. In humans, cortical excitability is an indirect measure of plasticity. Findings from studies using transcranial magnetic stimulation (TMS) translated the findings from the above-mentioned rodent studies (reviewed in [<xref ref-type="bibr" rid="pbio.3003816.ref007">7</xref>]). However, some in-vitro and in-vivo studies of synaptic strength in animals reveal opposite results, which may be due to differences in the type of marker, examined brain regions, cortical layers, or housing of animals (reviewed in [<xref ref-type="bibr" rid="pbio.3003816.ref008">8</xref>]).</p>
+<p>Synaptic vesicle glycoprotein 2A (SV2A) [<xref ref-type="bibr" rid="pbio.3003816.ref009">9</xref>] is an integral membrane protein located on synaptic vesicles. Recent advances in PET imaging with tracers such as [¹⁸F]SynVesT-1 enable the noninvasive measurement of SV2A binding in the living human brain [<xref ref-type="bibr" rid="pbio.3003816.ref010">10</xref>,<xref ref-type="bibr" rid="pbio.3003816.ref011">11</xref>], allowing new opportunities to examine state-dependent synaptic changes. However, whether this reflects presynaptic terminal number, vesicle complement, SV2A expression per vesicle, or excitatory/inhibitory-synapse composition cannot be resolved with in vivo imaging. While SV2A availability is commonly interpreted as a proxy measure of synaptic density, we refer to it here as ‘SV2A-indexed synaptic density’ to reflect this interpretation while acknowledging its underlying biological ambiguity.</p>
+<p>Homeostatic sleep pressure, quantified as slow wave activity (SWA), a physiological indicator of sleep need, likewise increases with time awake and declines during sleep (two-process model of sleep-wake regulation [<xref ref-type="bibr" rid="pbio.3003816.ref012">12</xref>]).</p>
+<p>The aims of this study were to evaluate in healthy volunteers with two consecutive SV2A PET scans: (<italic>i</italic>) to what extent SV2A-indexed synaptic density is increased after 28 h of sleep deprivation compared to a baseline condition and to data from a rested test-retest control group (primary outcome); and (<italic>ii</italic>) whether the buildup of sleep pressure after sleep deprivation compared, with preceding baseline sleep, is correlated with a higher SV2A-indexed synaptic density (exploratory analysis). Here we report results from a cohort (<italic>n</italic> = 40, f/m 14/26) which was randomized prior to inclusion to either normal sleep (control group, <italic>n</italic> = 20) or acute total sleep deprivation (sleep deprivation group, <italic>n</italic> = 20) -between scans (<xref ref-type="fig" rid="pbio.3003816.g001">Fig 1</xref>).</p>
+<fig id="pbio.3003816.g001" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003816.g001</object-id><label>Fig 1</label><caption><title>Study design (TIB time in bed).</title></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.g001" xlink:type="simple"/></fig>
+</sec>
+<sec id="sec003" sec-type="results">
+<title>Results</title>
+<sec id="sec004">
+<title>Demographic and scanning characteristics</title>
+<p>The control and the sleep deprivation groups did not differ in demographic and scanning characteristics (<xref ref-type="supplementary-material" rid="pbio.3003816.s001">S1 Table</xref>), but, as intended, differed in the amount of time spent awake before the start of the second scan.</p>
+</sec>
+<sec id="sec005">
+<title>SV2A-indexed synaptic density increases after sleep deprivation</title>
+<p>We calculated random-subject mixed ANOVAs on the difference between both scans with group (control and sleep deprivation), brain region (<italic>n</italic> = 8) and the interaction between group and brain region as fixed factors. False discovery rate adjusted post-hoc comparisons revealed that SV2A-indexed synaptic density was increased after sleep deprivation (<xref ref-type="fig" rid="pbio.3003816.g002">Figs 2</xref> and <xref ref-type="fig" rid="pbio.3003816.g003">3</xref>).</p>
+<fig id="pbio.3003816.g002" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003816.g002</object-id><label>Fig 2</label><caption><title>Inflated volume-mapped parametric images of cortical SV2A-indexed synaptic density (SV2A binding potential BP<sub>ND</sub>, sleep deprivation group, <italic>n</italic> = 20) overlayed on the FsAveragesurface as implemented in the CAT12 toolbox.</title></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.g002" xlink:type="simple"/></fig>
+<fig id="pbio.3003816.g003" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003816.g003</object-id><label>Fig 3</label><caption><title>Upper panel: Average absolute values (upper right) and individual relative differences [(scan2 – scan1)/scan1] of SV2A-indexed synaptic density (SV2A binding potential BP<sub>ND</sub>) in hippocampus.</title><p>Lower panel: Regional average relative differences. Error bars indicate SEMs. The asterisks represent significant differences between groups in the mixed model (group: <italic>p</italic> = 0.0103, region: <italic>p</italic> = 0.34, interaction <italic>p</italic> = 0.43, two groups <italic>n</italic> = 20, eight regions, post-hoc mult. comp. correction: false discovery rate). The data underlying this Figure are available here: <xref ref-type="supplementary-material" rid="pbio.3003816.s004">S1 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.g003" xlink:type="simple"/></fig>
+<p>The sleep deprivation group exhibited significant increases in SV2A binding potential in six of eight brain regions analyzed. For example, relative increases were observed in the thalamus (+4.6 ± 7.3%, <italic>p</italic> = 0.039), hippocampus (+5.6 ± 8.2%, <italic>p</italic> = 0.0195), and parietal cortex (+3.2 ± 5.1%, <italic>p</italic> = 0.022). In contrast, no significant differences were observed in the control group (Δ range: −0.3% to −1.4%, all p &gt; 0.2), confirming the test-retest stability of SV2A PET measurements. Intraclass correlation coefficients (ICCs) ranged from 0.87 to 0.93 across regions in the control group.</p>
+<p>Regional SV2A-indexed synaptic density values and statistics are presented in <xref ref-type="table" rid="pbio.3003816.t001">Table 1</xref>.</p>
+<table-wrap id="pbio.3003816.t001" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003816.t001</object-id><label>Table 1</label><caption><title>Regional SV2A-indexed synaptic density values (binding potential BP<sub>ND</sub>).</title></caption>
+<alternatives><graphic id="pbio.3003816.t001g" mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.t001" xlink:type="simple"/><table><colgroup>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+<col align="left" valign="middle"/>
+</colgroup>
+<thead>
+<tr>
+<th align="left">BP<sub>ND</sub></th>
+<th align="left">Scan</th>
+<th align="left" colspan="2">Group</th>
+<th align="left">Mixed model</th>
+</tr>
+<tr>
+<td align="left">Region</td>
+<td align="left"/>
+<td align="left">Control</td>
+<td align="left">Sleep Deprivation</td>
+<td align="left">p-value post-hoc mult. comp. correction: false discovery rate</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Cingulate ctx</td>
+<td align="left">1</td>
+<td align="left">4.63 ± 0.4</td>
+<td align="left">4.59 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">4.61 ± 0.3</td>
+<td align="left">4.7 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−0.27%</td>
+<td align="left">2.32%</td>
+<td align="left">0.081</td>
+</tr>
+<tr>
+<td align="left">Frontal ctx</td>
+<td align="left">1</td>
+<td align="left">3.98 ± 0.3</td>
+<td align="left">4.02 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">3.95 ± 0.3</td>
+<td align="left">4.13 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−0.54%</td>
+<td align="left">2.85%</td>
+<td align="left">0.063</td>
+</tr>
+<tr>
+<td align="left">Hippocampus</td>
+<td align="left">1</td>
+<td align="left">3.13 ± 0.4</td>
+<td align="left">3.08 ± 0.3</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">3.08 ± 0.4</td>
+<td align="left">3.25 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−1.10%</td>
+<td align="left">5.60%</td>
+<td align="left"><bold>0.0195</bold></td>
+</tr>
+<tr>
+<td align="left">Occipital ctx</td>
+<td align="left">1</td>
+<td align="left">4.35 ± 0.4</td>
+<td align="left">4.34 ± 0.5</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">4.28 ± 0.4</td>
+<td align="left">4.47 ± 0.5</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−1.40%</td>
+<td align="left">3.02%</td>
+<td align="left"><bold>0.0195</bold></td>
+</tr>
+<tr>
+<td align="left">Parietal ctx</td>
+<td align="left">1</td>
+<td align="left">4.17 ± 0.4</td>
+<td align="left">4.16 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">4.11 ± 0.3</td>
+<td align="left">4.29 ± 0.5</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−1.21%</td>
+<td align="left">3.15%</td>
+<td align="left"><bold>0.022</bold></td>
+</tr>
+<tr>
+<td align="left">Striatum</td>
+<td align="left">1</td>
+<td align="left">3.76 ± 0.3</td>
+<td align="left">3.71 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">3.74 ± 0.4</td>
+<td align="left">3.86 ± 0.5</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−0.52%</td>
+<td align="left">4.33%</td>
+<td align="left"><bold>0.024</bold></td>
+</tr>
+<tr>
+<td align="left">Temporal ctx</td>
+<td align="left">1</td>
+<td align="left">4.18 ± 0.4</td>
+<td align="left">4.13 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">4.15 ± 0.4</td>
+<td align="left">4.3 ± 0.4</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−0.43%</td>
+<td align="left">4.33%</td>
+<td align="left"><bold>0.0195</bold></td>
+</tr>
+<tr>
+<td align="left">Thalamus</td>
+<td align="left">1</td>
+<td align="left">2.72 ± 0.3</td>
+<td align="left">2.61 ± 0.3</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">2</td>
+<td align="left">2.68 ± 0.3</td>
+<td align="left">2.73 ± 0.3</td>
+<td align="left"/>
+</tr>
+<tr>
+<td align="left"/>
+<td align="left">Δ</td>
+<td align="left">−1.31%</td>
+<td align="left">4.59%</td>
+<td align="left"><bold>0.039</bold></td>
+</tr>
+</tbody>
+</table>
+</alternatives><table-wrap-foot>
+<fn id="t001fn001"><p>Mean ± SD, significant differences between groups are marked in bold. The data underlying this Table are available here: <xref ref-type="supplementary-material" rid="pbio.3003816.s004">S1 Data</xref>.</p></fn>
+</table-wrap-foot>
+</table-wrap>
+</sec>
+<sec id="sec006">
+<title>The increases in SV2A-indexed synaptic density and SWA after sleep deprivation are correlated</title>
+<p>Sleep-deprived participants had a 2-h recovery sleep opportunity after the second PET scan. SWA from sleep-EEG was calculated for a duration of 1.5 h after sleep onset during baseline and recovery sleep. Cognitive performance was measured with a psychomotor vigilance task (PVT) and sleepiness was assessed with the Karolinska Sleepiness Scale (KSS) right before the PET scans. The increase in SV2A-indexed synaptic density after sleep deprivation correlated with the increase in SWA during recovery sleep, both compared to baseline (<xref ref-type="supplementary-material" rid="pbio.3003816.s002">S2 Table</xref>). <xref ref-type="fig" rid="pbio.3003816.g004">Fig 4</xref> shows scatter plots of the main generator regions of SWA (cingulate and insula according to Murphy and colleagues 2009 [<xref ref-type="bibr" rid="pbio.3003816.ref013">13</xref>]).</p>
+<fig id="pbio.3003816.g004" position="float"><object-id pub-id-type="doi">10.1371/journal.pbio.3003816.g004</object-id><label>Fig 4</label><caption><title>Sleep hypnogram staging and single channel multitaper spectrograms of a representative subject.</title><p>The upper panel shows baseline sleep and the middle panel the recovery nap after sleep deprivation. A small insert in the middle panel depicts the electrode positions. The relative difference of slow wave activity (SWA) during the first 1.5 h of both recordings was used to explore the relationship between the buildup of sleep propensity and the increase of SV2A-indexed synaptic density in the lower panel (relative differences of sleep EEG SWA vs. relative change in SV2A-indexed synaptic density (scan2-scan1)/scan1). The data underlying this Figure are available here: <xref ref-type="supplementary-material" rid="pbio.3003816.s006">S3 Data</xref>.</p></caption>
+<graphic mimetype="image" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.g004" xlink:type="simple"/></fig>
+<p>Such correlations were not significant for cognitive performance and sleepiness. Nevertheless, sleep deprivation led to significantly increased sleepiness and impaired cognitive performance (<xref ref-type="supplementary-material" rid="pbio.3003816.s003">S3 Table</xref>).</p>
+</sec>
+</sec>
+<sec id="sec007" sec-type="conclusions">
+<title>Discussion</title>
+<p>Our findings provide in vivo evidence that extended wakefulness increases SV2A binding in the human brain, consistent with a synaptic potentiation during wake. These changes were regionally widespread and correlated with increased SWA during recovery sleep, supporting the synaptic homeostasis hypothesis.</p>
+<p>Interestingly, the observed increases in SV2A were modest (~2%–6%), yet comparable to structural changes reported in animal studies after sleep deprivation. These relatively small but reliable effects are notable given the temporal offset (~4.2 h post-wake) before baseline PET scanning, which may have allowed partial early wake‑dependent changes of synaptic components to develop, diminishing the magnitude of the difference compared with the sleep‑deprived condition.</p>
+<p>The magnitude of increase that we observed lies between findings from animal experiments that used in vivo methods of spine counting by microscopy or that collected brain tissue samples immediately before lights off/on or after extended wake periods. Using longitudinal two-photon imaging of yellow fluorescent protein expressing apical dendrites of layer V pyramidal neurons in mice, the dynamics of spine turnover revealed a net increase of about 3% after 6h of extended wakefulness [<xref ref-type="bibr" rid="pbio.3003816.ref014">14</xref>]. Block-face scanning electron microscopy on mouse brain primary somatosensory and motor cortices indicated that the dendritic axon spine interface decreases by about 18% during sleep compared to spontaneous wake and enforced wakefulness [<xref ref-type="bibr" rid="pbio.3003816.ref015">15</xref>]. Using homogenates of cortex preparations in mice and Western Blot for the AMPA receptor subunit GluA1 showed about a 40% higher amount after wakefulness compared to sleep [<xref ref-type="bibr" rid="pbio.3003816.ref016">16</xref>]. Our subjects were scanned a few hours after awakening, which might have attenuated the observed difference to the sleep deprivation effect. However, direct comparison of effect magnitudes across species should be interpreted with caution. Differences in brain architecture, sleep-wake patterns, tracer biology, and the spatial scales captured by PET versus microscopy or biochemical assays limit the extent to which quantitative values can be directly equated. Thus, our comparison is intended to provide qualitative context rather than imply strict numerical equivalence.</p>
+<p>SV2A binding has been shown to correlate with synaptophysin in postmortem tissue [<xref ref-type="bibr" rid="pbio.3003816.ref017">17</xref>–<xref ref-type="bibr" rid="pbio.3003816.ref019">19</xref>], an integral synaptic vesicle membrane protein that interacts with the SNARE complex and regulates vesicle formation and neurotransmitter release. Studies in male rodents have shown no change or more often decreases in synaptophysin after 24–96 h of sleep deprivation using cage shaking or mainly the multiple platform over water method, where animals will fall into the water during REM sleep associated muscle atonia [<xref ref-type="bibr" rid="pbio.3003816.ref020">20</xref>–<xref ref-type="bibr" rid="pbio.3003816.ref023">23</xref>] (reviewed in [<xref ref-type="bibr" rid="pbio.3003816.ref024">24</xref>]). However, the translation of results from rodents to humans is limited due to the methodological differences used to enforce wakefulness. Most rodent experiments rely on long and often stressful (life-threatening) deprivation protocols, which induce physiological stress responses that are difficult to separate from sleep loss effects.</p>
+<p>The observed association between SWA and SV2A-indexed synaptic density is in line with previous findings: Chemogenetically, it has been shown that local dendritic spine enlargement and synaptic potentiation in the prefrontal cortex of mice induces longer and deeper sleep (increasing local SWA) [<xref ref-type="bibr" rid="pbio.3003816.ref025">25</xref>]. Slow wave sleep drives reduction of synaptic AMPA receptor levels in rat neocortex and hypothalamus [<xref ref-type="bibr" rid="pbio.3003816.ref026">26</xref>]. The glutamatergic synapse is the most abundant type, but to date there is no data available that quantified the impact of sleep or sleep deprivation on AMPA receptors in humans yet. Using PET in humans, increased metabotropic glutamate receptor (mGluR5) densities after sleep deprivation were shown to be positively correlated with the rebound in SWA in NREM sleep after prolonged wakefulness [<xref ref-type="bibr" rid="pbio.3003816.ref027">27</xref>]. Similarly, recovery sleep after sleep deprivation decreased the elevated [<xref ref-type="bibr" rid="pbio.3003816.ref028">28</xref>] adenosine A<sub>1</sub> receptor availability and correlated negatively with the homeostatic sleep pressure measured as amount of deep sleep (N3) in the first sleep cycle [<xref ref-type="bibr" rid="pbio.3003816.ref029">29</xref>]. Other neuroreceptors which showed an increase after sleep deprivation were serotonin 2a receptors in which, however, an association with the buildup of sleep pressure during recovery sleep was not investigated [<xref ref-type="bibr" rid="pbio.3003816.ref030">30</xref>].</p>
+<p>Our findings align with multimodal evidence from magnetic resonance spectroscopy (MRS) studies showing that sleep deprivation increases neurochemical markers associated with synaptic activity. Converging proton MRS evidence demonstrates that prolonged wakefulness elevates glutamatergic tone—reflected in increased glutamate or GLX levels, higher Glu/GABA ratios, and corresponding increases in mGluR5 availability—and complementary MRS findings from multimodal PET/MRS work further show sleep-loss–related changes in metabolites such as myo-inositol and glycine, which are linked to astroglial regulation of glutamatergic signaling and sleep pressure [<xref ref-type="bibr" rid="pbio.3003816.ref027">27</xref>,<xref ref-type="bibr" rid="pbio.3003816.ref031">31</xref>,<xref ref-type="bibr" rid="pbio.3003816.ref032">32</xref>].</p>
+<p>SV2A binding did not correlate with behavioral changes in psychomotor vigilance or subjective sleepiness. This dissociation suggests that molecular indices of synaptic plasticity may operate independently from overt behavioral impairments.</p>
+<p>The interpretation of an increased SV2A PET signal after sleep deprivation must be approached with appropriate caution. SV2A is a vesicular glycoprotein found on synaptic terminals and is commonly used as a proxy for synaptic density. However, it is important to note that this marker reflects synaptic vesicle glycoprotein abundance and does not directly measure synaptic efficacy, functional plasticity, or postsynaptic changes. It is estimated that each vesicle contains roughly five SV2 molecules [<xref ref-type="bibr" rid="pbio.3003816.ref033">33</xref>], and whether this number is fixed or variable under different physiological conditions such as sleep deprivation is currently unknown. Given that SV2A is present in both excitatory and inhibitory synapses, the observed fluctuations in tracer binding may reflect a net change in the brain’s excitatory/inhibitory (E/I) tone following sleep loss. The inherent lack of specificity for a particular neurotransmitter system remains a limitation in interpreting whether these results represent a targeted or global synaptic response.</p>
+<p>Comparisons can be made to in-vitro techniques that determine synaptic density, such as spine counting. Potentiation or depotentiation at a synapse leads to linked changes in anatomical/molecular proxies of synaptic strength (reviewed in [<xref ref-type="bibr" rid="pbio.3003816.ref034">34</xref>]): spine head or bouton volume correlates with the area of the post synaptic density and the number of presynaptic vesicles in rats [<xref ref-type="bibr" rid="pbio.3003816.ref035">35</xref>,<xref ref-type="bibr" rid="pbio.3003816.ref036">36</xref>] and humans [<xref ref-type="bibr" rid="pbio.3003816.ref037">37</xref>]. The advantage of our approach is a whole-brain assessment of SV2A-indexed synaptic density applied longitudinally in humans.</p>
+<p>Moreover, the study employed a modest sample size (<italic>n</italic> = 20 per group), consistent with the logistical and financial constraints of PET imaging but still limited in its ability to detect smaller effect sizes or subgroup effects, such as potential sex-based differences in synaptic plasticity. Exploratory analyses did not reveal statistically significant sex effects, though females showed numerically greater SV2A increases in several regions, warranting follow-up in larger cohorts. The sample size is though larger than what has been published from microscopic counting of synapses at dendrites of usual very few animals.</p>
+<p>Changes in synaptic density may be inferred from SV2A binding only under the assumption that the number of vesicles per terminal or the number of active synapses has increased. It remains unclear whether such changes reflect new synapse formation, vesicle accumulation, or increased vesicle turnover. Nevertheless, prior studies have demonstrated that SV2A binding is stable over short timescales and is not acutely modulated by neural activity, as shown by PET-fMRI experiments where robust BOLD activations failed to influence SV2A binding in humans during visual stimulation [<xref ref-type="bibr" rid="pbio.3003816.ref038">38</xref>].</p>
+<p>Another critical consideration concerns PET quantification. The simplified reference tissue model 2 (SRTM2) was used with a population-based fixed k2’ value and an eroded centrum semiovale as the reference region. Although the centrum semiovale is commonly used in both [¹⁸F]SynVesT-1 and [¹¹C]UCB-J studies and shows high test-retest reproducibility [<xref ref-type="bibr" rid="pbio.3003816.ref039">39</xref>,<xref ref-type="bibr" rid="pbio.3003816.ref040">40</xref>], there is some evidence of low-level displaceable binding in this region, which could introduce systematic underestimation of the binding potential (BP<sub>ND</sub>). Despite this, our control group showed excellent test-retest reliability, with ICCs ranging from 0.87 to 0.93 and minimal relative differences (−0.3% to −1.4%), supporting the robustness of our approach.</p>
+<p>Finally, although we observed no significant correlations between SV2A increases and behavioral measures such as psychomotor vigilance or subjective sleepiness, it is possible that molecular indicators of synaptic change are more sensitive or precede behavioral manifestations. Alternatively, behavioral measures may plateau or vary inter-individually, limiting their sensitivity to state-dependent synaptic dynamics.</p>
+<p>It has been proposed that the short-lasting therapeutic success of sleep deprivation in some patients with depressive disorder can be explained by the increase in this homeostatic sleep drive [<xref ref-type="bibr" rid="pbio.3003816.ref041">41</xref>]. The synaptic plasticity model of therapeutic sleep deprivation in major depression [<xref ref-type="bibr" rid="pbio.3003816.ref042">42</xref>] combines the synaptic homeostasis hypothesis and the synaptic plasticity hypothesis of depression [<xref ref-type="bibr" rid="pbio.3003816.ref043">43</xref>], suggesting that the strengthening of synapses by therapeutic sleep deprivation pushes the flawed long-term potentiation in these patients into a more advantageous range of associative plasticity. Since sleep deprivation as well as ketamine and electroconvulsive therapy are fast-acting strategies in the therapy of depression it can be hypothesized that these treatments may share a common pathophysiological mechanism. It has been shown that SV2A measured with PET is reduced in depressed patients with moderate-to-severe symptoms [<xref ref-type="bibr" rid="pbio.3003816.ref044">44</xref>]. Electroconvulsive therapy increased SV2A-indexed synaptic density in a subgroup of patients who achieved remission [<xref ref-type="bibr" rid="pbio.3003816.ref045">45</xref>] and likewise ketamine increased SV2A-indexed synaptic density in patients with a prior synaptic deficit [<xref ref-type="bibr" rid="pbio.3003816.ref046">46</xref>].</p>
+<p>While acute sleep deprivation may transiently up-regulate SV2A-indexed synaptic density, future work should examine the synaptic consequences of repeated or chronic sleep loss. Chronic sleep restriction has been shown to have different adenosinergic dynamics compared with acute sleep deprivation [<xref ref-type="bibr" rid="pbio.3003816.ref047">47</xref>] and which is associated with cognitive impairment [<xref ref-type="bibr" rid="pbio.3003816.ref048">48</xref>], neuroinflammation, and accelerated neurodegeneration in both healthy and clinical populations. Longitudinal SV2A PET studies spanning recovery sleep and chronic sleep restriction protocols will be essential to determine whether these synaptic changes are fully reversible or carry cumulative neural costs.</p>
+</sec>
+<sec id="sec008" sec-type="conclusions">
+<title>Conclusions</title>
+<p>This study provides direct molecular evidence that acute sleep deprivation increases SV2A binding in the human brain and that these changes are associated with elevated sleep pressure, as indexed by SWA. These findings support the synaptic homeostasis model in humans and highlight the utility of SV2A PET as a noninvasive tool for probing dynamic synaptic changes related to sleep-wake states. Given that synaptic deficits have been observed in major depression, and that both sleep deprivation and other fast-acting antidepressants (e.g., ketamine, ECT) increase SV2A binding, our findings suggest a potential shared neurobiological mechanism linking synaptic plasticity, sleep, and mood regulation.</p>
+</sec>
+<sec id="sec009" sec-type="materials|methods">
+<title>Materials and methods</title>
+<p>All procedures were approved by the Ethics Committee of the regional Medical Board (Ärztekammer Nordrhein, Ethics committee number: 2019275) and the German Federal Office for Radiation Protection and carried out in accordance with the Declaration of Helsinki. Before participating in this study, participants gave written informed consent. The study was prospectively registered on 19.01.2022 with the German Clinical Trials Registry to provide transparency regarding objectives and methodology (DRKS # DRKS00027867, <ext-link ext-link-type="uri" xlink:href="https://drks.de/search/en/trial/DRKS00027867" xlink:type="simple">https://drks.de/search/en/trial/DRKS00027867</ext-link>), although it was not a clinical trial.</p>
+<sec id="sec010">
+<title>Participants</title>
+<p>Forty healthy human volunteers (14f; mean age 27.5 ± 6.5 (SD) years, range 20–45 years) participated in this study. Exclusion criteria were chronic neurological or psychiatric disorders, head trauma, sleep disorder, alcohol and illicit drug use, smoking, pregnant or breast-feeding females, current medication (except contraceptives) and an estimated habitual caffeine consumption above 500 mg/day. We checked for Zolpidem, Propoxyphene, Cotinine, Amphetamine, Methamphetamine, Morphine, Methadone, Phencyclidine, Nortriptyline, Tetrahydrocannabinol, Secobarbital, Oxazepam, Benzoylecgonine (Cocaine), and human chorionic gonadotropin with urinary tests.</p>
+</sec>
+<sec id="sec011">
+<title>Protocol</title>
+<p>The study consisted of a one-week ambulatory sleep satiation protocol (9 h time-in-bed (TIB) confirmed by actigraphy) with caffeine abstinence at home followed by an adaptation and baseline night in which sleep EEG was recorded. Sleep times were chosen to approximate individual habitual sleep times, i.e., either from 22:00 h to 07:00 h or from 23:00 h to 08:00 h. Following this ambulatory week, participants arrived in the laboratory in the morning for a set of measurements: a baseline psychomotor and sleepiness testing, and PET measurement. Two participants were studied at a time, with the second participant undergoing all procedures about 1 h after the first one. For better readability, the times for the first participant are given below.</p>
+<p>Control participants were permitted to leave the laboratory after the first set of measurements while wearing an actigraph on their nondominant wrist. Upon their return the next day, actigraphy data were reviewed to rule out any daytime napping and a second set of the above-mentioned measurements followed. Sleep-deprived participants remained awake in the laboratory between these two sets of measurements. During this period, they were allowed to engage in nonstrenuous activities, such as conversing, watching videos, playing calm games, reading, or browsing the internet. Constant supervision by at least one study staff member ensured compliance. To maintain wakefulness, participants were not allowed to close their eyes longer than a blink; if they did so, the experimenter promptly intervened and encouraged them to stay awake.</p>
+<p>Sleep-deprived participants had a 2-h recovery sleep opportunity (RS; 2 h TIB) in the sleep laboratory during which EEG was recorded in the afternoon after the second PET scan. Due to early awakenings or difficulties in falling asleep in some subjects, 1.5 h was the maximum sleep duration that could be analyzed uniformly across the group. Performance was assessed with a psychomotor vigilance test (PVT) before PET scans and at 03:00 h (sleep deprivation group only) to probe attention network functions.</p>
+</sec>
+<sec id="sec012">
+<title>[<sup>18</sup>F]SynVesT1 PET data acquisition and analysis</title>
+<p>[<sup>18</sup>F]SynVesT-1 was formulated and synthesized as follows: The fully GMP-compliant automated radiosynthesis of [<sup>18</sup>F]SynVesT-1 was performed using the Trasis AllinOne (AIO) synthesizer. The process began with the transfer and trapping of approximately 37 GBq of [<sup>18</sup>F]fluoride on a QMA cartridge. The reactor was initially heated to 65 °C. Subsequently, a syringe was prepared containing 2 mg of tetraethylammonium bicarbonate in 1 mL of methanol along with 0.8 mL of air. This mixture was then used to elute the [<sup>18</sup>F]fluoride into the reactor. The reactor temperature was increased to 80 °C, followed by a drying phase consisting of three steps under vacuum with nitrogen: 80 s at 115 °C, 180 s at 125 °C, and 124 s at 95 °C. After drying, the reactor was cooled to 55 °C, and 5 mg of precursor along with 20 mg of tetrakis(pyridine)copper(II)triflate in 0.8 mL of <italic>N</italic>,<italic>N</italic>-dimethylacetamide (DMA) were added. The <sup>18</sup>F-fluorination reaction proceeded at 110 °C for 20 min. Post-reaction, the reactor was cooled to 40 °C. The resulting mixture was purified by reversed-phase high-performance liquid chromatography (RP-HPLC) using a Phenomenex Luna 5μ C18 column (100 Å, 250 x 10 mm). The mobile phase consisted of an acetonitrile/water mixture (1:3) with 5.4 g of ammonium acetate (NH<sub>4</sub>Ac) at pH 4.4. Further purification was achieved through solid-phase extraction (SPE) using a C18 cartridge, with elution performed using ethanol and washing with a 0.9% saline solution. The preparation of [<sup>18</sup>F]SynVesT-1 resulted in a radiochemical yield (rcy) of up to 20% and a radiochemical purity of 99%. The radiotracer was diluted with sterile saline solution (0.9%) and injected as intravenous bolus (10 ml in 0.5 min). The mean injected dose of [<sup>18</sup>F]SynVesT-1 was 190.9 ± 33.3 MBq, mean molar activity at injection time was 32.4 ± 32.8 GBq/µmol. Injection and scan were started simultaneously at 11:35:23 ± 01:00:24 on average and scan duration was 90 min. Time period between wake up and scan start was 4.2 ± 0.7 h on average (28.0 ± 2.0 h for the sleep deprivation condition).</p>
+<p>[<sup>18</sup>F]SynVesT-1 PET data acquisition and magnetic resonance (MR) were conducted on a 3 Tesla PET/MR system (BrainPET; Siemens Healthineers). Participants’ constant wakefulness during PET scans was checked by video monitoring of subjects’ eye blink behavior. PET data were acquired in list-mode and reconstructed into 3D images with 256 x 256 x 153 voxels of size 1.25<sup>3</sup> mm<sup>3</sup> using the OP-OSEM reconstruction algorithm with 2 iterations and 32 subsets. The list-mode data was split into 34 consecutive time frames with increasing lengths, i.e., 6 x 10 s, 3 x 20 s, 3 x 30 s, 4 x 60 s, 3 x 150 s, 15 x 300 s. Detection sensitivity normalization, decay correction, dead time correction, random correction, scatter correction (Single Scatter Simulation with scaling by tail fitting), attenuation correction, and 2.5 mm Gaussian post-filtering was applied to each of the 34 image frames. For the attenuation and scatter correction, a combined attenuation map obtained from a transmission scan of the transmit/receive head coil and a MR-image derived patient attenuation map was used [<xref ref-type="bibr" rid="pbio.3003816.ref049">49</xref>].</p>
+</sec>
+<sec id="sec013">
+<title>Data analysis</title>
+<p>Preprocessing of PET and MR data was done with the PMOD Neuro Tool pipeline (v 4.006; PMOD Technologies): dynamic image frames were realigned to an average of frames 1–14 to correct for potential head movements and co-registered with the MRI, which was segmented into gray and white matter and cerebrospinal fluid compartments, and normalized to the MNI (Montreal Neurological Institute) space. The maximal head movement (translation and rotation from realignment) occurring during each scan was not significantly different between scan one and two, neither in the control group nor the sleep deprivation group and was subsequently not entered as a confounding variable into the analysis. Volumes of interest (VOIs) were defined by the intersection of the automated anatomical labeling (AAL) template in the MNI space implemented in the PMOD software [<xref ref-type="bibr" rid="pbio.3003816.ref050">50</xref>] and the gray matter segments from the individual MRI. For quantification the SRTM2 [<xref ref-type="bibr" rid="pbio.3003816.ref051">51</xref>] with a to 2 ml in volume eroded centrum semiovale reference region and a population-based fixed k2‘of 0.032 was used [<xref ref-type="bibr" rid="pbio.3003816.ref040">40</xref>]. Side averaged volumes of interest were included in the analysis: frontal, cingulate, occipital, parietal and temporal cortex, hippocampus, thalamus, and striatum (and insula only for correlation in <xref ref-type="fig" rid="pbio.3003816.g004">Fig 4</xref>). For visualization purposes, parametric BP<sub>ND</sub> images were generated with voxelwise SRTM2 and surface mapping with CAT12 [<xref ref-type="bibr" rid="pbio.3003816.ref052">52</xref>].</p>
+</sec>
+<sec id="sec014">
+<title>Performance and sleepiness</title>
+<p>A 3-min version of the PVT was used to measure vigilant attention. [<xref ref-type="bibr" rid="pbio.3003816.ref053">53</xref>]. Reaction times &gt;500 ms were defined as lapses. Mean reaction speed was analyzed by calculating the relative difference to the corresponding baseline value of the first PET scan. For the number of lapses, the absolute difference to the corresponding baseline value was calculated, as most of the baseline values were zero. Sleepiness was measured on the KSS [<xref ref-type="bibr" rid="pbio.3003816.ref054">54</xref>].</p>
+</sec>
+<sec id="sec015">
+<title>Sleep EEG recordings</title>
+<p>Sleep was recorded using a wireless headband (DREEM 3 headband, Rhythm, Paris, France; now Beacon Biosignals, Inc, Boston, United States) [<xref ref-type="bibr" rid="pbio.3003816.ref055">55</xref>]. The EEG headband is equipped with five dry EEG electrodes (occipital: O1, O2, frontal: Fp1, F7, and F8 sampled at 250 Hz), a 3D accelerometer for measuring movement, head position, and respiratory rate.</p>
+</sec>
+<sec id="sec016">
+<title>EEG analysis</title>
+<p>The analysis of SWA (relative delta EEG power in the 0.5 to 4 Hz range, using a Welch periodogram with a 4-s Hamming window, command: yasa.bandpower(data)) during the first 90 min (first NREM/REM sleep cycle) was conducted using the python based YASA toolbox (Version 0.6.3) [<xref ref-type="bibr" rid="pbio.3003816.ref056">56</xref>]. In two subjects, either the baseline or recovery sleep EEG could not be analyzed due to bad signal quality.</p>
+</sec>
+<sec id="sec017">
+<title>Statistical analysis</title>
+<p>All analyses were conducted using SAS version 9.4. In all statistical tests, the significance level was set at <italic>p</italic> &lt; 0.05. Normal distribution of residuals was verified with Q-Q plots and Kolmogorov–Smirnov test. Mixed ANOVAs were calculated on the difference between scan 1 and 2 with group (control and sleep deprivation) and brain region (<italic>n</italic> = 8) and the interaction between group and brain region as fixed factors and subject as random factor. Results were sliced per brain region and <italic>p</italic>-values post-hoc adjusted for multiple comparisons using the false discovery rate. To confirm that data of scan 1 was not different from scan 2 in the control group, a mixed ANOVA was calculated with scan (1 versus 2), brain region (<italic>n</italic> = 8) and interaction between scan and brain region as fixed factors and subject as random factor. Sliced results per brain regions indicated no differences between scans.</p>
+<p>Pearson’s product-moment correlation coefficients were calculated to investigate whether there is a linear relationship between the individual change in SWA, cognitive performance (PVT), and sleepiness (KSS) and change in SV2A-indexed synaptic density from baseline to sleep deprivation. The difference between the two PVT and KSS conditions was compared with an unpaired Wilcoxon test.</p>
+</sec>
+</sec>
+<sec id="sec018" sec-type="supplementary-material">
+<title>Supporting information</title>
+<supplementary-material id="pbio.3003816.s001" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s001" xlink:type="simple">
+<label>S1 Table</label>
+<caption>
+<title>Study participants’ demographic and experimental parameters.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s002" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s002" xlink:type="simple">
+<label>S2 Table</label>
+<caption>
+<title>Correlations between the difference (Δ) of regional SV2A indexed synaptic density values (binding potential BP<sub>ND</sub>) and slow wave activity (SWA) after sleep deprivation and baseline.</title>
+<p>The data underlying this Table are available here: <xref ref-type="supplementary-material" rid="pbio.3003816.s006">S3 Data</xref>.</p>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s003" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s003" xlink:type="simple">
+<label>S3 Table</label>
+<caption>
+<title>Effect of sleep deprivation on cognition.</title>
+<p>(DOCX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s004" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s004" xlink:type="simple">
+<label>S1 Data</label>
+<caption>
+<title>Individual values corresponding to <xref ref-type="table" rid="pbio.3003816.t001">Table 1</xref> and <xref ref-type="fig" rid="pbio.3003816.g003">Fig 3</xref>: Regional SV2A-indexed synaptic density values (binding potential BPND).</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s005" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s005" xlink:type="simple">
+<label>S2 Data</label>
+<caption>
+<title>Individual values corresponding to S1 Table: study participants’ demographic and experimental parameters.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s006" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s006" xlink:type="simple">
+<label>S3 Data</label>
+<caption>
+<title>Individual values corresponding to S2 Table: Difference (Δ) of regional SV2A-indexed synaptic density values (binding potential BP<sub>ND</sub>) and slow wave activity (SWA) after sleep deprivation and baseline.</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+<supplementary-material id="pbio.3003816.s007" mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s007" xlink:type="simple">
+<label>S4 Data</label>
+<caption>
+<title>Individual values corresponding to S3 Table: Effect of sleep deprivation on cognition (Karolinska Sleepiness Scale, Psychomotor vigilance task (PVT): mean reaction speed (1/s) and slowest 10% of reaction speed (1/s).</title>
+<p>(XLSX)</p>
+</caption>
+</supplementary-material>
+</sec>
+</body>
+<back>
+<glossary>
+<title>Abbreviations</title>
+<def-list><def-item><term>AAL</term><def><p>automated anatomical labeling</p></def></def-item><def-item><term>DMA</term><def><p><italic>N,N</italic>-dimethylacetamide</p></def></def-item><def-item><term>ICCs</term><def><p>intraclass correlation coefficients</p></def></def-item><def-item><term>KSS</term><def><p>Karolinska Sleepiness Scale</p></def></def-item><def-item><term>mGluR5</term><def><p>metabotropic glutamate receptor</p></def></def-item><def-item><term>MR</term><def><p>magnetic resonance</p></def></def-item><def-item><term>MRS</term><def><p>magnetic resonance spectroscopy</p></def></def-item><def-item><term>PET</term><def><p>positron emission tomography</p></def></def-item><def-item><term>PVT</term><def><p>psychomotor vigilance task</p></def></def-item><def-item><term>RP-HPLC</term><def><p>reversed-phase high-performance liquid chromatography</p></def></def-item><def-item><term>SHY</term><def><p>synaptic homeostasis hypothesis</p></def></def-item><def-item><term>SPE</term><def><p>solid-phase extraction</p></def></def-item><def-item><term>SRTM2</term><def><p>simplified reference tissue model 2</p></def></def-item><def-item><term>SV2A</term><def><p>synaptic vesicle glycoprotein 2A</p></def></def-item><def-item><term>SWA</term><def><p>slow wave activity</p></def></def-item><def-item><term>TIB</term><def><p>time-in-bed</p></def></def-item><def-item><term>TMS</term><def><p>transcranial magnetic stimulation</p></def></def-item><def-item><term>VOIs</term><def><p>volumes of interest.</p></def></def-item></def-list>
+</glossary>
+<ack>
+<p>We thank all volunteers for participating in the studies, and Silke Frensch, Nadja Hermes, Sabina Klein, Sabine Klein, Stephanie Krause, Kristina Bauer, Haoluo Liang, and Angela Oskamp from the Forschungszentrum Jülich and the imaging core facility for their excellent technical assistance and support in study conductance.</p>
+</ack>
+<ref-list>
+<title>References</title>
+<ref id="pbio.3003816.ref001"><label>1</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>. <article-title>Is sleep essential?</article-title> <source>PLoS Biol</source>. <year>2008</year>;<volume>6</volume>(<issue>8</issue>):e216.</mixed-citation></ref>
+<ref id="pbio.3003816.ref002"><label>2</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>. <article-title>Linking the need to sleep with synaptic function</article-title>. <source>Science</source>. <year>2019</year>;<volume>366</volume>(<issue>6462</issue>):<fpage>189</fpage>–<lpage>90</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.aay5304" xlink:type="simple">10.1126/science.aay5304</ext-link></comment> <object-id pub-id-type="pmid">31601760</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref003"><label>3</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>. <article-title>Sleep function and synaptic homeostasis</article-title>. <source>Sleep Med Rev</source>. <year>2006</year>;<volume>10</volume>(<issue>1</issue>):<fpage>49</fpage>–<lpage>62</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.smrv.2005.05.002" xlink:type="simple">10.1016/j.smrv.2005.05.002</ext-link></comment> <object-id pub-id-type="pmid">16376591</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref004"><label>4</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>, <name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>. <article-title>Sleep and synaptic homeostasis: a hypothesis</article-title>. <source>Brain Res Bull</source>. <year>2003</year>;<volume>62</volume>(<issue>2</issue>):<fpage>143</fpage>–<lpage>50</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.brainresbull.2003.09.004" xlink:type="simple">10.1016/j.brainresbull.2003.09.004</ext-link></comment> <object-id pub-id-type="pmid">14638388</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref005"><label>5</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Takeuchi</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Duszkiewicz</surname> <given-names>AJ</given-names></name>, <name name-style="western"><surname>Morris</surname> <given-names>RGM</given-names></name>. <article-title>The synaptic plasticity and memory hypothesis: encoding, storage and persistence</article-title>. <source>Philos Trans R Soc Lond B Biol Sci</source>. <year>2013</year>;<volume>369</volume>(<issue>1633</issue>):<fpage>20130288</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1098/rstb.2013.0288" xlink:type="simple">10.1098/rstb.2013.0288</ext-link></comment> <object-id pub-id-type="pmid">24298167</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref006"><label>6</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Diering</surname> <given-names>GH</given-names></name>, <name name-style="western"><surname>Nirujogi</surname> <given-names>RS</given-names></name>, <name name-style="western"><surname>Roth</surname> <given-names>RH</given-names></name>, <name name-style="western"><surname>Worley</surname> <given-names>PF</given-names></name>, <name name-style="western"><surname>Pandey</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Huganir</surname> <given-names>RL</given-names></name>. <article-title>Homer1a drives homeostatic scaling-down of excitatory synapses during sleep</article-title>. <source>Science</source>. <year>2017</year>;<volume>355</volume>(<issue>6324</issue>):<fpage>511</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.aai8355" xlink:type="simple">10.1126/science.aai8355</ext-link></comment> <object-id pub-id-type="pmid">28154077</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref007"><label>7</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Niethard</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Burgalossi</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Born</surname> <given-names>J</given-names></name>. <article-title>Plasticity during sleep is linked to specific regulation of cortical circuit activity</article-title>. <source>Front Neural Circuits</source>. <year>2017</year>;<volume>11</volume>:<fpage>65</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fncir.2017.00065" xlink:type="simple">10.3389/fncir.2017.00065</ext-link></comment> <object-id pub-id-type="pmid">28966578</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref008"><label>8</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Havekes</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Aton</surname> <given-names>SJ</given-names></name>. <article-title>Impacts of sleep loss versus waking experience on brain plasticity: parallel or orthogonal?</article-title> <source>Trends Neurosci</source>. <year>2020</year>;<volume>43</volume>(<issue>6</issue>):<fpage>385</fpage>–<lpage>93</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.tins.2020.03.010" xlink:type="simple">10.1016/j.tins.2020.03.010</ext-link></comment> <object-id pub-id-type="pmid">32459991</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref009"><label>9</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Serrano</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Kim</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Petrinovic</surname> <given-names>MM</given-names></name>, <name name-style="western"><surname>Turkheimer</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Cash</surname> <given-names>D</given-names></name>. <article-title>Imaging synaptic density: the next holy grail of neuroscience?</article-title> <source>Front Neurosci</source>. <year>2022</year>;<volume>16</volume>:<fpage>796129</fpage>.</mixed-citation></ref>
+<ref id="pbio.3003816.ref010"><label>10</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Li</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Cai</surname> <given-names>Z</given-names></name>, <name name-style="western"><surname>Wu</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Holden</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Pracitto</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Kapinos</surname> <given-names>M</given-names></name>, <etal>et al</etal>. <article-title>Synthesis and in vivo evaluation of a novel PET radiotracer for imaging of synaptic vesicle glycoprotein 2a (SV2A) in nonhuman primates</article-title>. <source>ACS Chem Neurosci</source>. <year>2019</year>;<volume>10</volume>(<issue>3</issue>):<fpage>1544</fpage>–<lpage>54</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1021/acschemneuro.8b00526" xlink:type="simple">10.1021/acschemneuro.8b00526</ext-link></comment> <object-id pub-id-type="pmid">30396272</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref011"><label>11</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Constantinescu</surname> <given-names>CC</given-names></name>, <name name-style="western"><surname>Tresse</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Zheng</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Gouasmat</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Carroll</surname> <given-names>VM</given-names></name>, <name name-style="western"><surname>Mistico</surname> <given-names>L</given-names></name>, <etal>et al</etal>. <article-title>Development and in vivo preclinical imaging of fluorine-18-labeled synaptic vesicle protein 2A (SV2A) PET tracers</article-title>. <source>Mol Imaging Biol</source>. <year>2019</year>;<volume>21</volume>(<issue>3</issue>):<fpage>509</fpage>–<lpage>18</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s11307-018-1260-5" xlink:type="simple">10.1007/s11307-018-1260-5</ext-link></comment> <object-id pub-id-type="pmid">30084043</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref012"><label>12</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Borbély</surname> <given-names>AA</given-names></name>. <article-title>A two process model of sleep regulation</article-title>. <source>Hum Neurobiol</source>. <year>1982</year>;<volume>1</volume>(<issue>3</issue>):<fpage>195</fpage>–<lpage>204</lpage>. <object-id pub-id-type="pmid">7185792</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref013"><label>13</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Murphy</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Riedner</surname> <given-names>BA</given-names></name>, <name name-style="western"><surname>Huber</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Massimini</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Ferrarelli</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>. <article-title>Source modeling sleep slow waves</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2009</year>;<volume>106</volume>(<issue>5</issue>):<fpage>1608</fpage>–<lpage>13</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.0807933106" xlink:type="simple">10.1073/pnas.0807933106</ext-link></comment> <object-id pub-id-type="pmid">19164756</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref014"><label>14</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Maret</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Faraguna</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Nelson</surname> <given-names>AB</given-names></name>, <name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>. <article-title>Sleep and waking modulate spine turnover in the adolescent mouse cortex</article-title>. <source>Nat Neurosci</source>. <year>2011</year>;<volume>14</volume>(<issue>11</issue>):<fpage>1418</fpage>–<lpage>20</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nn.2934" xlink:type="simple">10.1038/nn.2934</ext-link></comment> <object-id pub-id-type="pmid">21983682</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref015"><label>15</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>de Vivo</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Bellesi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Marshall</surname> <given-names>W</given-names></name>, <name name-style="western"><surname>Bushong</surname> <given-names>EA</given-names></name>, <name name-style="western"><surname>Ellisman</surname> <given-names>MH</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>, <etal>et al</etal>. <article-title>Ultrastructural evidence for synaptic scaling across the wake/sleep cycle</article-title>. <source>Science</source>. <year>2017</year>;<volume>355</volume>(<issue>6324</issue>):<fpage>507</fpage>–<lpage>10</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.aah5982" xlink:type="simple">10.1126/science.aah5982</ext-link></comment> <object-id pub-id-type="pmid">28154076</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref016"><label>16</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vyazovskiy</surname> <given-names>VV</given-names></name>, <name name-style="western"><surname>Cirelli</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Pfister-Genskow</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Faraguna</surname> <given-names>U</given-names></name>, <name name-style="western"><surname>Tononi</surname> <given-names>G</given-names></name>. <article-title>Molecular and electrophysiological evidence for net synaptic potentiation in wake and depression in sleep</article-title>. <source>Nat Neurosci</source>. <year>2008</year>;<volume>11</volume>(<issue>2</issue>):<fpage>200</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nn2035" xlink:type="simple">10.1038/nn2035</ext-link></comment> <object-id pub-id-type="pmid">18204445</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref017"><label>17</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rossi</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Arjmand</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Bærentzen</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Gjedde</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Landau</surname> <given-names>AM</given-names></name>. <article-title>Synaptic vesicle glycoprotein 2A: features and functions</article-title>. <source>Front Neurosci</source>. <year>2022</year>;<volume>16</volume>:<fpage>864514</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fnins.2022.864514" xlink:type="simple">10.3389/fnins.2022.864514</ext-link></comment> <object-id pub-id-type="pmid">35573314</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref018"><label>18</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Finnema</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Nabulsi</surname> <given-names>NB</given-names></name>, <name name-style="western"><surname>Eid</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Detyniecki</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Lin</surname> <given-names>S-F</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>M-K</given-names></name>, <etal>et al</etal>. <article-title>Imaging synaptic density in the living human brain</article-title>. <source>Sci Transl Med</source>. <year>2016</year>;<volume>8</volume>(<issue>348</issue>):348ra96. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/scitranslmed.aaf6667" xlink:type="simple">10.1126/scitranslmed.aaf6667</ext-link></comment> <object-id pub-id-type="pmid">27440727</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref019"><label>19</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mikkelsen</surname> <given-names>JD</given-names></name>, <name name-style="western"><surname>Kaad</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Aripaka</surname> <given-names>SS</given-names></name>, <name name-style="western"><surname>Finsen</surname> <given-names>B</given-names></name>. <article-title>Synaptic vesicle glycoprotein 2A (SV2A) levels in the cerebral cortex in patients with Alzheimer’s disease: a radioligand binding study in postmortem brains</article-title>. <source>Neurobiol Aging</source>. <year>2023</year>;<volume>129</volume>:<fpage>50</fpage>–<lpage>7</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.neurobiolaging.2023.05.003" xlink:type="simple">10.1016/j.neurobiolaging.2023.05.003</ext-link></comment> <object-id pub-id-type="pmid">37269646</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref020"><label>20</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Fernandes</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Baliego</surname> <given-names>LGZ</given-names></name>, <name name-style="western"><surname>Peixinho-Pena</surname> <given-names>LF</given-names></name>, <name name-style="western"><surname>de Almeida</surname> <given-names>AA</given-names></name>, <name name-style="western"><surname>Venancio</surname> <given-names>DP</given-names></name>, <name name-style="western"><surname>Scorza</surname> <given-names>FA</given-names></name>, <etal>et al</etal>. <article-title>Aerobic exercise attenuates inhibitory avoidance memory deficit induced by paradoxical sleep deprivation in rats</article-title>. <source>Brain Res</source>. <year>2013</year>;<volume>1529</volume>:<fpage>66</fpage>–<lpage>73</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.brainres.2013.07.019" xlink:type="simple">10.1016/j.brainres.2013.07.019</ext-link></comment> <object-id pub-id-type="pmid">23895766</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref021"><label>21</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wadhwa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Sahu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Kumari</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Kauser</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Ray</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Panjwani</surname> <given-names>U</given-names></name>. <article-title>Caffeine and modafinil given during 48 h sleep deprivation modulate object recognition memory and synaptic proteins in the hippocampus of the rat</article-title>. <source>Behav Brain Res</source>. <year>2015</year>;<volume>294</volume>:<fpage>95</fpage>–<lpage>101</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.bbr.2015.08.002" xlink:type="simple">10.1016/j.bbr.2015.08.002</ext-link></comment> <object-id pub-id-type="pmid">26255702</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref022"><label>22</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Almaspour</surname> <given-names>M-B</given-names></name>, <name name-style="western"><surname>Nasehi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Khalifeh</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Zarrindast</surname> <given-names>M-R</given-names></name>. <article-title>The effect of fish oil on social interaction memory in total sleep-deprived rats with respect to the hippocampal level of stathmin, TFEB, synaptophysin and LAMP-1 proteins</article-title>. <source>Prostaglandins Leukot Essent Fatty Acids</source>. <year>2020</year>;<volume>157</volume>:<fpage>102097</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.plefa.2020.102097" xlink:type="simple">10.1016/j.plefa.2020.102097</ext-link></comment> <object-id pub-id-type="pmid">32388317</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref023"><label>23</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Farajdokht</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Vatandoust</surname> <given-names>SM</given-names></name>, <name name-style="western"><surname>Hosseini</surname> <given-names>L</given-names></name>, <name name-style="western"><surname>Fekri</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Rahigh Aghsan</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Majdi</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Sericin protects against acute sleep deprivation-induced memory impairment via enhancement of hippocampal synaptic protein levels and inhibition of oxidative stress and neuroinflammation in mice</article-title>. <source>Brain Res Bull</source>. <year>2021</year>;<volume>174</volume>:<fpage>203</fpage>–<lpage>11</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.brainresbull.2021.06.013" xlink:type="simple">10.1016/j.brainresbull.2021.06.013</ext-link></comment> <object-id pub-id-type="pmid">34153383</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref024"><label>24</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wang</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Mao</surname> <given-names>X</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Zhang</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Song</surname> <given-names>Y</given-names></name>, <etal>et al</etal>. <article-title>Effects of sleep deprivation on cognition and synaptic associated proteins in rodents: a systematic review and meta-analysis</article-title>. <source>J Alzheimers Dis Rep</source>. <year>2025</year>;<volume>9</volume>:<fpage>25424823251391704</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/25424823251391704" xlink:type="simple">10.1177/25424823251391704</ext-link></comment> <object-id pub-id-type="pmid">41180961</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref025"><label>25</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Sawada</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Iino</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Yoshida</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Okazaki</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Nomura</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Shimizu</surname> <given-names>C</given-names></name>, <etal>et al</etal>. <article-title>Prefrontal synaptic regulation of homeostatic sleep pressure revealed through synaptic chemogenetics</article-title>. <source>Science</source>. <year>2024</year>;<volume>385</volume>(<issue>6716</issue>):<fpage>1459</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.adl3043" xlink:type="simple">10.1126/science.adl3043</ext-link></comment> <object-id pub-id-type="pmid">39325885</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref026"><label>26</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Liu</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Niethard</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Lun</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Dimitrov</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Ehrlich</surname> <given-names>I</given-names></name>, <name name-style="western"><surname>Born</surname> <given-names>J</given-names></name>, <etal>et al</etal>. <article-title>Slow-wave sleep drives sleep-dependent renormalization of synaptic AMPA receptor levels in the hypothalamus</article-title>. <source>PLoS Biol</source>. <year>2024</year>;<volume>22</volume>(<issue>8</issue>):e3002768. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1371/journal.pbio.3002768" xlink:type="simple">10.1371/journal.pbio.3002768</ext-link></comment> <object-id pub-id-type="pmid">39163472</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref027"><label>27</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holst</surname> <given-names>SC</given-names></name>, <name name-style="western"><surname>Sousek</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Hefti</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Saberi-Moghadam</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Buck</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ametamey</surname> <given-names>SM</given-names></name>, <etal>et al</etal>. <article-title>Cerebral mGluR5 availability contributes to elevated sleep need and behavioral adjustment after sleep deprivation</article-title>. <source>Elife</source>. <year>2017</year>;<volume>6</volume>:e28751. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.7554/eLife.28751" xlink:type="simple">10.7554/eLife.28751</ext-link></comment> <object-id pub-id-type="pmid">28980941</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref028"><label>28</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Elmenhorst</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Meyer</surname> <given-names>PT</given-names></name>, <name name-style="western"><surname>Winz</surname> <given-names>OH</given-names></name>, <name name-style="western"><surname>Matusch</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ermert</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Coenen</surname> <given-names>HH</given-names></name>, <etal>et al</etal>. <article-title>Sleep deprivation increases A1 adenosine receptor binding in the human brain: a positron emission tomography study</article-title>. <source>J Neurosci</source>. <year>2007</year>;<volume>27</volume>(<issue>9</issue>):<fpage>2410</fpage>–<lpage>5</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1523/JNEUROSCI.5066-06.2007" xlink:type="simple">10.1523/JNEUROSCI.5066-06.2007</ext-link></comment> <object-id pub-id-type="pmid">17329439</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref029"><label>29</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Elmenhorst</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Elmenhorst</surname> <given-names>E-M</given-names></name>, <name name-style="western"><surname>Hennecke</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Kroll</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Matusch</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Aeschbach</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Recovery sleep after extended wakefulness restores elevated A1 adenosine receptor availability in the human brain</article-title>. <source>Proc Natl Acad Sci U S A</source>. <year>2017</year>;<volume>114</volume>(<issue>16</issue>):<fpage>4243</fpage>–<lpage>8</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1614677114" xlink:type="simple">10.1073/pnas.1614677114</ext-link></comment> <object-id pub-id-type="pmid">28373571</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref030"><label>30</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Elmenhorst</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Kroll</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Matusch</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Bauer</surname> <given-names>A</given-names></name>. <article-title>Sleep deprivation increases cerebral serotonin 2A receptor binding in humans</article-title>. <source>Sleep</source>. <year>2012</year>;<volume>35</volume>(<issue>12</issue>):<fpage>1615</fpage>–<lpage>23</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5665/sleep.2230" xlink:type="simple">10.5665/sleep.2230</ext-link></comment> <object-id pub-id-type="pmid">23204604</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref031"><label>31</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Weigend</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Holst</surname> <given-names>SC</given-names></name>, <name name-style="western"><surname>Treyer</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>O’Gorman Tuura</surname> <given-names>RL</given-names></name>, <name name-style="western"><surname>Meier</surname> <given-names>J</given-names></name>, <name name-style="western"><surname>Ametamey</surname> <given-names>SM</given-names></name>, <etal>et al</etal>. <article-title>Dynamic changes in cerebral and peripheral markers of glutamatergic signaling across the human sleep-wake cycle</article-title>. <source>Sleep</source>. <year>2019</year>;<volume>42</volume>(<issue>11</issue>):zsz161. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/sleep/zsz161" xlink:type="simple">10.1093/sleep/zsz161</ext-link></comment> <object-id pub-id-type="pmid">31304973</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref032"><label>32</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Volk</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Jaramillo</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Merki</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>O’Gorman Tuura</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Huber</surname> <given-names>R</given-names></name>. <article-title>Diurnal changes in glutamate + glutamine levels of healthy young adults assessed by proton magnetic resonance spectroscopy</article-title>. <source>Hum Brain Mapp</source>. <year>2018</year>;<volume>39</volume>(<issue>10</issue>):<fpage>3984</fpage>–<lpage>92</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/hbm.24225" xlink:type="simple">10.1002/hbm.24225</ext-link></comment> <object-id pub-id-type="pmid">29885049</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref033"><label>33</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Mutch</surname> <given-names>SA</given-names></name>, <name name-style="western"><surname>Kensel-Hammes</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Gadd</surname> <given-names>JC</given-names></name>, <name name-style="western"><surname>Fujimoto</surname> <given-names>BS</given-names></name>, <name name-style="western"><surname>Allen</surname> <given-names>RW</given-names></name>, <name name-style="western"><surname>Schiro</surname> <given-names>PG</given-names></name>, <etal>et al</etal>. <article-title>Protein quantification at the single vesicle level reveals that a subset of synaptic vesicle proteins are trafficked with high precision</article-title>. <source>J Neurosci</source>. <year>2011</year>;<volume>31</volume>(<issue>4</issue>):<fpage>1461</fpage>–<lpage>70</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1523/JNEUROSCI.3805-10.2011" xlink:type="simple">10.1523/JNEUROSCI.3805-10.2011</ext-link></comment> <object-id pub-id-type="pmid">21273430</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref034"><label>34</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Bellesi</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>de Vivo</surname> <given-names>L</given-names></name>. <article-title>Structural synaptic plasticity across sleep and wake</article-title>. <source>Curr Opin Physiol</source>. <year>2020</year>;<volume>15</volume>:<fpage>74</fpage>–<lpage>81</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.cophys.2019.12.007" xlink:type="simple">10.1016/j.cophys.2019.12.007</ext-link></comment> <object-id pub-id-type="pmid">32642626</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref035"><label>35</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Harris</surname> <given-names>KM</given-names></name>, <name name-style="western"><surname>Stevens</surname> <given-names>JK</given-names></name>. <article-title>Dendritic spines of rat cerebellar Purkinje cells: serial electron microscopy with reference to their biophysical characteristics</article-title>. <source>J Neurosci</source>. <year>1988</year>;<volume>8</volume>(<issue>12</issue>):<fpage>4455</fpage>–<lpage>69</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1523/JNEUROSCI.08-12-04455.1988" xlink:type="simple">10.1523/JNEUROSCI.08-12-04455.1988</ext-link></comment> <object-id pub-id-type="pmid">3199186</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref036"><label>36</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Rollenhagen</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Ohana</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Sätzler</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Hilgetag</surname> <given-names>CC</given-names></name>, <name name-style="western"><surname>Kuhl</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Lübke</surname> <given-names>JHR</given-names></name>. <article-title>Structural properties of synaptic transmission and temporal dynamics at excitatory layer 5B synapses in the adult rat somatosensory cortex</article-title>. <source>Front Synaptic Neurosci</source>. <year>2018</year>;<volume>10</volume>:<fpage>24</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3389/fnsyn.2018.00024" xlink:type="simple">10.3389/fnsyn.2018.00024</ext-link></comment> <object-id pub-id-type="pmid">30104970</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref037"><label>37</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Schmuhl-Giesen</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Rollenhagen</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Walkenfort</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Yakoubi</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Sätzler</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Miller</surname> <given-names>D</given-names></name>, <etal>et al</etal>. <article-title>Sublamina-specific dynamics and ultrastructural heterogeneity of layer 6 excitatory synaptic boutons in the adult human temporal lobe neocortex</article-title>. <source>Cereb Cortex</source>. <year>2022</year>;<volume>32</volume>(<issue>9</issue>):<fpage>1840</fpage>–<lpage>65</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/cercor/bhab315" xlink:type="simple">10.1093/cercor/bhab315</ext-link></comment> <object-id pub-id-type="pmid">34530440</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref038"><label>38</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smart</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Liu</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Matuskey</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Chen</surname> <given-names>M-K</given-names></name>, <name name-style="western"><surname>Torres</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Nabulsi</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task</article-title>. <source>J Cereb Blood Flow Metab</source>. <year>2021</year>;<volume>41</volume>(<issue>5</issue>):<fpage>1067</fpage>–<lpage>79</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1177/0271678X20946198" xlink:type="simple">10.1177/0271678X20946198</ext-link></comment> <object-id pub-id-type="pmid">32757741</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref039"><label>39</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Smart</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Uribe</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Desmond</surname> <given-names>KL</given-names></name>, <name name-style="western"><surname>Martin</surname> <given-names>SL</given-names></name>, <name name-style="western"><surname>Vasdev</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Strafella</surname> <given-names>AP</given-names></name>. <article-title>Preliminary assessment of reference region quantification and reduced scanning times for [<sup>18F</sup>]SynVesT-1 PET in Parkinson’s Disease</article-title>. <source>Mol Imaging</source>. <year>2023</year>;<volume>2023</volume>:<fpage>1855985</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1155/2023/1855985" xlink:type="simple">10.1155/2023/1855985</ext-link></comment> <object-id pub-id-type="pmid">37622164</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref040"><label>40</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Naganawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Gallezot</surname> <given-names>J-D</given-names></name>, <name name-style="western"><surname>Li</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Nabulsi</surname> <given-names>NB</given-names></name>, <name name-style="western"><surname>Henry</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Cai</surname> <given-names>Z</given-names></name>, <etal>et al</etal>. <article-title>Noninvasive quantification of [<sup>18</sup>F]SynVesT-1 binding using simplified reference tissue model 2</article-title>. <source>Eur J Nucl Med Mol Imaging</source>. <year>2024</year>;<volume>52</volume>(<issue>1</issue>):<fpage>113</fpage>–<lpage>21</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s00259-024-06885-6" xlink:type="simple">10.1007/s00259-024-06885-6</ext-link></comment> <object-id pub-id-type="pmid">39155309</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref041"><label>41</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Borbély</surname> <given-names>AA</given-names></name>. <article-title>The S-deficiency hypothesis of depression and the two-process model of sleep regulation</article-title>. <source>Pharmacopsychiatry</source>. <year>1987</year>;<volume>20</volume>(<issue>1</issue>):<fpage>23</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1055/s-2007-1017069" xlink:type="simple">10.1055/s-2007-1017069</ext-link></comment> <object-id pub-id-type="pmid">3823126</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref042"><label>42</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wolf</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Kuhn</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Normann</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Mainberger</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Maier</surname> <given-names>JG</given-names></name>, <name name-style="western"><surname>Maywald</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Synaptic plasticity model of therapeutic sleep deprivation in major depression</article-title>. <source>Sleep Med Rev</source>. <year>2016</year>;<volume>30</volume>:<fpage>53</fpage>–<lpage>62</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.smrv.2015.11.003" xlink:type="simple">10.1016/j.smrv.2015.11.003</ext-link></comment> <object-id pub-id-type="pmid">26803484</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref043"><label>43</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Castrén</surname> <given-names>E</given-names></name>. <article-title>Neuronal network plasticity and recovery from depression</article-title>. <source>JAMA Psychiatry</source>. <year>2013</year>;<volume>70</volume>(<issue>9</issue>):<fpage>983</fpage>–<lpage>9</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1001/jamapsychiatry.2013.1" xlink:type="simple">10.1001/jamapsychiatry.2013.1</ext-link></comment> <object-id pub-id-type="pmid">23842648</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref044"><label>44</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holmes</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Scheinost</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Finnema</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Naganawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Davis</surname> <given-names>MT</given-names></name>, <name name-style="western"><surname>DellaGioia</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Lower synaptic density is associated with depression severity and network alterations</article-title>. <source>Nat Commun</source>. <year>2019</year>;<volume>10</volume>(<issue>1</issue>):<fpage>1529</fpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/s41467-019-09562-7" xlink:type="simple">10.1038/s41467-019-09562-7</ext-link></comment> <object-id pub-id-type="pmid">30948709</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref045"><label>45</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Laroy</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Vande Casteele</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Van Cauwenberge</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Koole</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Dupont</surname> <given-names>P</given-names></name>, <name name-style="western"><surname>Sunaert</surname> <given-names>S</given-names></name>, <etal>et al</etal>. <article-title>Synaptic density changes following electroconvulsive therapy: a longitudinal pilot study with PET-MR 11C-UCB-J imaging in late-life depression</article-title>. <source>Brain Stimul</source>. <year>2024</year>;<volume>17</volume>(<issue>3</issue>):<fpage>588</fpage>–<lpage>90</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.brs.2024.04.020" xlink:type="simple">10.1016/j.brs.2024.04.020</ext-link></comment> <object-id pub-id-type="pmid">38701916</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref046"><label>46</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Holmes</surname> <given-names>SE</given-names></name>, <name name-style="western"><surname>Finnema</surname> <given-names>SJ</given-names></name>, <name name-style="western"><surname>Naganawa</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>DellaGioia</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Holden</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Fowles</surname> <given-names>K</given-names></name>, <etal>et al</etal>. <article-title>Imaging the effect of ketamine on synaptic density (SV2A) in the living brain</article-title>. <source>Mol Psychiatry</source>. <year>2022</year>;<volume>27</volume>(<issue>4</issue>):<fpage>2273</fpage>–<lpage>81</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/s41380-022-01465-2" xlink:type="simple">10.1038/s41380-022-01465-2</ext-link></comment> <object-id pub-id-type="pmid">35165397</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref047"><label>47</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Lange</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Hennecke</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Thiel</surname> <given-names>K</given-names></name>, <name name-style="western"><surname>Neumaier</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Beer</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Bauer</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>Chronic sleep loss and A1 adenosine receptors in the human brain</article-title>. <source>Sleep</source>. <year>2026</year>;:zsag012. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/sleep/zsag012" xlink:type="simple">10.1093/sleep/zsag012</ext-link></comment> <object-id pub-id-type="pmid">41568778</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref048"><label>48</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Larson</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Basner</surname> <given-names>M</given-names></name>, <name name-style="western"><surname>Rao</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Barilla</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Boland</surname> <given-names>EM</given-names></name>, <name name-style="western"><surname>Goldschmied</surname> <given-names>JR</given-names></name>, <etal>et al</etal>. <article-title>Effects of acute sleep deprivation and recovery sleep on cognitive performance in depressed individuals</article-title>. <source>J Psychiatr Res</source>. <year>2025</year>;<volume>191</volume>:<fpage>198</fpage>–<lpage>205</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.jpsychires.2025.09.062" xlink:type="simple">10.1016/j.jpsychires.2025.09.062</ext-link></comment> <object-id pub-id-type="pmid">41033269</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref049"><label>49</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Kops</surname> <given-names>ER</given-names></name>, <name name-style="western"><surname>Herzog</surname> <given-names>H</given-names></name>, <name name-style="western"><surname>Shah</surname> <given-names>NJ</given-names></name>. <article-title>Comparison template-based with CT-based attenuation correction for hybrid MR/PET scanners</article-title>. <source>EJNMMI Phys</source>. <year>2014</year>;<volume>1</volume>(Suppl 1):A47. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1186/2197-7364-1-S1-A47" xlink:type="simple">10.1186/2197-7364-1-S1-A47</ext-link></comment> <object-id pub-id-type="pmid">26501635</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref050"><label>50</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Tzourio-Mazoyer</surname> <given-names>N</given-names></name>, <name name-style="western"><surname>Landeau</surname> <given-names>B</given-names></name>, <name name-style="western"><surname>Papathanassiou</surname> <given-names>D</given-names></name>, <name name-style="western"><surname>Crivello</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Etard</surname> <given-names>O</given-names></name>, <name name-style="western"><surname>Delcroix</surname> <given-names>N</given-names></name>, <etal>et al</etal>. <article-title>Automated anatomical labeling of activations in SPM using a macroscopic anatomical parcellation of the MNI MRI single-subject brain</article-title>. <source>Neuroimage</source>. <year>2002</year>;<volume>15</volume>(<issue>1</issue>):<fpage>273</fpage>–<lpage>89</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1006/nimg.2001.0978" xlink:type="simple">10.1006/nimg.2001.0978</ext-link></comment> <object-id pub-id-type="pmid">11771995</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref051"><label>51</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Wu</surname> <given-names>Y</given-names></name>, <name name-style="western"><surname>Carson</surname> <given-names>RE</given-names></name>. <article-title>Noise reduction in the simplified reference tissue model for neuroreceptor functional imaging</article-title>. <source>J Cereb Blood Flow Metab</source>. <year>2002</year>;<volume>22</volume>(<issue>12</issue>):<fpage>1440</fpage>–<lpage>52</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1097/01.WCB.0000033967.83623.34" xlink:type="simple">10.1097/01.WCB.0000033967.83623.34</ext-link></comment> <object-id pub-id-type="pmid">12468889</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref052"><label>52</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Gaser</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Dahnke</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Thompson</surname> <given-names>PM</given-names></name>, <name name-style="western"><surname>Kurth</surname> <given-names>F</given-names></name>, <name name-style="western"><surname>Luders</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>The Alzheimer’s Disease Neuroimaging</surname> <given-names>I</given-names></name>. <article-title>CAT: a computational anatomy toolbox for the analysis of structural MRI data</article-title>. <source>Gigascience</source>. <year>2024</year>;<volume>13</volume>.</mixed-citation></ref>
+<ref id="pbio.3003816.ref053"><label>53</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Benderoth</surname> <given-names>S</given-names></name>, <name name-style="western"><surname>Hörmann</surname> <given-names>H-J</given-names></name>, <name name-style="western"><surname>Schießl</surname> <given-names>C</given-names></name>, <name name-style="western"><surname>Elmenhorst</surname> <given-names>E-M</given-names></name>. <article-title>Reliability and validity of a 3-min psychomotor vigilance task in assessing sensitivity to sleep loss and alcohol: fitness for duty in aviation and transportation</article-title>. <source>Sleep</source>. <year>2021</year>;<volume>44</volume>(<issue>11</issue>):zsab151. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/sleep/zsab151" xlink:type="simple">10.1093/sleep/zsab151</ext-link></comment> <object-id pub-id-type="pmid">34137863</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref054"><label>54</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Akerstedt</surname> <given-names>T</given-names></name>, <name name-style="western"><surname>Gillberg</surname> <given-names>M</given-names></name>. <article-title>Subjective and objective sleepiness in the active individual</article-title>. <source>Int J Neurosci</source>. <year>1990</year>;<volume>52</volume>(1–2):<fpage>29</fpage>–<lpage>37</lpage>. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.3109/00207459008994241" xlink:type="simple">10.3109/00207459008994241</ext-link></comment> <object-id pub-id-type="pmid">2265922</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref055"><label>55</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Arnal</surname> <given-names>PJ</given-names></name>, <name name-style="western"><surname>Thorey</surname> <given-names>V</given-names></name>, <name name-style="western"><surname>Debellemaniere</surname> <given-names>E</given-names></name>, <name name-style="western"><surname>Ballard</surname> <given-names>ME</given-names></name>, <name name-style="western"><surname>Bou Hernandez</surname> <given-names>A</given-names></name>, <name name-style="western"><surname>Guillot</surname> <given-names>A</given-names></name>, <etal>et al</etal>. <article-title>The dreem headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging</article-title>. <source>Sleep</source>. <year>2020</year>;<volume>43</volume>(<issue>11</issue>):zsaa097. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1093/sleep/zsaa097" xlink:type="simple">10.1093/sleep/zsaa097</ext-link></comment> <object-id pub-id-type="pmid">32433768</object-id></mixed-citation></ref>
+<ref id="pbio.3003816.ref056"><label>56</label><mixed-citation publication-type="journal" xlink:type="simple"><name name-style="western"><surname>Vallat</surname> <given-names>R</given-names></name>, <name name-style="western"><surname>Walker</surname> <given-names>MP</given-names></name>. <article-title>An open-source, high-performance tool for automated sleep staging</article-title>. <source>Elife</source>. <year>2021</year>;<volume>10</volume>:e70092. <comment>doi: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.7554/eLife.70092" xlink:type="simple">10.7554/eLife.70092</ext-link></comment> <object-id pub-id-type="pmid">34648426</object-id></mixed-citation></ref>
+</ref-list>
+</back>
+<sub-article article-type="editor-report" id="pbio.3003816.r001" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r001</article-id>
+<title-group>
+<article-title>Decision Letter 0</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Smith</surname>
+<given-names>Lucas</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Lucas Smith</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="article" id="rel-obj002" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>0</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">29 Jan 2026</named-content></p>
+<p>Dear Dr Elmenhorst,</p>
+<p>Thank you for submitting your manuscript entitled "Sleep deprivation increases synaptic density in human brains" for consideration as a Research Article by PLOS Biology.</p>
+<p>Your manuscript has now been evaluated by the PLOS Biology editorial staff as well as by an academic editor with relevant expertise and I am writing to let you know that we would like to send your submission out for external peer review.</p>
+<p>However, before we can send your manuscript to reviewers, we need you to complete your submission by providing the metadata that is required for full assessment. To this end, please login to Editorial Manager where you will find the paper in the 'Submissions Needing Revisions' folder on your homepage. Please click 'Revise Submission' from the Action Links and complete all additional questions in the submission questionnaire.</p>
+<p>Once your full submission is complete, your paper will undergo a series of checks in preparation for peer review. After your manuscript has passed the checks it will be sent out for review. To provide the metadata for your submission, please Login to Editorial Manager (<ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology" xlink:type="simple">https://www.editorialmanager.com/pbiology</ext-link>) within two working days, i.e. by Jan 31 2026 11:59PM.</p>
+<p>*Please note that after some discussion, we think your paper would be best suited for consideration as a "Short Report" (<ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/what-we-publish#loc-short-reports" xlink:type="simple">https://journals.plos.org/plosbiology/s/what-we-publish#loc-short-reports</ext-link>). We therefore ask that when you provide your metadata, that you also update the article type to short report. This will not require any changes to the manuscript itself.</p>
+<p>If your manuscript has been previously peer-reviewed at another journal, PLOS Biology is willing to work with those reviews in order to avoid re-starting the process. Submission of the previous reviews is entirely optional and our ability to use them effectively will depend on the willingness of the previous journal to confirm the content of the reports and share the reviewer identities. Please note that we reserve the right to invite additional reviewers if we consider that additional/independent reviewers are needed, although we aim to avoid this as far as possible. In our experience, working with previous reviews does save time.</p>
+<p>If you would like us to consider previous reviewer reports, please edit your cover letter to let us know and include the name of the journal where the work was previously considered and the manuscript ID it was given. In addition, please upload a response to the reviews as a 'Prior Peer Review' file type, which should include the reports in full and a point-by-point reply detailing how you have or plan to address the reviewers' concerns.</p>
+<p>During the process of completing your manuscript submission, you will be invited to opt-in to posting your pre-review manuscript as a bioRxiv preprint. Visit <ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosbiology/s/preprints" xlink:type="simple">http://journals.plos.org/plosbiology/s/preprints</ext-link> for full details. If you consent to posting your current manuscript as a preprint, please upload a single Preprint PDF.</p>
+<p>Feel free to email us at plosbiology@plos.org if you have any queries relating to your submission.</p>
+<p>Kind regards,</p>
+<p>Luke</p>
+<p>Lucas Smith, Ph.D.</p>
+<p>Senior Editor</p>
+<p>PLOS Biology</p>
+<p>lsmith@plos.org</p>
+</body>
+</sub-article>
+<sub-article article-type="aggregated-review-documents" id="pbio.3003816.r002" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r002</article-id>
+<title-group>
+<article-title>Decision Letter 1</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Smith</surname>
+<given-names>Lucas</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Lucas Smith</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="article" id="rel-obj004" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>1</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">30 Mar 2026</named-content></p>
+<p>Dear Dr Elmenhorst,</p>
+<p>Thank you for your patience while your manuscript "Sleep deprivation increases synaptic density in human brains" went through peer-review at PLOS Biology and I apologize again for the protracted review process. Your manuscript has now been evaluated by the PLOS Biology editors, an Academic Editor with relevant expertise, and by several independent reviewers.</p>
+<p>In light of the reviews, which you will find at the end of this email, we are pleased to offer you the opportunity to address the comments from the reviewers in a revision that we anticipate should not take you very long. As you will see, below, the reviewers find your study to be generally interesting and well done, but they have offered a number of suggestions to strengthen the manuscript further. We think their comments will need to be thoroughly addressed before we can consider your study for publication - but we think the reviews can largely be addressed with textual changes.</p>
+<p>We will aim to assess your revised manuscript and your response to the reviewers' comments with our Academic Editor aiming to avoid further rounds of peer-review, although we might need to consult with the reviewers, depending on the nature of the revisions.</p>
+<p>In addition to these revisions, you may need to complete some formatting changes, which you will receive in a follow up email. A member of our team will be in touch with a set of requests shortly. If you do not receive a separate email within a few days, please assume that checks have been completed, and no additional changes are required.</p>
+<p>We expect to receive your revised manuscript within 1 month - however we are happy to extend this deadline if helpful. Please email us (plosbiology@plos.org) if you have any questions or concerns, or would like to request an extension.</p>
+<p>At this stage, your manuscript remains formally under active consideration at our journal; please notify us by email if you do not intend to submit a revision so that we withdraw the manuscript.</p>
+<p>**IMPORTANT - SUBMITTING YOUR REVISION**</p>
+<p>Your revisions should address the specific points made by each reviewer. Please submit the following files along with your revised manuscript:</p>
+<p>1. A 'Response to Reviewers' file - this should detail your responses to the editorial requests, present a point-by-point response to all of the reviewers' comments, and indicate the changes made to the manuscript.</p>
+<p>*NOTE: In your point-by-point response to the reviewers, please provide the full context of each review. Do not selectively quote paragraphs or sentences to reply to. The entire set of reviewer comments should be present in full and each specific point should be responded to individually.</p>
+<p>You should also cite any additional relevant literature that has been published since the original submission and mention any additional citations in your response.</p>
+<p>2. In addition to a clean copy of the manuscript, please also upload a 'track-changes' version of your manuscript that specifies the edits made. This should be uploaded as a "Revised Article with Changes Highlighted " file type.</p>
+<p>*Resubmission Checklist*</p>
+<p>When you are ready to resubmit your revised manuscript, please refer to this resubmission checklist: <ext-link ext-link-type="uri" xlink:href="https://plos.io/Biology_Checklist" xlink:type="simple">https://plos.io/Biology_Checklist</ext-link></p>
+<p>To submit a revised version of your manuscript, please go to <ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology/" xlink:type="simple">https://www.editorialmanager.com/pbiology/</ext-link> and log in as an Author. Click the link labelled 'Submissions Needing Revision' where you will find your submission record.</p>
+<p>Please make sure to read the following important policies and guidelines while preparing your revision:</p>
+<p>*Published Peer Review*</p>
+<p>Please note while forming your response, if your article is accepted, you may have the opportunity to make the peer review history publicly available. The record will include editor decision letters (with reviews) and your responses to reviewer comments. If eligible, we will contact you to opt in or out. Please see here for more details:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://blogs.plos.org/plos/2019/05/plos-journals-now-open-for-published-peer-review/" xlink:type="simple">https://blogs.plos.org/plos/2019/05/plos-journals-now-open-for-published-peer-review/</ext-link></p>
+<p>*PLOS Data Policy*</p>
+<p>Please note that as a condition of publication PLOS' data policy (<ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosbiology/s/data-availability" xlink:type="simple">http://journals.plos.org/plosbiology/s/data-availability</ext-link>) requires that you make available all data used to draw the conclusions arrived at in your manuscript. If you have not already done so, you must include any data used in your manuscript either in appropriate repositories, within the body of the manuscript, or as supporting information (N.B. this includes any numerical values that were used to generate graphs, histograms etc.). For an example see here: <ext-link ext-link-type="uri" xlink:href="http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001908#s5" xlink:type="simple">http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001908#s5</ext-link></p>
+<p>*Blot and Gel Data Policy*</p>
+<p>We require the original, uncropped and minimally adjusted images supporting all blot and gel results reported in an article's figures or Supporting Information files. We will require these files before a manuscript can be accepted so please prepare them now, if you have not already uploaded them. Please carefully read our guidelines for how to prepare and upload this data: <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/figures#loc-blot-and-gel-reporting-requirements" xlink:type="simple">https://journals.plos.org/plosbiology/s/figures#loc-blot-and-gel-reporting-requirements</ext-link></p>
+<p>*Protocols deposition*</p>
+<p>To enhance the reproducibility of your results, we recommend that if applicable you deposit your laboratory protocols in protocols.io, where a protocol can be assigned its own identifier (DOI) such that it can be cited independently in the future. Additionally, PLOS ONE offers an option for publishing peer-reviewed Lab Protocol articles, which describe protocols hosted on protocols.io. Read more information on sharing protocols at <ext-link ext-link-type="uri" xlink:href="https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols" xlink:type="simple">https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols</ext-link></p>
+<p>Thank you again for your submission to our journal. We hope that our editorial process has been constructive thus far, and we welcome your feedback at any time. Please don't hesitate to contact us if you have any questions or comments.</p>
+<p>Sincerely,</p>
+<p>Luke</p>
+<p>Lucas Smith, Ph.D.</p>
+<p>Senior Editor</p>
+<p>PLOS Biology</p>
+<p>lsmith@plos.org</p>
+<p>----------------------------------------------------------------</p>
+<p>REVIEWS:</p>
+<p>Reviewer #1: This interesting study reports changes in SV2A expression in humans after a night of sleep or a night of sleep deprivation. While no significant changes were observed in controls allowed to sleep, small increases in SV2A expression were seen in 6 of the 8 brain regions tested after sleep deprivation, including several cortical areas, hippocampus and striatum. The authors frame this result as supporting the synaptic homeostasis hypothesis (although the first 2 references do not seem the most relevant for this hypothesis). The results are straightforward and the study is well conducted. Some clarifications, however, are needed, especially in the interpretation.</p>
+<p>First, the authors suggest only late in the discussion that caution is needed to interpret SV2A results, but this caution is not taken apparent in the title or in most of the main text of the paper (see description of the 2 main goals of the study at the end of the introduction), where it is assumed that indeed changes in SV2A reflect changes in "synaptic terminal density" (bouton number?). My understanding is that it remains unclear whether SV2A levels reflect the number of axonal boutons and/or the status of the synaptic machinery in the pre-synapse (more SV2A molecules /vesicle, more synaptic vesicles?). Since SV2A is expressed in both excitatory and inhibitory synapses, changes after sleep deprivation could also reflect a switch in the excitatory/inhibitory tone in the brain after sleep deprivation.</p>
+<p>I encourage the authors to rephrase the statement (line 211) that SV2A changes after sleep deprivation have not been investigated in animal models. If recent SV2A results in mice after sleep and sleep deprivation are published soon, there will be a need to understand possible discrepancies between results in rodents and humans. These authors seem to be in the best position to address these differences.</p>
+<p>Minor points:</p>
+<p>Line 172: this comment is unclear; do the authors suggest that SD subjects could sleep to some extent before the nap? or that "renormalization" happens during waking? A similar comment appears later in the text.</p>
+<p>Line 191: this sentence needs to be fixed</p>
+<p>Reviewer #2: The presented research tests the Synaptic Homeostasis Hypothesis (SHY), which posits that wakefulness is associated with a net increase in synaptic strength driven by learning-related plasticity, whereas sleep facilitates synaptic renormalization (or down-selection) to maintain network efficiency and cellular homeostasis. To address this hypothesis, the authors quantify changes in synaptic density following 28 hours of total sleep deprivation using positron emission tomography (PET) imaging.</p>
+<p>SHY is strongly supported by animal studies; however, direct evidence in humans remains limited. The use of advanced PET imaging to assess synaptic density therefore represents a valuable and innovative contribution to the field and provides important translational relevance to one of the leading hypotheses concerning sleep function. The study design is well conceived, the analytical approach is appropriate and transparent, and the manuscript is clearly written.</p>
+<p>The reviewer has only minor concerns:</p>
+<p>1.Abstract: It would be helpful to specify when the PET scans were performed (e.g., before or after sleep or sleep deprivation) to improve clarity for the reader.</p>
+<p>2.Terminology related to SHY: Earlier publications introduced the term "downscaling," whereas more recent work, including some cited by the authors, uses "renormalization" or "down-selection." The terminology should be updated and applied consistently throughout the manuscript.</p>
+<p>3.Referencing of SHY: It is unclear why a commentary (Ref. 2) is cited instead of the original publication in which SHY was first proposed. The primary source should be referenced.</p>
+<p>4.Introduction: The paragraph on depressive disorders appears tangential to the stated study objectives and is not necessary for understanding the rationale. The reviewer suggests removing this section to improve focus.</p>
+<p>5.Figure 1: The terminology used in the text and figure should be harmonized (e.g., "sleep satiation"). In addition, the inclusion of more fine-grained time markers would improve clarity, for example to indicate when the 2-hour EEG recording was conducted. In general, the study design figure is not so easy to understand, for example because the control group is only indicated/included as text. A graphical illustration that includes controls and clearly shows what measurements were compared would be very helpful.</p>
+<p>6.Discussion: Direct comparison of effect magnitudes between human and mice studies should be interpreted with caution, as cross-species differences in methodology and scale limit direct comparability.</p>
+<p>7.Contextualization: The discussion of converging evidence could be strengthened by including relevant findings from magnetic resonance spectroscopy studies.</p>
+<p>8.Outlook: The future directions section would benefit from a broader perspective. While sleep deprivation may have transient therapeutic effects in depressive disorders, it also has numerous adverse consequences in both healthy and clinical populations. A more balanced outlook would enhance the manuscript's impact.</p>
+<p>Reviewer #3: In this randomized imaging study in 40 healthy adults, the authors evaluated the relationship between sleep deprivation and synaptic changes. They found significant increases in SV2A PET signal in multiple brain regions following sleep loss. The positive correlation between SV2A radioligand binding and elevated slow wave activity during recovery sleep strengthens the link between synaptic changes and sleep pressure. This study provides meaningful in vivo evidence supporting the synaptic homeostasis hypothesis and highlights SV2A PET imaging as a sensitive method for tracking sleep-wake dependent synaptic changes in humans.</p>
+<p>This is a well-designed study using a recently developed PET tracer. While SV2A PET has been used to assess synaptic density in various neurological conditions, prior studies specifically investigating sleep or sleep deprivation with SV2A PET have so far not been reported. The manuscript is clear and the discussion is appropriate.</p>
+<p>I have the following comments:</p>
+<p>-Throughout the manuscript: there are different SV2A biomarker interpretations: synaptic density (in title), presynaptic terminal density (abstract), and synaptic terminal density (in introduction). Please make this consistent and elaborate on differences in the already established discussion paragraph.</p>
+<p>-Throughout manuscript: "Synaptic vesicle protein 2A" should read "Synaptic vesicle glycoprotein 2A"; see UniProt: Q7L0J3.</p>
+<p>-Results: 8 brain regions were evaluated by ROI analysis. Why were these brain regions selected? Was a global effect expected? Did the authors consider an exploratory SPM analysis to evaluate potential changes beyond these regions?</p>
+<p>-Results: could reduced motion in scan 2 in the sleep-deprived subjects have contributed to the study outcome? How did the authors control for a potential contribution? Were subjects allowed to sleep during PET?</p>
+<p>-S2 Table. Clarify abbreviation dSWA.</p>
+<p>-Figure 1: the study design figure is confusing. Can you indicate which subject groups underwent the events in each row? Is the time indication relevant for all rows?</p>
+<p>-Figure 3: which brain regions were used for the SV2A BPnd values presented in bottom graphs?</p>
+<p>-Discussion, line 208 - please confirm that this was five SV2A molecules or five SV2 molecules in the reference.</p>
+<p>-Discussion: The authors did not discuss in detail the literature on potential synaptophysin changes in preclinical studies. Since this protein is closely associated with SV2A, it would be beneficial to elaborate on this literature.</p>
+</body>
+</sub-article>
+<sub-article article-type="author-comment" id="pbio.3003816.r003">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r003</article-id>
+<title-group>
+<article-title>Author response to Decision Letter 2</article-title>
+</title-group>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="peer-reviewed-article" id="rel-obj005" link-type="rebutted-decision-letter" object-id="10.1371/journal.pbio.3003816.r002" object-id-type="doi" object-type="decision-letter"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>2</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="author-response-date">22 Apr 2026</named-content></p>
+<supplementary-material id="pbio.3003816.s010" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s010" xlink:type="simple">
+<label>Attachment</label>
+<caption>
+<p>Submitted filename: <named-content content-type="submitted-filename">Response_2.docx</named-content></p>
+</caption>
+</supplementary-material>
+</body>
+</sub-article>
+<sub-article article-type="editor-report" id="pbio.3003816.r004" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r004</article-id>
+<title-group>
+<article-title>Decision Letter 2</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Smith</surname>
+<given-names>Lucas</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Lucas Smith</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="article" id="rel-obj006" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>2</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">1 May 2026</named-content></p>
+<p>Dear Dr Elmenhorst,</p>
+<p>Thank you for your patience while we considered your revised manuscript "Sleep deprivation increases SV2A availability as proxy measure of synaptic density in human brains" for publication as a Short Report at PLOS Biology. This revised version of your manuscript has been evaluated by the PLOS Biology editors and the Academic Editor, who is satisfied by the changes made in this revision.</p>
+<p>Based on our Academic Editor's assessment of your revision, we are likely to accept this manuscript for publication. However, before we can do so, we need you to address a number of data and policy related requests in a last revision that we anticipate will not take very long. These are detailed below.</p>
+<p>**IMPORTANT - Please address the following editorial requests:</p>
+<p>1 - TITLE: We understand that you have been asked to tone down the title of your paper by one of the reviewers, and we think the current version is a good step in that direction. However, we would like to propose a more streamlined version (if you agree, and do not think it is too strong).</p>
+<p>We suggest:</p>
+<p>"'Sleep deprivation increases levels of the synaptic density marker SV2A in the human brain.'"</p>
+<p>2 - CLINICAL TRIAL: Given that your study was part of a pre-registered clinical trial, we ask that you:</p>
+<p>a. indicate in the abstract that this work was done as part of a clinical trial and include the registry and registration number.</p>
+<p>b. provide a CONSORT checklist or relevant reporting guideline (uploaded as supporting information)</p>
+<p>c. provide a CONSORT flow diagram (added to Fig 1 would be best)</p>
+<p>d. provide the complete Trial protocol (uploaded as supporting information)</p>
+<p>e. If relevant, the manuscript file must include an explanation of any deviation from the trial protocol and any information on statistical methods or participants not indicated in the CONSORT documentation</p>
+<p>3 - DATA: We understand from your data and code availability statement, that access to the raw data underlying your study is restricted due to ethical or legal restrictions on sharing a sensitive data. This is an allowable data restriction, and thank you for providing the link to the Julich repository where researchers can request access to this data.</p>
+<p>a. I saw that page includes a 'contact' button - but I did not see explicit instructions listed on the website for how researchers should request access. Can you expand your Data and Code Availability statement to include a few more details about how researchers can request access to your data?</p>
+<p>b. While we understand that you cannot share the raw data, if legally allowed, we would ask that you do share the processed numerical data used to generate your figures. This can be provided as a supplementary files (e.g., excel). Please ensure that all data files are uploaded as 'Supporting Information' and are invariably referred to (in the manuscript, figure legends, and the Description field when uploading your files) using the following format verbatim: S1 Data, S2 Data, etc. Multiple panels of a single or even several figures can be included as multiple sheets in one excel file that is saved using exactly the following convention: S1_Data.xlsx (using an underscore).</p>
+<p>NOTE: the numerical data provided should include all replicates AND the way in which the plotted mean and errors were derived (it should not present only the mean/average values).</p>
+<p>-Please also ensure that figure legends in your manuscript include information on where the underlying data can be found, and ensure your supplemental data file/s has a legend.</p>
+<p>-Please ensure that your Data Statement in the submission system accurately describes where your data can be found.</p>
+<p>(I do see that your paper already has some data files in the supplement - if these are the underlying data for your figures, please make this clearer, by adding a legend for these files, and referencing them in the relevant figure legends).</p>
+<p>4 - CODE: Per journal policy, if you have generated any custom code during the course of this investigation, please make it available without restrictions. Please ensure that the code is sufficiently well documented and reusable, and that your Data Statement in the Editorial Manager submission system accurately describes where your code can be found. More information on our Code Policy, what and how to share can be found here: <ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/code-availability" xlink:type="simple">https://journals.plos.org/plosbiology/s/code-availability</ext-link></p>
+<p>Please note that we cannot accept sole deposition of code in GitHub, as this could be changed after publication. However, you can archive this version of your publicly available GitHub code to Zenodo. Once you do this, it will generate a DOI number, which you will need to provide in the Data Accessibility Statement (you are welcome to also provide the GitHub access information). See the process for doing this here: <ext-link ext-link-type="uri" xlink:href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" xlink:type="simple">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</ext-link></p>
+<p>5 - EDITORIAL SUGGESTION: We would suggest that you give the manuscript one final pass to ensure wording/terminology consistency, and with an eye for grammatical issues. When reading the revision, we noticed a few places that would benefit from a final edit. For example:</p>
+<p>a. SV2A terminology is better now, but it is still a bit uneven. In most places the revised version describes SV2A availability more cautiously as a proxy for synaptic density, but in a few places it still reads more like a direct measure of presynaptic terminal density. It would be good to do one more pass to make that wording consistent throughout</p>
+<p>b. The academic editor noticed that there seems to be a small inconsistency in the number of ROIs. In the Results they refer to eight brain regions, but in the Methods the listed ROIs seem to add up to nine. Please double check that and clarify.</p>
+<p>As you address these items, please take this last chance to review your reference list to ensure that it is complete and correct. If you have cited papers that have been retracted, please include the rationale for doing so in the manuscript text, or remove these references and replace them with relevant current references. Any changes to the reference list should be mentioned in the cover letter that accompanies your revised manuscript.</p>
+<p>In addition to these revisions, you may need to complete some formatting changes, which you will receive in a follow up email. A member of our team will be in touch with a set of requests shortly. If you do not receive a separate email within a few days, please assume that checks have been completed, and no additional changes are required.</p>
+<p>We expect to receive your revised manuscript within two weeks.</p>
+<p>To submit your revision, please go to <ext-link ext-link-type="uri" xlink:href="https://www.editorialmanager.com/pbiology/" xlink:type="simple">https://www.editorialmanager.com/pbiology/</ext-link> and log in as an Author. Click the link labelled 'Submissions Needing Revision' to find your submission record. Your revised submission must include the following:</p>
+<p>- a cover letter that should detail your responses to any editorial requests, if applicable, and whether changes have been made to the reference list</p>
+<p>- a Response to Reviewers file that provides a detailed response to the reviewers' comments (if applicable, if not applicable please do not delete your existing 'Response to Reviewers' file.)</p>
+<p>- a track-changes file indicating any changes that you have made to the manuscript.</p>
+<p>NOTE: If Supporting Information files are included with your article, note that these are not copyedited and will be published as they are submitted. Please ensure that these files are legible and of high quality (at least 300 dpi) in an easily accessible file format. For this reason, please be aware that any references listed in an SI file will not be indexed. For more information, see our Supporting Information guidelines:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://journals.plos.org/plosbiology/s/supporting-information" xlink:type="simple">https://journals.plos.org/plosbiology/s/supporting-information</ext-link></p>
+<p>*Published Peer Review History*</p>
+<p>Please note that you may have the opportunity to make the peer review history publicly available. The record will include editor decision letters (with reviews) and your responses to reviewer comments. If eligible, we will contact you to opt in or out. Please see here for more details:</p>
+<p><ext-link ext-link-type="uri" xlink:href="https://plos.org/published-peer-review-history/" xlink:type="simple">https://plos.org/published-peer-review-history/</ext-link></p>
+<p>*Press*</p>
+<p>Should you, your institution's press office or the journal office choose to press release your paper, please ensure you have opted out of Early Article Posting on the submission form. We ask that you notify us as soon as possible if you or your institution is planning to press release the article.</p>
+<p>*Protocols deposition*</p>
+<p>To enhance the reproducibility of your results, we recommend that if applicable you deposit your laboratory protocols in protocols.io, where a protocol can be assigned its own identifier (DOI) such that it can be cited independently in the future. Additionally, PLOS ONE offers an option for publishing peer-reviewed Lab Protocol articles, which describe protocols hosted on protocols.io. Read more information on sharing protocols at <ext-link ext-link-type="uri" xlink:href="https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols" xlink:type="simple">https://plos.org/protocols?utm_medium=editorial-email&amp;utm_source=authorletters&amp;utm_campaign=protocols</ext-link></p>
+<p>Please do not hesitate to contact me should you have any questions.</p>
+<p>Sincerely,</p>
+<p>Luke</p>
+<p>Lucas Smith, Ph.D.</p>
+<p>Senior Editor</p>
+<p>lsmith@plos.org</p>
+<p>PLOS Biology</p>
+</body>
+</sub-article>
+<sub-article article-type="author-comment" id="pbio.3003816.r005">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r005</article-id>
+<title-group>
+<article-title>Author response to Decision Letter 3</article-title>
+</title-group>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="peer-reviewed-article" id="rel-obj007" link-type="rebutted-decision-letter" object-id="10.1371/journal.pbio.3003816.r004" object-id-type="doi" object-type="decision-letter"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>3</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="author-response-date">5 May 2026</named-content></p>
+<supplementary-material id="pbio.3003816.s011" mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document" position="float" xlink:href="info:doi/10.1371/journal.pbio.3003816.s011" xlink:type="simple">
+<label>Attachment</label>
+<caption>
+<p>Submitted filename: <named-content content-type="submitted-filename">Response_to_R2.docx</named-content></p>
+</caption>
+</supplementary-material>
+</body>
+</sub-article>
+<sub-article article-type="editor-report" id="pbio.3003816.r006" specific-use="decision-letter">
+<front-stub>
+<article-id pub-id-type="doi">10.1371/journal.pbio.3003816.r006</article-id>
+<title-group>
+<article-title>Decision Letter 3</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name name-style="western"><surname>Smith</surname>
+<given-names>Lucas</given-names>
+</name>
+<role>Senior Editor</role>
+</contrib>
+</contrib-group>
+<permissions>
+<copyright-year>2026</copyright-year>
+<copyright-holder>Lucas Smith</copyright-holder>
+<license xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">
+<license-p>This is an open access article distributed under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/" xlink:type="simple">Creative Commons Attribution License</ext-link>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</license-p></license>
+</permissions>
+<related-object document-id="10.1371/journal.pbio.3003816" document-id-type="doi" document-type="article" id="rel-obj008" link-type="peer-reviewed-article"/>
+<custom-meta-group>
+<custom-meta>
+<meta-name>Submission Version</meta-name>
+<meta-value>3</meta-value>
+</custom-meta>
+</custom-meta-group>
+</front-stub>
+<body>
+<p><named-content content-type="letter-date">8 May 2026</named-content></p>
+<p>Dear Dr Elmenhorst,</p>
+<p>Thank you for the submission of your revised Short Report "Sleep deprivation increases levels of the synaptic density marker SV2A in the human brain" for publication in PLOS Biology and thank you for addressing our last editorial requests in this revision. On behalf of my colleagues and the Academic Editor, Guang Yang, I am pleased to say that we can in principle accept your manuscript for publication, provided you address any remaining formatting and reporting issues. These will be detailed in an email you should receive within 2-3 business days from our colleagues in the journal operations team; no action is required from you until then. Please note that we will not be able to formally accept your manuscript and schedule it for publication until you have completed any requested changes.</p>
+<p>Please take a minute to log into Editorial Manager at <ext-link ext-link-type="uri" xlink:href="http://www.editorialmanager.com/pbiology/" xlink:type="simple">http://www.editorialmanager.com/pbiology/,</ext-link> click the "Update My Information" link at the top of the page, and update your user information to ensure an efficient production process.</p>
+<p>PRESS</p>
+<p>We frequently collaborate with press offices. If your institution or institutions have a press office, please notify them about your upcoming paper at this point, to enable them to help maximize its impact. If the press office is planning to promote your findings, we would be grateful if they could coordinate with biologypress@plos.org. If you have previously opted in to the early version process, we ask that you notify us immediately of any press plans so that we may opt out on your behalf.</p>
+<p>We also ask that you take this opportunity to read our Embargo Policy regarding the discussion, promotion and media coverage of work that is yet to be published by PLOS. As your manuscript is not yet published, it is bound by the conditions of our Embargo Policy. Please be aware that this policy is in place both to ensure that any press coverage of your article is fully substantiated and to provide a direct link between such coverage and the published work. For full details of our Embargo Policy, please visit <ext-link ext-link-type="uri" xlink:href="http://www.plos.org/about/media-inquiries/embargo-policy/" xlink:type="simple">http://www.plos.org/about/media-inquiries/embargo-policy/</ext-link>.</p>
+<p>Thank you again for choosing PLOS Biology for publication and supporting Open Access publishing. We look forward to publishing your study.</p>
+<p>Sincerely,</p>
+<p>Luke</p>
+<p>Lucas Smith, Ph.D.</p>
+<p>Senior Editor</p>
+<p>PLOS Biology</p>
+<p>lsmith@plos.org</p>
+</body>
+</sub-article>
+</article>

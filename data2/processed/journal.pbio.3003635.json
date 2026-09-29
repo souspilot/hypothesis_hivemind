@@ -1,0 +1,529 @@
+{
+  "paper_id": "journal.pbio.3003635",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003635.xml"
+  },
+  "title": "A cortico-subthalamic circuit rapidly engages and releases inhibition of specific movements depending on the environmental context",
+  "doi": "10.1371/journal.pbio.3003635",
+  "authors": [
+    {
+      "first": "Cheol",
+      "last": "Soh"
+    },
+    {
+      "first": "Mario",
+      "last": "Hervault"
+    },
+    {
+      "first": "Nathan H.",
+      "last": "Chalkley"
+    },
+    {
+      "first": "Kien",
+      "last": "Huynh"
+    },
+    {
+      "first": "Qiang",
+      "last": "Zhang"
+    },
+    {
+      "first": "Ergun Y.",
+      "last": "Uc"
+    },
+    {
+      "first": "Jeremy D. W.",
+      "last": "Greenlee"
+    },
+    {
+      "first": "Jan R.",
+      "last": "Wessel"
+    }
+  ],
+  "abstract_text": "Response inhibition is an important cognitive control mechanism that enables flexible behavior by stopping inappropriate actions. Intracranial recordings across species have identified a neural circuit that implements response inhibition via the subthalamic nucleus of the basal ganglia. However, this work has been limited to simple tasks, in which unequivocal, salient \u201cstop\u201d-signals require the inhibition of all ongoing responses. Notably, response inhibition in the real world is substantially different. Real-world response inhibition is selective: it occurs only after specific salient signals (\u2018stimulus-selectivity\u2019) and stops only specific movements while others continue (\u2018response-selectivity\u2019). If and how the fronto-subthalamic system implements selective inhibition is largely unknown. Here, we recorded subthalamic local field potentials and scalp-EEG in humans performing a novel, selective inhibition task. Salient signals either required stopping all initiated responses (global inhibition), stopping only some responses (response-selective inhibition), or continuing all responses\u2014i.e., ignoring the signal (which ensures stimulus-selectivity). All three signals initially triggered a common fronto-subthalamic inhibitory process, signified by a rapid increase in \u03b2-burst activity. During global inhibition, subthalamic \u03b2-bursting subsequently increased above baseline, persisting for over a second. During response-selective inhibition, this activity was delayed, which enabled a second bout of disinhibition and allowed appropriate responses to continue. Throughout this period, frontal cortical and subthalamic \u03b2-band activity were tightly coupled. This shows that selective inhibition is accompanied by rapid, context-dependent engagement and release of fronto-subthalamic inhibition. Moreover, subthalamic activity lasted substantially longer than assumed by classic behavioral-computational models. This supports recent theoretical models that assume protracted response inhibition during action-stopping.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003635",
+    "body_text": [
+      {
+        "text": "Response inhibition is one of the fundamental cognitive control functions that enables flexible behavior [1]. It allows humans, non-human animals, and other cognitive agents to rapidly cancel inappropriate or obsolete actions [2,3]. Response inhibition is implemented by a fronto-basal ganglia neural circuit [4\u20136]. Frontal cortical regions signal the need to stop ongoing actions to the basal ganglia via two net-inhibitory motor pathways (indirect and hyperdirect, [7\u201310]). Both of these pathways feature the subthalamic nucleus (STN), which contributes to the net-inhibition of the thalamocortical motor system via broad projections to the output nuclei of the basal ganglia [11\u201313]. Causal investigations have shown that the STN contributes to the non-selective suppression of motor system excitability during response inhibition [14]. The fronto-subthalamic hyper- and indirect pathways implement response inhibition in conjunction with other important fronto-basal ganglia connections, such as an ascending arkypallidal-striatal route that inhibits prokinetic drive towards the striatum [3,15\u201317]). Together, these pathways enable the brain to stop or revise already initiated actions.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The vast majority of our knowledge about motor inhibition comes from stop-signal tasks [1,18,19]. In such tasks, a specific movement is initially instructed by a Go-signal. On some trials, salient stop-signals then instruct the subject to inhibit and cancel that movement prior to its execution. Stop-signals trigger activity within the right inferior frontal cortex [20], which in turn rapidly activates the STN [8]. STN activity is then followed by thalamic signaling [21] and ultimately results in the inhibition of the motor cortex ([14,22]. Recent work has shown that inhibitory commands along this chain are sent through transient, burst-like signals in the \u03b2-frequency band (13\u201330 Hz, [23\u201327]).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Stop-signal tasks have contributed greatly to our basic understanding of response inhibition. However, they are a poor model for response inhibition in the real-world [28]. Real-world demands on the response inhibition system are highly specific and require a large degree of selectivity\u2014both with respect to the stimuli that trigger inhibition [29], and with respect to the movements that have to be inhibited [30,31]. First, unlike classic stop-signal tasks (which include a single, unequivocal stop-signal) only specific salient stimuli in the real-world require response inhibition, whereas other do not. For example, pedestrians need to inhibit their walking movements after a car horn, but not after a ship\u2019s air horn. Second, real-world inhibition is also \u201cresponse-selective.\u201d Rather than inhibiting all initiated movements (as in the classic stop-signal task), only some ongoing movements have to be stopped, whereas others have to continue. For example, pedestrians need to inhibit their walking movements without dropping their bag when hearing a car horn.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The study of this more realistic, stimulus- and response-selective response inhibition requires more complicated laboratory paradigms than the classic stop-signal task. Emerging work using such paradigms has shown that both stimulus- and response-selective stopping substantially alter the effects of response inhibition. Selective response inhibition changes both the behavioral stopping process [29,30,32], as well as the physiological effects of response inhibition on the motor cortex [33\u201335]. This raises the question motivating the current study: how is this type of flexible, realistic response inhibition implemented in the fronto-subthalamic circuit?",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Answering this question has been challenging, because complex, selective stopping tasks are difficult to implement in model organisms that allow precise measurements of subcortical activity (such as the STN). The subcortical nuclei of the basal ganglia that are paramount to response inhibition are small and embedded deeply within the brain [7,36]. Measuring the activity of nuclei such as the STN with sufficient spatiotemporal precision requires invasive intracranial depth electrode recordings [37]. In the past, such recordings could only be performed in non-human animals [38,39] or in humans undergoing acute neurosurgery [40,41]. For these populations, it is difficult to perform complex, selective response inhibition tasks that mimic the requirements of real-world human environments. Rodents, for example, can only perform simplified versions of the classic, non-selective stop-signal task [42]. Healthy humans can readily perform stimulus- and response-selective stopping tasks. However, intracranial recordings from the human STN (and other subcortical nuclei of the response inhibition network) typically have to be performed during acute neurosurgery. This is usually done in the context of deep-brain stimulation (DBS) surgery, which is a common treatment for several neurological and psychiatric disorders [43\u201346]. During DBS surgery, local field potentials can be recorded from the human STN [37,47]. However, cognition and motor abilities are often substantially impaired during the perisurgical period and task performance windows are very short. So far, this has limited the work on response inhibition to simple non-selective stop-signal tasks.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "To address this shortcoming, we here capitalize on the recent introduction of remote-sensing capable deep-brain stimulators [48]. These novel devices allow the wireless streaming of LFPs from the chronically implanted depth electrodes at any time after the surgery. With additional hardware and software [49], the chronic recordings from these DBS devices can be precisely aligned with behavioral tasks, as well as other neural recordings, with millisecond precision. This allows the measurement of LFPs from the human STN while the patients perform complex cognitive tasks, outside of the operating room, on their typical medication, in their optimal cognitive state, for extended periods of time [50,51]. Moreover, the extraoperative setting enables the collection of simultaneous cortical recordings (such as EEG or MEG) concomitantly with the subcortical LFPs. This makes it possible to study large-scale cortico-subcortical dynamics [52].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Here, we performed a stimulus- and response-selective response inhibition task in 15 patients with DBS implants in the STN, while also recording EEG and EMG. This allowed us to compare the cortico-subthalamic dynamics of selective and non-selective stopping.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Fifteen Parkinson\u2019s Disease patients implanted with Medtronic Percept sensing-capable STN deep-brain stimulators performed a stimulus- and response-selective stopping task (Fig 1A) while undergoing a 64-channel scalp EEG recording, as well as EMG recordings from both responding muscles. Each trial began with a Go-stimulus that instructed the performance of an action. On 90% of trials, this action was a bimanual response, performed via button presses using the index fingers on both hands. On 10% of trials, a unimanual response was cued instead. These unimanual Go-trials were introduced as a comparison for the Selective-Stop trials, which required the continuation of a unimanual response. (In the following, we will refer to the regular, bimanual Go-trials as \u201cGo-trials\u201d and these rarer, unimanual Go-trials as \u201cunimanual Go-trials\u201d). Out of the 90% bimanual Go-trials, 30% featured a second, salient signal, with an adaptive delay. These salient visual stimuli either instructed the stopping of both responses (10% of trials), the stopping of one of the responses while the other continued (10%), or no stopping at all (10%). In keeping with the existing literature, we refer to the first type of trial\u2014in which all movement has to be stopped\u2014as \u201cGlobal-Stop\u201d-trials. We will refer to the second type of trial\u2014in which one movement has to be stopped while the other has to continue\u2014as \u201cSelective-Stop\u201d-trials. Finally, we will refer to the third type of trial\u2014which features the same type of salient signal as the stop trials but does not require the stopping of any movement\u2014as \u201cIgnore\u201d trials. These trials ensure that response inhibition is stimulus-selective.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Subjects and behavior",
+        "sec_num": null
+      },
+      {
+        "text": "Subjects showed behavior typical of older adults (Fig 1B). Go-trial reaction time was 673 ms (SEM: 27 ms) on bimanual Go-trials and 711 ms (SEM: 35 ms) on unimanual Go-trials, with no significant differences between the two. All subjects showed good stopping performance, with an average stop-signal reaction time (SSRT) of 330 ms (SEM: 20.1). SSRT on selective stop-trials was 368 ms (SEM: 38 ms; though it should be noted that selective stop-conditions often violate the assumptions of the horse race model and thus, the resulting SSRT estimates should be interpreted with caution). As expected for the stop-signal task, failed stop trials (609 ms, SEM: 25 ms) showed consistently faster responses than Go-trials (t(14) = 3.4, p = .0048, d = 0.6). Compared to bimanual Go-trials, both Selective-Stop trials (955 ms, SEM: 34 ms) and Ignore trials (809 ms, SEM: 28 ms) showed a significant slowing of reaction times of the continuing response (t(14) = 16.36, p < .0001, d = 2.2; t(14) = 9.08, p < .0001, d = 1.2).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Subjects and behavior",
+        "sec_num": null
+      },
+      {
+        "text": "EMG traces for all trial types can be found in Fig 1C. As can be seen in the signal-locked plots (right panel), all three trial types of interest featured a short-latency reduction of the initial EMG activity around the time of SSRT. Ignore and Selective stop-trials then saw a second bout of EMG increase, signifying the resumption of the appropriate response, whereas Global-Stop trial EMG remained suppressed. (Note that both types of Stop trials showed lower initial activity compared to Ignore trials. That is because successful stop-trials oversample the slower part of the RT distribution (a straightforward consequence of the horse race underlying response inhibition in the stop-signal task; [53]). In contrast, the Ignore trace features the entire Go-RT distribution, as most Ignore trials featured correct responses. If the Ignore trace is restricted to only the slower half of the Ignore RT distribution, these early EMG differences disappear (dark green line)).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Subjects and behavior",
+        "sec_num": null
+      },
+      {
+        "text": "LFP data from the subthalamic depth electrodes (Fig 1D) were downloaded from the implanted DBS device and precisely aligned with the EEG recording using established methods [49]. The digital event information from the EEG recording was then used to inform the analysis of the LFP trace, as was done in previous studies [50,51].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Subjects and behavior",
+        "sec_num": null
+      },
+      {
+        "text": "We trained several multi-variate decoders to distinguish whole-scalp EEG patterns associated with the different critical trial types. Activity after salient signals (Global-Stop, Selective-Stop, Ignore) was decodable from activity after Go-signals very early after the respective signal (see red, orange, and green lines in Fig 2A, which signify reliable multivariate decoding at a level of p < .01, cluster-corrected for multiple comparisons). However, differences between the three salient signal types themselves could not be detected until substantially later in the trial. Starting at ~450 ms, all three trial types showed consistent and decodable differences from one another. The topographical voltage map during this later time period (specifically, the 600\u2013666 ms period during which all three processes showed significant pairwise decoding differences) showed a centrally-located voltage positivity that was stronger on Global-Stop compared to both Ignore and Selective-Stop trials, and was also stronger on Selective-Stop compared to Ignore trials. This activity represents the classic stop-signal P3 event-related component [54,55], which typically peaks at electrode Cz. The ERP at that electrode is therefore also shown in Fig 2A. The area under the curve (AUC) metrics for the decoders underlying the significance lines in Fig 2A can be found in S1 Fig.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cortical activity shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "We then ensured that this later difference was not merely a consequence of the different types of motoric activity between the three conditions (Fig 2B and 2C). After removing motoric signal components from the compound EEG signal using independent component analysis (ICA, Fig 2B), we retrained the same multi-variate decoders as in Fig 2A, with very similar pairwise decoding latencies emerging from the analysis (Fig 2C, p < .01, cluster-corrected for multiple comparisons).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cortical activity shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Together, these EEG decoding analyses suggest that at the cortical level, processing between Global-Stop, Selective-Stop, and Ignore trials is initially indistinguishable. Significant differences in processing emerge later in the trial, chiefly as differences in processing over fronto-central electrode sites.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cortical activity shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "The full-spectrum STN LFP condition comparisons can be found in Fig 3A. In line with prior work, inhibitory STN activity largely took place in the \u03b2 frequency band [21,37,40]. \u03b2-band activity in the full-spectrum analysis was increased, alongside low-frequency activity, on Global-Stop compared to Go trials (Fig 3A, left panels, p < .05, cluster-corrected for multiple comparisons). STN \u03b2-band activity in particular was also increased on Global-Stop compared to Selective-Stop trials, as well as compared to Ignore trials (Fig 3A, middle and right panels), whereas low-frequency activity did not differ between these trial types. As prior work has found, STN \u03b2-band activity takes the form of discrete, transient \u201cburst-like\u201d events ([21]; Fig 3C). Fig 3B shows the \u03b2 burst probability timelines within the bilateral STN for each trial type, as well as the baseline burst rate in the 500 ms period prior to the Go-signal (dashed line). At the time of the signal, each trial type showed a declining rate of \u03b2 bursts relative to baseline. This reflects the disinhibition of the motor system during the initiation of the movement. (Note that the Go trial data was time-locked to a time point that matched the current stop-signal delay (SSD), rather than the Go-signal itself, to account for this activity). Shortly after the presentation of the salient signal, however, all three trial types (including Ignore trials, in which the signal did not instruct any stopping) showed a fast-latency increase in STN \u03b2 burst rates relative to go-trials. STN burst rates returned to pre-trial baseline prior to SSRT in all three trial types that featured salient events (Global-Stop, Selective Stop, and Ignore). This fast-latency increase in STN activity, which occurred regardless of stopping requirements, is in line with the STN\u2019s role in implementing rapid, short-lasting and broad motor inhibition after any type of salient event [56].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "STN activity also shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Prior computational modeling work and single-neuron recordings from non-human primates have suggested that motor-system inhibition during action-stopping begins just prior to the end of the SSRT period [57]. In line with this, STN \u03b2 burst rates were increased relative to Go trials for all three trial types right before the end of SSRT (Fig 3D). Replicating previous work, successful Global-Stop trials also featured higher beta burst rates compared to failed Global-Stop trials (pictured in S2 Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "STN activity also shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Most notably, substantial condition differences then emerged after SSRT. On Global-Stop trials, where all movement had to be stopped, STN \u03b2 bursting exceeded the baseline burst rate for a sustained period of over a second (Fig 3C). In contrast, both the Selective-Stop condition (where only part of the response had to be inhibited) and the Ignore condition (where no inhibition was necessary at all) featured an immediate reduction of STN \u03b2 bursting back to below-baseline levels. Notably, after the response was made, all three trial types with responses (Selective Stop, Ignore, and Go-trials) then showed a similar above-baseline increase in STN \u03b2 burst rates to that observed immediately after SSRT on Global-Stop trials.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "STN activity also shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Together, this suggests that all salient signals initially trigger a fast implementation of response inhibition. When non-selective inhibition of all ongoing responses is required (Global-Stop), the motor system is then inhibited broadly and for an extended period of time, signified by a sustained above-baseline \u03b2 bursting in STN. In contrast, when only partial, response-selective response inhibition (or no inhibition at all) is required, this pattern is delayed until after the continuation of the appropriate response. Prior to that, the STN-based inhibition is re-released to enable the execution of the respective response on those trials. This inhibit-release-inhibit dynamic on Selective-Stop and Ignore trials likely also explains why there is substantial behavioral slowing on trials with Selective-Stop and Ignore trials (Fig 1C): the initial suppression of the EMG observed in these conditions is likely due to the initial increase in STN \u03b2 band activity observed here.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "STN activity also shows early overlap and later divergence depending on selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "As highlighted above, both STN and cortical activity suggests that Global-Stop, Selective-Stop, and Ignore trials initially feature a shared process. Critical differences between the conditions were found only later in the trial (after SSRT). On the scalp, this was signified by unique activity over fronto-central areas (Fig 2A and 2C). In the STN, this was evident from sustained, above-baseline STN activity (Fig 3B). These scalp and STN signals shared a similar time course, suggesting a potential relationship between cortical and subthalamic processing.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "\u03b2 activity before and after SSRT is tightly coupled between frontal areas and STN",
+        "sec_num": null
+      },
+      {
+        "text": "Indeed, STN \u03b2 band activity on trials with salient signals (Global-Stop, Selective-Stop, Ignore), was highly correlated with \u03b2 activity over fronto-central scalp regions, both shortly before and immediately after SSRT (Fig 4A; electrode sites and time windows with significant cross-area correlations are highlighted at a threshold of p < .05, corrected for multiple comparisons). STN \u03b2 band activity in the time period immediately prior to SSRT (the last 50 ms before subject-specific SSRT, see Fig 3D) was predicted by \u03b2 band activity at fronto-central electrodes in the time window starting around 100 ms prior to SSRT. Similarly, STN \u03b2-band activity in the time window immediately after SSRT was correlated with fronto-central EEG in the post-SSRT period. Fig 4B shows the same relationship with better temporal resolution. EEG \u03b2-band activity in the fronto-central ROI was correlated with bilateral STN \u03b2-band activity for an extensive time period both before and after SSRT (Fig 4B; black outline shows single-trial significant correlations at a cluster-corrected critical p-value of 0.0027 \u2013 i.e., .05 divided by 18, the number of spatial ROIs in). Note that the \u2018motor\u2019 electrodes C3 and C4 were contained in the lateral ROIs, suggesting that this cortico-subthalamic correlation did not merely reflect the general \u03b2 coupling between STN and motor cortex (see Fig 5A below).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "\u03b2 activity before and after SSRT is tightly coupled between frontal areas and STN",
+        "sec_num": null
+      },
+      {
+        "text": "These analyses show that the \u03b2 band dynamics between fronto-central EEG signals and bilateral STN were highly correlated during the specific adjustments to behavior necessitated by the salient signal (i.e., global inhibition, selective inhibition, or continuation).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "\u03b2 activity before and after SSRT is tightly coupled between frontal areas and STN",
+        "sec_num": null
+      },
+      {
+        "text": "Finally, whether response inhibition activity in STN is lateralized has been a contentious question. Notably, an influential fMRI study reported that STN activity during (Global) response inhibition is lateralized to the right STN, regardless of the side of the action that has to be stopped [58]. However, anatomical connections [59] and functional coupling between STN and motor cortex typically show strong ipsilateral organization [60,61]. Consequently, unilateral STN lesions typically lead to clinical symptoms affecting contralateral limbs, such as hemiballismus [62]. Indeed, DBS electrodes are sometimes implanted only contralateral to the most symptomatic side of the body [63]. Thus, one could predict that each STN should specifically inhibit responses made with the contralateral hand. For that very reason, some intracranial STN recording studies of the classic stop-signal task have only recorded from the contralateral STN [40,41]. Others have averaged data from both STN [21,64,65]. However, no systematic investigations of STN LFP lateralization during response inhibition exists. Our data allow such an investigation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "No evidence of lateralized STN activity during response inhibition",
+        "sec_num": null
+      },
+      {
+        "text": "First, in line with previous work, cortico-subthalamic dynamics throughout the recording were strongly lateralized to the same side. In the EEG, increases in \u03b2 burst rate that took place after STN bursts clustered tightly around ipsilateral motor sites (Fig 5A). Very notably, \u03b2 dynamics between the two subthalamic nuclei were also highly correlated throughout the recording. \u03b2 burst rates in left STN were strongly increased both before and after individual bursts in right STN, and vice versa (Fig 5B).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "No evidence of lateralized STN activity during response inhibition",
+        "sec_num": null
+      },
+      {
+        "text": "With regards to response inhibition, both left and right STN showed comparable increases during both selective and global response inhibition (Fig 5C). Left, rather than right STN showed qualitatively earlier effects between Global/Selective-Stop trials and Go trials (see also full-spectrum plots in Fig 3A). However, this difference did not reach statistical significance at any time point for either contrast (selective/non-selective response inhibition). Either way, there was little evidence towards a right-lateralization of response inhibition at the level of the STN.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "No evidence of lateralized STN activity during response inhibition",
+        "sec_num": null
+      },
+      {
+        "text": "During selective stopping, the difference between Selective-Stop and unimanual Go trials was slightly more pronounced for the STN contralateral to the movement, with the contralateral STN showing significant early condition differences between Stop and Go trials that were absent in ipsilateral STN (Fig 5D). This is in line with the ipsilateral dominance in coupling between STN and motor cortex (Fig 5A). However, the condition difference between contralateral and ipsilateral contrasts was not significant above FDR-correction at any point.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "No evidence of lateralized STN activity during response inhibition",
+        "sec_num": null
+      },
+      {
+        "text": "In sum, there were no strongly lateralized effects for either type of response inhibition in the STN. Moreover, STN \u03b2 activity was tightly coupled throughout the recording, which suggests that both nuclei may be working in tight coordination. Indeed, during Global-Stop trials, significant phase-locking emerged between both STN, suggesting that both nuclei work together to effect non-selective response inhibition (Fig 5C).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "No evidence of lateralized STN activity during response inhibition",
+        "sec_num": null
+      },
+      {
+        "text": "To our knowledge, this is the first investigation of the cortico-subcortical dynamics of selective and non-selective response inhibition. We used a stimulus- and response-selective response inhibition task that required participants to either inhibit all ongoing responses (a \u2018Global\u2019 stop condition that matches the non-selective inhibitory requirements of the classic stop-signal task), inhibit one of multiple responses while continuing with another (response-selective stopping), or to ignore a similar salient signal and continue all responses (to ensure that response inhibition is stimulus-selective).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "All three salient stimuli\u2014Global-Stop, Selective-Stop, and Ignore\u2014rapidly led to activity changes in the cortex and the STN. Notably, this initial activity did not differ between the three critical conditions, neither in STN nor in cortex. EEG decoding did not reveal any unique early activity that distinguished the three types of trials (Fig 2A and 2C). STN \u03b2-frequency burst rates show the same initial, rapid increase back to baseline levels after all three types of signals (Fig 3B). Furthermore, Ignore and Selective-Stop trials\u2014both of which required the continuation of one or both movements\u2014featured a similar, short-latency reduction in the EMG of the responding effector as Global-Stop trials (Fig 1C). Together, these findings show that\u2014regardless of inhibitory requirements\u2014all salient events trigger a rapid and transient re-inhibition of the motor system. This aligns with past findings of broad suppression of the excitability of the cortico-spinal tract after any type of salient signal, regardless of whether they require global stopping [22,66], selective stopping [35], or no stopping at all [56].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "After this initial, shared inhibitory process, substantial differences between the conditions emerged. On Global-Stop trials\u2014which required the non-selective inhibition of all active responses\u2014the STN showed a sustained, above-baseline \u03b2 bursting rate, lasting for more than one second past the initial return to baseline (Fig 3B). In comparison, on Selective-Stop trials and Ignore trials, STN \u03b2 bursting reduced below baseline again during this time period. This likely reflects a release of inhibition to allow for the execution of the continued response on these two trial types.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "On the cortical level, unique patterns of fronto-centrally distributed scalp activity emerged during this same time period, as revealed by multi-variate EEG decoding. Moreover, single-trial correlation analyses across the three critical conditions showed a tight relationship between this fronto-central cortical activity and STN activity throughout this period (Fig 4). While scalp EEG does not allow for a precise localization of this signal to a specific part of the cortex, we speculate that this cortico-subcortical relationship reflects an interaction between the STN and the pre-supplementary motor area (preSMA) in the medial wall of the frontal cortex. The preSMA is a key node in the response inhibition circuit [67\u201370]. The preSMA and STN are anatomically connected [44,71,72], and the integrity of this connection is directly related to the efficacy of response inhibition [73,74]. Finally, intracranial [75] and MEG studies [26] have shown that preSMA activity during response inhibition takes place in the \u03b2 frequency band. As such, our finding that fronto-central cortical activity is tightly related to subthalamic \u03b2 activity during trials with different response inhibition requirements is consistent with the idea that an inhibitory preSMA-STN pathway governs the precise implementation of context-specific response inhibition [55]\u2014perhaps reflecting the activity of the indirect pathway. This idea is especially influential in the context of recent two-stage models of response inhibition (see below and see [3,17].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Lastly, our unique, bilateral intracranial STN recordings allowed us to test the purported lateralization of STN activity during response inhibition [58]. First, we confirmed that coupling between STN and motor cortex was highly lateralized (see also [60,61]), as STN \u03b2 bursts were followed by significantly increased bursts rates over ipsilateral motor cortex. Second, we found that across the entire recording, burst timing was highly concurrent across both STN. Third, we found no evidence for the purported right lateralization of STN activity during either type of response inhibition (Selective or Global). Neither did we find strong evidence to support a highly specialized role for the contralateral STN in unimanual (selective) response inhibition. Indeed, during non-selective response inhibition, strongly coherent \u03b2 band activity emerged between both STN. This suggests that response inhibition is carried out by both STN, perhaps in tight bilateral coordination, though future work should systematically assess the role of handedness and response laterality in these effects.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Together, this study suggests that a cortico-subthalamic circuit consisting of fronto-central cortical areas and the bilateral subthalamic nuclei exerts flexible inhibitory control over behavior. Selective inhibition is achieved via a two-step dynamic, which aligns with recent two-stage \u201cPause then Cancel\u201d models of response inhibition [3,17]. First, any salient signal that occurs during response preparation automatically instantiates a short-latency baseline-return of STN \u03b2 burst rates. This countermands the initial reduction of STN \u03b2 bursting that signifies the release of inhibition during responding. Second, a coordinated and flexible fronto-subthalamic process then implements specific adjustments to the inhibitory activity of the bilateral STN. The resulting STN activity is highly contingent on the control requirements of the specific situation. When responses have to continue (e.g., during selective stopping), inhibition is released once more, signified by a return of STN \u03b2 bursting below baseline. When all responses have to be inhibited (i.e., during Global-Stopping), the STN immediately enters a state of sustained, above-baseline \u03b2 bursting, likely in an effort to quell any residual activation of the response (see [3,17,6] for recent theoretical models of these dynamics). It is tempting to speculate that these two steps map onto the two inhibitory fronto-basal ganglia pathways (the indirect and hyper-direct pathways; [10,12]). According to the Pause-then-Cancel model of response inhibition the human brain [6,17], the initial step of short-latency, non-specific inhibition is implemented via the hyperdirect pathway from the right inferior frontal cortex [8], whereas the slower, context-specific inhibition is purportedly implemented via the indirect pathway, likely originating from the preSMA (see above). Notably, both of these pathways involve the STN (though the indirect pathway also features an arkypallidal route that does not rely on STN; [16]; Mallet and colleagues, 2016). While our current data align with these pathways and the associated two-stage models, these interpretations have to be tempered by two factors. First, the spatial resolution of EEG does not permit any strong interpretations regarding the origin of the observed scalp signals. Second, the potential contributions of two separable pathways to the STN signaling observed in the current study cannot be directly tested using our single-site LFP recordings.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Either way, the sustained, above-baseline STN activity we observed during non-selective response inhibition has substantial implications for the basic science of response inhibition. The influential horse-race model of action-stopping [53] suggests that stop-signal reaction time (SSRT) denotes the end of the \u2018horse race\u2019 between the prokinetic Go process (response execution) and the antikinetic Stop process (response inhibition). Decades of subsequent work on the neuroscientific basis of response inhibition has therefore assumed that neural processes critical to response inhibition have to occur before the end of SSRT. In addition to the above-mentioned two-stage models, recent empirical work has challenged this notion, showing that substantial amount of inhibitory activity continues to take place after SSRT (e.g., [76]). Indeed, in the current study, the initial inhibitory activity that took place prior to SSRT did not result in a complete return of EMG activity back to baseline (Fig 1B, see also [34] for similar findings in healthy young adults). Instead, EMG following both Ignore and Selective-Stop signals remained significantly above baseline after the initial reduction. Notably, even Global-Stop-trials, on which no overt response is made, featured substantial above-baseline EMG activity well after the initial suppression of the EMG and SSRT (Fig 1B). Together with the sustained, above-baseline activity observed in the STN, this suggests that during complete response inhibition, inhibitory activity persists for an extended period after SSRT. We speculate that this is because\u2014unlike assumed in the horse-race model \u2013 it is not sufficient for response inhibition to initially \u201cwin the race\u201d against response execution. Instead, it has to \u201ckeep winning\u201d for an extended period of time to prevent a belated execution of the inappropriate response. Whether the latter proposition is true\u2014and whether the sustained inhibitory effort is implemented via a separate pathway from the initial inhibition\u2014has to be tested in future studies.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In sum, we found that a cortico-subthalamic circuit exerts flexible response inhibition depending on the contextual requirements on inhibitory control\u2014similar to those found in the real world. Once a salient signal occurs, all responses are partially inhibited. During selective stopping, this broad inhibition is subsequently released to enable the continuation of the appropriate response. In contrast, during non-selective stopping, the motor system is over-inhibited for an extended period of time, signified by a sustained, above-baseline rate of burst-like \u03b2 activity in the STN.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "All experimentation was performed in accordance with the Declaration of Helsinki. All experiments were clinically supervised by an attending neurologist with subspecialty training in Parkinson\u2019s disease (EYU or QZ). Participants signed a consent form approved by the University of Iowa IRB board (IRB ID: 202002751). Enrollment in the study was contingent upon scoring greater than 19 on the Montreal Cognitive Assessment (MoCA) and screening by an attending neurologist with subspecialty training in Parkinson\u2019s disease (EYU). We recruited 16 Parkinson\u2019s Disease patients who had been previously implanted with wireless sensing capable Percept PC DBS stimulators (Medtronic plc., Minneapolis, MN, USA) targeting the bilateral STN (Mean Age: 67.5y; Age Range: 53\u201379; 4 female; 2 left-handed; for clinical characteristics see S1 Table). Participants were recruited from JDWG\u2019s neurosurgical practice. Two patients had stopped taking dopaminergic Parkinson\u2019s Disease medications due to the effectiveness of the DBS treatment. The remainder of the patients performed the task on their routine medications to allow for ideal cognitive and motor performance. One participant did not complete the experiment due to an inability to perform the experimental task.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Participants",
+        "sec_num": null
+      },
+      {
+        "text": "The task comprised 12 blocks that were completed within a single experimental session for each patient. Of the 12 blocks, two included 42 Go trials each, and the remaining 10 contained 60 trials each, comprising both Go and signal trials (684 trials in total). On Go trials (70%), the patients were instructed to rapidly execute a response to a Go stimulus, whereas on signal trials (30%), a salient signal could appear after the Go stimulus, instructing the patients to either continue the response, stop the full response, or stop part of the response (Fig 1A).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental task",
+        "sec_num": null
+      },
+      {
+        "text": "On Selective-Go trials (10%), a white circle appeared on the left or right side of the central fixation cross, prompting the patients to quickly perform the corresponding left- or right-index-finger button press. On Global-Go trials (60%), two white circles appeared on the left and right sides of the fixation cross, prompting patients to perform a bimanual response with both index fingers.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental task",
+        "sec_num": null
+      },
+      {
+        "text": "On Global-Stop trials (10%), the Global-Go stimulus was followed by a Global-Stop signal, consisting of both white circles turning gold. In this case, the patients were instructed to abort the bimanual response and withhold any button press. In Selective-Stop trials (10%), the Global-Go stimulus was followed by a Selective-Stop signal, consisting of one of the two circles (either left or right) turning gold while the other remained white. In this case, the patients were instructed to abort the response on the signaled side while continuing the response on the other side. On Ignore trials (10%), the Global-Go stimulus was followed by an Ignore signal, consisting of both white circles turning blue. In this case, the patients had to continue the bimanual response and ignore the salient signal. In Global-Stop and Selective-Stop trials, the SSD (i.e., the interval between Go and Stop signals) was initially set to 200 ms and was then dynamically adjusted according to each patient\u2019s stopping performance. This procedure was implemented separately for Global-Stop, left Selective-Stop, and right Selective-Stop signals: the SSD increased by 50 ms after successful stopping (no response) and decreased by 50 ms after failed stopping (response performed despite the stopping instruction). This tracking procedure was intended to converge on approximately 50% successful stopping for each stop type [1,19]. Ignore trials used the current value of the Global-Stop SSD but did not modify it.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental task",
+        "sec_num": null
+      },
+      {
+        "text": "Each trial began with a central fixation cross presented for 1,000 ms. The Go stimulus remained visible for up to 1,000 ms, and responses were accepted within a 1,500 ms deadline from Go onset. The total trial duration was 4,000 ms. Before the main task, the patients performed a practice block of 60 trials, which was repeated if their overall stopping success rate fell outside the 0.25\u20130.75 range. The assignment of gold versus blue colors to the Stop versus Ignore conditions was randomized across participants.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental task",
+        "sec_num": null
+      },
+      {
+        "text": "The experiment was programmed using Psychtoolbox 3 on MATLAB 2017a, running under Ubuntu Linux. Stimuli were displayed on a BenQ XL2420B monitor featuring a 120 Hz refresh rate and a resolution of 1,920 \u00d7 1,080 pixels. Manual responses were captured using a standard QWERTY USB keyboard, except in two cases, in which a USB response device (Kinesis Savant Elite 2) was used.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Experimental task",
+        "sec_num": null
+      },
+      {
+        "text": "We estimated SSRT using the integration method with replacement of Go omissions [19]. SSRT indexes stopping speed: a longer SSRT indicates slower stopping, and a shorter SSRT indicates faster stopping [18]. It was computed using the probability of responding in global stop-signal trials and the global Go RT distribution. Prior to SSRT calculation, we checked whether the subjects\u2019 behavior was suitable for computing SSRT. First, we verified the efficacy of the staircasing procedure used in the task (mean stop probability: 53%; range: 47%\u201360%). Second, we tested whether the Go RT was slower than the failed-stop trial RT to confirm that the prediction of the independent horse-race model was met, using a paired-samples t test.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Behavioral analysis",
+        "sec_num": null
+      },
+      {
+        "text": "We then quantified the average RT for each condition. To test whether signal trials yielded longer RT than Go trials, we compared global Go RT with selective stop-signal RT and global Go RT with ignore-signal RT using paired-samples t-tests. All behavioral analyses used trials from blocks in which both Go and signal trials were intermixed. Trials with RTs under 250 ms were discarded.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Behavioral analysis",
+        "sec_num": null
+      },
+      {
+        "text": "The Percept PC Neurostimulator\u2019s communicator device (Medtronic model 8880T2) was used to wirelessly stream STN LFP data to the provided programmer tablet (Model CT900, Samsung Galaxy Tab S5e) via Bluetooth at 250 Hz (the maximum available frequency). The two directional sensing DBS leads are equipped with four rows of depth electrodes each, spaced 1.5 mm apart. LFP recordings were made from bipolar contact montages above and below the clinical stimulation electrode(s) on each side, thus centering the recorded voltage on the clinically efficacious contact site. The data were online filtered using a lowpass filter of 100 Hz and a highpass filter at 1 Hz. To ensure a stable wireless connection, both the communicator and the operating tablet were consistently kept within a 50 cm range. Participants performed the experiment with the DBS stimulator in the off state to enable the wireless sensing feature and suspend stimulation of the STN. An attending neurologist verified the DBS parameters before and after the experiment to ensure that participants left with their original DBS configurations and their DBS enabled.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "LFP, EEG, and EMG recording",
+        "sec_num": null
+      },
+      {
+        "text": "EEG was acquired using a 64-channel EEG cap, amplified via Brain Vision MRplus amplifiers (Brain Products, Garching, Germany). The sampling rate was set to 5 kHz to enable a precise alignment between EEG and LFP data and to ensure sufficient sampling rate for EMG data acquisition. The EEG signal was online filtered at a low cutoff .01 Hz and a high cutoff of 1,000 Hz. The reference electrode was Pz, and the ground was Fz. EMG was recorded through the EEG amplifier from each hand using two electrodes placed on the belly and tendon of each FDI muscle. Ground electrodes were placed on the distal end of each hand\u2019s ulna.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "LFP, EEG, and EMG recording",
+        "sec_num": null
+      },
+      {
+        "text": "Before each block of the task was started, the DBS was activated for ~12 s and then turned off again. The next block did not start until 12 s after the DBS was turned off. This procedure introduced simultaneous artifacts in both the EEG and LFP traces, which were used to precisely align the EEG and LFP datasets [49]. After successful alignment, the LFP data were analyzed using the digital event information from the EEG system.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "LFP, EEG, and EMG recording",
+        "sec_num": null
+      },
+      {
+        "text": "DBS electrode location was reconstructed from a pre-operative anatomical MRI scan and a post-operative MRI scan (1 patient) or computed tomography (CT) scan (all other patients), both of which are conducted as part of the standard clinical implantation procedure. Reconstructions were performed via LeadDBS using the standard steps and settings [77]. First, linear co-registration of the post-operative scans to the pre-operative T1-weighted images was performed via ANTs and then refined to account for potential intra-operative brain shift through the LeadDBS subcortical refinement module. Normalization warp fields were then refined manually using LeadDBS\u2019 WarpDrive tool. For CTs, LeadDBS\u2019 PaCER implementation was then used for the final reconstruction. For MRIs, LeadDBS\u2019 TRAC/CORE algorithm was used. Two patients\u2019 electrode locations could not be reconstructed due to the lack of high-resolution post-op imaging.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "STN electrode contact reconstruction",
+        "sec_num": null
+      },
+      {
+        "text": "All electrophysiological data were processed using custom scripts coded with MATLAB 2023b (The MathWorks), which primarily relied on the features of the EEGLAB toolbox [78]. After alignment, all data were resampled to 500 Hz (EEG/EMG: from 5 k to 500 Hz; LFP: from 250 to 500 Hz) and bandpass filtered (EEG: 0.5\u201349 Hz; EMG: 10\u201340 Hz; LFP: 0.5\u2013100 Hz). The continuous EEG data were visually inspected to identify segments with non-stereotypical artifacts (e.g., muscle artifacts, line noise, etc.) that were removed from all EEG, EMG, and LFP data. The EEG data were re-referenced to the common average and then subjected to the ICA [79] to identify and remove stereotypical artifacts (blinks, saccades, and electrode artifacts).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "EEG/LFP/EMG preprocessing",
+        "sec_num": null
+      },
+      {
+        "text": "Epochs were extracted from \u2212200 to 1,500 ms relative to the events of interest. The EMG data were converted to RMS power by sliding a time window of \u00b15 ms throughout the data, and then baseline-corrected by dividing the entire epoch by the mean of a 200-ms pre-stimulus window. The resultant data were then standardized across all conditions and time points using z-transformation for each hand separately. For Global trials, EMG recordings were averaged across hands. For Selective-Stop-signal trials, we focused on the continuing hand (e.g., left-hand EMG for right-hand stopping trials).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "EMG analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Global-Stop-signal EMG data included only trials with partial response EMG (prEMG; [80]). The individual prEMG threshold was determined by averaging a 200-ms window following stop-signal onset across trials for each subject. The maximum peak amplitude of this trial-averaged data was taken as the individual prEMG threshold. Any trials with EMP peaks that exceeded this threshold were included in the stop-signal trial EMG analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "EMG analysis",
+        "sec_num": null
+      },
+      {
+        "text": "For the EEG decoding analysis, we used the ADAM toolbox [81]. Whole scalp EEG data were extracted from \u2212300 to 800 ms relative to the events of interest. We compared six pairs of conditions: Global Go versus Global Stop/ Selective Stop/ Ignore; Global Stop versus Selective Stop/ Ignore; and Selective Stop versus Ignore, taking only into account trials with correct responses. Since successful Stop trials oversample the slower part of the Go-trial response time distribution, we quantified Global Go response time for each subject and selected only the slower half of Global Go trials for decoding. Trials were balanced in all condition pairs through random sampling of the condition with more trials. For decoding analysis, a linear Discriminant Analysis-based decoder was trained and tested at each time point using leave-one-out cross-validation, in which the decoder was trained on all but one trial and tested on the remaining trial until all trials were tested. Decoding performance was then quantified at each time point for each subject using the AUC. The resulting 15 AUC time series data (551 timepoints) were compared against chance using paired samples t-tests, corrected for multiple comparisons using cluster permutation statistics (10,000 iterations, sample-wise p = .05; cluster-wise p = .01).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multi-variate EEG decoding analysis",
+        "sec_num": null
+      },
+      {
+        "text": "EEG signal components reflecting motor activity were identified from the ICA solution through an automated algorithm. Each independent component from each subjects\u2019 were backprojected into channel space. The resulting activity at motor electrode sites (C3 and C4) was then converted into beta burst time series (see below). The resulting time series were then epoched with respect to the stimulus onset on correctly-responded Global go trials and then baseline-corrected with respect to the preceding 500 ms period. The 200 ms pre-response period for each trial was then saved and averaged across trials. The components with the largest reduction of beta bursting in this time period, relative to pre-stimulus baseline, were then selected as motor components, separately for left (C3) and right (C4) motor cortex.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Motoric independent component selection",
+        "sec_num": null
+      },
+      {
+        "text": "Full-spectrum event-related spectral perturbation (ERSP) plots (Fig 3A) were generated by transforming the EEG and LFP time series into the time\u2013frequency domain via the filter-Hilbert method, with individual frequencies ranging from 1 to 125 Hz in linear steps of 1 Hz and a band range of \u00b1.5 Hz around each center frequency. The resulting complex time series was converted into power units through squaring its real part. Event-related time\u2013frequency activity was then extracted from \u2212500 ms to 1,500 ms around each event of interest and converted into change from baseline (decibel) using the 100 ms prior to the event as a baseline. ERSPs were tested for significance via cluster-based nonparametric permutation testing (5,000 iterations, voxel-wise p = .05, cluster-wise p = .05) across the entire time\u2013frequency spectrum.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Time\u2013frequency analyses",
+        "sec_num": null
+      },
+      {
+        "text": "Beta-frequency burst probability timelines (Figs 3B, 5C, and 5D) were extracted using established procedures [21,25,82]. First, each electrode\u2019s data were convolved with a complex Morlet wavelet of the form",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Time\u2013frequency analyses",
+        "sec_num": null
+      },
+      {
+        "text": "with \u03c3= m2\u03c0f, A= 1\u03c32\u03c0, and m = 7 (cycles) for each of 18 linearly spaced frequencies spanning the \u03b2-band (13\u201330 Hz). Time-frequency power estimates were extracted by calculating the squared magnitude of the complex wavelet-convolved data. Individual \u03b2-bursts were defined as local maxima in the recording-wide, electrode-specific \u03b2-band time\u2013frequency power matrix using the MATLAB function imregional(), using a set cut-off of 2\u00d7 the median power in the case of EEG [25] and 6\u00d7 the median power in the case of the local field potential [21,82]. The resulting stick function was then converted into a continuous burst-rate timeline via convolution with a gaussian window of the form exp(t22\u03c3t2), with a width of 200 ms and \u03c3= m2\u03c0f, with m = 7 (cycles) and f being the highest frequency of the time\u2013frequency composition (30 Hz). The beta burst time series were tested for differences using sample-to-sample t-tests using the critical p-values indicated in the results section. Corrections for multiple comparisons were performed via the false discovery rate (FDR) method [83]. Beta burst counts in the Stop/Ignore-signal-to-SSRT period (Fig 3D) were tested for significance using pairwise t-tests for each comparison.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Time\u2013frequency analyses",
+        "sec_num": null
+      },
+      {
+        "text": "For the purposes of all connectivity analyses involving the EEG data, the EEG data were transformed to current-source density [84] to reduce the impact of volume conduction.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      },
+      {
+        "text": "The cortico-subthalamic connectivity plots in Fig 5A were generated by identifying beta bursts in each STN (using the methods indicated above) across each subject\u2019s entire recording, and then identifying bursts in each channel\u2019s EEG time series in the time window 50 ms following each STN burst. The resulting averaged burst-rate scalp topography was then tested for differences from 0 at the group-level using one-tailed t-tests, corrected to a critical p-value of .00081 (i.e., p = .05 divided by the number of channels to correct for multiple comparisons).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      },
+      {
+        "text": "The STN-to-STN connectivity plots in Fig 5B were generated by splicing the beta-burst rate time series (see above) for each STN across each subjects\u2019 entire recording around individual bursts in the other STN, using a window of \u22121,000 to 1,000 ms around each burst. The averaged time series were then tested against the mean burst probability across the entire recording (black line) for the respective STN using sample-to-sample t-tests, corrected for multiple comparisons using the FDR method.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      },
+      {
+        "text": "The event-related STN-to-STN connectivity analyses in Fig 5E were performed by transforming the two STN time series into the frequency domain using the filter-Hilbert method as described above. Frequency-specific phase-angle differences were then extracted from the resulting complex time series, spliced around each event of interested, baseline-corrected to decibel as described above. They were then tested for significance via cluster-based nonparametric permutation testing (5,000 iterations, sample-wise p = .05, cluster-wise p = .05) across the entire time-frequency spectrum.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      },
+      {
+        "text": "The SSRT-related cortico-subcortical connectivity analyses in Fig 4A were performed on correct Global-Stop, Ignore, and Selective-Stop trials by windowing the time-frequency power-series (extracted via the square of the real part of the filter-Hilbert transformed signal in the beta band, 13\u201330 Hz) for each channel across four pre-SSRT windows of 50 ms duration, starting from 200 ms prior to SSRT, and across 10 post-SSRT windows of 50 ms duration, ranging from SSRT to 500 ms after. These analyses focused on the beta band because it was the only band to show condition-specific differences in STN LFP power (Fig 3A). Average channel-based beta power in each window was then correlated with the STN beta power in the 50 ms pre-SSRT window used in Fig 3D (for the pre-SSRT windows) and with STN beta power in the 100 ms post-SSRT window during which STN activity started diverging (Fig 3B) for the post-SSRT windows. Subject-specific SSRT estimates were used to time-lock the trial-wise data. The resulting correlation coefficients were then Fisher\u2019s z-transformed and tested for significant differences from zero using channel- and window-wise t-tests to a critical p-value of p = .0063 for the pre-SSRT windows and .0025 for the post-SSRT windows (i.e., p = .05 divided by the number of time windows for each analysis).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      },
+      {
+        "text": "The SSRT-locked, time-lagged, sample-to-sample, ROI-based cortico-subcortical connectivity analysis in Fig 4B was performed on correct Global-Stop, Ignore, and Selective-Stop trials by averaging the EEG signal within nine ROIs covering the entire scalp montage (ROIs indicated by the colored electrode locations), converting the nine resulting time-series to time-frequency power-series using the square of the real part of the filter-Hilbert transformed signal in the beta band (13\u201330 Hz), and then extracting trial-wise activity around the subject-specific SSRT estimate. For each sample point in the \u2212500 to 1,500 ms period around the subject-specific SSRT estimate, we then extracted and z-scored beta power in each EEG ROI and for each of the two STN power series, and then correlated the trial-wise beta power time series for each sample point. The resulting 1,000 \u00d7 1,000 temporal offset correlation matrix (2,000 ms per trial at a sampling rate of 500 Hz) was then converted to Fisher\u2019s z and tested for significance via cluster-based nonparametric permutation testing (5,000 iterations), with a voxel-wise and cluster-wise critical p-value of .0028 (i.e., p = .05 divided by 18, the number of matrices across the 9 ROIs and 2 STN locations).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Connectivity analyses",
+        "sec_num": null
+      }
+    ]
+  }
+}

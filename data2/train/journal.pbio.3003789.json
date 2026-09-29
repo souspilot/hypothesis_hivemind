@@ -1,0 +1,465 @@
+{
+  "paper_id": "journal.pbio.3003789",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003789.xml"
+  },
+  "title": "Encoding performance of cortical neurons critically depends on their morphological and neurophysiological properties",
+  "doi": "10.1371/journal.pbio.3003789",
+  "authors": [
+    {
+      "first": "Omer",
+      "last": "Revah"
+    },
+    {
+      "first": "Fred",
+      "last": "Wolf"
+    },
+    {
+      "first": "Michael J.",
+      "last": "Gutnick"
+    },
+    {
+      "first": "Andreas",
+      "last": "Neef"
+    }
+  ],
+  "abstract_text": "Sixty years after the concept of population coding in neuronal networks was introduced, we still lack a comprehensive understanding of its performance limits and the role of neuronal physiology. Here, we use dynamic gain analysis in a general model of population coding and demonstrate that disparate parameters of neurons and populations determine how accurately they can encode information. These are cell number, cell size, and the correlation time of the background noise. We experimentally test and confirm these predictions on neurons of excitatory populations in the mouse barrel cortex. Surprisingly, dendrite size and background correlations are precisely matched with the number of neurons in layer 4, such that even a single thalamocortical spike at the input is reliably reflected in the population output. However, this encoding performance can be modulated by the channels that mediate M-current, suggesting that coding in layer 4 may vary as a function of brain state.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003789",
+    "body_text": [
+      {
+        "text": "A major challenge of modern neuroscience is to understand how information is encoded and transferred within and between neuronal circuits given the circuit infrastructure, including the morphology, connectivity, molecular properties, and physiological characteristics of the constituent neurons. In mouse cortex, individual neurons fire no more than a few action potentials (APs) each second [1\u20134], so information is encoded as the combined spike output of subpopulations of neurons responding to common inputs [5,6]. The encoding capability of a population may be inferred from the dynamic gain curves of its constituent neurons. This is a measure of a neuron\u2019s ability to lock its spikes onto the frequency components of its input (Box 1, S1A and S1B Fig). Thus, it represents the temporal precision with which the combined firing rate of the neurons can track changes in a common input stream [6] (see S1G and S1H Fig). Numerous theoretical studies have investigated the basic principles of population coding. Early work by Knight [7] demonstrated that the information present in the common input can be perfectly encoded by an infinitely large population of noisy, instantaneously responding neurons. However, the size of cortical populations is finite and actual neurons do not respond instantaneously. As a result, the individual neuron\u2019s responses are jittered, which leads to information loss that may have dire consequences. Too much jitter, or, in the language of dynamic gain analysis, a too-narrow bandwidth of the dynamic gain, results in chaotic cortical dynamics [8]. A number of theoretical studies identified which features constrain the bandwidth, and thereby, the quality of encoding by a finite population of biophysically-inspired, non-perfect neuron models. These critical features include the correlation time of the background noise [9], the dynamics of AP generation [9,10], and the dendritic size of the neurons involved [11,12]. Dendrites amplify the impact of rapid input fluctuations because they shunt more slowly changing inputs [11,13]. Taken together, these studies predict that the encoding performance of a neuronal population reflects multiple factors, including the number of neurons involved, their morphology, the kinetic properties of the synaptic activity responsible for the background noise, and the ionic mechanisms governing AP generation. The relative importance of each of these elements can only be determined experimentally.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Experimental assessment of these theoretical concepts requires a stable population of well-defined neurons, in which each of the above factors is known. However, a cortical neuron may participate in many functional networks, and at any moment, a relevant subpopulation of neurons is sparsely embedded within a larger network (Fig 1A). Moreover, the characteristics of the common input are usually unknown. Here, we overcome these problems by studying the encoding performance of a stable population of well-described cortical neurons: the excitatory cells of Layer 4 (L4) of the mouse somatosensory cortex [14\u201318]. Numbers of neurons in this population, and their input and output, are known [19,20]. The common input is via projections of thalamocortical relay cells [20,21], accounting for about 15% of the excitatory synapses in spiny stellate cells [22]. The background noise reflects activities of recurrent connections among other L4 cells of the same barrel [17,21], and the population output converges onto pyramidal cells in Layers 2, 3, and 5 [17]. L4 is thus a relay layer, rapidly informing the rest of the cortical column about changes in tactile input. However, because L4 neurons have extremely short dendrites that span no more than a few hundred microns [23\u201325], we expect their encoding capacity to be limited [11\u201313]. Here, we experimentally compare the encoding bandwidth of L4 neurons to that of the much larger Layer 5 (L5) pyramidal neurons and find that, as predicted by theory, it is reduced, given the same noise parameters and population size. However, we now also demonstrate that synaptic receptor kinetics, axonal potassium channel properties, and population size combine to compensate for the morphological constraints. Indeed, all these factors appear to be matched, such that a single thalamocortical AP is reliably reflected in the L4 population output.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Through its synapses, a cortical neuron receives hundreds to thousands of inputs per second, so its membrane potential is constantly fluctuating. These fluctuations drive the cell to fire APs. The dynamic gain function captures the relationship between the different frequency components that constitute the input, e.g., slow undulations or more abrupt fluctuations, and the times at which APs are initiated. This explanation directs a method to measure dynamic gain: i) inject a random fluctuating current that drives irregular firing at a pre-decided rate, ii) superimpose a weak sinusoidal current, and iii) determine how strongly the AP generation is phase-locked to the sinusoid (see Materials and methods: Vector strength and S1A\u2013S1C Fig). Thus, frequencies that cause stronger phase-locking are amplified in the neuron\u2019s output. In this sense, the dynamic gain function is essentially a tuning curve, since it captures how the neuronal output reflects the various brain rhythms and conveys them to downstream neurons.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Box 1. Dynamic gain.",
+        "sec_num": null
+      },
+      {
+        "text": "The dynamic gain not only exposes the neurons to brain rhythms, it also exposes how rapidly the cell can respond with an AP. Thus, a wider bandwidth of the dynamic gain function results in an earlier, stronger, and narrower response. In our study, we used the dynamic gain function to reflect encoding by a neuronal population. When several neurons that contact the same downstream neuron, receive a common input, this population\u2019s collective encoding can be captured by averaging the individual neurons\u2019 (complex-valued) dynamic gain functions, weighted by each neuron\u2019s firing rate.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Box 1. Dynamic gain.",
+        "sec_num": null
+      },
+      {
+        "text": "An alternative method to derive the dynamic gain function does not require an additional sinusoidal input (see Materials and methods: Dynamic gain calculation and S1D and S1E Fig) because the stochastically fluctuating input is, itself, composed of various frequency components. The results of these two approaches are not only theoretically identical [26] but also identical in our experiments (S1E Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Box 1. Dynamic gain.",
+        "sec_num": null
+      },
+      {
+        "text": "We created a simple model to examine the influence of cellular parameters on a neuronal population\u2019s coding capability. It captures how diverging, feedforward input is relayed through a population of neurons whose output converges onto readout neurons (Fig 1A, black arrows onto blue relay neurons and blue arrows onto red readout neurons). Each neuron consists of a soma and a dendrite of length L. Each neuron has two distinct sources of input: extrinsic projections and massive local, recurrent connectivity. In cortical networks, the post-synaptic effect of local, recurrent inputs reflects a balance of inhibition and excitation, and it is largely asynchronous from neuron to neuron. Because we study how the population\u2019s output reflects its common feedforward input, we refer to the recurrent, asynchronous input as background noise. We represented this input to each neuron as an independent, stochastically fluctuating current with correlation time \u03c4. Its amplitude was chosen to evoke irregular AP firing at a basal rate \u03bd0 = 3 Hz (Fig 1B). As detailed in the Materials and methods, this model captures how dendrite size and synaptic kinetics impact the encoding of input by an ideal, instantaneous AP generator.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Identification of the factors that influence coding capabilities, as predicted by theory",
+        "sec_num": null
+      },
+      {
+        "text": "Modeled on the connectivity of L4, the relevant information enters into a subpopulation of N neurons through diverging feedforward input, where it evokes synaptic currents that appear in synchrony at each neuron in the subpopulation (Fig 1A, black arrows into blue neurons). When the N neurons receive synaptic currents triggered by an individual presynaptic AP, the population\u2019s firing rate momentarily increases (\u0394\u03bd in Fig 1B). How salient this minimal input is for the readout neuron depends on the size and duration of \u0394\u03bd. We analyzed this using an \u201coptimal decoder\u201d (see Materials and methods), which compares the rate increase during a 3 ms time window against the rate fluctuations that precede the common input. The decoder returns a detection probability (pDetect, see Materials and methods).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Identification of the factors that influence coding capabilities, as predicted by theory",
+        "sec_num": null
+      },
+      {
+        "text": "This analysis reproduced the dependencies expected from previous experimental and theoretical studies: larger dendrites (L) and longer noise correlation times (\u03c4) improved the dynamic gain at high frequencies (insets in Fig 1C and 1D). This, in turn, increases \u0394\u03bd (see also S1G\u2013S1J Fig), which improves the detectability of the single afferent AP. Enlarging the population size (N) was also beneficial, because it reduced the fluctuations in population rate (Fig 1B, 1E, and 1F). In an actual neural population, the coding efficiency will reflect some combination of these three parameters (Fig 1G). The model predicts that for a fixed correlation time of 5 ms, populations of neurons with short (200 \u03bcm) dendrites require 1,200 cells to achieve 90% detection probability, whereas only 700 are required when dendrites are long (2,000 \u03bcm). Further, the model predicts that the encoding performance of 1,000 cells with long dendrites and 3 ms correlated input (cyan dot in Fig 1G) can be matched by cells with short dendrites by either doubling the number of cells to 2,000 or by increasing the correlation time to about 7 ms. A further increase to 14 ms would even allow the same performance by only 500 cells (3 orange dots in Fig 1G). The model thus predicts that in order to achieve high-performance encoding, neurons must either be larger, which requires more space, or have slower temporal dynamics of the background noise.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Identification of the factors that influence coding capabilities, as predicted by theory",
+        "sec_num": null
+      },
+      {
+        "text": "We sought to understand how these theoretical concepts of population encoding are implemented by actual cortical neurons and cortical circuits. Excitatory neurons in L4 and L5 differ dramatically in size (Fig 2A). Most excitatory L4 neurons are spiny stellate cells; their dendritic arbors are short and limited to the same layer and cortical column [16,19,20,24,25,27,28]. The L5 pyramidal cells, by contrast, have broad basal dendritic skirts and large apical dendrites that extend throughout the cortical depth [29,30]. To determine how these two cell types compare electrophysiologically, we performed whole-cell patch clamp recordings from identified L4 and regular-firing L5 neurons in acute brain slices of the mouse somatosensory cortex. Table 1 summarizes the passive and active membrane properties of the cells. L4 neurons had approximately 2.5-fold lower membrane capacitance, 6-fold higher input resistance, and 2-fold longer membrane time constant, consistent with their compact morphology [28]. As noted above, our theoretical model predicts that the smaller L4 neurons should be less able to encode high frequencies (Fig 1D). To test this experimentally, we determined the encoding bandwidths of L4 and L5 neurons by analyzing the timing of their AP output during current noise injections. Injected currents were composed of small sinusoidal currents of various frequencies embedded in randomly fluctuating background noise with a correlation time \u03c4 of 5 ms (Fig 2F, Materials and methods). A small amount of constant DC current adjusted the mean membrane potential such that the fluctuating background drove cells to fire irregularly at about 5 Hz. The relation between AP timing and the embedded sinewave was determined for each frequency (Fig 2D and 2E). The raster plots and corresponding AP timing histograms demonstrate AP locking of L4 and L5 neurons to slower (50 Hz) and faster (200 Hz) sine wave frequencies. At 50 Hz, APs in both L4 and L5 neurons clustered to the depolarizing phase of the sine wave; at the higher frequency, phase-locking was much weaker in the L4 neurons (Fig 2D, 2E, and 2G). Statistical analysis revealed no significant difference in vector strength (Materials and methods) [6,31] at 50 and 100 Hz, whereas, at 200, 500, and 750 Hz, the vector strength was significantly lower in the L4 neurons (Fig 2G). These data confirm the theoretical expectation that the compact L4 neurons have a narrower encoding bandwidth than the L5 pyramidal cells with their extensive dendritic trees. However, actual spiny stellate neurons in vivo respond quite rapidly to weak afferent stimuli [32\u201334], and their functional bandwidth must actually be broader. We therefore tested the possibility that there is a difference in the other parameter that determines the encoding bandwidth. The actual background current of cortical neurons has never been experimentally measured.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "L4 neurons are less able than L5 neurons to code high frequencies when the background correlation time is the same",
+        "sec_num": null
+      },
+      {
+        "text": "During ongoing cortical activity, the background synaptic noise in a neuron reflects synaptic bombardment by asynchronous excitatory and inhibitory local inputs [4,32,33]. To preclude inputs from other brain areas and maximize the spatial effectiveness of the voltage clamp, we recorded in brain slices. Because neocortical neurons maintained in brain slices are largely quiescent, we induced reverberating synaptic activity by activating the network. This was accomplished by uncaging glutamate (MNI-glutamate) several hundred microns away from the recording site (Fig 3A and 3B). Care was taken to ensure that the uncaged glutamate did not come into direct contact with the cell under study, such that the subsequent synaptic barrage that resulted tens of milliseconds later reflected the activity of the local circuitry. Because we were interested in the effect of background noise characteristics on AP firing, we held the neuron at \u221250 mV, close to AP threshold. In these voltage clamp recordings, space clamp was maximized by replacing intracellular K+ with Cs+ while intracellular Cl- was maintained at physiological level. As shown in Fig 3B, UV flashes (50 ms) elicited subsequent network activity lasting up to 0.5 sec. The consequent synaptic noise consisted of a mixture of inhibitory and excitatory synaptic events (S3A Fig). However, since the voltage was held near the IPSC equilibrium potential, the recorded current was almost entirely excitatory (S3A and S3B Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Fluctuating background current is slower in L4 neurons",
+        "sec_num": null
+      },
+      {
+        "text": "We measured the temporal dynamics of the background activity in L4 neurons and found them to be significantly different than those of L5 neurons. The autocorrelation of the fluctuating background activity revealed that fluctuations in L4 decayed more slowly (Fig 3C). In Fig 3D, the plots were quantified by fitting a single exponential to the averaged autocorrelation function (10\u201320 trials per neuron); correlation time was 3\u20135 times longer in the L4 neurons. In order to determine how this difference in correlation time of the synaptic noise relates to the kinetics of the underlying synaptic events, we examined spontaneous excitatory post-synaptic currents (EPSCs) recorded at a holding potential of \u221270 mV, and inhibitory post-synaptic currents (IPSCs) at a holding potential of 0 mV in the two cell types (S3A and S3B Fig). While the time course of IPSCs in L4 and L5 cells was not significantly different, EPSC decay in L4 neurons was 2\u20133 times longer (S3C\u2013S3F Fig). In addition, we found that the decay time constant of EPSCs was linearly related to the correlation time of the noise (Fig 3D). Inhibitory time constants have minimal, if any, effect (S3B Fig) because the measurements were made not far from the IPSC reversal potential (\u221260 mV).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Fluctuating background current is slower in L4 neurons",
+        "sec_num": null
+      },
+      {
+        "text": "Our simple computational model suggested that a population of neurons with short dendrites could encode feedforward input better if the recurrent background input had a longer correlation time. We measured the correlation time in the small, L4 cells, and found it to be relatively long. We then determined how different background correlation times would affect the dynamic gain of the L4 cells. For the faster correlation time, we chose 2 ms, which is at the lower end of the correlation times measured in L5 pyramidal cells. For the longer correlation time, we used 10 ms, slightly longer than the average 7 ms observed in L4 network reverberations. The raster plots and corresponding AP time histograms in Fig 4C and 4D compare the ability of 3 representative L4 neurons to follow a 200 Hz input signal when the noise was fast (\u03c4 = 2 ms) and when the noise was slow (10 ms). It can be seen that the high-frequency tracking performance of the neurons was greatly enhanced with the slower correlation time. The vector-strength analysis for seven different input frequencies shows that slower background fluctuation is associated with a broadened bandwidth and a significant increase in the high-frequency encoding abilities of the L4 neurons (Fig 4G). Fig 4E shows that reanalysis of the recordings using the more efficient dynamic gain analysis (Supplementary material and S1A\u2013S1F Fig) confirmed this result.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Slow background noise enables L4 neurons to code high frequencies",
+        "sec_num": null
+      },
+      {
+        "text": "Considering the theoretical predictions (Fig 1), we next sought to determine how large the L4 population must be for its output to reliably reflect brief, correlated changes in input. To this end, we embedded a single, time-locked artificial EPSC (aEPSC) in the random noise (as generated above), and determined how many sweeps are required to reliably detect this small input in the output population spike train. In these experiments, since the noise is uncorrelated across sweeps, each sweep may be considered the equivalent of a different L4 neuron in response to the same aEPSC. The aEPSC (20 pA), which mimics the effect of a single thalamocortical AP [35,36] was superimposed on either \u2018slow\u2019 or \u2018fast\u2019 background fluctuations and injected into single cells every 50 ms. As can be seen in the traces in Fig 5A, AP clustering just after the aEPSC was most prominent when the background noise was \u201cslow.\u201d This is a direct consequence of the wider bandwidth of the dynamic gain; in fact, the waveform and amplitude of the population rate can be quantitatively predicted from the dynamic gain (S1G\u2013S1J Fig). In the peri-stimulus time histograms of Fig 5B and 5C, it can be seen that for an essentially \u201cinfinite\u201d population (n = 25,200), a response to the aEPSC is readily detected at both slow and fast noise correlation times. However, when the population consists of fewer neurons, the aEPSC is much harder to detect with the faster time correlation of the noise. Analysis of the detection probability as a function of the population size (see Materials and methods) reveals that \u2018slow\u2019 fluctuations improve the reliability of detection by 70%\u2212100% for firing rate changes occurring within 1 ms (Fig 5D). There are a few thousand excitatory neurons in L4 of a single barrel [20]. Because in vivo a thalamocortical volley is immediately followed by strong feedforward and feedback inhibition [37,38], our data indicate that the slower correlation time of the noise is essential for the fast encoding that is actually achieved by L4. Note that in spiny stellate cells in vivo, the background noise largely reflects recurrent activity, and the histogram bars after the initial response might be modified as a consequence of the thalamocortical EPSC. However, only the first one or two bars are relevant for our conclusion (Fig 5B\u2013D).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Fidelity of population encoding depends both on the number of neurons and the background correlation time",
+        "sec_num": null
+      },
+      {
+        "text": "Our experiments show that when background noise fluctuates slowly, the population of L4 neurons rapidly encodes thalamocortical input volleys. This is in agreement with predictions of our simple theoretical model in which AP generation occurs instantaneously (Fig 1). However, in real neurons, AP generation speed is finite and limited by the sodium and potassium currents that underlie AP initiation [13,39,40]. In the axon initial segment (AIS), sodium channels and KV7.2/3 potassium channels are arranged in a highly specific organization [41], and these KV7.2/3 channels modulate the AP initiation [42,43]. We sought to determine whether these specific potassium channels may regulate the dynamic gain of the L4 neurons by repeating the experiments from Fig 4 while blocking KV7 channels with 20 \u03bcM of the specific antagonist, XE991 [44]. In Fig 6A, comparison of average AP waveforms during 10 ms and 2 ms background activity with and without application of the KV7 blocker demonstrates an effect of the potassium current on the voltage dynamics leading up to the AP. Under control conditions, the slower background was associated with a far more gradual voltage incline to AP threshold than the faster background. This difference is nearly abolished by XE991. The finding is quantified in Fig 6B, which plots the difference between the voltages recorded 5 ms before AP initiation for the two background correlation times. Dynamic gain analysis shows that the addition of XE991 to the bath completely abolished the expanded bandwidth of L4 neurons despite the characteristically slow background noise. Thus, blockade of these K channels removed the ability of the L4 neurons to faithfully respond to a brief thalamocortical volley. Because KV7 channels underlie the acetylcholine-sensitive M-current [45], and acetylcholine is a prominent neuromodulator in the cortex [46], we propose that the coding ability of L4 may vary as a function of brain state.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Fast encoding depends on KV7 potassium currents",
+        "sec_num": null
+      },
+      {
+        "text": "We developed a simple model, showing that a neuronal population encodes feedforward input more faithfully, if the population is numerous, its neurons\u2019 dendrites are large, or the recurrent input is more slowly fluctuating. The smallest excitatory cortical neurons are spiny stellate cells that form a key gateway of sensory input into the cortex. We show that in layer 4 of the somatosensory cortex, the temporal properties of background noise, axonal potassium channels, and neuronal population size, offset the small size of the excitatory neurons, so as to assure faithful transmission of even the weakest thalamocortical input. This study provides a direct experimental assessment of information encoding in a population of cortical neurons using theoretical concepts proposed 50 years ago [7] and, for the first time, relates dynamic gain to a specific cortical function.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We demonstrate that (1) L4 neurons generate synaptic noise of very slow correlation time, which increases their encoding bandwidth, (2) broad bandwidth enables populations of only hundreds of neurons to reliably reflect single thalamocortical APs with millisecond precision, and (3) changes in L4 neuron properties that appear to have only a minor influence at the single cell level, strongly impact coding by the population as a whole. Although our study is focused on layer 4 of the rodent barrel cortex, we expect that our findings are broadly applicable to the mechanisms of cortical neuronal population coding in general. For example, it has been shown that a single externally induced AP can lead to a detectable increase in the activity of a population over several dozen milliseconds [47] and can even have a behavioral consequence [48].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Almost all neurons in an S1 cortical column receive direct thalamocortical input. But while all other cells receive context information from other whiskers, from secondary somatosensory cortex and primary motor cortex [49], the connectivity of spiny stellate cells is uniquely focused. Their only external excitatory input originates in the specific thalamus [17]. Thus, the output of the L4 neuronal population, which projects throughout the column [17], constitutes a beam of exclusively sensory information. Strong feedforward and feedback inhibition leaves only a narrow window of about 2 ms during which these cells must respond [37,50,51], such that the relayed output from L4, by amplifying the thalamic input, serves to focus the activity of the entire cortical column. Our findings explain how these neurons, despite their small size, are able to respond within this extremely brief window. Because the correlation time of the background noise is slow in L4 (Fig 3), less than 1,000 L4 neurons are sufficient to allow detection of a single thalamic EPSC with 90% confidence within the time constraints imposed by inhibition (Fig 5). Remarkably, this corresponds well to the number of L4 neurons (700) contacted by a single thalamocortical axon [52].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We provide the first direct measurements of the kinetics of background current noise and find that, whereas it is fast in the L5 neurons, it is slow in the much smaller L4 neurons (Fig 3). We further demonstrate that, as theoretically predicted, the slow kinetics of the noise is very likely due to long EPSC decay time constants. This difference between L4 and other layers may be explained by previous evidence that, although fast AMPA-receptors are the predominant mediators of excitatory synaptic activity in all other cortical layers, in L4 of the mouse barrel cortex, a slower NMDA-receptor with minimal Mg2+-sensitivity (NR2C) is mainly responsible for ongoing synaptic activity, even at resting potential [27,53]. Because encoding capacity critically depends on background correlation time (Fig 4), the unique synaptic physiology in L4 is crucial to its function.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "An alternative mechanism for slow input fluctuations could be a slow oscillation of the recurrent network itself. Although this would assure conditions for a rapid response of L4 neurons without the need for special synaptic receptors, those oscillations would pose a serious problem for L4 function because it would create prolonged periods during which most neurons were far from threshold, and the population\u2019s input sensitivity would be reduced. Indeed, in vivo recordings from mouse primary somatosensory cortex (S1) show that during active sensing periods, the networks in S1 switch to asynchronous activity [33], thereby avoiding intermittent drop-outs. The input correlation time is at least as long as the decay time constant of the dominant post-synaptic currents, even if the network activity is completely asynchronous. The presence of slow synapses, thereby, allows L4 neurons to consistently respond rapidly.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Ultimately, the bandwidth of dynamic gain must reflect the ionic mechanisms underlying AP generation [54]. Briefly, wide bandwidth requires that the voltage dependence of inward current at threshold be steep [54]. In cortical neurons, APs are generated in the proximal part of the axon, the AIS, where an elaborate cytoskeleton anchors both voltage-dependent Na channels and voltage-dependent KV7 channels in a precise spatial pattern [55]. We suggest that, because the slower background noise is associated with a much more gradual incline of the pre-AP membrane potential towards threshold, the local K channels are activated, the Na current is opposed, and by the time threshold is reached the membrane voltage is at a much steeper point on the Na activation curve. This would explain our finding that blocking the KV7 channels, by removing the difference in pre-AP voltage trajectory, narrowed the bandwidth. This result predicts that the relay function of the L4 population may vary as a function of brain state, since KV7 channels are regulated by the neuromodulator acetylcholine [56].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Fundamentally, cortical function entails the passage of information between neuronal ensembles composed of neurons whose output collectively represents common input at a given point in time. However, a given neuron joins different populations at different moments, and the specific function that is served is usually not known. By studying this encoding in a well-defined subpopulation with known inputs, we identified principles of encoding that may well apply to many other cortical areas. By measuring the bandwidth of the dynamic gain of a single neuron, we obtain insight into how this neuron and others like it participate in the dynamics of cortical function. We note that the dynamic gain of a given neuron is not necessarily a fixed parameter, but may be sensitive to physiological or pathophysiological states. Merino and colleagues [57] reported that in L2/3, when slow oscillatory brain rhythms appear, they are reflected in the background noise, and the dynamic gain function of certain inhibitory neurons is thereby dramatically broadened. Revah and colleagues [40] showed that dynamic gain is modified due to changes in the AP initiation machinery during recovery from brief epochs of transient cortical anoxia and consequent spreading depolarization. The findings illustrated in Fig 6 suggest that the dynamic gain of some cortical neurons may be modified during normal behaviors that are associated with changes in KV7 potassium channel activation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "It is widely agreed that the purely sensory, whisker-specific input to spiny stellate cells establishes L4 as the key entrance for sensory input to cortex. Our characterization extends this view. We found that three parameters from completely different domains, i.e., population size, neuron morphology, and NMDA receptor kinetics, act together to set the observed sensitivity of L4 excitatory neurons. This allows L4 to relay the thalamic input rapidly and amplify it. At the same time, our preliminary characterization of a possible cholinergic modulation suggests that L4 may even serve as a gate, operated by neuromodulation. This exciting possibility inspires further characterization of cholinergic modulation ex vivo and, importantly, in vivo, to identify behaviorally relevant effects of cholinergic modulation on sensory performance, particularly for weak tactile stimuli, when amplification by L4 might be particularly important.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "All animal procedures were conducted in accordance with the Prevention of Cruelty to Animals (Experiments on Animals) Law, 5,754\u20131994 (Israel). All experiments were approved by the Animal Care and Use Committee of the Hebrew University of Jerusalem (permit number: MD-13-13607-2).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Ethics statement",
+        "sec_num": null
+      },
+      {
+        "text": "ICR (CD-1) mice were maintained in a specific-pathogen-free facility at the Hebrew University of Jerusalem, Rehovot, under veterinary supervision. Animals had ad libitum access to food and water and were housed under a 12 h light/dark cycle (lights on at 7:00 A.M.). Three- to four-week-old mice (20\u201330 g) were housed in groups of 5\u201310 per cage. Both male and female mice were used in this study. Mice were anesthetized with pentobarbitone and euthanized by cervical decapitation. All efforts were made to minimize pain and stress.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Animals",
+        "sec_num": null
+      },
+      {
+        "text": "Recordings were made in 300\u2212400 \u03bcm thick coronal slices (L5) and tangential slices (L4) of the somatosensory cortex of CD-1 mice of either sex that were 14\u201324 postnatal days of age. Procedures for the preparation and maintenance of slices were similar to those described previously [58]. Animals of either sex were deeply anesthetized with Nembutal (60 mg/kg) or isoflurane and killed by decapitation; their brains were rapidly removed and placed in cold (4\u00b0C), oxygenated (95% O2\u20135% CO2) artificial cerebrospinal fluid (aCSF). Coronal and tangential slices from a region corresponding to the primary somatosensory cortex were cut on a vibratome (Series 1000; Pelco International, Redding, Canada), as previously shown [27]. The slices were then placed in a holding chamber containing aCSF at room temperature for >30 min of recovery and transferred to the recording chamber for recordings and analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electrophysiology",
+        "sec_num": null
+      },
+      {
+        "text": "Whole-cell patch-clamp recordings were made from visually identified L4 and L5 neurons under infrared differential interference contrast (IR-DIC) microscopic control. Slices were held submerged in a chamber on a fixed stage of an Axioskop FS microscope (Carl Zeiss, Oberkochen, Germany). Voltage and current were recorded in whole-cell configuration using an Axoclamp 2B (Molecular Devices, Foster City, CA) connected to an MU-type head stage (Molecular Devices, Foster City, CA). Patch pipettes were manufactured from thick-walled borosilicate glass capillaries (outer diameter, 1.5 mm; Hilgenberg, Malsfeld, Germany) and had resistances of 5\u20137 M\u03a9 for somatic and extracellular recordings. All recordings were made at 30 \u00b1 2\u00b0C. Command voltage protocols were generated, and whole-cell data were acquired on-line with a Digidata 1320A analog-to-digital interface. Data were low-pass filtered (\u22123 dB, one-pole Butterworth filter) and digitized at 20 kHz, except for spike shape analysis, which was oversampled at 250 kHz. For each neuron, bridge correction and capacitance compensation were performed manually online.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electrophysiology",
+        "sec_num": null
+      },
+      {
+        "text": "The aCSF contained (in mM): 124 NaCl, 3 KCl, 2 CaCl2, 2 MgSO4, 1.25 NaH2PO4, 26 NaHCO3, and 10 glucose, pH 7.3 when bubbled with a 95% O2\u20145% CO2 mixture. The pipette solution for current clamp experiments contained (in mM): 130 K-gluconate, 6 KCl, 4 NaCl, 2 MgCl2, and 10 HEPES (potassium salt), pH 7.3. For voltage clamp recordings the solution contained (in mM): 135 CsOH, 124 gluconic acid, 6 CsCl, 2 MgCl2, 4 NaCl, and 10 HEPES (potassium salt), pH 7.3. The intracellular chloride concentration is the same for both recipes, resulting in a calculated reversal potential for chloride of \u221259.7 mV.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Electrophysiology",
+        "sec_num": null
+      },
+      {
+        "text": "The subthreshold membrane properties and the characteristics of the AP were obtained by injecting a series of increasing 500 ms current steps, separated by 2\u20135 s intervals during which the cell was held at either resting or at \u221277 mV.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Assessing passive and active membrane properties.",
+        "sec_num": null
+      },
+      {
+        "text": "To achieve periods of reverberating network activity, in addition to the recording electrode, a second borosilicate glass electrode, pulled to a resistance of 2\u20134 M\u03a9, containing caged glutamate (MNI-caged-L-glutamate, 10 mM, Tocris), and connected to a Picospritzer II device (PARKER HANNIFIN CORPORATION), was placed 100\u2013200 \u03bcm away from the recorded neuron. Caged glutamate was puffed locally for 1 second, and, following, a short, 50\u2013100 ms long UV light-pulse was delivered onto the tissue through a 40\u00d7 objective (~25 mW/mm2). Successful network activations resulted in incoming synaptic barrages impinging on the recorded cell after a considerable delay (see Fig 3). Special care was taken to prevent glutamate from directly exciting the cell. Specifically, we repeatedly checked that the uncaging UV focus was outside the boundary of the barrel we recorded from. Because the dendrites of L4 neurons are almost completely confined to a barrel, this largely excludes the chance of direct contact of the released glutamate with the stimulated neuron\u2019s dendrites. In coronal slices, we performed release at least 200 \u03bcm away from the recorded Layer 5 neuron soma. Successful separation of uncaging and reverberation detection was indicated by a delay of at least 25 ms from the UV pulse onset.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Synaptic noise simulation in brain slices.",
+        "sec_num": null
+      },
+      {
+        "text": "To assess the frequency response of neuronal populations, we injected stochastically fluctuating currents in the whole-cell configuration. This analysis aims to achieve an in vivo-like operating point, mimicking a situation in which a high rate of synaptic inputs provides a continuously changing net background current, and AP firing is driven not by the average input but by its transient depolarizing excursions. The injected currents were composed of a stochastic signal, and a sinusoid signal of frequency fs (between 5 and 750 Hz as indicated). The stochastic signal was based on an Ornstein\u2013Uhlenbeck (OU) process, i.e., low-pass filtered white noise with a Gaussian amplitude distribution. Its correlation time was either 2, 5, or 10 ms as indicated. While 5 ms was chosen because this was previously assumed to be representative of glutamatergic synaptic decay time constants, the 2 and 10 ms were chosen based on our measurements (Fig 3). There is no guarantee that input correlations in vivo follow the exact same pattern. Although the PSC decay time constants represent a lower bound for the input current correlation time, multiple processes may prolong it. Our choice of 10 ms slightly exceeds the 7 ms we observed in L4 network reverberations. This experimental design thereby accommodates, to some degree, possibly slower correlations in vivo. We adjusted the input\u2019s standard deviation, \u03c3I, based on the input resistance of the neuron, to ensure that the voltage fluctuations were similar in all neurons. Along with \u03c3I, we also scaled the amplitude of the sinusoidal component Asin = 0.37\u00b7\u03c3I. A constant, direct current (DC) \u27e8I\u27e9 was added and adjusted to maintain a target firing rate of ~5 Hz. In the absence of measurements of spiny stellate cells\u2019 firing rates in vivo, we opted for this value because the neurons were able to sustain it for many seconds without detectable changes in AP shape. Lower values would inversely prolong the required measurement duration and preclude the application of two different input statistics to the same neuron. Currents were injected in 46 s episodes, with ~30 s intervals between the injections. APs were detected as upward crossings of zero membrane voltage.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Assessing the frequency response function of L4 and L5 neurons",
+        "sec_num": null
+      },
+      {
+        "text": "A neuron\u2019s ability to encode signals can be evaluated with different methods. We used two methods to ensure precise results. Results for both are obtained with code available at https://github.com/Anneef/AnTools in the subfolder \u2018Dynamic Gain Code\u2019. The permanent version of the code is published here: https://doi.org/10.25625/VQUKFU.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "The first method relies on the presence of a sinusoidal component in the input and uses the vector strength r to characterize how the AP times tj lock to the phase of the periodic stimulus:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "In the experiments underlying Fig 2, where stimuli of a single correlation time were used (5 ms), each cell (n = 10 L4 cells, n = 9 L5 cells) was typically studied with all 5 frequencies (f = 50, 100, 200, 500, and 750 Hz) twice (for L4 cells) or thrice (for L5 cells). In the experiments underlying Fig 4, 30 L4 neurons received fluctuating stimuli of 2 and of 10 ms correlation time. For both correlation times, typically, 3\u20134 of the 7 frequencies (5, 50, 100, 200, 350, 500, and 750 Hz) were applied once to each cell. For the number of stimuli applied, the cell in S1A\u2013S1F Fig is not typical because, in this cell, a total of 11 trials were successfully recorded. In terms of results, it is a typical cell. Out of the 204 trials recorded from these 30 cells, 200 trials were part of a 2\u201310 ms pair, i.e., the trial stimuli contained the same sine frequency for both correlation times, recorded in the same cell. In Fig 4F, the vector strengths calculated for each of these 200 trials are shown in circles. The average vector strengths, calculated for all trials with a given sine frequency, are shown as squares.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "Note that the average values are not simply the averages of the individual vector strength values because complex numbers are averaged and only their absolute values are reported. Specifically, the average absolute value is at most equal to the average of the individual absolute values of the trials. This case occurs only if the phases of all trial vector strengths are identical, i.e., if rtrial=1Ntrial\u2211j=1Ntrial(2\u03c0\u00b7f\u00b7tj) is the same for all trials.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "Furthermore, note that each of the 204 trials contributes to the calculation of the dynamic gain in Fig 4E.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "To determine the confidence intervals and statistical significance of phase locking (vector strength r) of recorded APs to periodic input current stimulation, we used 10,000 bootstrap samples of the actual spike times and of randomized spike times similar to the procedure described below for the dynamic gain. Because the contributions of individual APs are points on the unit circle, the average vector of the kth bootstrap sample is a point somewhere inside that unit circle, characterized by its magnitude and phase: mk\u00b7ei\u03d5k. To obtain the confidence interval of the magnitudes, it is not correct to simply study the distribution of allmk. Instead, the bootstrap results first have to be projected onto the vector of the average 1N\u2211j=1Nexp(i\u00b72\u03c0\u00b7f\u00b7tj)=mavg\u00b7ei\u03d5avg. The central 95 percentiles of these projected vectors\u2019 magnitudes, i.e., of mk\u00b7cos(\u03d5k\u2212\u03d5avg), corresponds to the confidence interval of the vector strength as shown in Figs 2, 4, and S1 Fig.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Vector strength.",
+        "sec_num": null
+      },
+      {
+        "text": "The second method to characterize the encoding ability of neurons is the dynamic gain function G(f). It represents the frequency-domain, linear transfer function (or susceptibility) of a population of neurons that receive a common feedforward input \u0394I. In other words, in the frequency domain, the neurons\u2019 common population rate changes as follows:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "The tilde represents the Fourier transformations of the respective functions.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "The calculation of the dynamic gain, as performed here, based on [59], does not rely on an embedded sinusoidal signal. Instead, all the frequency components that are present in the stochastic signal are used as reference to calculate phase-locking. We described the rationale and calculations in detail earlier [13,57]. A spike-triggered average (STA) input current was obtained by summing up 1-s-long stimulus segments centered on the AP times for all cells of a given condition and dividing by the total number of APs.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "The complex dynamic gain function G(f) was calculated as the ratio of the complex conjugate of the Fourier transform of the STA, F(STAI)*, and the Fourier transform of the autocorrelation of the stimulus (its power spectrum), multiplied with the average firing rate:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "In order to improve the signal-to-noise ratio, G(f) was filtered in the frequency domain by a Gaussian filter w(f\u2032) centered at frequency f\u2032 = f and a frequency-dependent window size with a standard deviation of f/2\u03c0 as proposed by [59]:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "The filtered dynamic gain function Gw(f) thus becomes",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "The magnitude |G| of this complex dynamic gain function is shown in Figs 4 and 6. Its phase arg(\u27e8G(f)\u27e9) is not displayed because it is not relevant for the arguments here. To determine the region of the gain curves, where |G| is significantly larger than zero, a noise floor was calculated as the 95th percentile of the bootstrap distribution of dynamic gain functions obtained from AP times for which the temporal relation to the stimulus is destroyed by shifting the original times by an interval larger than 1 second. The noise floors are shown in Fig 4E as dashed lines. The results are shown only for frequencies where |G| is above the noise floor. In accordance with the calculation of the confidence interval of the vector-strength-based gain, again, the confidence interval of |G| is obtained by bootstrap-sampling over all AP times, and as before, the resulting complex bootstrap values G(f) are projected onto the angle of the average \u27e8G(f)\u27e9, before the central 95% of the |G(f)| were determined. As explained above, the projection ensures that the confidence interval includes zero at those frequencies where the gain exceeds the result for randomized spike times (noise floor). We used 1,000 bootstrap samples to estimate noise floor and confidence interval.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain calculation.",
+        "sec_num": null
+      },
+      {
+        "text": "In S1A\u2013S1F Fig, the two methods are compared. As long as the exact same data are analyzed, i.e., a single trial with one underlying sine-frequency, the results of the two methods are in good quantitative agreement and statistically indistinguishable. It should be noted, however, that an entire curve for various frequencies represents different information for the vector strength method and the STA-based method. Whereas the latter uses the same data (all APs in all trials) for all data points, the former calculates the gain at a given frequency only from APs fired within the one (or few) trials, for which a sinusoidal stimulus component with this particular frequency was added to the OU input. So unless multiple sine components are added to the same trial, all points in the vector-strength-based dynamic gain curve originate from disjunct datasets.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparing calculations of dynamic gain based on vector-strength and spike-triggered average.",
+        "sec_num": null
+      },
+      {
+        "text": "The analysis in S1A\u2013S1E Fig highlights the great advantage of the STA-based method: each AP is analyzed with respect to all input frequencies and not just a single frequency of a superimposed periodic input component. For correlation times as short as 2 ms, the input contains so much power throughout the interesting frequency range (1\u2013800 Hz), that the STAI-based dynamic gain analysis provides confidence intervals as narrow as the vector-strength method for all relevant frequencies. For such short input correlation times, usage of the vector strength method seems to offer no advantage. In the case of longer input correlations (10 ms), the confidence intervals from the STA-based dynamic gain curve are very wide for high frequencies. For the low number of spikes fired during a single trial, the vector strength provides a more precise estimate, because at the one frequency of interest, the underlying OU process contains very little power and therefore limits the signal-to-noise of the dynamic gain at this frequency. However, as soon as vector strength measurements at more than three or four frequencies are conducted, the APs from all these trials together allow a precise STA-based estimate of the gain at all frequencies and once more the vector strength is outperformed.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Comparing calculations of dynamic gain based on vector-strength and spike-triggered average.",
+        "sec_num": null
+      },
+      {
+        "text": "Here, we provide detailed technical descriptions of the mathematical connections among the presented results. In particular, we show how the frequency-domain expression of the dynamic gain function G(f) is related to the temporal response, i.e., the change of the firing rate over time \u0394\u03bd(t) after the input has changed with \u0394I(t). We introduced the dynamic gain as the linear transfer function of a population of neurons, with respect to changes in the common (feedforward) input. This is expressed in the frequency domain through Eq. 2. Its time-domain equivalent is a convolution:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain accurately describes the rate change in response to an artificial EPSC.",
+        "sec_num": null
+      },
+      {
+        "text": "The frequency domain equivalent is a simple multiplication:",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain accurately describes the rate change in response to an artificial EPSC.",
+        "sec_num": null
+      },
+      {
+        "text": "It is not a priori clear, to which degree this linear approximation captures the population\u2019s response to a change in the common input \u0394I. For very small perturbations, the linearity can be plausibly assumed, but what input magnitude can be considered sufficiently small? We can test this for a concrete realization of \u0394I by comparing the predictions of the time-domain equivalent of Eq. 2 and the experimentally obtained \u0394\u03bd.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain accurately describes the rate change in response to an artificial EPSC.",
+        "sec_num": null
+      },
+      {
+        "text": "This test is conducted in S1 Fig. We obtained the dynamic gain curves from APs fired at least 25 ms after the EPSC onset (S1G Fig). Notably, those dynamic gain curves are very similar to the gain curves in Fig 4, recorded from cells in the same cortical area and with similar cellular properties. This similarity indicates that the presence of the aEPSC signal did not substantially influence the dynamic gain calculation. In the next step, we took those complex dynamic gain functions (including the phase information) and, following Eq. 7, we multiplied G(f) with the Fourier transformation of the waveform \u0394I(t) of the aEPSCs (Figs S1F and 5A), the inverse Fourier-transformation results in a prediction for the response \u0394\u03bd(t), shown in S1H Fig. Finally, we compared this theoretical prediction with the experimental results that are shown in the top panels of Fig 5B and 5C. This comparison demonstrates that the theoretically predicted responses capture all features of the experimental responses, i.e., delay, magnitude, and temporal extent (S1I Fig). Importantly, the different dynamic gain curves for background correlations of 2 and 10 ms closely predict the different response waveforms in Fig 5B and 5C, respectively. This demonstrates that the dynamic gain, the linear approximation of encoding, faithfully describes the encoding in the conditions tested, i.e., at a given working point characterized by input parameters \u03bcI, \u03c3I, \u03c4, and AP firing statistics. That notwithstanding, it is obvious that the system is not globally linear. This is evident from the very fact that the temporal statistics of the input has a profound impact on the dynamic gain. This would not be the case, if the system was globally linear.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Dynamic gain accurately describes the rate change in response to an artificial EPSC.",
+        "sec_num": null
+      },
+      {
+        "text": "For the neuron model, we had to find a possibility to study the effect of dendrite properties and input correlation times. We implemented a simple Gauss neuron, in which AP firing is not explicitly modeled, but instead each crossing of a voltage threshold from below is detected as an AP. From our earlier characterization of this model, we knew, that its encoding ability depends on the correlation time \u03c4 of the input current [60].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Theoretical model",
+        "sec_num": null
+      },
+      {
+        "text": "The electrotonic structure, i.e., the passive properties of the neuron model and its morphology, determine how the current input is transformed into the fluctuating membrane voltage. If the model was only a point neuron with resistance R and capacitance C, the transformation would correspond to a low-pass filter V~(\u03c9)=R\u00b7I~(\u03c9)/(1+R2C2\u03c92\u00b7). When a dendrite is added, low frequencies experience an additional suppression, while very high frequencies are less affected. For the transfer function for currents injected into the soma of this more complex structure (neuron + dendrite), we used an analytical expression derived in [61]. The soma was represented by a sphere with 10 \u03bcm diameter, the dendrite is a cylinder with 5 \u03bcm diameter and variable length (as specified in Fig 1). Intracellular and membrane resistivity were 1.5 \u03a9m and 0.9 \u03a9m2, the specific membrane capacitance was 0.01 F/m2. For reference, these parameters result in a membrane time constant of 9 ms and an electrotonic length constant of 866 \u03bcm.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Theoretical model",
+        "sec_num": null
+      },
+      {
+        "text": "Before tests were applied, the individual distributions were tested against the normal distribution with Jarque\u2013Bera tests. If the hypothesis of a normal distribution could not be rejected, the hypothesis of equal variances was tested with F-tests. If not rejected, the distributions were then compared with t-tests. In Figs 4F and 6B, those criteria were not passed, and therefore a Wilcoxon rank test was used.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Statistical tests",
+        "sec_num": null
+      },
+      {
+        "text": "The optimal decoder is set up as described earlier [6]. It monitors the number of APs ndetect fired by a neuronal population during a \u201cmeasurement window\u201d of a certain width (3 ms Fig 1; 1 and 2 ms in Fig 5D left and right panel). If the AP count in this window exceeds the threshold nthresh, defined as the 95th percentile of the distribution of AP counts in all the baseline windows (of equal width), then a significant increase is detected.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Optimal decoder and detection probability.",
+        "sec_num": null
+      },
+      {
+        "text": "Because ndetect and nthresh are both discrete random numbers with distributions following count statistics, the detection probability shows abrupt jumps as the population size increases. Every time nthresh is incremented by one, the detection probability drops. These jumps are artifacts of the decoder definition. They overlay the steady increase of the underlying detection probability with population size. We therefore do not show these jumps but only the overall trend of increasing P.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Optimal decoder and detection probability.",
+        "sec_num": null
+      }
+    ]
+  }
+}

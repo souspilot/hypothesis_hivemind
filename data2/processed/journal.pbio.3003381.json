@@ -1,0 +1,377 @@
+{
+  "paper_id": "journal.pbio.3003381",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003381.xml"
+  },
+  "title": "Structural insights into subtype-specific agonist recognition by sphingosine-1-phosphate receptors",
+  "doi": "10.1371/journal.pbio.3003381",
+  "authors": [
+    {
+      "first": "Leiye",
+      "last": "Yu"
+    },
+    {
+      "first": "Haizhan",
+      "last": "Jiao"
+    },
+    {
+      "first": "Bin",
+      "last": "Pang"
+    },
+    {
+      "first": "Rujuan",
+      "last": "Ti"
+    },
+    {
+      "first": "Bing",
+      "last": "Gan"
+    },
+    {
+      "first": "Zhaoyang",
+      "last": "Qin"
+    },
+    {
+      "first": "Jinxin",
+      "last": "Wang"
+    },
+    {
+      "first": "Lizhe",
+      "last": "Zhu"
+    },
+    {
+      "first": "Hongli",
+      "last": "Hu"
+    },
+    {
+      "first": "Ruobing",
+      "last": "Ren"
+    }
+  ],
+  "abstract_text": "Sphingosine-1-phosphate (S1P), a key metabolite of sphingolipids, plays crucial roles in a wide range of physiological and pathological processes. S1P primarily exerts its functions by binding to G protein-coupled sphingosine-1-phosphate receptors (S1PRs), which comprise five subtypes (S1PR1-5) in humans, thereby activating these receptors and their downstream signaling pathways. Understanding the molecular determinants that govern agonist selectivity among different S1PR subtypes is vital for the rational and precise development of targeted therapeutic agents. Here, four cryo-electron microscopy structures of agonist-bound S1PR1-Gi1 complexes are reported. Through an integrated approach combining structural analysis, molecular dynamics simulations, and pharmacological assays, the molecular basis for the selectivity of CYM5442, HY-X-1011, Ponesimod, and SAR247799 toward S1PR1 over S1PR2-S1PR5 is uncovered. Nonconserved residues within the ligand-binding pocket and at the Gi1-protein interface contribute to S1PR1 selectivity by these agonists. A distinct agonist binding orientation toward transmembrane helices 5-7, combined with branched substituents that increase the agonist\u2019s molecular width, results in steric clashes with residues in S1PR3. Additionally, branched moieties located at the tail portions of the agonist restrict its deep insertion into the binding pocket of both S1PR3 and S1PR5. These structural features collectively enhance its selectivity for S1PR1 over S1PR3 and S1PR5. Furthermore, polar interactions with conserved polar residues in the top region of the binding pocket also influence agonist selectivity. Besides, the relatively broad molecular width of the agonist sterically hinders its binding into S1PR2 and S1PR4 pocket by nonconserved residue pairs bearing bulky side chains. These findings establish a structural framework for the rational design of next-generation S1PR1 highly selective agonists with improved therapeutic potential.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003381",
+    "body_text": [
+      {
+        "text": "Sphingosine-1-phosphate (S1P), a key metabolite of sphingolipids, plays crucial roles in a wide range of physiological processes, such as lymphocyte trafficking and cardiovascular development. S1P is generated through the phosphorylation of sphingosine, a backbone structural component of all sphingolipids, and can be exported from cells via specific membrane transporters [1\u20134]. S1P primarily exerts its biological functions by binding to G protein-coupled sphingosine-1-phosphate receptors (S1PRs), which consist of five subtypes (S1PR1-5), thereby activating these receptors and triggering various downstream signaling pathways [5]. S1PRs belong to the class A GPCR (G protein-coupled receptor) superfamily. Activation of GPCRs involves significant conformational rearrangements on the cytoplasmic side, particularly a large outward movement of transmembrane helix 6 (TM6), accompanied by reorganization of other helices, which creates an intracellular pocket that can engage different G proteins (Gi/o, Gs, Gq, and G12/13), GRKs (G protein-coupled receptor kinases), and arrestins to form functional signaling complexes [6]. The S1PR subtypes activate distinct yet partially overlapping G protein-mediated signaling cascades, thus orchestrating diverse cellular responses such as proliferation, apoptosis, adhesion, and migration. Specifically, S1PR1 couples exclusively with Gi/o (the alpha subunit of heterotrimeric G proteins), S1PR2-3 interact with Gi/o, G12/13, and Gq, while S1PR4-5 bind to Gi/o and G12/13 [5].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "S1PR1 is highly expressed in endothelial cells and adipocytes, with lower expression levels observed in various immune cell populations. Upon activation by S1P, S1PR1 engages Gi proteins, leading to subsequent activation of Rac1 signaling, which promotes the formation of tight junctions between endothelial cells and helps maintain the integrity and normal function of vascular and lymphatic endothelial barriers [7]. In vascular endothelial cells (VECs), S1PR1 signaling not only stabilizes adherens junctions but also enhances nitric oxide (NO) production via endothelial nitric oxide synthase (eNOS), which is essential for regulating blood flow and pressure [8]. Moreover, S1PR1 plays a pivotal role in lymphocyte egress from the thymus and secondary lymphoid organs, a process that relies on a concentration gradient of S1P-high in plasma (~1 \u03bcM) and lymph (~100 nM), compared to much lower levels in interstitial fluids [9\u201313]. Additionally, S1PR1 is expressed in brain endothelial cells, astrocytes, glial cells, and leukocytes, where it contributes significantly to the proper functioning of the central nervous system (CNS).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "S1PRs play complex roles in multiple pathological processes, including cardiovascular, autoimmune, inflammatory, neurological, oncologic, hearing loss, and fibrotic diseases [14]. Consequently, the therapeutic potential of S1PR1 modulation has been extensively investigated, leading to the development of numerous S1PR1 modulators, several of which are clinically approved pharmacological agents for treating various conditions such as multiple sclerosis (MS) and inflammatory bowel disease (IBD) [15\u201318]. MS is a chronic neurodegenerative disorder characterized by persistent inflammation within the CNS, resulting in neuronal demyelination and subsequent functional impairments. Fingolimod (FTY720) was the first FDA-approved drug specifically targeting S1PR1 for the treatment of MS [16]. Fingolimod undergoes phosphorylation in vivo to form phosphorylated Fingolimod (FTY720-P). Upon binding to S1PR1, FTY720-P activates S1PR1 and promotes \u03b2-arrestin recruitment, leading to \u03b2-arrestin-mediated internalization of S1PR1. This results in a reduction of S1PR1 on the plasma membrane, thereby decreasing the circulation and CNS infiltration of immune cells, which suppresses inflammation and disease progression. However, patients treated with Fingolimod may experience adverse events such as relapse of multiple sclerosis, decreased lymphocyte count, fatigue, and headache [19]. Furthermore, FTY720-P also activates all five S1PR subtypes and engages G protein-dependent signaling pathways that can promote immune cell migration [20]. Additionally, its long half-life contributes to further side effects [21]. In recent years, the FDA has approved three second-generation S1PR-targeted drugs\u2014Siponimod, Ozanimod, and Ponesimod\u2014for the treatment of MS [22\u201324]. Although these newer agents exhibit improved receptor selectivity, they still carry risks of side effects such as bradycardia. Siponimod and Ozanimod selectively activate both S1PR1 and S1PR5 with similar potency, with Siponimod showing approximately a thousand-fold lower potency toward S1PR3 and S1PR4 compared to S1PR1 and S1PR5 [25,26]. Ponesimod strongly activates S1PR1 but exhibits lower affinity for S1PR3 and S1PR5 [27]. The activation of multiple S1PR subtypes may lead to varied physiological effects and increase the likelihood of certain adverse reactions, such as bradycardia [28].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "It is noteworthy that current therapeutics predominantly target S1PR1 as their primary mechanism of action. However, due to the high sequence and structural similarity among the five S1PR subtypes, existing modulators often display cross-reactivity across multiple receptor subtypes, activating diverse signaling pathways. This phenomenon not only complicates therapeutic outcomes but also contributes to the potential side effects associated with these drugs. Therefore, the development of highly subtype-selective S1PR modulators remains a significant challenge. Understanding the molecular determinants that govern agonist selectivity among S1PR subtypes is crucial for the rational and precise design of targeted modulators. While multiple structures of S1PRs bound to various modulators have been reported previously [29\u201337], the mechanisms underlying agonist selectivity among different S1PR subtypes remain insufficiently understood. In this study, we determined four agonist-bound S1PR1-Gi1 complex structures. Through integrated structural analysis, mutagenesis combined with Gi1 coupling assays, and molecular dynamics simulations, we uncovered the molecular basis for the preferential selectivity of agonists toward S1PR1 over S1PR2-S1PR5. These findings provide a foundation for the rational design and development of highly selective S1PR1 modulators.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "1. Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "Previously, several agonists\u2014CYM5442, HY-X-1011, Ponesimod, and SAR247799\u2014were reported to exhibit improved selectivity for S1PR1 over S1PR2-S1PR5 (S1A\u2013S1D Fig) [38\u201341]. Although the activation of S1PR by these four agonists has been characterized previously using various experimental approaches, we employed a standardized bioluminescence resonance energy transfer (BRET)-based assay to systematically evaluate their activation profiles across S1PR1-S1PR5. This method enables quantitative assessment of Gi1 protein dissociation kinetics and facilitates direct comparison of four agonists pharmacological properties. The BRET assay results demonstrated that all four agonists exhibit greater potency and efficacy for S1PR1 compared to S1PR3 and S1PR5, with EC50 values differing by one to two orders of magnitude (Fig 1A\u20131D). In contrast, S1P exhibits comparable potency across S1PR1, S1PR3, and S1PR5 (S1E Fig). Furthermore, no activation of S1PR2 and S1PR4 was detected in response to any of the four agonists in the BRET-based Gi1 dissociation assay, unlike the robust activation observed with S1P (S1F\u2013S1G Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.1 S1PRs subtype selectivity of four S1PR1 agonists",
+        "sec_num": null
+      },
+      {
+        "text": "A traveling-salesman based automated path searching (TAPS) molecular dynamics simulations method was employed to predict S1PR1/3/5 activation by agonists and successfully identified a novel S1PR1 agonist (HY-X-1011) with enhanced selectivity for S1PR1 over S1PR3 and S1PR5 [42]. In this study, we applied the same TAPS-based molecular dynamics method to explore the minimum free energy path (MFEP) during the transition of S1PR1/3/5 from an inactive to an active conformation induced by CYM5442, HY-X-1011, Ponesimod, and SAR247799 (details provided in the Methods section). The activation potential of each ligand can be quantified by the sum of the barrier height \u0394GT (the Gibbs free energy difference between the inactive state and the transition state) and the stability of the intermediate state relative to the inactive state \u0394GI (the Gibbs free energy difference between the inactive state and the intermediate state; the intermediate state closely resembles the fully active structure) [41]. The calculated free energy distributions (\u0394GT + \u0394GI) along the MFEP of the four distinct ligands for three S1PR subtypes showed strong agreement with the BRET measurements of Gi1 protein dissociation (Fig 1E\u20131H).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.1 S1PRs subtype selectivity of four S1PR1 agonists",
+        "sec_num": null
+      },
+      {
+        "text": "However, the lack of comprehensive structural, computational, and pharmacological profiling has limited our understanding of the mechanisms underlying receptor subtype selectivity (Fig 1I). To investigate and clarify the basis of this selectivity, we determined four Gi1-coupled S1PR1 structures bound to CYM5442, HY-X-1011, Ponesimod, or SAR247799 using single-particle cryo-electron microscopy (cryo-EM). The four complexes were successfully assembled following previously established protocols (S2A\u2013S2D Fig) [33]. Data collection and analysis yielded four density maps of the S1PR1-Gi1 complex bound to each respective agonist at overall resolutions of 3.69 \u00c5, 2.79 \u00c5, 2.79 \u00c5, and 2.97 \u00c5, respectively, enabling structural model building (Figs 1J\u20131K, S3A\u2013S3E and S1 Table). Most residues with bulky side chains in the transmembrane helices (TM) 2-7 of the receptor can be identified. However, the density for TM1 is noticeably weaker than that of TM2-TM7 across all four maps (S3F\u2013S3I Fig). Importantly, densities in the ligand-binding pocket for each of the four agonists were observed in their respective maps, enabling the determination of the ligand\u2019s overall orientation, and a detailed characterization of the binding sites (Figs 1J and S4).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.2 Overall structures of agonist-bound S1PR1-Gi1 complexes",
+        "sec_num": null
+      },
+      {
+        "text": "In these Gi1-coupled S1PR1 structures, four agonists adopt extended conformations within the orthosteric binding pocket of S1PR1, exhibiting length-dependent variations in polar interactions in the top region of the pocket, while maintaining similar hydrophobic contacts in the middle and bottom regions (Fig 2A\u20132D). Systematic alanine scanning mutagenesis confirmed the significant roles of most selected residues involved in agonist interaction, as revealed by Gi1 dissociation BRET assays (Fig 2E and S2 Table). Alanine substitution of polar residues, including Y29, N1012.60, R1203.28, and E1213.29, has been shown to significantly reduce S1PR1 activation by both S1P and FTY720P [33]. These residues which interact with the head groups of CYM5442, HY-X-1011, Ponesimod, or SAR247799 also affect the potency or efficacy of agonist-induced S1PR1 activation to varying degrees. Notably, most residues in the middle and bottom regions of the pocket strongly influence the potency or efficacy of all four agonists, such as F1253.33, L1283.36, L2766.55, and L2977.39. The key residues critical for CYM5442, HY-X-1011, Ponesimod, or SAR247799 induced S1PR1 activation are predominantly located in transmembrane segments TM3, TM5, TM6, and TM7 with their densities clearly discernible (S4 Fig). These results suggest that, in comparison to the head groups, the hydrophobic tails of these agonists exhibit stronger interactions with TM3, TM5, TM6, and TM7, playing more critical roles in activating S1PR1 and initiating downstream Gi1 signaling.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3 Agonist-induced activation of S1PR1",
+        "sec_num": null
+      },
+      {
+        "text": "A comparison of conformational changes between agonist-bound active S1PR1 structures and the antagonist ML-056-bound inactive structure provides key mechanistic insights into receptor activation [29]. All active structures display a characteristic outward movement of TM6 by ~11.5 \u00c5, which facilitates G protein coupling (S5A\u2013S5D Fig). Agonist binding induces a conserved reorientation of side chains in the hydrophobic residues L1283.36, F2105.47, F2736.52, W2696.48, and L2977.39 (S5E\u2013S5H Fig), with F210\u2075.\u2074\u2077 undergoing a rotamer switch that drives TM6 displacement, accompanied by rotation of F2736.52. Furthermore, class A GPCR activation-related motifs in S1PR1\u2014including E3.49R3.50Y3.51, P5.50I3.40F6.44, and N7.49P7.50xxY7.53\u2014are largely conserved [43]. These motifs (E1413.49R1423.50Y1433.51, L2135.50V1323.40F2656.44, and N3077.49P3087.50xxY3117.53) exhibit significant conformational changes across all four activated receptor structures (S5I\u2013S5T Fig), underscoring the evolutionary conservation of the S1PR activation mechanism.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.3 Agonist-induced activation of S1PR1",
+        "sec_num": null
+      },
+      {
+        "text": "Although most residues that interact with the four agonists are conserved across S1PR1, S1PR3, and S1PR5, we hypothesize that nonconserved residues within the ligand-binding pocket contribute to receptor subtype selectivity. Initially, we identified nonconserved residues in the ligand-binding pockets of S1PR1 and S1PR3 (Fig 3A\u20133D), which are located in the middle and bottom regions of the binding cavity. Two previously reported key residues\u2014L2766.55 and L2977.39 in S1PR1, corresponding to F2636.55 and I2847.39 in S1PR3\u2014are known to influence the selectivity of Siponimod and CBP-307 for S1PR1 and S1PR3, respectively. Functional characterization of reciprocal mutants confirmed the importance of these two residue pairs. The L2766.55F-L2977.39I double mutant of S1PR1 exhibited reduced agonist potency and efficacy, similar to or weaker than that of wild-type (WT) S1PR3. Conversely, introducing the F2636.55L-I2847.39L mutations into S1PR3 enhanced the potency of CYM5442, HY-X-1011, and Ponesimod to levels approaching those observed for S1PR1, although SAR247799 remained tenfold less potent (Fig 3E\u20133H and S3 Table). Additionally, residues S1293.37, T2075.44, and V1323.40 in S1PR1 correspond to G1233.37, I2015.44, and T1263.40 in S1PR3, and all contact the tail portions of the four agonists. Therefore, we examined the effects of mutating these three residue pairs\u2014S1293.37G/G1233.37S, T2075.44I/I2015.44T, and V1323.40T/T1263.40V\u2014on receptor activation. These mutants displayed partial exchange effects in response to Ponesimod and SAR247799, except for V1323.40T in S1PR1 and T1263.40V in S1PR3, which had no observable impact (S6A\u2013S6F Fig). Three nonconserved residues\u2014F1333.41, V2095.46, and L2135.50\u2014located at the bottom of the S1PR1 pocket show distinct interaction patterns. Among them, V2095.46 interact with the tail ends of CYM5442, HY-X-1011, and Ponesimod. In contrast, F1333.41, and L2135.50 do not exhibit direct interactions with any of the four agonists in the determined structure. Intriguingly, results from the Gi dissociation assay showed that triple mutants F1333.41C-V2095.46I-L2135.50I (S1PR1) and C1273.41F-I2035.46V-I2075.50L (S1PR3) exhibited exchanged activation potencies when stimulated by CYM5442, HY-X-1011, Ponesimod, and SAR247799 (Fig 3I\u20133L and S3 Table).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Similarly, we also identified several residues predominantly clustered in the central and bottom regions of the binding pockets of S1PR1 and S1PR5 (Fig 4A\u20134D). Among them, M1243.32 and S1293.37 (S1PR1), corresponding to V1153.32 and T1203.37 (S1PR5), exhibit close contacts with four agonists. However, these reciprocal mutants exhibit varying effects on the activation of S1PR1 and S1PR5 by the four agonists (S7A\u2013S7H Fig). We further analyzed T2075.44 and V1985.44, which are located between TM5 and TM6, near the branched moieties at the tail portions of CYM5442, HY-X-1011, and Ponesimod. The T2075.44V mutation in S1PR1 results in reduced potency, similar to the activation of S1PR5 by the four agonists, whereas the V1985.44T mutation in S1PR5 leads to increased potency, resembling the activation of S1PR1 by CYM5442, HY-X-1011, and SAR247799 (Fig 4E\u20134H). Additionally, three residues\u2014F1333.41, V2095.46, and L2135.50\u2014at the bottom of the S1PR1 pocket are also not conserved in S1PR5 (L1243.41, A2005.46, and I2045.50) (Fig 4A\u20134D). Reciprocal triple mutations\u2014F1333.41L-V2095.46A-L2135.50I in S1PR1 and L1273.41F-A2035.46V-I2075.50L in S1PR5\u2014resulted in fully swapped activation profiles for CYM5442 and SAR247799, and showed significant exchange in activation effects for Ponesimod and HY-X-1011, except for L1273.41F-A2035.46V-I2075.50L in S1PR5 in response to Ponesimod (Fig 4I\u20134L). Collectively, our findings systematically reveal nonconserved residue pairs within the ligand-binding pocket that contribute to S1PR1 selectivity by the four agonists.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Most nonconserved residues within the ligand-binding pocket influence receptor subtype selectivity through direct contact with agonists. However, nonconserved residues at positions 3.41, 5.46, and 5.50\u2014two of which do not directly interact with the four agonists in our determined structures\u2014nonetheless play significant roles in determining selectivity for S1PR1, S1PR3, and S1PR5, as revealed by above analyses. To further understand the structural basis underlying the effects of these nonconserved residues at positions 3.41, 5.46, and 5.50 on subtype selectivity, we conducted additional structural analysis.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "We observed that residues F/C/L3.41, V/I/A5.46, and L/I/I5.50 are located at the bottom of the orthosteric pockets in S1PR1, S1PR3, and S1PR5 (Figs 3A\u20133D and 4A\u20134D). Moreover, compared to the inactive structure of S1PR1, F1333.41, V2095.46, and L2135.50 move closer to each other in the active structure, leading to stronger interactions between F1333.41 and L2135.50 and enhancing contacts between TM3 and TM5 (S8A\u2013S8E Fig). However, the shorter or smaller side chains of the corresponding residues in S1PR3 (C1273.41 and I2075.50) and S1PR5 (L1243.41 and I2045.50) weaken these interactions in those subtypes. Additionally, L/I/I5.50 is part of the conserved Class A GPCR activation-related motif P5.50I3.40F6.44, which influence receptor activation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Furthermore, we found that R782.37 in S1PR1, located at the Gi-binding interface and interacting with D350 on the \u03b15 helix of Gi1, is not conserved in S1PR5 (A692.37) and S1PR3 (N722.37) (S9A Fig). Gi1 dissociation assays results of swapped mutants confirmed that R782.37 in S1PR1 and A692.37 in S1PR5 also influence the selectivity of S1PR1 and S1PR5 by four agonists (S9B\u2013S9E Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Notably, the four agonists discussed above do not activate S1PR2 or S1PR4. This lack of activation is attributed to nonconserved amino acid residues in these two receptors. H2717.31 and F2747.39 in S1PR2, and L1253.32 and M2897.35 in S1PR4 with bulky side chains result in a significantly narrower cavity at the upper region of the ligand-binding pocket in both S1PR2 and S1PR4 (S10A\u2013S10H Fig). Consequently, the above-mentioned agonists, due to their relatively broad molecular width, are sterically hindered from entering the binding pocket and reaching its deeper regions, thereby preventing effective binding and receptor activation. F2747.39 in S1PR2, and L1253.32 and M2897.35 in S1PR4 were also discussed in a previously report [44]. Moreover, the effects of other nonconserved amino acid residues on agonist selectivity for S1PR1 over S1PR2 and S1PR4 require further investigation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.4 Role of nonconserved residues in S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Notably, S1PR1 and S1PR5 contain a larger subpocket that accommodates branched groups present in the tail portions of CYM5442 (Fig 5A\u20135B). In contrast, S1PR3 features a smaller and shallower subpocket at the corresponding position (Fig 5C). Compared to S1P, the four synthetic agonists have a larger molecular width, and the branched functional moieties located at the tail portions of CYM5442, HY-X-1011, and Ponesimod appear to restrict their ability to penetrate deeper into the binding pocket during activation (Fig 5D). Thus, we hypothesize that S1P, which lacks the bulky branched substituent, can easily access the deeper regions of the receptor pocket during activation, thereby facilitating the activation of S1PR3 and S1PR5. Similarly, SAR247799, which lacks branched moieties at its tail portions, is more likely to penetrate deeply into the S1PR5 pocket. To test this hypothesis, we employed molecular dynamics simulations using our previously established TAPS method to examine agonist binding within the S1PR1/3/5 pockets during the transition from inactive to active receptor states. Distance measurements between the tail ends of the five agonists and residue 5.50 at the bottom of the S1PR1/3/5 pockets supported our hypothesis (Fig 5E\u20135G). Upon receptor activation, S1P penetrates deeply into the pockets of all three subtypes\u2014S1PR1, S1PR3, and S1PR5\u2014whereas CYM5442, HY-X-1011, and Ponesimod reach only relatively shallow positions in the pockets, obviously in S1PR3 and S1PR5. SAR247799 inserts more deeply into the S1PR5 pocket compared to CYM5442, HY-X-1011, and Ponesimod, consistent with its dual activity toward S1PR1 and S1PR5.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.5 Agonists structural features and binding modes for S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Although nonconserved residues among S1PR subtypes play crucial roles in ligand selectivity, the designed agonists exhibit greater selectivity for S1PR1 compared to S1P, which demonstrates broad affinity across all five S1PR subtypes. Beyond the above-mentioned structural differences between the four agonists and S1P, their distinct binding modes within the ligand-binding pocket may provide insights into subtype-specific signaling mechanisms mediated by these agonists. Therefore, we further analyzed and compared the binding modes of the four agonists with that of S1P.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.5 Agonists structural features and binding modes for S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "Compared to previously reported structures of S1P bound to S1PR1 and S1PR3, the central regions of CYM5442, HY-X-1011, Ponesimod, and SAR247799 adopt a characteristic \u201ccurved\u201d conformation, positioning them closer to two nonconserved residues\u2014L6.55 and L7.39\u2014located at the TM6 and TM7. Structural superposition of S1PR1 with S1PR3 revealed that these four agonists with a larger molecular width and branched moieties cause steric clashes solely with F2636.55, I2847.39, or both (Fig 6A\u20136D). Furthermore, compared to S1P-bound S1PR1 and S1PR3, the branched moieties at the tail portions of CYM5442, HY-X-1011, and Ponesimod extend deeper into the subpocket formed at the TM5-TM6 interface of S1PR1. This subpocket is composed of F2105.47, T2075.44, F2736.52, and L2766.55 in S1PR1, corresponding to F2045.47, I2015.44, F2606.52, and F2636.55 in S1PR3 and F2015.47, V1985.44, F2686.52, and L2716.55 in S1PR5 (Fig 6E\u20136L). However, compared to F2766.55 in the active state of S1PR1, F2636.55 in S1P-bound S1PR3 adopts a different conformation, significantly reducing the volume of this subpocket and causing steric hindrance with the branched moieties at the tail portions of CYM5442, HY-X-1011, and Ponesimod upon structural alignment of S1PR1 with S1PR3 (Fig 6E\u20136H). This likely diminishes the binding affinity of these three agonists toward S1PR3. Similarly, when aligning S1PR1 with S1PR5, compared to Siponimod bound in S1PR5, the branched moieties at the tail portions of CYM5442, HY-X-1011, and Ponesimod insert more deeply into the subpocket located at the TM5-TM6 interface of S1PR1. Notably, Siponimod is an approved drug for treating MS with comparable affinity for both S1PR1 and S1PR5 [22,25]. Moreover, the lower branched moieties of these three agonists are close to F2105.47, and the nonconserved residue T2075.44 in S1PR1 corresponds to V1985.44 in S1PR5, potentially influencing receptor activation. These structural observations align well with our BRET assay results. Based on the above analysis, we conclude that the enhanced selectivity of compounds CYM5442, HY-X-1011, Ponesimod, and SAR247799 over S1PR3 and S1PR5 stems from their binding orientation toward TM5-TM7 and branched substituents.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.5 Agonists structural features and binding modes for S1PR1 selectivity",
+        "sec_num": null
+      },
+      {
+        "text": "To investigate whether other S1PR1-selective agonist exhibit similar characteristics that could potentially enhance their selectivity for S1PR1, we analyzed the structures of Siponimod (BAF312), CBP307, and SEW2871 in complex with S1PR1 [31,33]. All three agonists bind in close proximity to TM5-TM7, compared to S1P bound in S1PR3 (S11A\u2013S11C Fig).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6 Comparison of diverse agonists",
+        "sec_num": null
+      },
+      {
+        "text": "Siponimod exhibits potent activation of S1PR1 and S1PR5 with minimal activity toward S1PR3 [45], as consistently characterized by our BRET-based Gi dissociation assays [41]. The branched moieties of Siponimod, particularly the phenyl trifluoromethyl group, could cause steric clashes with I2847.39, F2636.55, and F2606.52 in S1PR3, which likely contribute to its reduced potency at this receptor subtype (S11A Fig). Although the trifluoromethyl group of Siponimod inserts into the subpocket between TM5 and TM6 in S1PR1, in S1PR5 this group is positioned closer to TM3 and does not fully penetrate the subpocket between TM5 and TM6. Nevertheless, the polar head of Siponimod engages in interactions with K34, N1012.60, R1203.28, and E1213.29. These residues are fully conserved in S1PR5 and likely contribute to S1PR5 activation by Siponimod, maintaining a comparable potency to that observed for S1PR1.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6 Comparison of diverse agonists",
+        "sec_num": null
+      },
+      {
+        "text": "Additionally, a similar phenomenon was observed for HY-X-1011. The EC50 value of HY-X-1011 for S1PR3 is higher than those of CYM5442, Ponesimod, and SAR247799 for the same receptor (Fig 2B, 2E, and S3 Table). The primary distinction between HY-X-1011 and the other three agonists lies in its head group, allowing for more extensive interactions with polar residues located in the top region of the binding pocket. These interactions potentially contribute to the higher potency of HY-X-1011 toward S1PR3.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6 Comparison of diverse agonists",
+        "sec_num": null
+      },
+      {
+        "text": "CBP307 also exhibits enhanced selectivity for S1PR1 over S1PR3 and S1PR5 in previously report [33,41]. Although there are no branched groups near the tail part of CBP307 that could insert into the subpocket between TM5 and TM6, CBP307 still exhibits higher potency toward S1PR1 compared to S1PR5. We attribute this enhanced selectivity primarily to the influence of nonconserved amino acids, particularly the difference between M124 in S1PR1 and V115 in S1PR5 as well as to the interaction between CBP307\u2019s head group and the conserved polar residues in the top region of the binding pocket (S11B Fig). Our previous studies have shown that the M124A mutation in S1PR1 reduces the potency of CBP307, decreasing the EC50 by approximately one order of magnitude [33]. Furthermore, the fluorine atom located on the benzene ring near the head group of CBP307 increases the molecular width, which may hinder the faster and more stable binding of CBP307 to S1PR3, thereby reducing its activation potency. Additionally, other nonconserved residues within the binding pockets of S1PR1 and S1PR3 may further contribute to the higher activity and selectivity of CBP307 for S1PR1 over S1PR3.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6 Comparison of diverse agonists",
+        "sec_num": null
+      },
+      {
+        "text": "SEW2871 has been reported as a selective S1PR1 agonist, with no activity observed at S1PR2-S1PR5 even at concentrations up to 10 \u03bcM [46]. SEW2871 exhibits a significantly shorter molecular length compared to all above analyzed agonists (S11C Fig). Besides, the introduction of two trifluoromethyl groups significantly increased the molecular width. Trifluoromethyl group attached to the thiophene ring at the distal end of the molecule inserts into the subpocket formed by transmembrane helices TM5 and TM6, positioning the thiophene ring in close proximity to TM6. This trifluoromethyl group experiences steric clashes with F2636.55 and F2606.52 in S1PR3 (S11C Fig). Additionally, we observe interactions between the trifluoromethyl group located at the molecular head with residues N1012.60 and E1213.29. Notably, prior studies have indicated that the N1012.60 and E1213.29 mutation exerts only a weak effect on the activation of S1PR1, suggesting a limited role for these residues in S1PR1 activation [31].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "2.6 Comparison of diverse agonists",
+        "sec_num": null
+      },
+      {
+        "text": "In this study, we integrated structural analysis, molecular dynamics simulations, and pharmacological assays to elucidate the molecular basis for the selectivity of CYM5442, HY-X-1011, Ponesimod, and SAR247799 toward S1PR1. Specifically, selectivity arises from a combination of nonconserved residues in both the ligand-binding pocket and the Gi-protein interaction interface, the distinct binding orientation toward TM5-TM7 and branched substituents increase the agonist\u2019s effective width, which lead to steric clashes with three residues in S1PR3, and the presence of branched moieties on three agonists that restrict deep insertion into the base of the binding pocket, particularly in S1PR3 and S1PR5. Additionally, we analyzed three other S1PR1 selective agonists and found that their activity profiles toward S1PR1, S1PR3, and S1PR5 align with the characteristics summarized above. Besides, reducing polar interactions with conserved polar residues in the top region of the binding pocket may enhance selectivity for S1PR1. Moreover, the relatively broad molecular width of the agonist sterically hinders its binding into S1PR2 and S1PR4 pocket by nonconserved residue pairs bearing bulky side chains. These findings provide a structural framework for the rational development of next-generation highly selective S1PR1 agonists with enhanced therapeutic potential.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Given that the activation mechanisms of different G protein subtypes (Gi/o, Gs, Gq, and G12/13) coupled to S1PR1 have not yet been clearly elucidated, in this study, we specifically compared selective agonists that adopt extended conformations within the orthosteric binding pocket of S1PR1 to activate S1PR1 and its downstream Gi1 signaling. Whether the observed common characteristics in S1PR1-mediated Gi1 activation extend to other G protein subtypes remains to be determined and warrants further investigation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "GPCR signaling via G proteins can be terminated by arrestin binding. Receptor phosphorylation by G protein-coupled receptor kinases (GRKs) promotes arrestin recruitment, which blocks further G protein interaction and initiates receptor internalization. Many S1PR modulators activate both G protein-dependent and arrestin-dependent signaling pathways, which may result in opposing physiological effects. Therefore, developing S1PR modulators with bias toward either G protein or arrestin signaling is crucial for creating more effective and targeted therapeutics targeting S1PR1. SAR247799, a previously reported Gi-biased agonist of S1PR1, exhibits endothelial protective properties and has recently been shown to preserve endothelial barrier integrity in inflammatory bowel disease (IBD) models [37,40]. Additionally, this study also reports the structure of SAR247799 bound to S1PR1. In our study, we analyzed SAR247799 recognition and activation mechanisms of S1PR1 and initiating downstream Gi signaling. However, the molecular basis for its G protein bias remains unclear. Structural determination of the S1PR1-\u03b2-arrestin complex could provide insights into the mechanisms underlying G protein or \u03b2-arrestin bias, thereby facilitating the rational design of biased S1PR1-selective agonists with improved therapeutic profiles.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Due to differences in expression patterns and downstream signaling pathways among S1PR1-S1PR5, the development of highly selective agonists targeting individual subtypes, such as S1PR2-S1PR5, holds promise for the targeted treatment of specific diseases. A previous study reported ONO-5430608 as an inverse agonist of S1PR5 [35]. Notably, unlike typical S1PR1 agonists, ONO-5430608 adopts a different conformation when bound within the S1PR5 ligand-binding pocket, and its selectivity for S1PR5 appears to be influenced by the conformation of residue Y89. However, further research is still needed to elucidate the structural basis and pharmacological potential of selective small-molecule agonists for S1PR2-S1PR5. Additionally, the identification of nonconserved allosteric sites across S1PR1-S1PR5 may offer an additional strategy for developing S1PRs-subtype-selective agonists with enhanced therapeutic properties [47].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "3. Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "ScFv16 was subcloned into the pFastBac vector and expressed in Trichoplusia ni Hi5 insect cells using the Bac-to-Bac system, exactly following the established protocol [33]. Briefly, Hi5 cells were infected by ScFv16 baculovirus (amplified in Sf9 cells) for 96 hours. The medium was collected by centrifugation, pH-balanced to 8.0, and then supplemented with 1 mM NiCl\u2082 and 5 mM CaCl\u2082. After incubating for 1 hour at RT, the supernatant was mixed with Ni-Sepharose resin (GE Healthcare) for another 1 hour. The resin was then collected (800 \u00d7 g, 10 min, 4 \u00b0C) and transferred to a gravity column. The column was washed with wash buffer C (20 mM HEPES pH 7.5, 100 mM NaCl, 20 mM imidazole) and eluted with a high-imidazole buffer (wash buffer C containing 250 mM imidazole). HRV-3C protease was added to remove the C-terminal His-tag. Following the tag removal, size-exclusion chromatography was performed on a Superdex 200 Increase 10/300 GL column (GE Healthcare) pre-equilibrated with 20 mM HEPES (pH 7.5) and 100 mM NaCl. The target fractions were concentrated, flash-frozen in liquid nitrogen, and stored at \u221280 \u00b0C.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "ScFv16 Purification.",
+        "sec_num": null
+      },
+      {
+        "text": "As previously described [33], the full-length WT human S1P1 with the BRIL protein fused to its N-terminus was subcloned into the pFastBac vector. Meanwhile, the WT G\u03b1i1 and G\u03b21\u03b32 were respectively inserted into the pFastBac vector and pFastBac-Dual vector. The complex was co-expressed in Spodoptera frugiperda (Sf9) insect cells with baculoviruses encoding S1P1, WT G\u03b1i1, and WT G\u03b21\u03b32 at a 1:1:1 multiplicity of infection. Infected cells were harvested after 48 hours, followed by flash-freezing in liquid nitrogen, and stored at \u221280 \u00b0C until use. To stabilize the complex, all purification steps were performed in the presence of 10 \u03bcM ligands (CYM5422, HY-X-1011, Ponesimod, SAR247799). The cell pellets were thawed and resuspended in lysis buffer (25 mM HEPES pH 7.5, 150 mM NaCl, 5% glycerol, 10 mM MgCl\u2082, 20 mM KCl, 5 mM CaCl\u2082, 1 mM MnCl\u2082, 100 \u03bcM PMSF, 2 \u03bcg/mL aprotinin, 2 \u03bcg/mL pepstatin) and sequentially treated with 25 mU/mL apyrase (1 hour, room temperature) and 1% DDM/0.1% CHS (2 hours, 4 \u00b0C). After centrifugation (39,191 \u00d7 g, 30 min, 4 \u00b0C), the supernatant was incubated with anti-Flag resin (GenScript) in wash buffer A (25 mM HEPES pH 7.5, 150 mM NaCl, 5% glycerol, 5 mM MgCl\u2082, 5 mM CaCl\u2082, 0.01% LMNG, 0.001% CHS). Bound proteins were eluted using wash buffer A supplemented with 200 \u03bcg/mL Flag peptide. The eluate was further purified by Ni-NTA affinity chromatography. After loading onto Ni-NTA resin (Qiagen), the column was washed with wash buffer B (25 mM HEPES pH 7.5, 150 mM NaCl, 5 mM MgCl\u2082, 25 mM imidazole, 0.01% LMNG, 0.001% CHS) and eluted with a high-imidazole buffer (wash buffer B containing 250 mM imidazole). The eluted complex was concentrated to less than 2 mL using an Amicon Ultra Centrifugal Filter (MWCO 100 kDa) and incubated with excess scFv16 for 2 hours on ice. Final purification was achieved by size-exclusion chromatography (Superdex 200 Increase 10/300 GL, GE Healthcare) in SEC buffer (25 mM HEPES pH 7.5, 150 mM NaCl, 0.00075% LMNG, 0.00025% GDN, 0.000075% CHS, 100 \u03bcM TCEP). Monomeric fractions containing the complex were concentrated to 10\u201315 mg/mL for cryo-EM grid preparation.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "S1PR1 and G protein expression and complex purification.",
+        "sec_num": null
+      },
+      {
+        "text": "The full-length WT human S1PR1, S1PR3, S1PR5, and mutants were cloned into a pcDNA3.1 vector with a HA signal peptide, an N-terminal Flag tag. The construct was generated with a standard PCR-based strategy and homologous recombination (1.1 \u00d7 S4 Fidelity PCR Mix, Beijing Genesand Biotech Co.).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Molecular cloning of constructs used in BRET assay.",
+        "sec_num": null
+      },
+      {
+        "text": "HEK293T cells (ATCC CRL-11268; mycoplasma free) were maintained, passaged, and transfected in DMEM medium containing 10% FBS, 100 U/ml penicillin, and 100 \u03bcg/ml streptomycin (Gibco-ThermoFisher) in a humidified atmosphere at 37 \u00b0C and 5% CO2. After transfection, cells were plated in DMEM containing 2% dialyzed FBS for BRET assay.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cell culture of BRET assay.",
+        "sec_num": null
+      },
+      {
+        "text": "BRET assays were used to measure agonists induced S1PR1/3/5 (WT or mutants) activation coupled Gi signal [48]. HEK293T cells (ATCC CRL-11268; mycoplasma free) were co-transfected in a 1:1:1:1 ratio of receptor: G\u03b1i1-Rluc8: G\u03b21: G\u03b32-GFP2 with polyethyleneimine. After at least 18 hours, transfected cells were harvested and reseeded in opaque white bottom 96-well assay plates (Beyotime) at a density of 30,000\u201350,000 cells per well in media (DMEM added 2% dFBS). The next day, the medium was decanted. Cells were incubated in 40 \u03bcL 7.5 \u03bcM coelenterazine 400a (Goldbio) in drug buffer (1 \u00d7 Hank\u2019s balanced salt solution (HBSS), 20 mM HEPES, pH 7.4, 0.1% BSA) for 2 min, and then treated with 20 \u03bcL compounds (CYM5442, HY-X-1011, Ponesimod, and SAR247799) prepared in drug buffer at serial concentration gradient for an additional 5 min. Plates were read in an LB940 Mithras plate reader (Berthold Technologies) with 395-nm and 510-nm emission filters with 1 s per well integration times. BRET ratios were calculated as the ratio of GFP2 emission (510 nm) to Rluc8 emission (395 nm) and analyzed in GraphPad prism 9.0 or GraphPad Prism 10. Ponesimod, CYM5442, and SAR247799 were purchased from MedChemExpress (MCE). HY-X-1011 was synthesized by MCE or by collaborators. Data were normalized to 100% of maximal response of WT stimulation and analyzed using nonlinear regression curve fit log (agonist vs. response). The mean values and SEM/SD values are generated from all repeated samples. Mean values and SEM/SD were automatically calculated for all replicates in GraphPad.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Bioluminescence resonance energy transfer assay (BRET).",
+        "sec_num": null
+      },
+      {
+        "text": "The purified complex was applied to glow-discharged 300-mesh alloy grids (Quantifoil 300 mesh, Au R1.2/1.3 and M024-Au300-R1.2/1.3) and subsequently vitrified using Vitrobot Mark IV. The images were collected in the counted-Nanoprobe mode on a 300 kV Titan Krios Gi3 electron microscope (Thermo Fisher Scientific) equipped with Gatan K3 Summit detector and GIF Quantum energy filter (slit width 20 eV). All movie stacks with 50 frames were collected using SerialEM software at a nominal magnification of 105,000\u00d7, a pixel size of 0.85 \u00c5, and a defocus range of \u22121.2 \u03bcm to \u22121.8 \u03bcm. Each movie stack for S1PR1-Gi1-CYM5442, S1PR1-Gi1-HY-X-1011, S1PR1-Gi1-Ponesimod, and S1PR1-Gi1-SAR247799 was recorded for 2.8 s, 2.2 s, 2.3 s, and 2.2 s, respectively, corresponding to a total dose of 53.83 e\u2212/\u00c52, 51.73 e\u2212/\u00c52, 52.56 e\u2212/\u00c52, and 55.63 e\u2212/\u00c52, respectively. 3303 movies, 3159 movies, 3141 movies, and 2906 movies were collected for S1PR1-Gi1-CYM5442, S1PR1-Gi1-HY-X-1011, S1PR1-Gi1-Ponesimod, and S1PR1-Gi1-SAR247799, respectively.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cryo-EM sample preparation, data acquisition, and data processing.",
+        "sec_num": null
+      },
+      {
+        "text": "For S1PR1-Gi1-CYM5442, S1PR1-Gi1-HY-X-1011, and S1PR1-Gi1-Ponesimod data, Data processing was performed using cryoSPARC [49]. Movies frames were aligned using Patch motion. CTF estimation was performed using Patch CTF. Particles were first picked using a blob picker. Particle picking of all micrographs was performed by a template picker. 2,204,113, 3,670,342, and 3,401,413 particles were extracted. Afterwards, particles sets were selected and refined by iterative 2D classification, ab initio reconstruction, and heterogeneous refinement. Finally, 198,838, 1,019,239, and 529,510 particles were selected for S1PR1-Gi1-CYM5442, S1PR1-Gi1-HY-X-1011, and S1PR1-Gi1-Ponesimod data, respectively. After one round of ab initio reconstruction, non-uniform and local refinement, 3.69 \u00c5, 2.79 \u00c5, and 2.79 \u00c5 map were refined out for S1PR1-Gi1-CYM5442, S1PR1-Gi1-HY-X-1011, and S1PR1-Gi1-Ponesimod data, respectively.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cryo-EM sample preparation, data acquisition, and data processing.",
+        "sec_num": null
+      },
+      {
+        "text": "For S1PR1-Gi1-SAR247799 data, movies were imported into RELION 5.0 [50]. Beam-induced motion was corrected using MotionCor2 [51], after which the micrographs were imported into CryoSPARC for contrast transfer function (CTF) parameter estimation using PatchCTF. 4,653,961 particles were picked and extracted in a pixel size of 1.7 \u00c5. After 2D classification, 1,364,671 particles were selected for ab-initio reconstruction and heterogeneous refinement. The retained 359,408 particles were re-extracted in RELION in a pixel size of 0.85. These particles underwent additional sieving using CryoSIEVE [52], resulting in a final selection of 94,216 particles. The final CTF refinement, particle polishing, non-uniform refinement and local refinement result in density map of 3.0 \u00c5 resolution.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Cryo-EM sample preparation, data acquisition, and data processing.",
+        "sec_num": null
+      },
+      {
+        "text": "The initial complex model was built using the structure of S1PR1-Gi-S1P (PDB code: 7VIE) as templates. The structure model of S1PR1-Gi-S1P is fitted into the density map and manually adjusted and fixed in COOT [53]. The restraint files of CYM5442, HY-X-1011, Ponesimod, and SAR247799 were generated by Phenix. elbow package [54]. The complete model was finally refined in Phenix using real-space refinement with secondary structure and geometry restraints [55] and was checked in COOT. Overfitting of the model was checked by refining the model using one of the two independent maps from gold-standard refinement and calculating FSC against both half maps [56]. The final model was validated using Molprobity [57] (S1 Table). Structural figures were prepared in PyMOL (https://pymol.org/2/), UCSF Chimera [58], and UCSF ChimeraX [59].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Model building and refinement.",
+        "sec_num": null
+      },
+      {
+        "text": "Four agonists were docked into previously reported inactive structure (S1PR1 PDB ID: 3V2Y) and active structures (S1PR1 PDB ID: 7VIE, S1PR3 PDB ID: 7EW3, and S1PR5 PDB ID: 7EW1). The inactive structure model of S1PR3 and S1PR5 was homology modeled by modeler using the inactive S1PR1 structure (PDB ID: 3V2Y) as the template [60]. Agonists docked inactive structures of receptors were used as the start inactive state. Agonists docked active structures of receptors were used as the end active state. AutoDock 4.2 [61] was used to dock the ligands into the binding pocket of the apo inactive/active receptors. In all MD simulations, only receptors and ligands were used, with G protein complex and other protein removed from the structures. The Membrane Builder module in CHARMM-GUI server [62] was used to prepare the simulation inputs, a membrane of pre-equilibrated (310 K) POPC lipids based on the OPM database [63] alignment, TIP3P solvent with 0.15 M Na+/Cl\u2212 ions and the CHARMM36 force field [64]. The force field of the ligands was generated by the CGenFF program [65]. All MD simulations were performed using GROMACS-2019.4 [66]. The CHARMM36 force field was used to describe the interactions in the system. Energy minimization was performed for 10,000 steps by the steepest descent algorithm and then by the conjugate gradient algorithm. Then a 100 ps NVT simulation was performed at 310 K for solvent equilibration, followed by a 1 ns NPT equilibration to 1 atm using the Berendsen barostat [67]. All MD production simulations were performed with a time-step of 1 fs and a length of 100 ns using Parrinello-Rahman barostat [68]. In all constant temperature simulations, the Bussi (velocity-rescaling) thermostat was used [69]. Long-range electrostatic interactions were treated by the particle-mesh Ewald method [70]. The short-range electrostatic and van der Waals interactions both used a cutoff of 10 \u00c5. All H-bonds were constrained by the LINCS algorithm [71].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Molecular dynamics simulation.",
+        "sec_num": null
+      },
+      {
+        "text": "Targeted MD simulations (tMD) were carried out using GROMACS-2019.4 and PLUMED-2.5.3 [72], pulling the S1PR1/3/5-ligands complexes from the inactive states to the active states. The inactive structures were relaxed by a 100-ns MD simulation, and the active structures were energy-minimized, followed by a 100-ps NVT and a 1-ns NPT equilibration. The additional bias potential introduced in tMD takes a simple harmonic form U(s)=k2(s\u2212s0)2, where k is the spring force constant, s0 represents the target structure. k was set to 1000 kJ/(mol \u00c52), biasing on heavy atoms of the nonloop parts of receptors and the ligands, while structure alignments were performed using C-alpha atoms of the non-loop parts of receptors.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Path searching.",
+        "sec_num": null
+      },
+      {
+        "text": "To find the MFEPs, which are more physically natural than the initial paths, the TAPS method [42] was used to do path optimization. The TAPS simulation was performed using an in-house python script incorporating GROMACS, PLUMED, and Concorde [73]. The simulations were performed in the NVT ensemble at 310 K, using the velocity-rescale thermostat [69]. The initial path was obtained by selecting conformations with a gap of 1.0 \u00c5 from the tMD trajectory. The RMSD between the conformations was computed using all heavy atoms of the nonloop parts of receptors and ligands, while structure alignments were performed using C-alpha atoms of the nonloop parts of receptors. In each TAPS iteration, 1000 ps sampling was performed in total. Gaussians of height 0.25 kJ/mol and width 0.5 were deposited every 0.01 ps, with frames recorded at the same frequency. After the optimization, convergence was evaluated by Multidimensional Scaling (MDS) method [74] and PCV-z analysis [75].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Path searching.",
+        "sec_num": null
+      },
+      {
+        "text": "To evaluate the probability of receptor activation, umbrella sampling [76] was used to do the free energy calculation. Umbrella sampling was performed using GROMACS-2019.4 and PLUMED-2.5.3. The free energy profiles of the MFEPs were calculated along PCV-s, which represents the progress along the MFEP. The sampling in each window was restrained within 1.5 \u00c5 of MFEP through a harmonic wall potential with a force constant of 20,000 kJ/(mol\u2022\u00c54) at PCV-z = 2.25 \u00c52. The RMSD among the conformations, which was computed by all heavy atoms of the nonloop parts of receptors and ligands, was chosen as the CV. Structure alignment was performed using C-alpha atoms of the nonloop parts of receptors. The window size was chosen as 0.5 \u00c5 along the MFEP. For each window, a force constant of 200 kJ/mol was employed. Each window was simulated for at least 10 ns. A complete free energy profile was evaluated with the weighted histogram analysis method (WHAM) [77]. When the iteration process of WHAM reached convergence, the mean value and standard statistical error (error bar) of the free energy were calculated in each window from the last 10 WHAM iterations.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Free energy calculation.",
+        "sec_num": null
+      }
+    ]
+  }
+}

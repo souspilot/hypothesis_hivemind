@@ -1,0 +1,501 @@
+{
+  "paper_id": "journal.pbio.3003561",
+  "header": {
+    "generated_with": "jats-xml-extractor",
+    "source_file": "journal.pbio.3003561.xml"
+  },
+  "title": "Cryptococcus neoformans adapts to host CO2 concentrations via metabolic and stress-response remodeling",
+  "doi": "10.1371/journal.pbio.3003561",
+  "authors": [
+    {
+      "first": "Laura C.",
+      "last": "Ristow"
+    },
+    {
+      "first": "Emma E.",
+      "last": "Blackburn"
+    },
+    {
+      "first": "Andrew J.",
+      "last": "Jezewski"
+    },
+    {
+      "first": "Xiaorong",
+      "last": "Lin"
+    },
+    {
+      "first": "Damian J.",
+      "last": "Krysan"
+    }
+  ],
+  "abstract_text": "Cryptococcus neoformans is an environmental pathogen that remodels its cellular physiology to survive within mammals and, in susceptible hosts, cause life-threatening meningoencephalitis. Of the many distinctions between the external environment and mammalian tissues, CO2 concentration in the host is two orders of magnitude higher than in the environment and represents a critical stress for C. neoformans. C. neoformans strains that do not replicate at host CO2 concentrations are less virulent in mouse models of infection, further supporting CO2 tolerance as a virulence trait. To further understand the genetic determinants of C. neoformans CO2 tolerance, we performed a near genome-wide screen for deletion mutants with altered CO2 fitness using a competitive growth assay. A total of 301 of 4,692 deletion mutants showed altered CO2 tolerance (245 reduced fitness; 56 increased fitness) demonstrating the global effect of host CO2 on C. neoformans physiology. Based on this data set as well as a metabolomic analysis of C. neoformans adaptation to host CO2, we show that remodeling of central carbon metabolism, oxidative stress buffering, and membrane homeostasis represent an integrated response to CO2 stress that is mediated in part by the TOR-Ypk1 signaling axis. We propose that CO2-induced capsule formation leads to reduced cellular glucose which, in turn, triggers remodeling of central carbon metabolism toward utilization of alternative carbon sources and increased mitochondrial respiration/reactive oxygen generation. Thus, these data provide a near genome-wide profile of the genetic determinants of C. neoformans CO2 tolerance as well as a model for how this important environmental human fungal pathogen alters its physiology to proliferate in the host.",
+  "pdf_parse": {
+    "paper_id": "journal.pbio.3003561",
+    "body_text": [
+      {
+        "text": "Cryptococcus neoformans is an environmental fungus that causes life-threatening infections of the central nervous system in humans [1]. People with altered immune function such as organ transplant patients and those living with HIV/AIDS are at particular risk for invasive cryptococcal infection [2]. C. neoformans has been cultured from a wide range of environmental niches throughout the world [3]. The majority of environmental C. neoformans isolates are non-pathogenic in mammalian models of infection whereas C. neoformans isolated from patients are generally more virulent [4]. One well-established reason for this distinction is that most environmental strains of C. neoformans are unable to grow at mammalian body temperature (~37 \u00b0C, [5]). Growth at human body temperature, polysaccharide capsule formation, and cell wall melanization represent three of the most widely studied C. neoformans virulence traits [5]. Despite the prominence of the \u201cbig-three\u201d virulence traits [6], other aspects of C. neoformans biology contribute to its ability to cause disease and the identification of traits that can better distinguish pathogenic and non-pathogenic strains remains an area of strong research interest in fungal pathogenesis [7].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "In addition to elevated body temperature, the mammalian host environment presents additional stressors that could also represent significant fitness bottlenecks to C. neoformans; low levels of nutrients and reactive oxygen species (ROS) are two commonly cited examples [6,7]. Our group found that the elevated concentrations of CO2 present in host tissues (5%) relative to the external environment (~0.04%) represent a significant stressor for C. neoformans [8,9]. Overall, environmental strains have reduced fitness in host concentrations of CO2 relative to clinical isolates. Importantly, environmental strains that are CO2-tolerant are also able to cause disease in mouse models [10]. In addition, CO2-sensitive environmental strains recovered from infected mice have increased CO2-fitness as well as increased fitness in the host [11]. Taken together, these data strongly support the concept that tolerance of host CO2 concentrations is a virulence trait for C. neoformans [9].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "We have been interested in identifying the genetic and physiologic determinants of C. neoformans CO2 tolerance. In previous work, we showed that the target of rapamycin (TOR) pathway is a critical mediator of CO2 tolerance and that, in part, this was due to the role of TOR in remodeling of phospholipid asymmetry of the plasma membrane in response to host CO2 [12]. In addition, we found that multiple genetic loci contribute to the CO2 fitness of tolerant strains through quantitative genetic trait analysis of backcrossed strains [11]. To gain a more complete profile of the genes that affect CO2 tolerance, we carried out a large-scale competitive fitness screen using the C. neoformans deletion mutant libraries constructed by the Madhani lab [13].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "The results of this screen have provided new insights into the breadth of cellular systems affected by host CO2 as well as the multiple stress response pathways that contribute to the ability of the CO2-tolerant reference strain H99 to compensate to elevated, host-relevant concentrations of CO2. We focused our follow-up studies on the metabolic and oxidative stress pathways and processes required for CO2 tolerance. The results of these experiments suggest that metabolic remodeling, buffering of ROS species, and membrane homeostasis represent an interconnected and integrated response to high CO2 concentrations that is critical for C. neoformans to adapt to this host-relevant stressor.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Introduction",
+        "sec_num": null
+      },
+      {
+        "text": "To identify genes with altered fitness at host concentrations of CO2 (5%), a moderate throughput competitive fitness assay that we previously reported [12] was used to screen 4,692 strains from the Madhani C. neoformans deletion library; all deletion mutants were in the CO2-tolerant KN99\u03b1 strain background (S1 Table). Each mutant was inoculated into the well of a 96-well plate with an approximately equal cell concentration of mNeonGreen-labeled reference strain H99. The strains were incubated in RPMI buffered with MOPS in ambient air or 5% CO2 at 37 \u00b0C for 24 h. The ratios of the two strains were quantified using flow cytometry, and the competitive fitness calculated as described in Materials and methods. Mutants with statistically significant (three replicates, P < 0.05 Student t test) competitive fitness changes of \u00b10.2 were considered to have altered fitness.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "A total of 301 genes met these criteria with 245 mutants showing reduced fitness and 56 mutants displaying increased fitness (Fig 1A and S1 Table). We previously identified multiple kinase mutants in the Bahn Library that have altered fitness in 5% CO2; importantly, a subset of these were also in the Madhani Library and showed the same fitness phenotypes [12], including mutants of MPK1, BCK1, MKK2, PKA1, ARK1, PKA1, CBK1, FBP26, YPK1, and CEX1. In addition, recently, it has been reported that plating errors in the distribution of the Madhani deletion set have occurred, leading to obvious problems with reproducibility. Our group has previously reported screening a subset of the Madhani library (obtained independently) under different conditions (yeast peptone 2% dextrose (YPD), 10% CO2 on solid agar plates, [13]); a total of 25 mutants identified by Chadwick and colleagues were also identified in this work [13]. Finally, we have also independently constructed mutants for further study and confirmed those phenotypes. A summary of these corroboration results is provided in S2 Table. While large-scale screening experiments have inherent false positive and negative rates, our follow-up data indicate that the screening results are reasonably robust within limitations expected for a genome-wide mutant screen.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "Biological process GO term analysis of the set with reduced fitness provided some insight into the overall functions involved in CO2 tolerance (Fig 1B). Response to the detergent sodium dodecyl sulfate (SDS) and salt were the two terms with the lowest adjusted p values (Benjamini-Hochberg). SDS interferes with membrane function and is consistent with our previous findings that CO2 leads to remodeling of the plasma membrane and that drugs targeting sterols (fluconazole) and sphingolipid biosynthesis (myriocin) are more active against C. neoformans at host CO2 concentration than in ambient air [8].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "The response to salt appears to be driven by a large set of protein kinases with pleomorphic phenotypes [14] that include sensitivity to salt (CCK1, IPK1, CBK1, YPK1, SNF1, TPS2). If the host CO2 concentrations directly triggered a stress response that overlaps with salt stress, then it may increase activity of the Hyperosmolar Glycerol Pathway (HOG) pathway, an important part of the cellular response to elevated salt [15]. Our previous screen of a protein kinase library [12], however, did not find that mutants of the HOG1 pathway were less fit in CO2 (in the current screen the hog1\u2206 mutant showed modestly reduced fitness 0.78, S1 Table). Furthermore, transition to high CO2 did not change the phosphorylation status of Hog1 (Fig 1C). Therefore, it seems sensitivity to salt is an indirect correlation with CO2 sensitivity. Finally, genes involved in response to oxidative stress were also enriched in those required for CO2 fitness.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "The set of gene mutations that increased CO2 fitness is also enriched for response to salt along with response to pH and multivesicular body (MVB) formation (Fig 1D). The presence of the latter two groups of genes is likely related to the fact that the Rim101 pathway is maladaptive during CO2 stress [12] and that some genes that contribute to the MVB are involved in Rim101 processing [16]. Interestingly, the set of genes required for full CO2 fitness was enriched for those that are also annotated to affect the \u201cbig three\u201d virulence traits [5,6] of capsule formation, melanin metabolism, and response to heat (Fig 1B). However, the set of genes whose loss of function increases fitness in 5% CO2 was also enriched for those with effects on capsule, melaninization, and salt stress (Fig 1D). The connection between genes that affect CO2 fitness and the \u201cbig three\u201d virulence traits is likely due to the fact that all of these phenotypes are indirectly affected by many physiologic processes. Of these, capsule formation is the trait most likely to share physiologically direct connections to CO2 fitness because it is a well-characterized inducer of capsule formation in vivo [17].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "Finally, we compared the set of mutants with reduced CO2 fitness to the set of mutants with reduced fitness in a mouse model of cryptococcosis as recently reported by Boucher and colleagues [14]. The Venn diagram in Fig 1E shows that 138/245 (56%) mutants with reduced CO2 fitness in vitro also have reduced fitness during infection. We do not know what level of CO2 fitness under these in vitro conditions is required to maintain in vivo fitness. However, we took advantage of the large-scale phenotyping data from Boucher and colleagues [14] to compare the CO2/in vivo fitness correlation with that between fitness at body temperature (37 \u00b0C) and in vivo fitness. The ability to grow at host body temperature is one of the three well-established C. neoformans virulence traits. Interestingly, the overlap of mutants with reduced fitness at 37 \u00b0C with in vivo fitness was remarkably similar (152/272, 56%) to that for CO2 fitness (Fig 1F). These comparisons suggest that both CO2 and host body temperature tolerance are virulence traits that display variable penetrance rather than virulence factors that show a binary, present/absent, distribution. Further, these traits are likely to interact with each other as well as with additional virulence traits to determine the overall in vivo fitness of a given mutant or strain.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The transition to host CO2 concentrations affects a wide range of cellular processes in C. neoformans",
+        "sec_num": null
+      },
+      {
+        "text": "The set of mutants associated with increased CO2 fitness was enriched for those involved in response to alkaline pH (Fig 1D). In addition to re-identifying the rim101\u2206 mutant, deletion mutants of components of the pathway required for proteolytic processing (Rim13 and Rim20), and hence activation, of Rim101 were also found to have increased fitness in 5% CO2. Activation of the Rim101 pathway has been linked to Endosomal Sorting Complex Required for Transport (ESCRT) complex function in model yeasts [18]. Furthermore, the Kronstad [19] and Alspaugh [16] labs have shown that the ESCRT complex is involved in Rim101 activation in C. neoformans as well. In keeping with these observations, deletion mutants of five genes with homology to ESCRT complex components (VPS22/23/25/28&36) showed increased fitness in CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The RIM101 and PKA pathways negatively regulate CO2 tolerance in an independent manner",
+        "sec_num": null
+      },
+      {
+        "text": "In principle, the increased fitness of mutants related to tolerance of elevated pH could be due to pH-related functions or due to other functions with pH response as a common but distinct function. Therefore, we compared the CO2 phenotypes of the ESCRT complex mutants to non-ESCRT complex VPS genes (Fig 2A) and re-tested them on YPD plates (S1 Fig); the CO2 phenotypes were consistent between the two conditions for all strains. All five ESCRT complex mutants were more fit in CO2 than H99 (VPS22/23/25/28&36) while non-ESCRT VPS mutants either had reduced CO2 fitness (VPS1 and VPS31) or no phenotype (VPS29/35/&41); the increased fitness of the vps29\u2206 mutant is statistically significant but not likely to be large enough to be biologically relevant. Regardless of their CO2 tolerance phenotype, all VPS mutants except for the vps29\u2206 mutant showed reduced growth on YPD adjusted to pH 8 (Fig 2B). Since both CO2-tolerant and -intolerant VPS mutants are generally sensitive to pH 8, it appears that the CO2 fitness phenotypes are not directly related to an impaired response to elevated pH but rather due to other functions of the ESCRT/Rim101 pathway or VPS genes.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The RIM101 and PKA pathways negatively regulate CO2 tolerance in an independent manner",
+        "sec_num": null
+      },
+      {
+        "text": "O\u2019Meara and colleagues have demonstrated that some functions of the Rim101 pathway are regulated by the Protein Kinase A (PKA) pathway [20]. Previously, we showed that, like loss of function mutants in the RIM101 pathway, deletion of PKA1 increases CO2 fitness [12]; an observation we re-confirmed in this screen (Fig 2C). The PKA pathway is negatively regulated by Pkr1 and, consistent with that relationship, the pkr1\u2206 mutant is less fit in CO2 (Fig 2C). Therefore, we tested whether the PKA pathway directly regulates Rim101 during CO2 stress. To do so, we took advantage of a strain constructed by O\u2019Meara and colleagues in which the only source of RIM101 is an allele in which the PKA phosphosite (Ser773) was mutated to alanine (rim101Ser773Ala, [20]). The rim101Ser773Ala mutant did not show a significant difference from WT in fitness under 5% CO2 (Fig 2D). Therefore, both the PKA and RIM101 pathways negatively affect CO2 tolerance, but they do so in a manner independent of each other.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The RIM101 and PKA pathways negatively regulate CO2 tolerance in an independent manner",
+        "sec_num": null
+      },
+      {
+        "text": "The TOR pathway is also a key positive regulator of CO2 tolerance, and prior work has shown that it regulates remodeling of the plasma membrane asymmetry in response to elevated CO2 concentrations [12]. Further validating the importance of the TOR pathway to CO2 tolerance, two putative components of the TOR complex, SIN1 and a protein homologous to Avo2 (CNAG_02727), as well as SIT4, a phosphatase that appears to function downstream of TOR in S. cerevisiae [21], were among the mutants with reduced fitness (S1 Table). A key function of the Tor-Ypk1 axis in model yeast is the regulation of sphingolipid biosynthesis [22]. In S. cerevisiae, Ypk1 phosphorylates and activates the serine-palmityl transferase (SPT, [23]) which regulates the first committed step of sphingolipid biosynthesis (Fig 3A). As previously reported, the potency of the SPT inhibitor, myriocin, against C. neoformans is increased in 5% CO2, indicating sphingolipid synthesis is required for CO2 tolerance [8,12]. In addition, Lee and colleagues have previously demonstrated that Ypk1 is required for sphingolipid biosynthesis in C. neoformans [23].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Regulation of membrane homeostasis through both the TOR and UPR pathways is required for CO2 tolerance",
+        "sec_num": null
+      },
+      {
+        "text": "Downstream of SPT (Fig 3A), the sphingolipid biosynthesis pathway has two branches: glucosylceramide (GC) and inositol-phosphoryl-ceramide (IPC). We identified the gcs1\u2206 mutant as having reduced CO2 fitness, demonstrating the importance of the GC branch in CO2 tolerance (Fig 3B). IPC synthase (Ipc1) is an essential gene [24] and, therefore, to determine if the IPC branch is also required for CO2 tolerance, we compared the potency of the specific IPC inhibitor, aureobasidin A in ambient and 5% CO2 [25]. Indeed, the zone of clearance induced by aureobasidin A is increased at 5% CO2 relative to ambient air (Fig 3C). These data firmly establish that an essential function of the Tor-Ypk1 axis during CO2 stress is to maintain sphingolipid homeostasis and that both major sphingolipid classes contribute to CO2 tolerance.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Regulation of membrane homeostasis through both the TOR and UPR pathways is required for CO2 tolerance",
+        "sec_num": null
+      },
+      {
+        "text": "Membrane homeostasis is also critically dependent on the function of the endoplasmic reticulum (ER) for the synthesis of lipids such as sterols, for the delivery to membrane proteins, and for the generation of the cell wall which buffers the cells against the effects of membrane-directed stressors. The unfolded-protein response (UPR) pathway functions to maintain ER homeostasis in the presence of a variety of stressors that affect its function [26]. The two key proteins in this pathway are the kinase IRE1 and the downstream transcription factor HXL1 (aka BZP1). Mutants lacking either component of the UPR pathway have reduced fitness in 5% CO2 (Fig 3D). These data contribute to the growing body of evidence that host CO2 exerts a significant stress on the membranes of C. neoformans and, consequently, key mediators of membrane biosynthesis and membrane stress response pathways are critical for the ability of C. neoformans to replicate under those conditions.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Regulation of membrane homeostasis through both the TOR and UPR pathways is required for CO2 tolerance",
+        "sec_num": null
+      },
+      {
+        "text": "Through its conversion to bicarbonate, CO2 is an essential substrate for many key reactions in central carbon metabolism [27]. At the same time, it is generated as a byproduct in other reactions of central carbon metabolism such as those in the tricarboxylic acid cycle in the mitochondria. Twenty-five mutants involving central carbon metabolic processes were identified as being required for CO2 fitness (Table 1). Sixteen of these genes are associated with mitochondrial functions. In addition, the deletion mutants of two non-essential genes involved in glycolysis (FBP26 and PFK1) have reduced fitness as do five genes associated with the synthesis of acetyl-CoA or CoASH (YHM2, CAB3, LSC1, POT1, and ALD4). Lastly, multiple genes in the kynurenine pathway, which generates nicotinamide, were also less fit in 5% CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host CO2 concentrations remodel C. neoformans carbon metabolism",
+        "sec_num": null
+      },
+      {
+        "text": "To further explore the effect of host CO2 concentrations on the metabolic state of C. neoformans, we compared the non-lipid metabolomic profile of C. neoformans incubated in buffered RPMI at ambient CO2 to that from cells incubated in 5% CO2 after 24 h at 37 \u00b0C. The abundance of 90 molecules differed between 5% CO2 and ambient air (\u00b1 1 log2, adjust P < 0.05, S3 Table). Strikingly, glucose; two glycolysis intermediates, phosphoenopyruvate (PEP) and dihydroxyacetone-3-phosphate (DHAP); and fructose (Fig 4A) are reduced, suggesting that exposure to 5% CO2 depletes glucose and glycolytic intermediates.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host CO2 concentrations remodel C. neoformans carbon metabolism",
+        "sec_num": null
+      },
+      {
+        "text": "Host CO2 is a strong inducer of the polysaccharide capsule in C. neoformans [17], and we have previously shown that genes involved in capsule biosynthesis are enriched in the set of genes upregulated by exposure of H99 to host levels of CO2 [12]. The carbohydrates that make up the capsule are derived from glucose, suggesting that host CO2 may divert glucose from glycolysis to capsule biosynthesis [28]. Indeed, the levels of a glucose-derived capsule biosynthesis intermediate, UDP-glucuronate (UDP-GlnA), are reduced 4-fold in 5% CO2 relative to ambient CO2 levels (Fig 4B), supporting the idea that flux through this pathway is increased. In the next step of capsule biosynthesis, UDP-GlnA is converted to UDP-xylose by UDP-xylose synthase (UXS1, [29]). Consistent with this function, the uxs1\u2206 mutant has reduced capsule thickness [30]. Deletion of UXS1 increases CO2 fitness (Fig 4C), suggesting that interrupting capsule biosynthesis early in the pathway provides a growth advantage. In contrast, deletion of UGE1, the enzyme that epimerizes UPD-glucose to UDP-galactose, increases capsule thickness [31] and reduces CO2 fitness (Fig 4C).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host CO2 concentrations remodel C. neoformans carbon metabolism",
+        "sec_num": null
+      },
+      {
+        "text": "If this model is operative, we hypothesized that increasing glucose concentrations would improve growth of H99 in 5%CO2. RPMI medium contains 0.2% glucose, and we previously reported that increasing glucose concentrations to 2% did not affect the growth of H99 in 5% CO2 [9]; therefore, we supplemented the medium to 2%, 5%, and 10% and incubated H99 at 37 \u00b0C in either ambient or 5% CO2 for 48 h. Cultures of H99 containing increased glucose that were incubated at ambient CO2 reached a higher final cell density relative to standard RPMI; however, there was no apparent dose effect between 2%\u201310%, indicating that at glucose concentrations above 2% other nutrients were growth limiting (Fig 4D). In 5% CO2, the effect of increasing glucose concentrations on the final cell density is blunted relative to ambient CO2 (Fig 4D). A statistically significant effect on final cell density is not observed until the concentration of glucose is 10%.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host CO2 concentrations remodel C. neoformans carbon metabolism",
+        "sec_num": null
+      },
+      {
+        "text": "These data support the model that at host CO2 concentrations, glucose is being diverted to processes other than replication and that high glucose concentrations can saturate the non-replicative pathway which, in turn, leads to increased final culture density. In contrast, at ambient CO2, 2% glucose is sufficient to render glucose a non-limiting nutrient. Taken together with our genetic and metabolic data, we propose that CO2-induced capsule formation diverts glucose from glycolysis and other energy-generating processes, leading to the use of alternative carbon sources at host CO2 concentration.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host CO2 concentrations remodel C. neoformans carbon metabolism",
+        "sec_num": null
+      },
+      {
+        "text": "Metabolomic studies in other yeast have shown that depletion of glucose increases protein catabolism in order to mobilize amino acids as carbon sources [32]. As shown in Fig 5A, nine di- and tripeptides are increased at 5% CO2, a strong indication that C. neoformans protein catabolism is operative under these conditions. In addition, the amounts of six amino acids (Leu, Phe, Tyr, Trp, His, and Met) are increased by \u2265 2-fold in cells grown in 5% CO2 (S3 Table). Of the nine di- and tri-peptides identified, all contain ketogenic amino acids, and 7/9 peptides contain Leu and Lys which are exclusively ketogenic amino acids. Ketogenic amino acids can be further catabolized in the mitochondria to acetyl-CoA which then enters the TCA cycle as an alternative to acetyl-CoA derived from glycolysis-derived pyruvate [33]. Thus, it appears that C. neoformans mobilizes alternative carbon nutrients by protein catabolism to compensate for reduced amounts of glucose after shift to host levels of CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Protein catabolism and urea cycle activity is increased in response to host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "Protein catabolism occurs in the vacuole and is dependent upon vacuolar ATPase (V-ATPase) to generate the acidic environment necessary for the activation of vacuolar peptidases [34]. Multiple strains lacking genes coding for V-ATPase components or proteins involved in the assembly of the V-ATPase complex show reduced CO2 fitness (Fig 5B), indicating that maintenance of vacuolar pH is critical for tolerance of high CO2. Although V-ATPase mutants have pleomorphic effects on cells, the metabolomic data clearly indicate protein catabolism occurs during the initial phases of CO2 stress. Accordingly, loss of V-ATPase function would likely interfere with efficient generation of ketogenic amino acids necessary to maintain mitochondrial respiration.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Protein catabolism and urea cycle activity is increased in response to host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "CO2/HCO3- is essential for the cell, but high levels of CO2 are stressful and can ultimately be toxic. As such, CO2 is both generated and consumed by metabolic reactions in the cell. The urea cycle is one of the CO2-consuming processes utilized by eukaryotic cells (Fig 5C). Ura2 is a carbamoyl phosphate synthase that catalyzes the rate-limiting condensation of CO2 with ammonia which feeds into the urea cycle. Previous work by our group found that deletion of URA2 reduces CO2 fitness [11] and our screen confirmed this result (Table 1). Carbamoyl-phosphate enters the urea cycle by reacting with ornithine to generate citrulline which, in turn, is converted to argininosuccinic acid (Fig 5C). Both the citrulline and argininosuccinic acid levels are elevated at 5% CO2 relative to ambient levels (Fig 5D and 5E), suggesting increased conversion of CO2 to urea cycle intermediates relative to ambient CO2. Supporting this conclusion, in S. cerevisiae, urea cycle activity is enhanced under increased CO2 concentrations to deplete excess CO2/HCO3 [35]. Ura2 is also required for the synthesis of uridine/uracil and deletion mutants are auxotrophic for those nutrients. However, Chadwick and colleagues found that the reduced fitness of the ura2\u2206 mutant in 5% CO2 was not rescued by uracil or uridine supplementation while the auxotrophic phenotypes were reversed [11]. Therefore, Ura2 appears to buffer the cell against high levels of CO2 by converting it into intermediates of the urea cycle. Together, these data indicate that host levels of CO2 lead to substantial alteration of central carbon metabolism through multiple mechanisms.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Protein catabolism and urea cycle activity is increased in response to host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "In S. cerevisiae, acute depletion of glucose leads to an increase in mitochondrial respiration. Banerjee and colleagues have also demonstrated that glucose depletion in C. neoformans leads to increased oxidative stress which is a byproduct of mitochondrial activity [36]. Based on these precedents as well as the large set of mitochondrial genes required for CO2 fitness, we predicted that host CO2 concentrations would increase mitochondrial respiration and membrane potential. To test this hypothesis, we characterized the membrane potential of mitochondria in ambient and 5% CO2 using JC-1 staining as previously reported by the Kronstad lab [37]. In this assay, increased mitochondrial membrane potential leads to a red shift in the JC-1 dye. As shown in Fig 6A, growth in 5% CO2 leads to an increase in the proportion of red-shifted cells relative to ambient CO2. This increase in mitochondrial membrane potential is consistent with an increase in respiration at host concentrations of CO2 [38]. The membrane potential is driven by the TCA cycle and electron transport chain enzymes. Accordingly, deletion mutants of the TCA cycle enzyme succinyl CoA synthetase (LSC1) as well as three complex I/ubiquinone NADH dehydrogenase components CNAG_05267, CNAG_02403, and CNAG_02833 have reduced fitness in host CO2 concentrations (Table 1). PFK1 and FBP26 reduce the ability of yeast to transition from glycolysis to respiration [39]. We, therefore, suggest this function may contribute to the reduced fitness of the pfk1\u2206 and fbp26\u2206 mutants (Table 1) at 5% CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host concentrations of CO2 alter C. neoformans cellular redox balance",
+        "sec_num": null
+      },
+      {
+        "text": "To further characterize the effect of CO2 on the redox state of C. neoformans, we measured the ratios of NAD+/NADH and NADP+/NADPH under ambient and host CO2 concentrations. As shown in Fig 6B, CO2 increases the NAD + /NADH ratio by ~2.5 fold. The increased NAD+/NADH ratio is consistent with the higher mitochondrial membrane potential observed in Fig 6A and further supports the conclusion that 5% CO2 increases respiration and TCA cycle activity relative to ambient CO2 concentrations. One of the consequences of increased respiration is increased oxidative stress in the cell. NADPH is a critical component of the biochemical processes that detoxify ROS [38]. Interestingly, the ratio of NADP+/NADPH is unchanged at 5% CO2 compared to ambient CO2 (Fig 6C). This suggests that CO2-tolerant C. neoformans can compensate for the increase in respiration and oxidative state of the cell at 5% CO2 without depleting NADPH stores significantly. The pentose-phosphate pathway generates two molecules of NADPH through the oxidation of glucose first to 6-phospho-gluconate and then, through an oxidative decarboxylation step, to ribulose-5-phosphate [40]. The levels of 6-phosphogluconate are reduced in 5% CO2 relative to ambient CO2 conditions which is consistent with increased pentose phosphate pathway activity (Fig 6D), possibly to maintain NADPH levels and compensate for increased ROS resulting from increased mitochondrial respiration.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Host concentrations of CO2 alter C. neoformans cellular redox balance",
+        "sec_num": null
+      },
+      {
+        "text": "Acetyl-CoA is not only required for mitochondrial respiration through the TCA cycle but is also a fundamental substrate for lipid biosynthesis as well as for histone acetyltransferases involved in the regulation of gene expression [41]. Acetyl-CoA cannot diffuse across organelle membranes and, therefore, distinct pools of acetyl-CoA are present in the mitochondria, cytosol, and nucleus [41]. In the presence of glucose, glycolysis delivers pyruvate-derived acetyl-CoA to the mitochondria and TCA cycle. Our metabolomics data suggests that glucose and glycolysis are reduced at 5% CO2 and that ketogenic amino acids are mobilized to provide acetyl-CoA to support the increased mitochondrial respiration driven by the acute reduction in glucose.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "Lipid catabolism through \u03b2-oxidation contributes to the acetyl-CoA pool and, therefore, could also contribute to acetyl-CoA homeostasis during CO2 stress [32]. Supporting this hypothesis, we identified three mutants in the \u03b2-oxidation pathway that have reduced CO2 fitness: the enoyl CoA hydratase CNAG_04531, the multi-functional protein MFE2, and the 3-oxo-acyl CoA thiolase POT1 (Table 1). Enoyl-CoA hydratases catalyze the second step of fatty acid \u03b2-oxidation while Pot1 directly generates acetyl-CoA. MFE2 is a peroxisomal enzyme that catalyzes the first two steps of \u03b2-oxidation [38]. MFE2 is subject to glucose repression in C. neoformans, and POT1 has been shown to be negatively regulated by glucose in S. cerevisiae [42]. The expression of both MFE2 (1.8-fold, FDR = 9e-15) and POT1 (3-fold, FDR 1e-68) is increased in 5% CO2, further supporting its likely role in generating acetyl-CoA under these conditions [12]. In addition, \u03b2-oxidation is positively regulated by the AMP-activated protein kinase Snf1 in other systems [43,44], and this kinase is required for full fitness at host CO2 concentrations (competitive index: 0.67; p = 0.012, S1 Table). Finally, POT1, MFE2, and enoyl CoA hydratase CNAG_04531 are required for full fitness during infection [14]. Thus, the in vivo fitness defects of genes related to \u03b2-oxidation may be due, at least in part, to their importance in the adaptation of C. neoformans to host CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "Two additional enzymes could also contribute to the generation of acetyl-CoA: acetyl-CoA synthetase (ACS1) and aceto-acetyl-CoA synthetase (KBC1, [45]). Acs1 converts acetate to acetyl-CoA. Kbc1 condenses the ketone body acetoacetate with CoA to give aceto-acetyl-CoA which, in turn, is a substrate for Pot1, leading to two molecules of acetyl-CoA. We, therefore, tested the CO2 fitness of acs1\u2206, kbc1\u2206, and the corresponding double deletion mutants using the competition assay. The kbc1\u2206 acs1\u2206 double mutant showed a modest reduction in CO2 fitness whereas neither single mutant differed from WT (Fig 6E), suggesting that these enzymes play a minor role in maintaining acetyl-CoA homeostasis during CO2 stress.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "Amino acid catabolism and \u03b2-oxidation to acetyl-CoA occur in the mitochondria and directly provide acetyl-CoA for use in the TCA cycle. However, acetyl-CoA is also required in other cellular components to support biosynthesis and gene expression. An important source of cytosolic and nuclear acetyl-CoA in C. neoformans and other cells is, in fact, the mitochondria. Indeed, previous work by the Kronstad lab showed that the majority of cytosolic and nuclear acetyl-CoA appears to be derived from citrate generated in the mitochondria [46]. Citrate is exported to the cytosol, where it is converted to acetyl-CoA and oxaloacetate by ATP-citrate lyase (ACL1). In prior work, we found that the acl1\u2206 mutant has a severe growth defect in 5% CO2 [45]. This suggests that nuclear and cytosolic acetyl-CoA stores remain primarily dependent on Acl1.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "The deletion mutant of a tricarboxylic acid transporter, CNAG_06096, has a strong fitness defect in 5% CO2 (Table 1). CNAG_06096 is homologous to S. cerevisiae Yhm2 which is a mitochondrial citrate-oxoglutarate antiporter [47]. In other fungi with ATP-citrate lyase enzymes such as Aspergillus spp., deletion of the citrate-oxoglutarate transporter leads to reduced acetyl-CoA production [48]. Presumably, this is due to reduced cytosolic citrate in the absence of the transporter. If Yhm2 plays this role during mammalian C. neoformans infection, then, like the acl1\u2206 mutant, it should have a profound fitness defect in vivo. To test this hypothesis, we infected mice with a 1:1 mixture of H99 and either the acl1\u2206 or yhm2\u2206 mutant via inhalation (Fig 6F) and intravenous injection (Fig 6G). As expected, based on the previous report of its reduced virulence, the acl1\u2206 had dramatically reduced fitness in both lung and brain tissue. The yhm2\u2206 mutant showed a similarly profound reduction in fitness relative to WT. These data indicate that mitochondrial citrate-derived acetyl-CoA is required for C. neoformans tolerance of CO2 and infection of mammals.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "Taken together, these data indicate that host concentrations of CO2 establish a relatively low glucose state in C. neoformans. In response, oxidation of fatty acids and amino acid catabolism generates mitochondrial acetyl-CoA which then supports increased respiratory metabolism. Cytosolic and nuclear pools of acetyl-CoA remain largely dependent on the export of mitochondrial citrate through the transporter Yhm2; citrate is then converted to acetyl-CoA by Acl1 in the nucleus and cytosol.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Multiple acetyl-CoA-generating pathways are required for C. neoformans tolerance of host CO2 concentrations",
+        "sec_num": null
+      },
+      {
+        "text": "One of the consequences of increased mitochondrial respiration is the generation of ROS. Glutathione is an important mechanism by which ROS species are detoxified. Recently, Black and colleagues described the importance of glutathione-mediated redox regulation in the virulence of C. neoformans through effects on melanization and titan cell formation [49]. In addition, loss of glutathione affects a variety of metabolic pathways and reduces fitness in low-nutrient growth conditions. The glutathione synthetases GSH1 and GSH2 are both required for CO2 tolerance in H99 (Fig 7A). The biosynthesis of glutathione is integrated with sulfate assimilation as well as methionine and cysteine biosynthesis (Fig 7B, [50]). Consistent with this integration, five genes in the sulfur assimilation pathway (SUL1, MET3, MET5, MET10) are required for CO2 tolerance along with CYS4 which converts homocysteine to cystathionine and MET2 which generates the homoserine that is coupled with cystathionine to generate cysteine (Fig 7A and 7B). Homoserine levels are significantly reduced under 5% CO2 (Fig 7C), further supporting the notion that this pathway is highly active under those conditions.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The glutathione and TOR-Ypk1 pathways buffer C. neoformans against CO2-induced ROS accumulation",
+        "sec_num": null
+      },
+      {
+        "text": "To explore the role of these pathways in CO2 tolerance, we compared the CO2 fitness of each mutant in the presence and absence of supplemental cysteine and glutathione (Fig 7D). The CO2 fitness of each mutant was improved in the presence of both cysteine and glutathione. Black and colleagues had found that reduced glutathione had effects on the cell beyond its role in detoxifying ROS [49]. We, therefore, used the DCFDA assay to characterize the levels of ROS induced by CO2 in the WT strain and the gsh2\u2206 mutant (Fig 6E). In WT cells, 5% CO2 does not induce a significant increase in ROS. However, cellular ROS increases significantly in the gsh2\u2206 mutant relative to WT in 5% CO2 (Fig 7E). These data suggest that host concentrations of CO2 cause oxidative stress in C. neoformans but that CO2-tolerant strains such as H99 utilize glutathione to detoxify these species as part of a compensatory response. It is also possible that glutathione is required to maintain metabolic homeostasis as well. Taken together, these data indicate that the reduced in vivo fitness of genes involved in glutathione homeostasis may also be due to their role in the response to increased CO2 concentrations encountered by C. neoformans during mammalian infection.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The glutathione and TOR-Ypk1 pathways buffer C. neoformans against CO2-induced ROS accumulation",
+        "sec_num": null
+      },
+      {
+        "text": "In S. cerevisiae, the TOR-Ypk1 pathway also buffers the cell from ROS generated in the mitochondria and vacuole through its regulation of sphingolipid biosynthesis [51]. In C. neoformans, TOR-Ypk1 is required for sphingolipid biosynthesis, and we hypothesized that this pathway may also buffer the cell against CO2-induced ROS. High levels of ROS in ambient CO2 are present in the ypk1\u2206 mutant relative to WT (Fig 7F). This observation is consistent with the model proposed by Niles and colleagues in which TOR-Ypk1 suppresses the accumulation of ROS in S. cerevisiae [51]. The levels of ROS in the ypk1\u2206 mutant do not increase further in 5% CO2. However, the loss of ROS homeostasis in the ypk1\u2206 mutant seems likely to contribute to its susceptibility to 5% CO2. As discussed above Ypk1 is required for synthesis of sphingolipids in C. neoformans and other fungi through regulation of SPT [22,23]. Niles and colleagues also found that reduced sphingolipid biosynthesis increased cellular ROS [51]. If this mechanism is also operative at host levels of CO2 in C. neoformans, then the gcs1\u2206 mutant would be expected to have the same phenotype. Although loss of GCS1 does not alter ROS levels in ambient CO2 concentrations (Fig 7F), ROS levels are increased in the gcs1\u2206 mutant at 5% CO2. Thus, the TOR-Ypk1 pathway is required for the prevention of toxic levels of cellular ROS, and its regulation of sphingolipid biosynthesis is likely to contribute to this function. Furthermore, the glucosylceramide arm of the sphingolipid pathway directly contributes to the buffering of ROS generated by C. neoformans growth at host concentrations of CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "The glutathione and TOR-Ypk1 pathways buffer C. neoformans against CO2-induced ROS accumulation",
+        "sec_num": null
+      },
+      {
+        "text": "To cause disease in humans, C. neoformans must transition from the low-CO2, external environment to the host environment where CO2 concentrations are ~100-fold higher [9]. In general, strains that are unable to grow at host CO2 concentrations cannot cause disease in mammalian models of cryptococcosis [8,10]. To better understand the determinants of host CO2 tolerance, we performed a large-scale functional genomics screen to identify genes and cellular processes required for a CO2-tolerant strain to make the transition from CO2 concentrations found in the external environment to those present in the host. The set of genes which modulate CO2 tolerance is relatively large and encompasses a variety of cellular functions, indicating that host CO2 concentrations affect a wide range of physiological processes in C. neoformans which, in turn, is consistent with our findings that tolerance of CO2 stress appears to be an important mammalian virulence trait.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "In previous work, we screened protein kinase and transcription factor mutant libraries to identify regulatory pathways that contribute to C. neoformans CO2 tolerance [12]. Therefore, one of the main goals of this work was to move beyond regulatory pathways to cellular and physiological processes and functions that contribute to the multifactorial C. neoformans response to host CO2 concentrations. With those goals in mind, we focused on two sets of genes that emerged from our screen: metabolism and ROS-related genes. Integration of our genetic data with metabolomic profiling as well as assessments of mitochondrial function and redox status lead to the overall model shown in Fig 8.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "First, our data support a model in which the reduced steady state concentrations of glucose and glycolytic pathway intermediates is due, in part, to diversion of glucose to UDP-glucose for capsule synthesis. Host concentrations of CO2 were one of the first well-described in vitro inducers of capsule formation [17]. Because capsule is an extracellular glucose-derived polymer [28], its synthesis re-routes massive amounts of metabolic resources to the extracellular space. Second, the reduction in glucose results in an increased dependence on mitochondrial respiration to support central carbon metabolism. Third, alternative carbon sources such as ketogenic amino acids and fatty acids must be catabolized to acetyl-CoA to provide sufficient carbon flux through the TCA cycle of the mitochondria. Mobilization of leucine, a ketogenic amino acid, also serves to activate the TOR pathway which is one of the most important regulatory pathways governing CO2 tolerance [12]. Fourth, acetyl-CoA equivalents must also be transported from the mitochondria to other cellular compartments because acetyl-CoA cannot directly cross organelle membranes [41]. We found that the mitochondrial citrate transporter Yhm2 [47] is critical for CO2 tolerance likely because it exports citrate from the mitochondria after which it is converted to acetyl-CoA by ATP-citrate lyase, ACL1. Acetyl-CoA, among other functions, is critical for the synthesis of lipids including sphingolipids. The severe infectivity defects of yhm2\u2206 and acl1\u2206 [46] mutants support the assertion that these processes are also important during infection.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "An unexpected observation was that genes involved in ROS homeostasis were enriched in the set of mutants with reduced CO2 fitness. Our subsequent experiments indicate that mitochondrial respiration is increased at host levels of CO2. Although there is no increase in the amount of ROS in CO2-tolerant H99 cells, our data indicates that this is because multiple compensatory mechanisms maintain ROS homeostasis under these conditions. Loss of sulfate assimilation genes or enzymes in the glutathione biosynthetic pathway leads to both increased ROS and decreased CO2 fitness [49,50]. Based on these data, it appears that a key determinant of C. neoformans CO2 tolerance is the ability of the strain to buffer ROS generated by the increase in mitochondrial activity triggered by host levels of CO2. The most commonly recognized source of oxidative stress for C. neoformans during infection is the phagolysosome of the macrophage. Therefore, our work supports the novel conclusion that host CO2 concentrations present in the lung, bloodstream, and tissues are also a source of oxidative stress as a result of the increased mitochondrial activity required to process alternative carbon sources.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "We also found that the TOR-Ypk1 pathway contributes to ROS homeostasis both generally and in response to CO2 stress. Although this TOR-Ypk1 function has been described in S. cerevisiae [51], it has not been previously demonstrated in C. neoformans. In S. cerevisiae, the ROS buffering functions of the Tor-Ypk1 pathway are mediated in part by the positive regulation of sphingolipid synthesis [51]. Consistent with that conserved function, synthesis of the sphingolipid glucosylceramide is important for both buffering ROS specifically under CO2 stress and for fitness at host concentrations of CO2. Together with previous studies, these data provide a detailed mechanism for how the Tor-Ypk1 pathway governs CO2 tolerance through its regulation of lipid homeostasis. As we have previously shown [12], TOR-Ypk1 regulates the remodeling of phospholipid asymmetry by increasing outer membrane phosphatidylserine, a response that likely affects membrane fluidity during CO2 stress. Although it is likely that the role of TOR-Ypk1 in sphingolipid biosynthesis mediates CO2 tolerance through multiple mechanisms [52], we show that it is due, at least in part, to its role in buffering mitochondrial ROS induced by host concentrations of CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "This work not only provides a near genome-wide profile of the genes required for C. neoformans CO2 tolerance, but also demonstrates that carbon metabolism, membrane homeostasis, and ROS resistance play interconnected roles in establishing that tolerance. More generally, our work demonstrates the extensive remodeling of the cellular physiology that an environmental human pathogen must undergo to adapt to but one aspect of the host environment. The stringency of this process may be one part of the explanation for why a minority of C. neoformans strains are able to establish successful infections in mammals. Indeed, the CO2-induced diversion of glucose-to-capsule provides one possible mechanism for why environmental strains can form capsule, grow at 37 \u00b0C, and melanize but are unable to cause disease. Specifically, we propose that at least some strains are unable to remodel central carbon metabolism to balance the CO2-induced diversion of glucose to capsule. Consequently, they replicate poorly in the lung and do not cause disease. CO2-tolerant strains such as H99, on the other hand, remodel central carbon metabolism to adjust to the reduced glucose flux to the mitochondria and replicate sufficiently to cause disease. It is likely that other mechanisms contribute to the in vivo fitness/CO2 tolerance correlation, and additional experiments with large sets of C. neoformans isolates will be required to test this proposal.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "It is interesting to consider whether adaptation to host levels of CO2 might also affect the fitness or success of other fungal pathogens. In the case of fungal pathogens that are also commensal components of the human mycobiome, e.g., Candida species, the fungus is likely to be adapted to host CO2 since that is part and parcel of its niche. However, the vast majority of in vitro studies of Candida spp have been performed at ambient CO2 which, presumably, is not its normal environment. Indeed, shifting C. albicans to 5% CO2 induces its filamentation program which, in turn, is a key virulence trait [53]. This fact may contribute to recent observations that the genetic control of C. albicans filamentation varies between in vitro and in vivo conditions [54].",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Recently, host levels of CO2 have been reported to increase in vitro growth and reduce antifungal susceptibility of Histoplasma capsulatum [55]. This is the opposite of the effect of elevated CO2 on C. neoformans. As such, host CO2 concentrations do not appear to affect human fungal pathogens in the same manner. However, this would suggest that incorporating this variable when studying host-relevant aspects of human fungal pathobiology may bring new insights.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "Returning to the role of host CO2 concentrations in C. neoformans pathobiology, the genes and pathways required for adaptation to this condition, particularly those that also are required for in vivo fitness, represent potential targets for therapeutic intervention that would not be evident under standard in vitro growth conditions. Indeed, the ultimate proving ground for a new antifungal is whether it is active against the fungus in the host. Our previous work has shown that CO2 concentrations affect the in vitro activity of both fluconazole and flucytosine, two standard drugs in the treatment of cryptococcosis. Accordingly, our work underscores the potential value of screening and testing novel antifungal drugs under in vitro conditions that more closely approximate the host environment.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Discussion",
+        "sec_num": null
+      },
+      {
+        "text": "This study was performed according to the guidelines of the National Institutes of Health and the University of Georgia Institutional Animal Care and Use Committee (IACUC). The animal models and procedures used have been approved by the IACUC (AUP protocol number: A2023 03-033-A3).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Ethics statement",
+        "sec_num": null
+      },
+      {
+        "text": "Yeast extract-peptone-2% dextrose (YPD) was prepared according to standard recipes [56]. RPMI 1,640 without glutamine or sodium bicarbonate was buffered with 165 mM MOPS and pH adjusted to 7. Strains used in this work are described in S4 Table. The C. neoformans deletion library (2015, 2016, 2020 Madhani plates) was acquired from the Fungal Genetic Stock Center (FGSC). Strains were stored at \u221280 \u00b0C in 20% glycerol. Frozen stocks were recovered on solid YPD medium at 30 \u00b0C for 2 days. To prepare for assays, 3 mL YPD was inoculated per strain and grown overnight, 30 \u00b0C, shaking at 200 rpm.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Strains and growth conditions",
+        "sec_num": null
+      },
+      {
+        "text": "For generation of an independent yhm2\u2206 strain (S4 Table), CRISPR/Cas9 short-arm homology (SAH) and transient CRISPR-Cas9 coupled with electroporation (TRACE) methods were used as published [57,58]. CRISPR components were PCR purified according to manufacturer instructions (QIAquick PCR Purification Kit; cat no. 28104) and transformed into H99 via electroporation using the \u201cPic\u201d setting on a Bio-Rad Micropulser. For gene deletion constructs, YHM2 SAH Repair 5\u2032 and 3\u2032 oligos designed with a 50 bp sequence matching the flanks of the YHM2 coding sequence and a 20 bp sequence matching the flanks of the hygromycin (HygB) resistance marker cassette were used to amplify a repair construct, which replaced the entire open reading frame for the target gene with the HYGB cassette. Gene deletion constructs were transformed along with Cas9 DNA and two gene-specific sgRNAs into H99. Transformants were selected on YPD medium with 400 \u00b5g/mL hygromycin B, and knockouts were PCR verified at the 5\u2032 flank with LCR031 and gene-specific \u201c5\u2032 KO confirmation primer\u201d, at the 3\u2032 flank with LCR323 and gene-specific \u201c3\u2032 KO confirmation primer\u201d, and for lack of the native locus with gene-specific \u201corf confirmation\u201d primer pairs (S5 Table).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Strain construction",
+        "sec_num": null
+      },
+      {
+        "text": "The Madhani mutant collection was screened using a competitive growth assay in which each mutant was compared to the H99 reference strain following previously published procedures [12]. Briefly, 96-well plates were prepared with 200 \u00b5L YPD per well. Wells were inoculated from growth on solid YPD plates with individual strains to be tested and the reference strain H99-mNeonGreen and grown statically overnight at 30 \u00b0C. Dilutions were performed to standardize input of unlabeled strains and H99-mNeonGreen in a 1:1 ratio, at 2 \u00d7 104 cells/mL final concentration in RPMI 1,640 medium with 165 mM MOPS, pH 7. Co-cultures were grown at 37 \u00b0C for 24 h in ambient air or 5% CO2 before analyzing on an Attune NxT Flow Cytometer with CytKick autosampler and Attune Cytometric software. mNeonGreen positive and negative populations were identified by histogram plot with 10,000 single cells counted per sample. The percent of mNeonGreen negative cells in CO2 conditions was divided by the percent of mNeonGreen negative cells in ambient conditions to determine the competitive fitness in CO2 relative to ambient conditions. Statistical significance was determined by chi-squared test in Microsoft Excel. In experiments to follow up the screen, the following additions to the medium were made as indicated at the following final concentrations; cysteine (200 \u00b5M), glutathione (1 mM), and the final analysis compared mutant cells with supplementation to those without supplementation at 37 \u00b0C, 5% CO2.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Flow cytometry-based competitive growth assay",
+        "sec_num": null
+      },
+      {
+        "text": "Cells from overnight cultures of indicated strains were washed twice with PBS prior to quantifying OD600. Strains were diluted to an OD600:1, followed by 10-fold serial dilutions. Three \u00b5L from each dilution was spotted on agar plates and grown inverted at 37 \u00b0C in ambient air or at 10% CO2 on YPD plates or YPD buffered with HEPES at pH 8. Images were captured at 48 h.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Solid agar growth assays",
+        "sec_num": null
+      },
+      {
+        "text": "Cells from overnight cultures were washed twice with PBS prior to quantifying concentration on a Countess II FL automated cell counter. Cells were diluted to 1 \u00d7 107 cells/mL to plate on RPMI 1,640 medium with 165 mM MOPS, pH 7 agar plates. A sterile q-tip was saturated in the cell solution before streaking an entire plate to generate a lawn. When plates had dried, a sterile filter paper dot was placed in the center of the plate. Aureobasidin A was added in a 20 \u00b5L volume at a final concentration of 100 \u00b5g/disk. Plates were incubated at 37 \u00b0C in ambient air or 5% CO2. Images were captured at 48 h.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Aureobasidin A susceptibility assay",
+        "sec_num": null
+      },
+      {
+        "text": "A 30 mL culture of YPD was inoculated with H99 and grown overnight at 30 \u00b0C in a 220 rpm shaking incubator. Simultaneously, two groups of 4 flasks containing 50 mL of RPMI media buffered to pH 7 with 165 mM MOPS were pre-equilibrated by shaking at 220 rpm in a 37 \u00b0C incubator with either ambient air or 5% CO2 overnight. The following day, late log-phase cultures were back-diluted to an OD600 of 0.5 and allowed to double at 37 \u00b0C in a 220 rpm shaking incubator. Pre-equilibrated flasks were inoculated to an initial OD600 of 0.1 from the log phase culture and allowed to grow for 24 h. 100 ODs were collected from each flask, cell pellet rinsed with ice-cold UltraPure Distilled Water (Invitrogen), then flash frozen in an ethanol dry-ice bath and stored at \u221280 \u00b0C. For extraction, cell pellets were subjected to three rounds of homogenization with glass beads for one min. Homogenates were resuspended in 2 mL of methanol and transferred to 8 mL glass vials containing 4 mL of cold chloroform (LiChrosolv, Sigma). Samples were then vortexed for 1 min and 2 mL of water (Omnisolv, Sigma) was added. Samples were vortexed for 1 min and then subjected to 10 min of centrifugation at 3,000g for phase separation. The aqueous phase was collected (~3.8 mL) and transferred to a new glass vial. Samples were frozen at \u221280 \u00b0C and submitted to the Harvard Center for Mass Spectrometry (HCMS) where they were dried under nitrogen flow and resuspended in 100 \u00b5L of 30% acetonitrile in water.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Metabolomic analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Untargeted metabolomics was performed using HILIC-UHPLC-MS/MS. A 5 \u00b5l injection was separated on a HILICON iHILIC-P Classic column (150 \u00d7 2.1 mm, 5 \u00b5m) at 40 \u00b0C with a ThermoFisher IDX system with HESI source in positive and negative polarity (resolution 120,000; AGC target 1 \u00d7 105; m/z 65\u20131,000). The 45 min LC gradient (0.15 mL/min after 0.5 min ramp from 0.05 mL/min) used mobile phase A (20 mM ammonium carbonate, 0.1% ammonium hydroxide in water) and B (97% acetonitrile in water): 93% B (0\u20130.5 min), linear to 40% B (19 min), to 0% B (28\u201333 min), return to 93% B (36\u201345 min). Eluent was diverted to waste at 0\u20130.5 min and 32\u201346 min. A pooled QC sample underwent AcquireX deepscan (5 levels) in both polarities for MS/MS.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Metabolomic analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Data were processed in Compound Discoverer 3.2 with the following workflow: (1) MS1 peak detection and integration (threshold-based); (2) retention time alignment; (3) gap-filling by re-integration of low-intensity or noise regions; (4) adduct grouping into single features (neutral monoisotopic mass reported); (5) background subtraction using blanks; (6) median-centered normalization; (7) formula prediction from accurate mass, isotopic pattern, and MS2 (if available); (8) identification via mzVault (local, RT-inclusive) then mzCloud (online MS2); and (9) manual curation of IDs and integrations. One ambient sample exhibited anomalous total intensity and was excluded from differential analysis; normalized areas without this anomalous sample are reported. Peak areas were median-centered and log-transformed prior to statistical analysis, where a Welch corrected, two-tailed t test was performed to compare Ambient (n = 3) versus Elevated (n = 4) conditions. Features with log2 (fold-change) >1 and P < 0.05 were considered significantly regulated.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Metabolomic analysis",
+        "sec_num": null
+      },
+      {
+        "text": "Cells from overnight cultures of indicated strains were washed twice with PBS prior to quantifying concentration on a Countess II FL automated cell counter. Cells were diluted to 7.5 \u00d7 105 cells/mL in RPMI 1,640 medium with 165 mM MOPS, pH 7 and aliquoted in 3 ml volumes in 6-well plates, with 3 wells per replicate, performed in biological triplicate. Plates were incubated at 37 \u00b0C in ambient air or 5% CO2 for 24 h. At 24 h, replicate wells were combined, concentration was quantified by cell counter, and 1 \u00d7 106 cells were aliquoted into a 24-well plate per staining condition. Cells were resuspended in 1 ml RPMI containing 2.5 \u00b5M JC-1 (catalog no. M34152; Thermo Fisher) or 16 \u00b5M DCFDA (catalog no. D6883; Sigma) and incubated at 37 \u00b0C in ambient air or 5% CO2 for 1 h. Cells were washed once with PBS, then resuspended in 500 \u00b5l PBS and analyzed on an Attune NxT Flow Cytometer with Attune Cytometric software. JC-1 staining was analyzed by dividing the mean fluorescence intensity (MFI) resulting from excitation with the blue (488 nm) laser in the BL2 emission filter (574/26) by the MFI in the BL1 emission filter (530/30), i.e., red/green ratio of single yeast cells. DCFDA staining was analyzed by measuring the MFI of single yeast cells in the BL1 emission filter (530/30) following excitation with the blue laser.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Mitochondrial membrane potential and reactive oxygen species assays",
+        "sec_num": null
+      },
+      {
+        "text": "Cells from overnight cultures of H99 were washed twice with PBS prior to quantifying concentration on a Countess II FL automated cell counter. Cells were diluted to 7.5 \u00d7 105 cells/mL in RPMI 1,640 medium with 165 mM MOPS, pH 7 and aliquoted in 3 ml volumes in 6-well plates, with 3 wells per replicate, performed in biological triplicate. Plates were incubated at 37 \u00b0C in ambient air or 5% CO2 for 24 h. At 24 h, replicate wells were combined, concentration was quantified by cell counter, and two tubes of 1 \u00d7 107 cells were pelleted per replicate/condition to allow simultaneous analysis of the oxidized and reduced form from each replicate. Cells were frozen at \u221280 \u00b0C and lyophilized overnight. Manufacturer kit instructions were followed for NAD+/NADH (BioAssay E2ND-100) or NADP + /NADPH (BioAssay Systems E2NP-100) quantification.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Quantification of NAD/NADH and NADP+/NADPH ratios",
+        "sec_num": null
+      },
+      {
+        "text": "CD1 female mice (022CD1) with a body weight of 18\u201325 g were purchased from Charles River. The mice were housed with a max of 5 per cage with a 7am\u20137 pm 12 h dark/12 h light cycle. They were fed LabDiet 5053 irradiated Picolab Rodent Diet 20. The water was provided by the automated watering system connected to the rack, which has several filtration systems. The ambient temperature was between 20 and 24 \u00b0C with 30%\u201370% humidity. For intravenous inoculation (IV), wild-type and mutant cells were mixed in a 1:1 ratio prior to inoculation with 1 \u00d7 1 05 colony-forming units (CFUs)/animal in 100 \u00b5l volume. Organs were harvested at day 4 and homogenized in 2 mL of cold sterile PBS using an IKA-T18 homogenizer. Homogenized organs were serially diluted, plated onto YNB and YNB with 400 \u00b5g/mL hygromycin, and incubated at 30 \u00b0C for 2 days before counting CFUs. Neither the acl1\u0394 nor yhm2\u0394 strains were detected in the brain. For intranasal inoculation (IN), wild-type and mutant cells were mixed in a 1:1 ratio prior to inoculation with 5 \u00d7 104 CFU/animal in a 50 \u00b5l volume. Organs were harvested at day 10, and fungal burden quantification was performed as above.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Mouse model of cryptococcosis",
+        "sec_num": null
+      },
+      {
+        "text": "Overnight cultures of H99 were rinsed in water and resuspended to spot 5 \u00d7 107 cells in 20 \u00b5l in biological triplicate on an RPMI 1,640 medium with 165 mM MOPS, pH 7 agar plate. Replicate plates were incubated at 37 \u00b0C overnight. Prior to CO2 exposure, a 0 h time point was collected, then one plate was shifted to 37 \u00b0C + 5% CO2, while one remained at 37 \u00b0C ambient CO2 for 2 h. At 2 h, all replicates were swabbed from the plates into individual tubes containing 500 \u00b5l 0.2 N NaOH. Suspensions were incubated at room temperature for five minutes. Cells were pelleted and resuspended in 20 \u00b5l reducing sample buffer. Samples were boiled for 5 min, then pelleted at 5,000 rpm for 3 min before removing supernatant to fresh tubes. Ten \u00b5l from each replicate was loaded into duplicate 10% SDS-PAGE gels and run at 80 V. Samples were transferred to a nitrocellulose membrane for 1 h at 100 V. Membranes were blocked with 5% bovine serum albumin (BSA) in tris-buffered saline with 0.1% tween 20 (TBST) for 1 h at RT, then incubated with 1:10,000 rabbit anti-Hog1 (generous gift from Yong-Sun Bahn) or rabbit anti-phospho-p38 MAPK (catalog no. 4092S; Cell Signaling Technology) at 1:10,000 in 5% BSA/TBST overnight at 4 \u00b0C. Membranes were washed 3 times for 5 min with TBST, then incubated for 1 h at RT with 1:10,000 goat anti-rabbit horseradish peroxidase (HRP) (catalog no. STAR208P; Bio-Rad) in 5% BSA/TBST. Membranes were washed 3 times for 5 min with TBST, then developed with chemiluminescent substrate (catalog no. 1705060; BioRad) and imaged on a myECL imager (ThermoFisher).",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Western blotting",
+        "sec_num": null
+      },
+      {
+        "text": "Data were graphed and analyzed in GraphPad Prism 9 software or Microsoft Excel. Statistical analysis and graph descriptions, including ` values are provided in figure legends.",
+        "cite_spans": [],
+        "ref_spans": [],
+        "eq_spans": [],
+        "section": "Statistical analyses",
+        "sec_num": null
+      }
+    ]
+  }
+}
