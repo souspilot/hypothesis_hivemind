@@ -329,7 +329,7 @@ def diversity_slopes(grid: list[list[tuple[str, dict]]], path: Path, seed: int =
             for side in ("top", "right"):
                 ax.spines[side].set_visible(False)
             if c == 0:
-                ax.set_ylabel(VENDI_LABEL)
+                ax.set_ylabel("Effective no. of distinct\nhypotheses (of 10)")
             _panel_label(ax, next(letter), title)
     _save(fig, path)
 
