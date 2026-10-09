@@ -1,24 +1,12 @@
 #!/usr/bin/env python3
-"""
-Removes model entries containing invalid samples (blank, "ERROR: ..."
-strings, or garbled/degenerate output -- see hypothesis_engine.is_valid
-for the full definition) from existing hypothesis-generation output
-files, so the next run of the main script regenerates ONLY those
-model/paper combinations -- not the whole file.
+"""Remove invalid responses from stored hypothesis outputs.
 
-Relies on the existing skip logic in generate_hypotheses.py /
-generate_new_hypotheses.py: valid existing samples are preserved and only
-the shortfall gets regenerated. Deleting a model_id key entirely (rather
-than leaving a partial, contaminated list) makes that logic correctly see
-it as "needs topping up", so a re-run fills in just what's missing --
-papers/models that already came back clean are left alone.
+Preserve valid responses; remove a model key only if none remain.
+The next generation run fills the missing samples. This script edits data.
 
 Usage:
-    python clean_blank_samples.py results/new_hypotheses
-    python clean_blank_samples.py results2/new_hypotheses
-    python clean_blank_samples.py results/underlying_hypotheses
-    python clean_blank_samples.py results2/underlying_hypotheses
-"""
+  python clean_blank_samples.py results/new_hypotheses
+  python clean_blank_samples.py results2/underlying_hypotheses"""
 
 import json
 import sys
@@ -41,15 +29,10 @@ def clean_file(path: Path) -> dict[str, int]:
 
         removed[model_id] = bad_count
         if valid:
-            # Keep the good samples -- only the invalid ones are stripped
-            # out. The generation engine's own top-up logic will then see
-            # a shorter-than-N_SAMPLES list and regenerate just the
-            # shortfall, not all of them from scratch.
+            # Preserve valid responses for the next generation run.
             data[model_id] = valid
         else:
-            # Every sample for this model was invalid -- nothing worth
-            # keeping, so drop the key entirely (same end result as
-            # before for this specific case).
+            # Remove model entries with no valid responses.
             del data[model_id]
 
     if removed:

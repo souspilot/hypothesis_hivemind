@@ -116,9 +116,7 @@ def _panel_label(ax, letter: str, title: str) -> None:
     ax.set_title(f"({letter}) {title}", loc="left", pad=4, fontweight="bold")
 
 
-# ---------------------------------------------------------------------------
 # Figure 1: model-by-model similarity (lower triangle)
-# ---------------------------------------------------------------------------
 
 def model_matrices(panels: list[tuple[str, np.ndarray]], path: Path,
                    size: tuple[float, float] | None = None, legend_ncol: int | None = None,
@@ -148,9 +146,9 @@ def model_matrices(panels: list[tuple[str, np.ndarray]], path: Path,
             # Compact layout: name each column beside its diagonal cell instead
             # of along a rotated x axis, which roughly halves the height.
             ax.set_xticks([])
-            for i, m in enumerate(MODELS):
-                ax.text(i + 0.62, i, m.name, ha="left", va="center",
-                        color=PROVIDER_COLORS[m.provider], fontsize=plt.rcParams["ytick.labelsize"])
+            for i, model in enumerate(MODELS):
+                ax.text(i + 0.62, i, model.name, ha="left", va="center",
+                        color=PROVIDER_COLORS[model.provider], fontsize=plt.rcParams["ytick.labelsize"])
             ax.set_xlim(-0.5, n + 3.2)
             ax.set_yticks([])
         else:
@@ -167,10 +165,11 @@ def model_matrices(panels: list[tuple[str, np.ndarray]], path: Path,
             ax.set_title(title, loc="left", pad=4 * SCALE, fontweight="bold")
 
     if diagonal_labels:
-        cax = axes[-1].inset_axes([0.6, 0.8, 0.38, 0.04])
-        cbar = fig.colorbar(im, cax=cax, orientation="horizontal")
-        cbar.ax.xaxis.set_label_position("top")
-        cbar.set_ticks([norm.vmin, norm.vmax], labels=[f"{norm.vmin:.2f}", f"{norm.vmax:.2f}"])
+        # Vertical bar in the empty upper-right corner of the last panel.
+        cax = axes[-1].inset_axes([0.93, 0.5, 0.035, 0.48])
+        cbar = fig.colorbar(im, cax=cax, orientation="vertical")
+        cbar.ax.yaxis.set_ticks_position("right")
+        cbar.set_ticks([norm.vmin, (norm.vmin + norm.vmax) / 2, norm.vmax])
     else:
         cbar = fig.colorbar(im, ax=axes, fraction=0.025, pad=0.015, aspect=30)
     cbar.set_label("Mean cosine similarity")
@@ -181,9 +180,7 @@ def model_matrices(panels: list[tuple[str, np.ndarray]], path: Path,
     _save(fig, path)
 
 
-# ---------------------------------------------------------------------------
 # Figure 2: distribution of per-paper intra-model similarity
-# ---------------------------------------------------------------------------
 
 HIST_EDGES = np.array([0.0, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
 HIST_LABELS = ["< 0.5", "0.5–0.6", "0.6–0.7", "0.7–0.8", "0.8–0.9", "0.9–1.0"]
@@ -232,9 +229,7 @@ def intra_model_histograms(panels: list[tuple[str, np.ndarray]], path: Path) -> 
     _save(fig, path)
 
 
-# ---------------------------------------------------------------------------
 # Figure 3: same paper vs different papers (embedding sanity check)
-# ---------------------------------------------------------------------------
 
 LEVELS = [
     ("same_model", "Same paper, same model"),
@@ -284,9 +279,7 @@ def relatedness_densities(grid: list[list[tuple[str, dict[str, np.ndarray]]]], p
     _save(fig, path)
 
 
-# ---------------------------------------------------------------------------
 # Figure 4: distinct ideas among 10 hypotheses (Vendi score)
-# ---------------------------------------------------------------------------
 
 SAME_PAPER_COLOR, OTHER_PAPERS_COLOR = LEVEL_COLORS[0], LEVEL_COLORS[2]
 VENDI_LABEL = "Effective no. of distinct hypotheses (of 10)"

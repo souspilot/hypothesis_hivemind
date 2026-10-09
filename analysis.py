@@ -26,6 +26,7 @@ import numpy as np
 
 from config import MIN_PAPERS, MODELS, MODELS_BY_SLUG, N_SAMPLES, Dataset, Task, canonical_slug
 from hypothesis_engine import is_valid
+from embedding_cache import fingerprint, load_fingerprints
 
 SLUGS = [m.slug for m in MODELS]
 PROVIDER_OF = np.array([m.provider for m in MODELS])
@@ -60,9 +61,7 @@ class Corpus:
             onehot = np.zeros((len(owner), n_m))
             onehot[np.arange(len(owner)), owner] = 1
             block_sums = onehot.T @ sims @ onehot
-            # Subtract the self-similarity diagonal (each vector with itself
-            # = 1.0); the previous version left it in, which inflated every
-            # intra-model value to 0.1 + 0.9 * true value at 10 samples.
+            # Exclude unit self-similarities from the intra-model averages.
             n_pairs = np.outer(counts, counts).astype(float)
             np.fill_diagonal(block_sums, np.diag(block_sums) - counts)
             np.fill_diagonal(n_pairs, counts * (counts - 1))
@@ -115,11 +114,9 @@ class Corpus:
         return np.concatenate(self.vectors[p])
 
 
-# ---------------------------------------------------------------------------
 # Diversity (Fig. 4): Vendi score and PERMANOVA
 #
 # Both need full coverage (N_SAMPLES per model), which load_corpus guarantees.
-# ---------------------------------------------------------------------------
 
 def vendi_score(x: np.ndarray) -> float:
     """Effective number of distinct items among the rows of x (unit vectors),
@@ -189,9 +186,7 @@ def diversity_summary(corpus: "Corpus", n_draws: int = 200, n_unrelated: int = 1
         "n_papers": len(corpus.paper_ids),
     }
 
-# ---------------------------------------------------------------------------
 # Loading
-# ---------------------------------------------------------------------------
 
 class DataIntegrityError(RuntimeError):
     pass
@@ -216,6 +211,7 @@ def load_corpus(dataset: Dataset, task: Task) -> tuple[Corpus, dict[str, list[st
         results = {canonical_slug(k): v for k, v in _read(results_dir / f"{pid}.json").items()}
         emb_path = emb_dir / f"{pid}.json"
         cached = {canonical_slug(k): v for k, v in _read(emb_path).items()} if emb_path.exists() else {}
+        hashes = {canonical_slug(k): v for k, v in load_fingerprints(emb_path).items()}
 
         reasons, per_model = [], []
         for slug in SLUGS:
@@ -225,6 +221,8 @@ def load_corpus(dataset: Dataset, task: Task) -> tuple[Corpus, dict[str, list[st
                 reasons.append(f"{slug}: {n_valid}/{N_SAMPLES} valid responses")
             elif len(vecs) != n_valid:
                 reasons.append(f"{slug}: {len(vecs)} cached vectors for {n_valid} responses")
+            elif slug in hashes and hashes[slug] != fingerprint([s for s in results[slug] if is_valid(s)]):
+                reasons.append(f"{slug}: response text changed since embedding")
             per_model.append(vecs / np.linalg.norm(vecs, axis=1, keepdims=True) if len(vecs) else vecs)
         if reasons:
             excluded[pid] = reasons
@@ -253,8 +251,12 @@ def load_outputs(dataset: Dataset, task: Task, paper_ids: list[str]) -> dict[str
 
 def load_paper_metadata(dataset: Dataset, used: set[str]) -> list[dict]:
     """[{id, title, url}] for the given papers, sorted by id."""
+    metadata = {row["id"]: row for row in _read(dataset.metadata_path)} if dataset.metadata_path.exists() else {}
     rows = []
     for pid in sorted(used):
+        if pid in metadata:
+            rows.append({key: metadata[pid][key] for key in ("id", "title", "url")})
+            continue
         meta = _read(dataset.papers_dir / f"{pid}.json")
         rows.append({"id": pid, "title": meta["title"].strip(), "url": dataset.paper_url(pid, meta)})
     return rows
@@ -265,9 +267,7 @@ def _read(path) -> dict:
         return json.load(f)
 
 
-# ---------------------------------------------------------------------------
 # Statistics helpers
-# ---------------------------------------------------------------------------
 
 def bootstrap_ci(per_paper: np.ndarray, n_boot: int = 10_000, seed: int = 0) -> tuple[float, float, float]:
     """(mean, lo, hi): 95% percentile bootstrap CI of the mean over papers."""

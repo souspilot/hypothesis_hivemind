@@ -20,15 +20,11 @@ from model_utils import build_all_models
 
 log = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
 # Config
-# ---------------------------------------------------------------------------
 
 MAX_WORKERS = 24
 
-# ---------------------------------------------------------------------------
 # Prompt
-# ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = (
     "You are a scientific reasoning assistant. Given a description of the "
@@ -45,9 +41,7 @@ USER_INSTRUCTION = (
     "Express it as one declarative sentence (e.g. 'If X, then Y because Z')."
 )
 
-# ---------------------------------------------------------------------------
 # Input handling specific to this script's schema
-# ---------------------------------------------------------------------------
 
 def extract_text(data: dict) -> str:
     return data["experiments_summary"]
@@ -61,9 +55,7 @@ def should_skip_content(data: dict) -> str | None:
         return f"upstream error: {data['error']}"
     return None
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     setup_logging()

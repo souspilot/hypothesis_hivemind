@@ -5,8 +5,8 @@ __pycache__/
 ._dbindex_/
 data.ipynb
 
-# AI4Mat papers carry no open licence: share their OpenReview links
-# (paper_assets/appendix_datasets.tex), not their text.
+# AI4Mat full-text redistribution rights have not been verified.
+# Share titles and source links in metadata/ai4mat.json instead.
 data/raw/
 data/processed/
 data/train/
@@ -16,11 +16,11 @@ data/test/
 # PDFs duplicate it and download_plos.py re-fetches them.
 data2/raw/
 
-# ~720 MB; rebuild from results*/ with `python embed.py` (a few cents).
+# Embedding vectors and fingerprints; rebuild with `python embed.py`.
 embeddings/
 embeddings2/
 
-# Output of the removed visualize_similarity.py; superseded by paper_assets/.
+# Earlier plot outputs; current figures are in paper_assets/.
 plots/
 plots2/
 
@@ -29,3 +29,7 @@ poster/
 
 # Paper source: kept locally, not in the repo.
 paper/
+
+# Local environments and reproduced assets.
+.venv/
+reproduced_assets/

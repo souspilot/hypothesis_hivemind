@@ -1,19 +1,7 @@
-"""
-Shared engine for the hypothesis-generation scripts.
+"""Shared hypothesis-generation engine.
 
-Both generate_hypotheses.py (experiment summaries -> underlying hypotheses)
-and generate_new_hypotheses.py (full paper text -> novel hypotheses) do the
-same underlying work: for each input file, for each model, make sure there
-are N_SAMPLES *valid* generations, dispatching all needed calls concurrently
-and writing incrementally as each model's set completes. The only things
-that actually differ between the two are the input directory, the text
-extracted from each file, the prompt, and (for the summaries script) a
-paper-ID skip list and an upstream-error check.
-
-This module holds the one shared implementation; each script supplies just
-those differences. Fixing a bug here (as happened separately, several times,
-in each script's own copy of this logic) now only needs doing once.
-"""
+Preserve valid stored responses and generate missing samples concurrently.
+The calling scripts supply input extraction, prompts, and paper exclusions."""
 
 from __future__ import annotations
 
@@ -43,21 +31,11 @@ def setup_logging() -> None:
 
 
 def is_valid(sample) -> bool:
-    """A sample is invalid if it's blank, one of the literal 'ERROR: ...'
-    strings written when a call raises an exception, a lingering None
-    placeholder, or garbled output (>= 100 embedded newlines).
+    """Reject empty strings, None, ERROR-prefixed responses, and garbled output.
 
-    The 100-newline threshold is backed by real data, not a guess: across
-    a full audit of this project's output, legitimate samples topped out
-    at 4 newlines (models adding an unrequested "**Hypothesis:** ... this
-    is grounded in..." structure despite being told not to -- verbose,
-    but still one coherent hypothesis). Confirmed-garbled samples (mostly
-    moonshotai/kimi-k2.7-code hitting its reasoning-token budget mid-
-    generation and degenerating into repeated fragments like "important."
-    or "to to to to...") started at 241 newlines. 100 sits in the middle
-    of that gap with wide margin on both sides -- not a fine-grained
-    judgment call, a threshold picked to land cleanly between two
-    observed, well-separated clusters."""
+    The garbling threshold is 100 newlines. In the original output audit,
+    legitimate samples had at most four newlines; confirmed garbled samples
+    had at least 241."""
     if sample is None:
         return False
     text = str(sample)
@@ -69,11 +47,7 @@ def is_valid(sample) -> bool:
 
 
 def load_skip_ids(path: Path) -> set[str]:
-    """IDs to skip entirely, one per line (blank lines ignored). Matches
-    the input file's stem, e.g. 'journal.pbio.3003761' -- not the filename
-    with its .json extension. Returns an empty set if the file doesn't
-    exist, so this is safe to call unconditionally even for scripts that
-    don't use a skip list."""
+    """Read paper IDs from a file, ignoring blank lines. Missing files yield no IDs."""
     if not path.exists():
         return set()
     ids = {line.strip() for line in path.read_text().splitlines() if line.strip()}
@@ -99,7 +73,7 @@ def process_file(
     generations. Returns the result dict, or None if the file was skipped.
 
     extract_text(data) -> str            : pulls the text to send the model
-    should_skip_content(data) -> str|None: return a skip reason to bail
+    should_skip_content(data) -> str|None: return a reason to skip
                                             before calling any model (e.g. an
                                             upstream error already recorded
                                             in this file), or None to proceed
@@ -128,9 +102,7 @@ def process_file(
         with open(output_path) as f:
             result = json.load(f)
 
-    # result_lock guards all reads/writes to `result` and the output file,
-    # since multiple worker threads fill in different slots (and sometimes
-    # different models) at the same time.
+    # Workers share the result dictionary and output file.
     result_lock = threading.Lock()
 
     def save():
@@ -138,15 +110,10 @@ def process_file(
             with open(output_path, "w") as f:
                 json.dump(result, f, indent=2)
 
-    # For each model, keep whatever EXISTING samples are still valid and
-    # only queue up work for the shortfall -- not a full fresh N_SAMPLES
-    # regeneration. This means an "ERROR: rate limited" from a prior run
-    # gets silently retried on the next run without needing an external
-    # cleanup pass first.
+    # Preserve valid responses and retry only the missing samples.
     tasks: list[tuple[str, BaseModel, int]] = []
     for slug, model in models.items():
-        # Samples may already exist under a legacy key (e.g. the original
-        # direct-API AI4Mat runs); top those up rather than starting over.
+        # Preserve legacy model keys from the original direct-API runs.
         model_id = stored_key(result, slug)
         existing = result.get(model_id, [])
         valid = [s for s in existing if is_valid(s)]

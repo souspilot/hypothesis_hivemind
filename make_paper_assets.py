@@ -11,6 +11,7 @@ out and listed in REPORT.md; the build fails if fewer than MIN_PAPERS remain.
 
 Outputs
   figures/fig1_model_similarity_{ai4mat,plos}.pdf     main text (AI4Mat) / appendix (PLOS)
+  figures/fig1_main_{ai4mat,plos}.pdf                 compact Fig. 1 for the main text
   figures/fig2_intra_model_{ai4mat,plos}.pdf          appendix
   figures/fig3_same_vs_different_paper.pdf            appendix
   figures/fig4_diversity.pdf                          distinct ideas (Vendi): 1 model vs 10 models vs 10 papers
@@ -19,7 +20,7 @@ Outputs
   tables/models.tex                                   models and generation settings
   tables/model_matrix_<dataset>_<task>.csv            numbers behind Fig. 1
   tables/per_paper_<dataset>_<task>.csv               per-paper group means
-  appendix_datasets.tex                               A.1 / A.2 paper lists
+  appendix_datasets.tex                               paper titles and source links
   numbers.tex                                         \\newcommand macros for in-text numbers
   REPORT.md                                           data checks + every number, human readable
 """
@@ -61,6 +62,12 @@ def main() -> None:
         figures.model_matrices(
             [(t.label, corpora[d.key, t.key].model_matrix()) for t in TASKS.values()],
             out / "figures" / f"fig1_model_similarity_{d.key}",
+        )
+        # Main-text Fig. 1: same data, model names beside the diagonal so the
+        # figure keeps the height of the accepted version.
+        figures.model_matrices(
+            [(t.label, corpora[d.key, t.key].model_matrix()) for t in TASKS.values()],
+            out / "figures" / f"fig1_main_{d.key}", diagonal_labels=True,
         )
         figures.intra_model_histograms(
             [(t.label, corpora[d.key, t.key].intra_model) for t in TASKS.values()],
@@ -143,9 +150,7 @@ def main() -> None:
     print(f"\nWrote assets to {out.resolve()}")
 
 
-# ---------------------------------------------------------------------------
 # LaTeX tables (booktabs)
-# ---------------------------------------------------------------------------
 
 def similarity_table(rows: list[dict]) -> str:
     lines = [
@@ -243,9 +248,7 @@ def dataset_lists(papers: dict[str, list[dict]]) -> str:
     return "\n".join(out)
 
 
-# ---------------------------------------------------------------------------
 # Report
-# ---------------------------------------------------------------------------
 
 class Report:
     def __init__(self):
@@ -303,7 +306,6 @@ class Report:
         return "\n".join(self.lines) + "\n"
 
 
-# ---------------------------------------------------------------------------
 
 _DIGITS = dict(zip("0123456789", ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]))
 

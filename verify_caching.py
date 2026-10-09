@@ -1,27 +1,8 @@
 #!/usr/bin/env python3
-"""
-Verifies prompt caching is actually active for Claude models routed through
-OpenRouter's Anthropic Skin.
+"""Inspect Claude prompt-cache usage through the Anthropic endpoint on OpenRouter.
 
-How the check works: we send the same long static_text block twice, both
-times marked with cache_control. Anthropic's response includes a `usage`
-object that separately reports:
-  - cache_creation_input_tokens: tokens WRITTEN to the cache this call
-  - cache_read_input_tokens:     tokens READ from an existing cache entry
-  - input_tokens:                tokens that were neither written nor read
-                                  from cache (charged at normal price)
-
-Expected pattern if caching is working:
-  Call 1 (first time seeing this static_text): cache_creation_input_tokens > 0,
-                                                cache_read_input_tokens == 0
-  Call 2 (same static_text again):             cache_creation_input_tokens == 0,
-                                                cache_read_input_tokens > 0
-
-If instead BOTH calls show cache_read_input_tokens == 0 and
-cache_creation_input_tokens == 0 every time, caching isn't happening --
-the model is treating each call as fully fresh, and you're paying full
-input-token price on all N_SAMPLES calls, not just the first.
-"""
+Make two API calls with the same static text and report cache-write and
+cache-read token counts. The second call should report cache-read tokens."""
 
 from model_utils import build_model
 
@@ -29,7 +10,7 @@ MODEL_ID = "anthropic/claude-sonnet-4.6"
 
 # Needs to be long enough to be worth caching at all -- Anthropic's minimum
 # cacheable block size is 1024 tokens for Sonnet/Opus (2048 for Haiku).
-# Repeating a sentence is a cheap way to pad past that threshold for testing.
+# Repeat the test sentence to exceed the cacheable block threshold.
 STATIC_TEXT = "This is a long static block used only to test caching. " * 200
 
 

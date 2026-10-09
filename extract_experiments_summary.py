@@ -29,17 +29,10 @@ TASK_PROMPT = (
     "Paper text:\n"
 )
 
-# OpenRouter speaks the OpenAI Chat Completions format, not Anthropic's native
-# Messages format. Model names on OpenRouter are "provider/model-name" --
-# e.g. "anthropic/claude-sonnet-4-6" -- because one endpoint fronts many
-# providers, so the provider prefix disambiguates which company's model
-# you mean (this is different from calling Anthropic directly, where the
-# plain "claude-sonnet-4-6" string was enough since there's only one provider).
-OPENROUTER_MODEL = "anthropic/claude-sonnet-4-6"
+# OpenRouter uses provider-prefixed model identifiers.
+OPENROUTER_MODEL = "anthropic/claude-sonnet-4.6"
 
-# 1024 was too tight -- some papers' methods sections need more room to
-# summarize than that leaves once you account for the JSON wrapper
-# ({"title": ..., "experiments_summary": ...}) eating into the budget too.
+# Allow space for the methods summary and JSON wrapper.
 MAX_OUTPUT_TOKENS = 4096
 
 
@@ -73,9 +66,7 @@ def process_paper(client: OpenAI, paper_path: Path, output_dir: Path) -> dict | 
     paper_text = extract_paper_text(data)
     prompt = TASK_PROMPT + paper_text
 
-    # OpenAI-style chat completions: the system prompt is just another
-    # message in the list (role="system"), rather than a separate
-    # top-level "system" parameter like Anthropic's native API uses.
+    # Send the system prompt through the Chat Completions message list.
     response = client.chat.completions.create(
         model=OPENROUTER_MODEL,
         max_tokens=MAX_OUTPUT_TOKENS,
@@ -88,11 +79,7 @@ def process_paper(client: OpenAI, paper_path: Path, output_dir: Path) -> dict | 
     choice = response.choices[0]
     text_content = choice.message.content or ""
 
-    # finish_reason == "length" means the model hit max_tokens and got cut
-    # off mid-output -- like a recording that stops at a fixed time limit
-    # regardless of whether the sentence was finished. If that happens,
-    # fail loudly and specifically rather than letting it surface later as
-    # a confusing JSON parse error with no context.
+    # Report truncation before attempting JSON parsing.
     if choice.finish_reason == "length":
         raise RuntimeError(
             f"Response truncated at max_tokens={MAX_OUTPUT_TOKENS} "
@@ -103,9 +90,7 @@ def process_paper(client: OpenAI, paper_path: Path, output_dir: Path) -> dict | 
     try:
         result = parse_json_response(text_content)
     except json.JSONDecodeError as e:
-        # Preserve the actual raw text alongside the parse error -- without
-        # this, a JSON failure gives you only "something went wrong" with
-        # no way to see what the model actually said.
+        # Retain the raw response for diagnosing malformed JSON.
         raise RuntimeError(
             f"JSON parse failed ({e}). Raw response was: {text_content!r}"
         ) from e
