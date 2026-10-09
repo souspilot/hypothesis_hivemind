@@ -16,6 +16,9 @@ data/test/
 # PDFs duplicate it and download_plos.py re-fetches them.
 data2/raw/
 
+# Intermediate article JSON; regenerate from the committed XML.
+data2/processed/
+
 # Embedding vectors and fingerprints; rebuild with `python embed.py`.
 embeddings/
 embeddings2/

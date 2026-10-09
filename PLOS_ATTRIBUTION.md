@@ -1,6 +1,6 @@
 # PLOS Biology article attribution
 
-This notice covers all 57 source articles in `data2/xml/`, `data2/processed/`, and `data2/train/`, including the five excluded from the analysis. It also identifies the sources of PLOS experiment summaries and hypotheses.
+This notice covers all 57 source articles in `data2/xml/` and `data2/train/`, and any intermediate JSON regenerated in `data2/processed/`, including the five excluded from the analysis. It also identifies the sources of PLOS experiment summaries and hypotheses.
 
 The articles are licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). The original XML retains the publisher’s licence and copyright notices. The JSON files extract metadata and article text, normalize whitespace, and omit some XML markup, figures, tables, and publisher material. Model-generated experiment summaries are adaptations of the methods descriptions; hypotheses are generated responses based on those source articles.
 

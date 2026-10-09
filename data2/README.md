@@ -1,6 +1,6 @@
 # PLOS Biology source articles
 
-The 57 articles in `xml/` declare CC BY 4.0 in their original publisher XML. `processed/` and `train/` contain article text and metadata extracted from that XML. The extraction normalizes whitespace and omits some publisher markup and material.
+The 57 articles in `xml/` declare CC BY 4.0 in their original publisher XML. `train/` contains article text and metadata extracted from that XML. The intermediate `processed/` directory is excluded from Git and can be regenerated with `python xml_to_json.py` from the repository root. The extraction normalizes whitespace and omits some publisher markup and material.
 
 Full author lists, original copyright holders, licence notices, and source DOI links appear in [PLOS_ATTRIBUTION.md](../PLOS_ATTRIBUTION.md). Preserve that attribution notice with redistributed article files or provide equivalent attribution. The included XML retains original publisher notices. Images and supplementary attachments linked from the XML are not included here.
 
