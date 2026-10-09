@@ -108,7 +108,7 @@ The stored responses are sufficient to rebuild embeddings; generating them again
 | Generate novel hypotheses | `generate_new_hypotheses.py --dataset plos` | OpenRouter |
 | Embed responses | `embed.py --dataset plos --task novel` | OpenRouter |
 
-Generation reads article JSON from `data/train/` or `data2/train/`. The XML converter writes to `data2/processed/`. Run `python prepare_plos.py --check` to validate the inputs and `python prepare_plos.py` to copy the 52 non-excluded study articles into `data2/train/`. Existing files are preserved; conflicting contents produce an error. Prepared PLOS training files are also included in this repository. AI4Mat full texts must be obtained separately from the sources listed in the dataset appendix.
+Generation reads article JSON from `data/train/` or `data2/train/`. The XML converter writes to `data2/processed/`. The intermediate `data2/processed/` directory is excluded from Git. To rebuild article JSON from the included XML, run `python xml_to_json.py`, then `python prepare_plos.py --check` to validate the inputs and `python prepare_plos.py` to copy the 52 non-excluded study articles into `data2/train/`. Existing files are preserved; conflicting contents produce an error. Prepared PLOS training files are also included in this repository. AI4Mat full texts must be obtained separately from the sources listed in the dataset appendix.
 
 Hypothesis generation preserves valid stored responses and fills missing samples up to ten per model and paper. Readers accept both current model identifiers and legacy identifiers from earlier direct-API runs. The prompts are defined in the generation scripts.
 
@@ -139,7 +139,7 @@ Model responses and Claude Sonnet 4.6 experiment summaries were generated for th
 
 AI4Mat full texts are not distributed here. PLOS PDFs are also excluded because the XML is included. Embeddings can be rebuilt from the stored responses. Logs, the preprocessing notebook, and local Python caches are excluded from Git.
 
-Code and tests use the [MIT License](LICENSE). Documentation and study-generated assets use [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Source articles retain their original licences. See [licensing and attribution](LICENSING.md) for the scope and attribution requirements, and [the data-rights review](DATA_RIGHTS_REVIEW.md) for redistribution evidence and unresolved items.
+Code and tests use the [MIT License](LICENSE). Documentation and study-generated assets use [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Source articles retain their original licences. See [licensing and attribution](LICENSING.md) for the scope and attribution requirements.
 
 ## Citation
 
