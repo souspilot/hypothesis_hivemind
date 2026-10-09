@@ -1,0 +1,252 @@
+[
+  {
+    "id": "0SPoKR8Xrk",
+    "title": "Data-driven prediction of polymer surface adhesion using high-throughput MD and hybrid network models",
+    "url": "https://openreview.net/pdf?id=0SPoKR8Xrk"
+  },
+  {
+    "id": "0uWNuJ1xtz",
+    "title": "STR-Bamba: Multimodal Molecular Textual Representation Encoder-Decoder Foundation Model",
+    "url": "https://openreview.net/pdf?id=0uWNuJ1xtz"
+  },
+  {
+    "id": "12ZCZVKm7r",
+    "title": "Universally Converging Representations of Matter Across Scientific Foundation Models",
+    "url": "https://openreview.net/pdf?id=12ZCZVKm7r"
+  },
+  {
+    "id": "24lzMGlvnq",
+    "title": "Preference Learning from Physics-Based Feedback: Tuning Language Models to Design BCC/B2 Superalloys",
+    "url": "https://openreview.net/pdf?id=24lzMGlvnq"
+  },
+  {
+    "id": "35aDuh7ndX",
+    "title": "Pharmacophore-Guided Generative Design of Novel Drug-Like Molecules",
+    "url": "https://openreview.net/pdf?id=35aDuh7ndX"
+  },
+  {
+    "id": "3WZkuWlzmN",
+    "title": "Cross Modal Predictive architecture for Material Property prediction",
+    "url": "https://openreview.net/pdf?id=3WZkuWlzmN"
+  },
+  {
+    "id": "3pAVbjWMXW",
+    "title": "Language Model Enabled Structure Prediction from Infrared Spectra of Mixtures",
+    "url": "https://openreview.net/pdf?id=3pAVbjWMXW"
+  },
+  {
+    "id": "4U2k4uw43B",
+    "title": "ML-Driven Discovery of Metastable States",
+    "url": "https://openreview.net/pdf?id=4U2k4uw43B"
+  },
+  {
+    "id": "4Xh9oL5rH0",
+    "title": "Universal Machine Learning Interatomic Potentials Enable Accurate Metal-Organic Framework Molecular Modeling",
+    "url": "https://openreview.net/pdf?id=4Xh9oL5rH0"
+  },
+  {
+    "id": "57YLCp7n2V",
+    "title": "GEOM-Drugs Revisited: Toward More Chemically Accurate Benchmarks for 3D Molecule Generation",
+    "url": "https://openreview.net/pdf?id=57YLCp7n2V"
+  },
+  {
+    "id": "5OsnDm1CdX",
+    "title": "Generalizable Prediction of Mixture Etching Rates Using Graph Neural Networks",
+    "url": "https://openreview.net/pdf?id=5OsnDm1CdX"
+  },
+  {
+    "id": "6pjxodugzO",
+    "title": "Foundation Models Enabling Multi-Scale Battery Materials Discovery: From Molecules To Devices",
+    "url": "https://openreview.net/pdf?id=6pjxodugzO"
+  },
+  {
+    "id": "7brF4sMQq3",
+    "title": "GAP: Guided Diffusion for A Priori Transition State Sampling",
+    "url": "https://openreview.net/pdf?id=7brF4sMQq3"
+  },
+  {
+    "id": "7cbwuA5k0T",
+    "title": "Task Alignment Outweighs Framework Choice in Scientific LLM Agents",
+    "url": "https://openreview.net/pdf?id=7cbwuA5k0T"
+  },
+  {
+    "id": "7l75CbxtmC",
+    "title": "A Computational Workflow for Cost-Effective Synthesis of Inorganic Materials: Integrating Thermodynamics, Cellular Automata, Machine Learning, and Commercial Databases",
+    "url": "https://openreview.net/pdf?id=7l75CbxtmC"
+  },
+  {
+    "id": "8JFITrNy3K",
+    "title": "MatPROV: A Provenance Graph Dataset of Material Synthesis Extracted from Scientific Literature",
+    "url": "https://openreview.net/pdf?id=8JFITrNy3K"
+  },
+  {
+    "id": "9JSO4qf1RQ",
+    "title": "Accelerated Inorganic Materials Design with Generative AI Agents",
+    "url": "https://openreview.net/pdf?id=9JSO4qf1RQ"
+  },
+  {
+    "id": "A21WF9M1Um",
+    "title": "The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent",
+    "url": "https://openreview.net/pdf?id=A21WF9M1Um"
+  },
+  {
+    "id": "AQkGpEMGWA",
+    "title": "AI-Guided Design and Discovery of Silicon-Based Anode Materials for Lithium-Ion Batteries",
+    "url": "https://openreview.net/pdf?id=AQkGpEMGWA"
+  },
+  {
+    "id": "Bg4Hn9Qq3w",
+    "title": "LLM Agents for Knowledge Discovery in Atomic Layer Processing",
+    "url": "https://openreview.net/pdf?id=Bg4Hn9Qq3w"
+  },
+  {
+    "id": "Cfj7uBu5dy",
+    "title": "Towards Dynamic Benchmarks for Autonomous Materials Discovery",
+    "url": "https://openreview.net/pdf?id=Cfj7uBu5dy"
+  },
+  {
+    "id": "Ciw6DbDa4U",
+    "title": "Surrogate Modeling for the Design of Optimal Lattice Structures using Tensor Completion",
+    "url": "https://openreview.net/pdf?id=Ciw6DbDa4U"
+  },
+  {
+    "id": "Ei3eF8B8XH",
+    "title": "Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy",
+    "url": "https://openreview.net/pdf?id=Ei3eF8B8XH"
+  },
+  {
+    "id": "EuACaJblk4",
+    "title": "Towards End-to-End Learning of Protein Structure Prediction and Structure-based Sequence Design",
+    "url": "https://openreview.net/pdf?id=EuACaJblk4"
+  },
+  {
+    "id": "Gzf8k2wPdF",
+    "title": "Training speedups via batching for geometric learning: an analysis of static and dynamic algorithms",
+    "url": "https://openreview.net/pdf?id=Gzf8k2wPdF"
+  },
+  {
+    "id": "InZczCC8X1",
+    "title": "Closed-loop, machine learning-driven optimization of reactor yields in reactive carbon electrolyzers",
+    "url": "https://openreview.net/pdf?id=InZczCC8X1"
+  },
+  {
+    "id": "YKxwBMK8Nl",
+    "title": "Benchmarking Agentic Systems in Automated Scientific Information Extraction with ChemX",
+    "url": "https://openreview.net/pdf?id=YKxwBMK8Nl"
+  },
+  {
+    "id": "a3LKICpDO2",
+    "title": "Accurate Band Gap Prediction in Porous Materials using ∆-Learning",
+    "url": "https://openreview.net/pdf?id=a3LKICpDO2"
+  },
+  {
+    "id": "aECXy5Jgm4",
+    "title": "Accelerated Discovery of High-Performance Polyamines for Solid-State Direct CO 2 Capture via Efficient Simulations and Bayesian Optimization",
+    "url": "https://openreview.net/pdf?id=aECXy5Jgm4"
+  },
+  {
+    "id": "acfR6umMJt",
+    "title": "Efficient Nudged Elastic Band Method using Neural Network Bayesian Algorithm Execution",
+    "url": "https://openreview.net/pdf?id=acfR6umMJt"
+  },
+  {
+    "id": "amn6lBDjXm",
+    "title": "A Chemically Grounded Evaluation Framework for Generative Models in Materials Discovery",
+    "url": "https://openreview.net/pdf?id=amn6lBDjXm"
+  },
+  {
+    "id": "auRe7zr32I",
+    "title": "NaviDiv: A Comprehensive Tool for Monitoring Chemical Diversity in Generative Molecular Design",
+    "url": "https://openreview.net/pdf?id=auRe7zr32I"
+  },
+  {
+    "id": "bmgU7yWBeC",
+    "title": "When Forces Disagree: A Data-Free Fast Uncertainty Estimate for Direct-Force Pre-trained Neural Network Potentials",
+    "url": "https://openreview.net/pdf?id=bmgU7yWBeC"
+  },
+  {
+    "id": "cEgjPFdLvl",
+    "title": "AMDEN: Amorphous Materials DEnoising Network",
+    "url": "https://openreview.net/pdf?id=cEgjPFdLvl"
+  },
+  {
+    "id": "cFTvHHXvt6",
+    "title": "CHROMA: Conversational Human-Readable Optical Multilayer Assembly for Natural Language-Driven Inverse Design of Structural Coloration",
+    "url": "https://openreview.net/pdf?id=cFTvHHXvt6"
+  },
+  {
+    "id": "ctyy8EJYQj",
+    "title": "Coupling Language Models with Physics-based Simulation for Synthesis of Inorganic Materials",
+    "url": "https://openreview.net/pdf?id=ctyy8EJYQj"
+  },
+  {
+    "id": "dEtRvi7G5i",
+    "title": "An Effective Machine Learning Frame for Materials Discovery Structured by a Chemical Concept",
+    "url": "https://openreview.net/pdf?id=dEtRvi7G5i"
+  },
+  {
+    "id": "dmeAH1hVR8",
+    "title": "Accelerating Material Discovery for Metal Organic Frameworks using Large Language Models",
+    "url": "https://openreview.net/pdf?id=dmeAH1hVR8"
+  },
+  {
+    "id": "e8bcQehZ15",
+    "title": "Concept-based Steering of Large Language Models for Conditional Molecular Generation",
+    "url": "https://openreview.net/pdf?id=e8bcQehZ15"
+  },
+  {
+    "id": "eUiZg9uUt4",
+    "title": "An exploration of dataset bias in single-step retrosynthesis prediction",
+    "url": "https://openreview.net/pdf?id=eUiZg9uUt4"
+  },
+  {
+    "id": "egi8g2U0ZX",
+    "title": "Benchmarking knowledge transfer methods in de novo materials discovery",
+    "url": "https://openreview.net/pdf?id=egi8g2U0ZX"
+  },
+  {
+    "id": "enQdbinvNd",
+    "title": "Towards Fully Automated Molecular Simulations: Multi-Agent Framework for Simulation Setup and Force Field Extraction",
+    "url": "https://openreview.net/pdf?id=enQdbinvNd"
+  },
+  {
+    "id": "farKrjdsIH",
+    "title": "SAM-EM: Real-Time Segmentation for Automated Liquid Phase Transmission Electron Microscopy",
+    "url": "https://openreview.net/pdf?id=farKrjdsIH"
+  },
+  {
+    "id": "g6Sj1OFjAu",
+    "title": "CompGen: A Conditional Generation Framework for Inverse Composition Design of Catalytic Surfaces",
+    "url": "https://openreview.net/pdf?id=g6Sj1OFjAu"
+  },
+  {
+    "id": "gifMFKvAl5",
+    "title": "Physics-Constrained Diffusion for Lightweight Composite Material Design",
+    "url": "https://openreview.net/pdf?id=gifMFKvAl5"
+  },
+  {
+    "id": "hFzjgQzoVU",
+    "title": "XDIP: A Curated X-ray Absorption Spectrum Dataset for Iron-Containing Proteins",
+    "url": "https://openreview.net/pdf?id=hFzjgQzoVU"
+  },
+  {
+    "id": "hQCdhenqre",
+    "title": "Machine Learning Interatomic Potentials: library for efficient training, model development and simulation of molecular systems",
+    "url": "https://openreview.net/pdf?id=hQCdhenqre"
+  },
+  {
+    "id": "hk6iX4mg3B",
+    "title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
+    "url": "https://openreview.net/pdf?id=hk6iX4mg3B"
+  },
+  {
+    "id": "iFHaZzs6Kz",
+    "title": "Emergent Pose-Invariance in 3D Molecular Representations via Multimodal Learning",
+    "url": "https://openreview.net/pdf?id=iFHaZzs6Kz"
+  },
+  {
+    "id": "j3aOU8Ahue",
+    "title": "Bridging Data-Rich and Data-Poor Domains on Lithium-Ion Battery via Scanning Electron Microscopic Data Through Convolutional Neural Network Transfer Learning",
+    "url": "https://openreview.net/pdf?id=j3aOU8Ahue"
+  }
+]

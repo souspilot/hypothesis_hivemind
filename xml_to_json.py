@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
-"""
-Converts a folder of JATS-XML papers (the format PLOS, PMC, etc. publish in)
-into S2ORC-style JSON files matching the schema your summarizer script reads.
-
-Why this beats PDF extraction: JATS XML is the publisher's actual structured
-source, not a rendered page image with no memory of paragraph/section
-boundaries. Every paragraph is already wrapped in <p>, every section already
-has a <title>, and reference markers are already tagged with <xref>. We're
-just walking a tree that's already correctly shaped, not reconstructing one.
-"""
+"""Convert PLOS JATS XML into the article JSON schema used by the generation scripts."""
 
 import json
 from pathlib import Path
@@ -19,13 +10,7 @@ OUTPUT_DIR = Path("data2/processed")  # matches TRAIN_DIR in the summarizer scri
 
 
 def get_text(el) -> str:
-    """
-    Flatten an XML element's text (including nested tags like <italic> or
-    <xref>) into one clean string. itertext() walks every text node inside
-    the element, like reading a sentence aloud even when some words are
-    italicized or superscripted -- the formatting tags disappear, the
-    words remain, in order.
-    """
+    """Return normalized text from an XML element, including nested elements."""
     return " ".join("".join(el.itertext()).split())
 
 
@@ -40,31 +25,15 @@ def extract_doi(root, ns) -> str:
 
 
 def extract_authors(root, ns) -> list[dict]:
-    """
-    Only pull contribs from <front>. This matters because some JATS files
-    embed extra material -- peer-review history, production/copyediting
-    metadata -- elsewhere in the document (e.g. in a <sub-article> or
-    <back> section), and those sections can contain their OWN
-    contrib-group/contrib[@contrib-type="author"] elements for reviewers,
-    editors, or production staff. Searching the whole tree with ".//"
-    would sweep those in too. Scoping to <front> restricts us to the
-    actual byline, the same way you'd search a company's front-desk
-    sign-in sheet rather than every sign-in sheet in the building.
-    """
+    """Read the first author group in the article front matter.
+
+    Exclude reviewer and production credits elsewhere in the document."""
     authors = []
     front = root.find(".//front", ns)
     if front is None:
         return authors
 
-    # Take only the FIRST <contrib-group> that contains an author contrib --
-    # this is the original byline. If the document has additional
-    # contrib-groups later in <front> (e.g. attached to a correction
-    # notice, production credit, or later article version), those are
-    # skipped rather than merged in.
-    # (Note: lxml's find()/findall() use a restricted path syntax that
-    # doesn't support nested predicates like "group[child[@attr]]", so we
-    # do the "does this group contain an author" check in plain Python
-    # instead of trying to express it as one XPath query.)
+    # Use the first group containing an author; ignore later credit groups.
     first_author_group = None
     for group in front.findall(".//contrib-group", ns):
         if group.find('contrib[@contrib-type="author"]', ns) is not None:
@@ -84,9 +53,7 @@ def extract_authors(root, ns) -> list[dict]:
 
 
 def extract_abstract(root, ns) -> str:
-    # PLOS papers often have two <abstract> tags: the real one and a
-    # shorter "toc" (table-of-contents) blurb. We want the real one --
-    # i.e. the one WITHOUT abstract-type="toc".
+    # Exclude the table-of-contents abstract.
     for abstract_el in root.findall(".//abstract", ns):
         if abstract_el.get("abstract-type") != "toc":
             paras = [get_text(p) for p in abstract_el.findall(".//p", ns)]
@@ -95,14 +62,9 @@ def extract_abstract(root, ns) -> str:
 
 
 def extract_body_paragraphs(root, ns) -> list[dict]:
-    """
-    Walk every <sec> in <body> and pull out its <p> paragraphs, tagging
-    each with the section title it belongs to (e.g. "Introduction",
-    "Methods" -> "Study sites and sampling"). We only look at direct
-    child <p> of each <sec> (via ".//p" scoped per-section further down)
-    so figure captions and table content don't get swept in as if they
-    were narrative paragraphs.
-    """
+    """Extract direct paragraph children of each body section, with section titles.
+
+    Nested sections are visited separately to avoid duplicate paragraphs."""
     paragraphs = []
     body = root.find(".//body", ns)
     if body is None:
@@ -112,9 +74,7 @@ def extract_body_paragraphs(root, ns) -> list[dict]:
         title_el = sec.find("title", ns)
         section_title = get_text(title_el) if title_el is not None else None
 
-        # Only direct <p> children of this <sec> -- nested <sec>s will be
-        # visited separately by the outer iter("sec") loop, so we don't
-        # want to double-count their paragraphs here.
+        # Nested sections are handled by the outer loop.
         for p in sec.findall("p", ns):
             text = get_text(p)
             if text:
@@ -136,10 +96,7 @@ def convert_one(xml_path: Path, out_dir: Path) -> Path:
 
     tree = etree.parse(str(xml_path))
     root = tree.getroot()
-    ns = {}  # JATS elements we're using here (article-title, sec, p, etc.)
-             # aren't in a namespace in this file, so an empty map is correct;
-             # only mml:/xlink: prefixed tags are namespaced, and we don't
-             # need to address those directly since itertext() ignores tags.
+    ns = {}  # Article and paragraph tags are not namespaced.
 
     record = {
         "paper_id": paper_id,

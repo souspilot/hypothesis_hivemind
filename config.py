@@ -1,21 +1,11 @@
-"""
-Single source of truth for datasets, tasks, and models.
-
-Every script (generation, embedding, analysis) looks things up here instead
-of hard-coding directory suffixes or model-id strings. The on-disk layout is
-unchanged -- AI4Mat lives in data/ results/ embeddings/, PLOS Biology in
-data2/ results2/ embeddings2/ -- but that mapping now exists in exactly one
-place (DATASETS below).
-"""
+"""Dataset paths, tasks, model identifiers, and recorded generation settings."""
 
 from dataclasses import dataclass, field
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-# ---------------------------------------------------------------------------
 # Datasets
-# ---------------------------------------------------------------------------
 
 @dataclass(frozen=True)
 class Dataset:
@@ -31,6 +21,10 @@ class Dataset:
     @property
     def papers_dir(self) -> Path:
         return self._dir("data") / "train"
+
+    @property
+    def metadata_path(self) -> Path:
+        return ROOT / "metadata" / f"{self.key}.json"
 
     @property
     def summaries_dir(self) -> Path:
@@ -71,9 +65,7 @@ DATASETS: dict[str, Dataset] = {
     ),
 }
 
-# ---------------------------------------------------------------------------
 # Tasks
-# ---------------------------------------------------------------------------
 
 @dataclass(frozen=True)
 class Task:
@@ -87,9 +79,7 @@ TASKS: dict[str, Task] = {
     "novel": Task("novel", "new_hypotheses", "Generate novel hypothesis"),
 }
 
-# ---------------------------------------------------------------------------
 # Models
-# ---------------------------------------------------------------------------
 
 PROVIDERS = ["Anthropic", "Google", "Moonshot AI", "OpenAI"]
 
@@ -158,9 +148,7 @@ def stored_key(result: dict, slug: str) -> str:
     return slug
 
 
-# ---------------------------------------------------------------------------
 # Experiment constants
-# ---------------------------------------------------------------------------
 
 N_SAMPLES = 10
 # A (dataset, task) is analysed only on papers where all models have N_SAMPLES

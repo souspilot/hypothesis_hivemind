@@ -26,6 +26,7 @@ import numpy as np
 
 from config import MIN_PAPERS, MODELS, MODELS_BY_SLUG, N_SAMPLES, Dataset, Task, canonical_slug
 from hypothesis_engine import is_valid
+from embedding_cache import fingerprint, load_fingerprints
 
 SLUGS = [m.slug for m in MODELS]
 PROVIDER_OF = np.array([m.provider for m in MODELS])
@@ -60,9 +61,7 @@ class Corpus:
             onehot = np.zeros((len(owner), n_m))
             onehot[np.arange(len(owner)), owner] = 1
             block_sums = onehot.T @ sims @ onehot
-            # Subtract the self-similarity diagonal (each vector with itself
-            # = 1.0); the previous version left it in, which inflated every
-            # intra-model value to 0.1 + 0.9 * true value at 10 samples.
+            # Exclude unit self-similarities from the intra-model averages.
             n_pairs = np.outer(counts, counts).astype(float)
             np.fill_diagonal(block_sums, np.diag(block_sums) - counts)
             np.fill_diagonal(n_pairs, counts * (counts - 1))
@@ -110,91 +109,84 @@ class Corpus:
             "different_paper": between[iu],
         }
 
-    def variance_curve(self, n_perm: int = 1000, seed: int = 0) -> np.ndarray:
-        """(n_papers, n_models) embedding variance of the outputs pooled from
-        the first k models, k = 1..n_models, averaged over n_perm random model
-        orders (drawn independently per paper).
-
-        Exact, not sampled from vectors: for N unit vectors with mean
-        pairwise cosine s (self-pairs excluded), variance = 1 - |centroid|^2
-        = (N-1)/N * (1 - s), and s for any set of models follows from
-        pair_matrix. Requires full coverage (N_SAMPLES per model).
-        """
-        m = N_SAMPLES
-        n_m = len(SLUGS)
-        weights = np.full((n_m, n_m), float(m * m))
-        np.fill_diagonal(weights, m * (m - 1))
-        rng = np.random.default_rng(seed)
-        k = np.arange(1, n_m + 1)
-        n = k * m
-        out = np.empty((len(self.paper_ids), n_m))
-        for p, sims in enumerate(self.pair_matrix):
-            perms = np.argsort(rng.random((n_perm, n_m)), axis=1)
-            w = (weights * sims)[perms[:, :, None], perms[:, None, :]]  # (n_perm, n_m, n_m)
-            pair_sums = np.cumsum(np.cumsum(w, axis=1), axis=2)[:, k - 1, k - 1]
-            mean_sim = pair_sums / (n * (n - 1))
-            out[p] = ((n - 1) / n * (1 - mean_sim)).mean(axis=0)
-        return out
+    def paper_matrix(self, p: int) -> np.ndarray:
+        """(n_models * N_SAMPLES, dim) embeddings for paper p, grouped by model."""
+        return np.concatenate(self.vectors[p])
 
 
-def independent_variance(k: np.ndarray, intra: float, unrelated: float, m: int = N_SAMPLES) -> np.ndarray:
-    """Pooled variance of k models if each kept its own within-model spread
-    (mean pairwise cosine `intra`) but its outputs were only as similar to
-    other models' outputs as outputs for different papers (`unrelated`)."""
-    k = np.asarray(k, dtype=float)
-    n = k * m
-    mean_sim = (k * m * (m - 1) * intra + k * (k - 1) * m * m * unrelated) / (n * (n - 1))
-    return (n - 1) / n * (1 - mean_sim)
+# Diversity (Fig. 4): Vendi score and PERMANOVA
+#
+# Both need full coverage (N_SAMPLES per model), which load_corpus guarantees.
+
+def vendi_score(x: np.ndarray) -> float:
+    """Effective number of distinct items among the rows of x (unit vectors),
+    with the cosine kernel: exp(Shannon entropy of the eigenvalues of K/n).
+    Friedman & Dieng, "The Vendi Score", TMLR 2023."""
+    eig = np.linalg.eigvalsh(x @ x.T / len(x))
+    eig = eig[eig > 1e-12]
+    return float(np.exp(-(eig * np.log(eig)).sum()))
 
 
-def equivalent_independent_models(target: float, intra: float, unrelated: float) -> float:
-    """Number of independent models (as defined in independent_variance)
-    whose pooled variance equals `target`; solved by bisection over real k."""
-    lo, hi = 1.0, 1e4
-    if target <= independent_variance(lo, intra, unrelated):
-        return 1.0
-    for _ in range(100):
-        mid = (lo + hi) / 2
-        lo, hi = (mid, hi) if independent_variance(mid, intra, unrelated) < target else (lo, mid)
-    return (lo + hi) / 2
+def permanova_r2(x: np.ndarray, groups: np.ndarray) -> float:
+    """Share of the variation among rows of x explained by `groups`:
+    between-group / total sum of squares on Euclidean distances (Anderson 2001)."""
+    total = ((x - x.mean(axis=0)) ** 2).sum()
+    within = sum(((x[groups == g] - x[groups == g].mean(axis=0)) ** 2).sum() for g in np.unique(groups))
+    return float(1 - within / total)
 
 
-def diversity_summary(corpus: Corpus, n_boot: int = 2000, seed: int = 0) -> dict:
-    """Observed variance curve, the independent-model reference, and the
-    equivalent number of independent models for all n_models models, with
-    95% bootstrap CIs over papers."""
-    curves = corpus.variance_curve()
-    intra_pp = np.nanmean(corpus.intra_model, axis=1)
-    unrelated = float(np.mean(corpus.paper_level_distributions()["different_paper"]))
-    k = np.arange(1, curves.shape[1] + 1)
+def diversity_summary(corpus: "Corpus", n_draws: int = 200, n_unrelated: int = 1000,
+                      n_perm: int = 199, seed: int = 0) -> dict:
+    """Fig. 4 and its numbers, for one (dataset, task). Every Vendi score is
+    over exactly N_SAMPLES hypotheses, so set size cannot drive a difference.
 
-    def stats(idx):
-        mean_curve = curves[idx].mean(axis=0)
-        intra = intra_pp[idx].mean()
-        return mean_curve, equivalent_independent_models(mean_curve[-1], intra, unrelated), intra
-
-    mean_curve, k_eff, intra = stats(np.arange(len(curves)))
+    one[p]:  mean Vendi score of each model's own N_SAMPLES hypotheses for paper p.
+    ten[p]:  mean Vendi score of N_SAMPLES hypotheses for paper p, one each from
+             N_SAMPLES randomly chosen models (n_draws draws).
+    unrelated: Vendi scores of N_SAMPLES hypotheses about N_SAMPLES different
+             papers (random model each); a scale reference only.
+    r2_model / r2_provider: PERMANOVA R^2 of model / provider identity per paper;
+             p_max is the largest per-paper permutation p-value.
+    """
     rng = np.random.default_rng(seed)
-    boots = [stats(rng.integers(0, len(curves), len(curves))) for _ in range(n_boot)]
-    boot_curves = np.stack([b[0] for b in boots])
-    boot_keff = np.array([b[1] for b in boots])
+    n_m, m = len(SLUGS), N_SAMPLES
+    models = np.repeat(np.arange(n_m), m)
+    providers = np.repeat(PROVIDER_OF, m)
+
+    one, ten, r2_model, r2_provider, p_values = [], [], [], [], []
+    for p, per_model in enumerate(corpus.vectors):
+        one.append(np.mean([vendi_score(v) for v in per_model]))
+        ten.append(np.mean([
+            vendi_score(np.stack([per_model[mi][rng.integers(m)]
+                                  for mi in rng.choice(n_m, m, replace=False)]))
+            for _ in range(n_draws)]))
+        x = corpus.paper_matrix(p)
+        r2 = permanova_r2(x, models)
+        null = [permanova_r2(x, rng.permutation(models)) for _ in range(n_perm)]
+        p_values.append((1 + sum(v >= r2 for v in null)) / (n_perm + 1))
+        r2_model.append(r2)
+        r2_provider.append(permanova_r2(x, providers))
+
+    unrelated = np.array([
+        vendi_score(np.stack([corpus.vectors[q][rng.integers(n_m)][rng.integers(m)]
+                              for q in rng.choice(len(corpus.vectors), m, replace=False)]))
+        for _ in range(n_unrelated)])
+    one, ten = np.array(one), np.array(ten)
     return {
-        "k": k,
-        "observed": mean_curve,
-        "observed_lo": np.percentile(boot_curves, 2.5, axis=0),
-        "observed_hi": np.percentile(boot_curves, 97.5, axis=0),
-        "independent": independent_variance(k, intra, unrelated),
-        "k_eff": k_eff,
-        "k_eff_ci": (float(np.percentile(boot_keff, 2.5)), float(np.percentile(boot_keff, 97.5))),
-        "single_model_share": float(mean_curve[0] / mean_curve[-1]),
-        "intra": float(intra),
+        "one": one,
+        "ten": ten,
         "unrelated": unrelated,
+        "one_mean": bootstrap_ci(one, seed=seed),
+        "ten_mean": bootstrap_ci(ten, seed=seed),
+        "unrelated_mean": float(unrelated.mean()),
+        "share_up": float(np.mean(ten > one)),
+        "r2_model": bootstrap_ci(np.array(r2_model), seed=seed),
+        "r2_provider": bootstrap_ci(np.array(r2_provider), seed=seed),
+        "p_max": float(max(p_values)),
+        "n_papers": len(corpus.paper_ids),
     }
 
-
-# ---------------------------------------------------------------------------
 # Loading
-# ---------------------------------------------------------------------------
 
 class DataIntegrityError(RuntimeError):
     pass
@@ -219,6 +211,7 @@ def load_corpus(dataset: Dataset, task: Task) -> tuple[Corpus, dict[str, list[st
         results = {canonical_slug(k): v for k, v in _read(results_dir / f"{pid}.json").items()}
         emb_path = emb_dir / f"{pid}.json"
         cached = {canonical_slug(k): v for k, v in _read(emb_path).items()} if emb_path.exists() else {}
+        hashes = {canonical_slug(k): v for k, v in load_fingerprints(emb_path).items()}
 
         reasons, per_model = [], []
         for slug in SLUGS:
@@ -228,6 +221,8 @@ def load_corpus(dataset: Dataset, task: Task) -> tuple[Corpus, dict[str, list[st
                 reasons.append(f"{slug}: {n_valid}/{N_SAMPLES} valid responses")
             elif len(vecs) != n_valid:
                 reasons.append(f"{slug}: {len(vecs)} cached vectors for {n_valid} responses")
+            elif slug in hashes and hashes[slug] != fingerprint([s for s in results[slug] if is_valid(s)]):
+                reasons.append(f"{slug}: response text changed since embedding")
             per_model.append(vecs / np.linalg.norm(vecs, axis=1, keepdims=True) if len(vecs) else vecs)
         if reasons:
             excluded[pid] = reasons
@@ -256,8 +251,12 @@ def load_outputs(dataset: Dataset, task: Task, paper_ids: list[str]) -> dict[str
 
 def load_paper_metadata(dataset: Dataset, used: set[str]) -> list[dict]:
     """[{id, title, url}] for the given papers, sorted by id."""
+    metadata = {row["id"]: row for row in _read(dataset.metadata_path)} if dataset.metadata_path.exists() else {}
     rows = []
     for pid in sorted(used):
+        if pid in metadata:
+            rows.append({key: metadata[pid][key] for key in ("id", "title", "url")})
+            continue
         meta = _read(dataset.papers_dir / f"{pid}.json")
         rows.append({"id": pid, "title": meta["title"].strip(), "url": dataset.paper_url(pid, meta)})
     return rows
@@ -268,9 +267,7 @@ def _read(path) -> dict:
         return json.load(f)
 
 
-# ---------------------------------------------------------------------------
 # Statistics helpers
-# ---------------------------------------------------------------------------
 
 def bootstrap_ci(per_paper: np.ndarray, n_boot: int = 10_000, seed: int = 0) -> tuple[float, float, float]:
     """(mean, lo, hi): 95% percentile bootstrap CI of the mean over papers."""

@@ -1,22 +1,12 @@
 #!/usr/bin/env python3
-"""
-Reports samples containing embedded newlines, for manual review.
+"""Report response newline counts for manual inspection without editing data.
 
-This does NOT delete or modify anything -- it's purely a report. A sample
-containing a newline isn't necessarily garbled: real hypotheses often
-carry a markdown header ("# Hypothesis\\n\\n...") that alone accounts for
-2 newlines, which is NOT the same failure mode as genuinely degenerate
-output (which tends to run into the hundreds of newlines). Because of
-that overlap, this tool leads with a distribution summary and sorts
-flagged samples by newline count descending, so a real outlier is visible
-at a glance instead of getting lost among dozens of ordinary
-markdown-formatted samples sitting at 2-4 newlines.
+Headers and formatting can introduce a few newlines in valid responses.
+Sort samples by newline count to highlight outliers.
 
 Usage:
-    python find_garbled_samples.py results/new_hypotheses
-    python find_garbled_samples.py results2/new_hypotheses --min-newlines 20
-    python find_garbled_samples.py results/underlying_hypotheses --full-text
-"""
+  python find_garbled_samples.py results/new_hypotheses
+  python find_garbled_samples.py results2/new_hypotheses --min-newlines 20"""
 
 import argparse
 import json
@@ -43,8 +33,7 @@ def main():
     files = sorted(args.results_dir.glob("*.json"))
     print(f"Scanning {len(files)} files in {args.results_dir}/\n")
 
-    # Collect every (count, location, text) with at least 1 newline, before
-    # printing anything -- the summary needs the full picture first.
+    # Collect newline counts and sample locations for the report.
     flagged: list[tuple[int, str, str, int, str]] = []  # (n_newlines, paper, model, slot, text)
     newline_counts: Counter = Counter()
 
@@ -60,7 +49,7 @@ def main():
                     newline_counts[n] += 1
                     flagged.append((n, path.stem, model_id, i + 1, text))
 
-    # --- Distribution summary: the real point of this tool ---
+    # Newline-count distribution.
     if newline_counts:
         print("Newline-count distribution across all samples with >=1 newline:")
         for n in sorted(newline_counts):
@@ -76,13 +65,12 @@ def main():
                 gap_note = (
                     f"\n  -> Biggest jump: {biggest_gap[1]} to "
                     f"{counts_sorted[counts_sorted.index(biggest_gap[1]) + 1]} newlines. "
-                    f"That gap is usually where 'ordinary markdown formatting' ends "
-                    f"and 'something actually went wrong' begins."
+                    f"Inspect samples above this gap for garbled output."
                 )
         print(gap_note)
         print()
 
-    # --- Listing, worst offenders first ---
+    # List samples in descending newline count.
     flagged.sort(key=lambda t: t[0], reverse=True)
     shown = 0
     for n, paper, model_id, slot, text in flagged:

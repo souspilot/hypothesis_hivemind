@@ -1,19 +1,12 @@
-"""
-Embed every valid hypothesis with text-embedding-3-small and cache the
-vectors per paper (embeddings*/<task>/<paper_id>.json, {model_key: [[...]]}).
+"""Embed valid hypotheses and cache vectors by paper and model.
 
-A cached entry is reused only if it holds exactly as many vectors as the
-model currently has valid samples for that paper; otherwise it is
-re-embedded. (The previous version reused any entry that merely existed, so
-an entry cached while a model had 0 or 6 valid samples stayed that way after
-the samples were topped up to 10.) Papers on the dataset's skip list are
-never embedded and any stale cache for them is removed.
+Reuse entries only when sample counts and content fingerprints match.
+Skip-listed papers are excluded and their cached files are removed.
 
 Usage:
-  python embed.py                           # every dataset x task
+  python embed.py
   python embed.py --dataset plos --task novel
-  python embed.py --check                   # report stale entries, no API calls
-"""
+  python embed.py --check"""
 
 import argparse
 import json
@@ -24,6 +17,7 @@ from pathlib import Path
 
 from config import DATASETS, EMBEDDING_MODEL, OPENROUTER_BASE_URL, TASKS, Dataset, Task, parse_dataset_args
 from hypothesis_engine import is_valid
+from embedding_cache import fingerprint, fingerprints_path, load_fingerprints
 
 log = logging.getLogger(__name__)
 MAX_WORKERS = 16
@@ -41,9 +35,10 @@ def plan(dataset: Dataset, task: Task) -> dict[Path, dict[str, list[str]]]:
             continue
         results = json.loads(path.read_text())
         cached = json.loads(out_path.read_text()) if out_path.exists() else {}
+        hashes = load_fingerprints(out_path)
         for key, samples in results.items():
             valid = [s for s in samples if is_valid(s)]
-            if key not in cached or len(cached[key]) != len(valid):
+            if key not in cached or len(cached[key]) != len(valid) or hashes.get(key) != fingerprint(valid):
                 todo.setdefault(out_path, {})[key] = valid
     return todo
 
@@ -54,6 +49,7 @@ def run(dataset: Dataset, task: Task, embedder) -> None:
         if stale.exists():
             stale.unlink()
             log.info("Removed cached embeddings for skip-listed paper %s", pid)
+        fingerprints_path(stale).unlink(missing_ok=True)
     todo = plan(dataset, task)
     n = sum(len(v) for v in todo.values())
     log.info("[%s / %s] %d stale or missing entries across %d papers", dataset.key, task.key, n, len(todo))
@@ -63,10 +59,15 @@ def run(dataset: Dataset, task: Task, embedder) -> None:
 
     def embed_paper(out_path: Path, entries: dict[str, list[str]]) -> None:
         cached = json.loads(out_path.read_text()) if out_path.exists() else {}
+        hashes = load_fingerprints(out_path)
         for key, samples in entries.items():
             cached[key] = embedder.embed_documents(samples) if samples else []
+            hashes[key] = fingerprint(samples)
             log.info("  %s / %s: %d vectors", out_path.stem, key, len(samples))
         out_path.write_text(json.dumps(cached))
+        hash_path = fingerprints_path(out_path)
+        hash_path.parent.mkdir(parents=True, exist_ok=True)
+        hash_path.write_text(json.dumps(hashes, indent=2) + "\n")
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         for f in [pool.submit(embed_paper, p, e) for p, e in todo.items()]:
@@ -96,8 +97,7 @@ def main() -> None:
     from langchain_openai import OpenAIEmbeddings
 
     load_dotenv()
-    # OpenRouter proxies OpenAI's text-embedding-3-small; vectors are identical
-    # to calling OpenAI directly, so caches from either route can be mixed.
+    # Request the configured embedding model through OpenRouter.
     embedder = OpenAIEmbeddings(
         model=EMBEDDING_MODEL, api_key=os.environ["OPENROUTER_API_KEY"], base_url=OPENROUTER_BASE_URL,
     )

@@ -20,15 +20,11 @@ from model_utils import build_all_models
 
 log = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
 # Config
-# ---------------------------------------------------------------------------
 
 MAX_WORKERS = 24
 
-# ---------------------------------------------------------------------------
 # Prompt
-# ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = (
     "You are an expert research scientist. Given the context of a research paper, "
@@ -44,24 +40,12 @@ USER_INSTRUCTION = (
     "that extends beyond what this paper has already established."
 )
 
-# ---------------------------------------------------------------------------
 # Input handling specific to this script's schema
-# ---------------------------------------------------------------------------
 
 def extract_text(data: dict) -> str:
     title = data.get("title", "")
 
-    # Three schema shapes have shown up across this project's data sources,
-    # so we check each in order rather than assuming just one:
-    #
-    # 1. Current schema (PLOS papers, from xml_to_json.py): a plain
-    #    STRING at the top level, under "abstract_text".
-    # 2. Old S2ORC-style schema: a plain STRING at the top level, under
-    #    "abstract" directly -- already exactly what we want, no
-    #    reconstruction needed.
-    # 3. Same old schema, fallback path: a LIST of paragraph-dicts nested
-    #    inside pdf_parse.abstract (redundant with #2 in the same files,
-    #    but kept as a fallback in case a file only has this form).
+    # Accept current article JSON and legacy S2ORC abstract fields.
     abstract = data.get("abstract_text", "")
 
     if not abstract:
@@ -79,9 +63,7 @@ def extract_text(data: dict) -> str:
     body = "\n\n".join(b["text"] for b in data.get("pdf_parse", {}).get("body_text", []))
     return f"Title: {title}\n\nAbstract: {abstract}\n\n{body}"
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     setup_logging()
